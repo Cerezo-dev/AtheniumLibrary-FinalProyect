@@ -1,4 +1,4 @@
 package pe.edu.upeu.library.crudlibrary.servicios;
 
-public class Categoria {
+public class PrincipalServicioImp {
 }
