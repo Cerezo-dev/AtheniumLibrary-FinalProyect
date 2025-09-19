@@ -3,6 +3,8 @@ package pe.edu.upeu.library.crudlibrary.modelo;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import pe.edu.upeu.library.crudlibrary.enums.Carrera;
+import pe.edu.upeu.library.crudlibrary.enums.TipoParticipante;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -17,7 +19,7 @@ public class Usuarios {
     private String correoinstitucional;
     private String contraseña;
     private String estado;
-    private String carrera;
-
+    private Carrera carrera;
+    private TipoParticipante tipoParticipante;
 
 }

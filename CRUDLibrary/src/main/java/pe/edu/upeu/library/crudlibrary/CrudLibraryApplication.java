@@ -28,7 +28,7 @@ public class CrudLibraryApplication extends Application {
         builder.application().setWebApplicationType(WebApplicationType.NONE);
         context = builder.run(getParameters().getRaw().toArray(new String[0]));
 
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/gui/main_Menu.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/main_Menu.fxml"));
         loader.setControllerFactory(context::getBean);
         parent = loader.load();
     }
