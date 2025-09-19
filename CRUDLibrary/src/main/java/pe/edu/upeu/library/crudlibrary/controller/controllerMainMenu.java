@@ -21,8 +21,6 @@ import java.util.Map;
 @Controller
 public class controllerMainMenu {
 
-<<<<<<< HEAD
-=======
     @FXML
     private BorderPane bp;
     @FXML
@@ -95,5 +93,4 @@ public class controllerMainMenu {
         public void menuSelected(Event e) {
         }
     }
->>>>>>> 093fb75be5b321fdb799a8c13a909bd051b89a1e
 }
