@@ -12,9 +12,9 @@
                         <MenuItem fx:id="menuItem1" mnemonicParsing="false" text="Principal" />
                         <MenuItem fx:id="menuItem2" mnemonicParsing="false" text="Prestamos" />
                         <MenuItem fx:id="menuItem3" mnemonicParsing="false" text="Devoluciones" />
-                  <MenuItem fx:id="menuItem31" mnemonicParsing="false" text="Usuarios" />
-                  <MenuItem fx:id="menuItem311" mnemonicParsing="false" text="Libros" />
-                  <MenuItem fx:id="menuItem3111" mnemonicParsing="false" text="Reportes" />
+                        <MenuItem fx:id="menuItem31" mnemonicParsing="false" text="Usuarios" />
+                        <MenuItem fx:id="menuItem311" mnemonicParsing="false" text="Libros" />
+                        <MenuItem fx:id="menuItem3111" mnemonicParsing="false" text="Reportes" />
                         <MenuItem fx:id="menuItemS" mnemonicParsing="false" text="Salir" />
                     </items>
                 </Menu>

@@ -17,6 +17,9 @@ public class TESTCLIENTE {
         repo.create(cliente);
 
         // Leer usuario
+        // Eliminar usuario por DNI
+        repo.delete("12345678");
+        System.out.println("Lista después de eliminar: " + repo.listar());
         UsuarioCliente encontrado = repo.read("12345678");
         System.out.println("Encontrado: " + encontrado);
 
@@ -25,8 +28,5 @@ public class TESTCLIENTE {
         repo.update("12345678", cliente);
         System.out.println("Actualizado: " + repo.read("12345678"));
 
-        // Eliminar usuario por DNI
-        repo.delete("12345678");
-        System.out.println("Lista después de eliminar: " + repo.listar());
     }
 }
