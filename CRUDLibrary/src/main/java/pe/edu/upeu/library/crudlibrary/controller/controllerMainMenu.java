@@ -46,13 +46,13 @@ public class controllerMainMenu {
 
     class MenuItemListener {
         Map<String, String[]> menuconfig = Map.of(
-                "menuItem1", new String[]{"/FXML/main_principal.fxml", "Reg. Principal", "T"},
-                "menuItem2", new String[]{"/FXML/main_prestamos.fxml", "Prestamos", "T"},
-                "menuItem3", new String[]{"/FXML/main_devoluciones.fxml", "Devoluciones", "T"},
-                "menuItem4", new String[]{"/FXML/main_usuarios.fxml", "Usuarios", "T"},
-                "menuItem5", new String[]{"/FXML/main_libros.fxml", "Libros", "T"},
-                "menuItem6", new String[]{"/FXML/main_reportes.fxml", "Reportes", "T"},
-                "menuItemc", new String[]{"/FXML/login.fxml", "Salir", "S"} // Corregido aquí
+                "menuItem1", new String[]{"/fxml/main_principal.fxml", "Reg. Principal", "T"},
+                "menuItem2", new String[]{"/fxml/main_prestamos.fxml", "Prestamos", "T"},
+                "menuItem3", new String[]{"/fxml/main_devoluciones.fxml", "Devoluciones", "T"},
+                "menuItem4", new String[]{"/fxml/main_usuarios.fxml", "Usuarios", "T"},
+                "menuItem5", new String[]{"/fxml/main_libros.fxml", "Libros", "T"},
+                "menuItem6", new String[]{"/fxml/main_reportes.fxml", "Reportes", "T"},
+                "menuItemc", new String[]{"/fxml/login.fxml", "Salir", "S"} // Corregido aquí
         );
 
         public void handle(ActionEvent e) {

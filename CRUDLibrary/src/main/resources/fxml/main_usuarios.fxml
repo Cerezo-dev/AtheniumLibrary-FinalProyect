@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pe.edu.upeu.library.crudlibrary.controller.ControllerUsuarios">
+   <children>
+      <Label layoutX="14.0" layoutY="14.0" prefHeight="35.0" prefWidth="253.0" text="Registrar nuevo usuario">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="60.0" text="Nombres" />
+      <TextField fx:id="txtNombre" layoutX="14.0" layoutY="85.0" prefHeight="25.0" prefWidth="252.0" />
+      <TextField fx:id="txtApellidoP" layoutX="14.0" layoutY="188.0" prefHeight="25.0" prefWidth="252.0" />
+      <TextField fx:id="txtApellidoM" layoutX="14.0" layoutY="287.0" prefHeight="25.0" prefWidth="252.0" />
+      <TextField fx:id="txtDomicilio" layoutX="334.0" layoutY="85.0" prefHeight="25.0" prefWidth="252.0" />
+      <TextField fx:id="txtTelefono" layoutX="334.0" layoutY="169.0" prefHeight="25.0" prefWidth="252.0" />
+      <Label layoutX="14.0" layoutY="158.0" text="Apellido Paterno" />
+      <Label fx:id="txtApellidoMaterno" layoutX="14.0" layoutY="256.0" text="Apelido Materno" />
+      <Label layoutX="334.0" layoutY="60.0" text="Domicilio" />
+      <Label layoutX="336.0" layoutY="143.0" text="Telefono" />
+      <Button fx:id="btnRegistrar" layoutX="386.0" layoutY="272.0" mnemonicParsing="false" onAction="#registrar" prefHeight="55.0" prefWidth="149.0" text="Registrar">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <TextField fx:id="txtDni" layoutX="336.0" layoutY="231.0" />
+      <Label layoutX="334.0" layoutY="205.0" text="Dni" />
+      <TableView fx:id="tableUsuarios" layoutX="631.0" layoutY="35.0" prefHeight="310.0" prefWidth="238.0" />
+   </children>
+</AnchorPane>

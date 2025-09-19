@@ -11,20 +11,24 @@ import java.util.List;
 public class UsuariosServicioImp extends UsuariosRepository implements UsuariosServicioI {
 
     @Override
-    public void save(Usuarios usuario) {usuarios.add(usuario);
+    public void save(Usuarios usuario) {
+        usuarios.add(usuario);
     }
 
     @Override
-    public Usuarios update(Usuarios usuario, int index) {usuarios.set(index, usuario);
+    public Usuarios update(Usuarios usuario, int index) {
+        usuarios.set(index, usuario);
         return usuario;
     }
 
     @Override
-    public void delete(int index) {usuarios.remove(index);
+    public void delete(int index) {
+        usuarios.remove(index);
     }
 
     @Override
-    public Usuarios findById(int index) {return usuarios.get(index);
+    public Usuarios findById(int index) {
+        return usuarios.get(index);
     }
 
     @Override

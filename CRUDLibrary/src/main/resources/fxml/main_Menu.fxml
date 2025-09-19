@@ -12,17 +12,10 @@
                         <MenuItem fx:id="menuItem1" mnemonicParsing="false" text="Principal" />
                         <MenuItem fx:id="menuItem2" mnemonicParsing="false" text="Prestamos" />
                         <MenuItem fx:id="menuItem3" mnemonicParsing="false" text="Devoluciones" />
-<<<<<<< HEAD:CRUDLibrary/src/main/resources/gui/main_Menu.fxml
-                        <MenuItem fx:id="menuItem31" mnemonicParsing="false" text="Usuarios" />
-                        <MenuItem fx:id="menuItem311" mnemonicParsing="false" text="Libros" />
-                        <MenuItem fx:id="menuItem3111" mnemonicParsing="false" text="Reportes" />
-                        <MenuItem fx:id="menuItemS" mnemonicParsing="false" text="Salir" />
-=======
                         <MenuItem fx:id="menuItem4" mnemonicParsing="false" text="Usuarios" />
                         <MenuItem fx:id="menuItem5" mnemonicParsing="false" text="Libros" />
                         <MenuItem fx:id="menuItem6" mnemonicParsing="false" text="Reportes" />
                         <MenuItem fx:id="menuItemc" mnemonicParsing="false" text="Salir" />
->>>>>>> 093fb75be5b321fdb799a8c13a909bd051b89a1e:CRUDLibrary/src/main/resources/FXML/main_Menu.fxml
                     </items>
                 </Menu>
             </menus>
