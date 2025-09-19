@@ -1,0 +1,17 @@
+package pe.edu.upeu.library.crudlibrary.modelo;
+
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@AllArgsConstructor
+@NoArgsConstructor
+@Data
+public class UsuarioCliente extends Usuarios {
+
+    private String direccion;
+    private String ciudad;
+    private String historialPrestamos;
+
+}
