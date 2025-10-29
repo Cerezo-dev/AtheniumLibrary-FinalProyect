@@ -8,18 +8,16 @@ import jakarta.persistence.*;
 import lombok.Data;
 
 /**
- En la BD, los nombres serán "ESTUDIANTE", "DOCENTE", "BIBLIOTECARIO", "ADMINISTRADOR".
+    * Modelo de entidad para representar géneros de libros en la base de datos.
  */
 @Data
 @Entity
-@Table(name = "athenium_perfil")
-public class Perfil {
-
+@Table(name = "athenium_genero")
+public class Genero {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_perfil")
-    private Long idPerfil;
+    private Long id;
 
-    @Column(nullable = false, length = 50)
-    private String nombre; // Ej. "ESTUDIANTE", "DOCENTE", etc.
+    @Column(nullable = false, length = 100)
+    private String nombre; // "Ficción", "Ciencia", "Ingeniería de Software"
 }

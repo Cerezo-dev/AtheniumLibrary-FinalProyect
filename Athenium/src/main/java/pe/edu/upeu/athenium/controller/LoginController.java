@@ -26,7 +26,6 @@ import pe.edu.upeu.athenium.service.IUsuarioService;
 import java.io.IOException;
 
 @Controller
-//@Component
 public class LoginController {
 
     @Autowired
@@ -40,6 +39,50 @@ public class LoginController {
     @FXML
     Button btnIngresar;
 
+    /** ==== Métodos agregados para manejar alternancia entre Login y Registro ====*/
+
+    @FXML
+    private javafx.scene.layout.VBox loginPane;
+
+    @FXML
+    private javafx.scene.layout.VBox registerPane;
+
+    @FXML
+    private javafx.scene.control.Label lblStatus;
+
+    @FXML
+    private void showRegisterPane(ActionEvent event) {
+        if (loginPane != null && registerPane != null) {
+            loginPane.setVisible(false);
+            loginPane.setManaged(false);
+            registerPane.setVisible(true);
+            registerPane.setManaged(true);
+            if (lblStatus != null) lblStatus.setText("");
+        } else {
+            System.out.println("⚠️ Pane references are null; check FXML fx:id bindings.");
+        }
+    }
+
+    @FXML
+    private void showLoginPane(ActionEvent event) {
+        if (loginPane != null && registerPane != null) {
+            registerPane.setVisible(false);
+            registerPane.setManaged(false);
+            loginPane.setVisible(true);
+            loginPane.setManaged(true);
+            if (lblStatus != null) lblStatus.setText("");
+        } else {
+            System.out.println("⚠️ Pane references are null; check FXML fx:id bindings.");
+        }
+    }
+
+    @FXML
+    private void handleRegister(ActionEvent event) {
+        if (lblStatus != null) {
+            lblStatus.setText("✅ Registro simulado correctamente.");
+        }
+    }
+/**en pruebaaa */
     @FXML
     public void cerrar(ActionEvent event) {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -48,22 +91,26 @@ public class LoginController {
         System.exit(0);
     }
 
-
     @FXML
     public void login(ActionEvent event) throws IOException {
         try {
-            Usuario usu=us.loginUsuario(txtUsuario.getText(), new String(txtClave.getText()));
-            if (usu!=null) {
-                SessionManager.getInstance().setUserId(usu.getIdUsuario());
-                SessionManager.getInstance().setUserName(usu.getUser());
+            Usuario usu = us.loginUsuario(txtUsuario.getText(), txtClave.getText());
 
-                SessionManager.getInstance().setUserPerfil(usu.getIdPerfil().getNombre());
-                FXMLLoader loader = new  FXMLLoader(getClass().getResource("/view/maingui.fxml"));
+            if (usu != null) {
+                SessionManager.getInstance().setUserId(usu.getId());
+                SessionManager.getInstance().setUserName(usu.getEmail());
+
+                String perfilNombre = (usu.getPerfil() != null && usu.getPerfil().getNombre() != null)
+                        ? usu.getPerfil().getNombre()
+                        : "";
+                SessionManager.getInstance().setUserPerfil(perfilNombre);
+
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/mDashboard.fxml"));
                 loader.setControllerFactory(context::getBean);
                 Parent mainRoot = loader.load();
                 Screen screen = Screen.getPrimary();
                 Rectangle2D bounds = screen.getBounds();
-                Scene mainScene = new Scene(mainRoot,bounds.getWidth(), bounds.getHeight()-30);
+                Scene mainScene = new Scene(mainRoot, bounds.getWidth(), bounds.getHeight() - 30);
                 mainScene.getStylesheets().add(getClass().getResource("/css/styles.css").toExternalForm());
                 Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
                 stage.getIcons().add(new Image(getClass().getResource("/img/store.png").toExternalForm()));
@@ -77,17 +124,13 @@ public class LoginController {
                 stage.setHeight(bounds.getHeight());
                 stage.show();
             } else {
-                Stage stage = (Stage) ((Node)
-                        event.getSource()).getScene().getWindow();
-                double with=stage.getWidth()*2;
-                double h=stage.getHeight()/2;
-                System.out.println(with + " h:"+h);
+                Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                double with = stage.getWidth() * 2;
+                double h = stage.getHeight() / 2;
                 Toast.showToast(stage, "Credencial invalido!! intente nuevamente", 2000, with, h);
             }
-        }catch (Exception e){
+        } catch (Exception e) {
             System.out.println(e.getMessage());
         }
     }
-
-
 }

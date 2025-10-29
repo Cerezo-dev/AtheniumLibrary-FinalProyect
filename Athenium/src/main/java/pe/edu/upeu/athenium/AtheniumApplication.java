@@ -13,31 +13,35 @@ import org.springframework.context.ConfigurableApplicationContext;
 @SpringBootApplication
 public class AtheniumApplication extends Application {
 
-	private ConfigurableApplicationContext applicationContext;
-	private Parent root;
+    private ConfigurableApplicationContext applicationContext;
+    private Parent root;
 
 
-	public static void main(String[] args) {
-		//SpringApplication.run(SysVentasApplication.class, args);
-		launch(args);
-	}
+    public static void main(String[] args) {
+        //SpringApplication.run(SysVentasApplication.class, args);
+        launch(args);
+    }
 
-	@Override
-	public void init() throws Exception {
-		SpringApplicationBuilder builder = new SpringApplicationBuilder(AtheniumApplication.class);
-		builder.application().setWebApplicationType(WebApplicationType.NONE);
-		applicationContext=builder.run(getParameters().getRaw().toArray(new String[0]));
+    @Override
+    public void init() throws Exception {
+        SpringApplicationBuilder builder = new SpringApplicationBuilder(AtheniumApplication.class);
+        builder.application().setWebApplicationType(WebApplicationType.NONE);
+        applicationContext=builder.run(getParameters().getRaw().toArray(new String[0]));
 
-		FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/login.fxml"));
-		loader.setControllerFactory(applicationContext::getBean);
-		root = loader.load();
-	}
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/login.fxml"));
+        loader.setControllerFactory(applicationContext::getBean);
+        root = loader.load();
+    }
 
-	@Override
-	public void start(Stage stage) throws Exception {
-		Scene scene = new Scene(root);
-		stage.setScene(scene);
-		stage.setTitle("SysVentas SysCenterLife");
-		stage.show();
-	}
+    @Override
+    public void start(Stage stage) throws Exception {
+        Scene scene = new Scene(root);
+        // Cargar la hoja de estilos principal (styles.css)
+        scene.getStylesheets().add(getClass().getResource("/css/styles.css").toExternalForm());
+        stage.setScene(scene);
+
+        stage.setTitle("Athenium - EGBD");
+
+        stage.show();
+    }
 }

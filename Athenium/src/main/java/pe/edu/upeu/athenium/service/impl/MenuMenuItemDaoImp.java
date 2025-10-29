@@ -13,31 +13,46 @@ public class MenuMenuItemDaoImp implements IMenuMenuItemDao {
 
         List<MenuMenuItenTO> lista = new ArrayList<>();
 
-        lista.add(new MenuMenuItenTO("miprincipal", "/view/login.fxml", idioma.getProperty("menu.nombre.principal"), idioma.getProperty("menuitem.nombre.salir"),                "Salir", "S"));
-        lista.add(new MenuMenuItenTO("miproducto", "/view/main_producto.fxml", idioma.getProperty("menu.nombre.producto"),idioma.getProperty("menuitem.nombre.producto"), "Gestión Productos", "T"));
-        lista.add(new MenuMenuItenTO("micliente", "/view/main_cliene.fxml", "Venta", "Reg. Cliente", "Gestionar Cliente", "T"));
-        lista.add(new MenuMenuItenTO("miventa", "/view/main_venta.fxml", "Venta", "Reg.  Venta", "Gestionar Ventas", "T"));
-
+        lista.add(new MenuMenuItenTO("mDashboard", "/view/dashboard-view.fxml", "Principal", "Mi Dashboard", "Menu Principal", "T"));
+        lista.add(new MenuMenuItenTO("mCatalogo", "/view/catalogo-view.fxml", "Biblioteca", "Catálogo", "Catalogo de libros", "T"));
+        lista.add(new MenuMenuItenTO("mPrestamos", "/view/prestamos-view.fxml", "Biblioteca", "Gestionar Préstamos", "Gestion de prestamos", "T"));
+        lista.add(new MenuMenuItenTO("mUsuarios", "/view/usuarios-view.fxml", "Admin", "Gestionar Usuarios", "Menu de usuarios", "T"));
+        lista.add(new MenuMenuItenTO("mReportes", "/view/reportes-view.fxml", "Admin", "Reportes", "Reportes", "T"));
+        lista.add(new MenuMenuItenTO("miprincipal", "/view/login.fxml", idioma.getProperty("menu.nombre.principal"), idioma.getProperty("menuitem.nombre.salir"),"Salir", "S"));
 
         List<MenuMenuItenTO> accesoReal = new ArrayList<>();
 
         accesoReal.add(lista.get(0));
 
         switch (perfil) {
-            case "Administrador":
-                accesoReal.add(lista.get(2));
-                accesoReal.add(lista.get(3));
+            case "ESTUDIANTE":
+                accesoReal.add(lista.get(0)); // Dashboard
+                accesoReal.add(lista.get(1)); // Catálogo
+                accesoReal.add(lista.get(6)); // salir
                 break;
-            case "Root":
-                accesoReal = lista;
+
+            case "DOCENTE":
+                accesoReal.add(lista.get(0)); // Dashboard
+                accesoReal.add(lista.get(1)); // Catálogo
+                accesoReal.add(lista.get(6)); // salir
                 break;
-            case "Reporte":
-                accesoReal.add(lista.get(1));
-                accesoReal.add(lista.get(2));
+
+            case "BIBLIOTECARIO":
+                accesoReal.add(lista.get(1)); // Catálogo
+                accesoReal.add(lista.get(2)); // Gestionar Préstamos
+                accesoReal.add(lista.get(3)); // Gestionar Usuarios
+                accesoReal.add(lista.get(6)); // salir
                 break;
-            default:
-                throw new AssertionError();
+
+            case "ADMINISTRADOR":
+                accesoReal = lista; // Ve todo
+                break;
+
+            default: // Visitante o usuario sin rol
+                accesoReal.add(lista.get(1)); // Solo Catálogo
+                break;
         }
+
         return accesoReal;
     }
 

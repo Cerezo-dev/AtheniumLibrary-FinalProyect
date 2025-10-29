@@ -1,18 +1,18 @@
 spring.application.name=SysVentas
 
-#SQLite
+#SQlite
 spring.jpa.hibernate.ddl-auto=update
 spring.jpa.database-platform=org.hibernate.community.dialect.SQLiteDialect
 
 #Alternative for SQLite
 #spring.jpa.database-platform=org.hibernate.dialect.MariaDBDialect
-#Para el cifrado de contraseÃ±as:
+#Para el cifrado de contraseñas:
 #spring-boot-starter-security
 
-spring.datasource.url=jdbc:sqlite:./data/athenium.db
+spring.datasource.url=jdbc:sqlite:data/athenium.db
 spring.datasource.driver-class-name=org.sqlite.JDBC
 spring.jpa.show-sql=true
-spring.flyway.enabled=false
+spring.flyway.enabled=true
 spring.flyway.locations=classpath:db/migration
 
 logging.level.root=INFO

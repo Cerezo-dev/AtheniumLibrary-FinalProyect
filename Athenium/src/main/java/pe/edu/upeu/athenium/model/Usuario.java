@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package pe.edu.upeu.athenium.model;
 
 import jakarta.persistence.Column;
@@ -16,26 +12,42 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import jakarta.persistence.*;
+import lombok.Data;
 
-@Builder
-@NoArgsConstructor
-@AllArgsConstructor
+/**
+ * FASE 2: Re-Modelado
+ * Esta entidad reemplaza a 'Cliente.java' y a 'Usuario.java' del PDF.
+ * Es la entidad base para TODOS los actores (Estudiante, Docente, etc.).
+ * Su rol se define por la relación con 'Perfil'.
+ */
 @Data
 @Entity
-@Table(name = "upeu_usuario")
+@Table(name = "athenium_usuario")
 public class Usuario {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_usuario")
-    private Long idUsuario;
-    @Column(name = "user", nullable = false, unique = true, length = 20)
-    private String user;
-    @Column(name = "clave", nullable = false, length = 100)
-    private String clave;
-    @Column(name = "estado", nullable = false, length = 10)
-    private String estado;
-    @JoinColumn(name = "id_perfil", referencedColumnName = "id_perfil")
+    private Long id;
+
+    @Column(nullable = false, unique = true, length = 50)
+    private String email; // Usaremos email como 'user' para el login
+
+    @Column(nullable = false, length = 50)
+    private String nombre;
+
+    @Column(nullable = false, length = 50)
+    private String apellido;
+
+    @Column(nullable = false, length = 85)
+    private String password;
+
+    @Column(nullable = false, length = 20)
+    private String estado; // Ej. "ACTIVO", "BLOQUEADO" (RNF-2 Brute Force)
+
+    // ¡La clave de RBAC (RNF-2)!
+
     @ManyToOne(optional = false)
-    private Perfil idPerfil;
+    @JoinColumn(name = "id_perfil", referencedColumnName = "id_perfil")
+    private Perfil perfil;
 }

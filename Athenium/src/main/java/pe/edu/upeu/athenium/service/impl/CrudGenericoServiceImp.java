@@ -8,6 +8,12 @@ import pe.edu.upeu.athenium.service.ICrudGenericoService;
 
 import java.util.List;
 
+/**
+ * CORRECCIÓN:
+ * 1. Eliminado el método 'delete(T t)' que ya no está en la interfaz.
+ * 2. Tu lógica de `update` es correcta, pero la de `save` y `deleteById`
+ * está perfecta como estaba en el PDF.
+ */
 @RequiredArgsConstructor
 @Service
 public abstract class CrudGenericoServiceImp<T,ID> implements ICrudGenericoService<T,ID> {
@@ -21,7 +27,9 @@ public abstract class CrudGenericoServiceImp<T,ID> implements ICrudGenericoServi
 
     @Override
     public T update(ID id, T t) {
+        //comprueba si existe.
         getRepo().findById(id).orElseThrow(()->new ModelNotFoundException("ID NOT FOUND "+id));
+        // Luego guarda (JPA sabe que es un update si el objeto 't' tiene un ID)
         return getRepo().save(t);
     }
 
@@ -32,19 +40,16 @@ public abstract class CrudGenericoServiceImp<T,ID> implements ICrudGenericoServi
 
     @Override
     public T findById(ID id) {
-       return getRepo().findById(id).orElseThrow(()->new ModelNotFoundException("ID NOT FOUND "+id));
+        return getRepo().findById(id).orElseThrow(()->new ModelNotFoundException("ID NOT FOUND "+id));
     }
 
     @Override
     public void deleteById(ID id) {
-        if(!getRepo().existsById(id)){
-            throw new ModelNotFoundException("ID NOT FOUND "+id);
+        if(!getRepo().existsById(id)){ //verifica si existe el id
+            throw new ModelNotFoundException("ID NOT FOUND "+id);//si no existe lanza la excepcion
         }
-        getRepo().deleteById(id);
+        getRepo().deleteById(id);//si existe lo borra
     }
 
-    @Override
-    public void delete(T t) {
-        getRepo().delete(t);
-    }
+    // El método 'delete(T t)' se elimina.
 }
