@@ -5,7 +5,6 @@ import lombok.Data;
 import java.util.List;
 
 /**
-
  * Esta entidad representa el "título" (la idea abstracta del libro),
  * NO la copia física. No tiene "stock".
  * Un Libro puede tener muchos Ejemplares.
@@ -31,7 +30,7 @@ public class Libro {
     @Column(name = "anio_publicacion")
     private int anioPublicacion;
 
-    // Relación con 'Genero' (antes 'Categoria' [cite: 1280-1284])
+    // Relación con 'Genero' (antes 'Categoria' )
     @ManyToOne
     @JoinColumn(name = "id_genero", referencedColumnName = "id")
     private Genero genero;

@@ -9,6 +9,7 @@ import lombok.Data;
 
 /**
     * Modelo de entidad para representar géneros de libros en la base de datos.
+    * Este reemplaza 'categoria', de los requerimientos del excel (Creo)
  */
 @Data
 @Entity

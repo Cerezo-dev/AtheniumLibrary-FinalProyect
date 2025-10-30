@@ -17,7 +17,7 @@ public class Prestamo {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    // Relación con el Usuario que PIDE el libro (antes 'Cliente' [cite: 1460-1463])
+    // Relación con el Usuario que PIDE el libro (antes 'Cliente'
     @ManyToOne(optional = false)
     @JoinColumn(name = "id_usuario_prestado_a", referencedColumnName = "id")
     private Usuario usuario; // El Estudiante o Docente
@@ -27,10 +27,16 @@ public class Prestamo {
     @JoinColumn(name = "id_ejemplar", referencedColumnName = "id")
     private Ejemplar ejemplar;
 
-    // Relación con el Usuario que REGISTRA el préstamo (antes 'Usuario' en Venta [cite: 1464-1469])
+    // Relación con el Usuario que REGISTRA el préstamo (antes 'Usuario' en Venta
     @ManyToOne(optional = false)
     @JoinColumn(name = "id_usuario_bibliotecario", referencedColumnName = "id")
     private Usuario bibliotecario; // El que tiene rol "BIBLIOTECARIO"
+
+
+    /*
+    * A partir de este punto podria salir prestamo_Detalle siguiendo
+    * Lo de di 'divide y venceras'
+     */
 
     @Column(nullable = false)
     private LocalDateTime fechaPrestamo;

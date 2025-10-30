@@ -1,4 +1,6 @@
 package pe.edu.upeu.athenium.repository;
 
-public interface EjemplarRepository {
+import pe.edu.upeu.athenium.model.Ejemplar;
+
+public interface EjemplarRepository extends ICrudGenericoRepository<Ejemplar,Long> {
 }

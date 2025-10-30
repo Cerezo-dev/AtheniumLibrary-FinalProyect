@@ -4,7 +4,12 @@ import pe.edu.upeu.athenium.dto.ModeloDataAutocomplet;
 import pe.edu.upeu.athenium.model.Libro;
 
 import java.util.List;
-
+/**
+public interface ILibroService extends ICrudGenericoService<Libro, Long> {
+    List<ModeloDataAutocomplet> listAutoCompletProducto(String nombre);
+    List<ModeloDataAutocomplet> listAutoCompletProducto();
+} */
+// Temporarl (Creo)
 public interface ILibroService {
     Libro save(Libro libro);
     List<Libro> findAll();
@@ -13,4 +18,6 @@ public interface ILibroService {
     Libro findById(Long id);
     List<ModeloDataAutocomplet> listAutoCompletProducto(String nombre);
     public List<ModeloDataAutocomplet> listAutoCompletProducto();
+
+
 }
