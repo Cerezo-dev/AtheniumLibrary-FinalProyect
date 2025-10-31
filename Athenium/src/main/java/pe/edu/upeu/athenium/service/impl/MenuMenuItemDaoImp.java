@@ -28,32 +28,35 @@ public class MenuMenuItemDaoImp implements IMenuMenuItemDao {
             case "ESTUDIANTE":
                 accesoReal.add(lista.get(0)); // Dashboard
                 accesoReal.add(lista.get(1)); // Catálogo
-                accesoReal.add(lista.get(6)); // salir
+                accesoReal.add(lista.get(5)); // Salir (Índice 5)
                 break;
 
             case "DOCENTE":
                 accesoReal.add(lista.get(0)); // Dashboard
                 accesoReal.add(lista.get(1)); // Catálogo
-                accesoReal.add(lista.get(6)); // salir
+                accesoReal.add(lista.get(5)); // Salir (Índice 5)
                 break;
 
             case "BIBLIOTECARIO":
+                accesoReal.add(lista.get(0)); // Dashboard (Lo necesita para iniciar)
                 accesoReal.add(lista.get(1)); // Catálogo
                 accesoReal.add(lista.get(2)); // Gestionar Préstamos
                 accesoReal.add(lista.get(3)); // Gestionar Usuarios
-                accesoReal.add(lista.get(6)); // salir
+                accesoReal.add(lista.get(5)); // Salir (Índice 5)
                 break;
 
             case "ADMINISTRADOR":
-                accesoReal = lista; // Ve todo
+                accesoReal = lista; // Ve todo (los 6 elementos)
                 break;
 
             default: // Visitante o usuario sin rol
                 accesoReal.add(lista.get(1)); // Solo Catálogo
+                accesoReal.add(lista.get(5)); // Salir (Índice 5)
                 break;
         }
 
         return accesoReal;
+
     }
 
     @Override

@@ -66,12 +66,26 @@ public class DashboardController {
 
     @FXML
     public void initialize() {
-        Platform.runLater(() -> {
-            stage = (Stage) tabPaneFx.getScene().getWindow();
-            System.out.println("El título del stage es: " + stage.getTitle());
+        // Asegura obtener el Stage solo cuando la Scene esté disponible
+        tabPaneFx.sceneProperty().addListener((obs, oldScene, newScene) -> {
+            if (newScene != null) {
+                Platform.runLater(() -> {
+                    stage = (Stage) newScene.getWindow();
+                    System.out.println("El título del stage es: " + (stage != null ? stage.getTitle() : "Stage nulo"));
+                });
+            }
         });
+
+        // Caso en que la Scene ya esté presente (ejecución temprana)
+        if (tabPaneFx.getScene() != null) {
+            Platform.runLater(() -> {
+                stage = (Stage) tabPaneFx.getScene().getWindow();
+                System.out.println("El título del stage es: " + (stage != null ? stage.getTitle() : "Stage nulo"));
+            });
+        }
+
         graficarMenus();
-        // Layout principal
+        // Asegurarse de no usar tabPaneFx antes de que esté en la escena, pero centrarlo aquí está bien
         bp.setCenter(tabPaneFx);
     }
 
@@ -130,7 +144,7 @@ public class DashboardController {
                 stage.sizeToScene();
                 stage.setScene(scene);
                 stage.centerOnScreen();
-                stage.setTitle("SysVentas SysCenterLife");
+                stage.setTitle("Athenium ");
                 stage.setResizable(false);
                 stage.show();
             }catch (Exception ex){

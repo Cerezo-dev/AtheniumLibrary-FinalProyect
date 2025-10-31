@@ -16,12 +16,17 @@ import javafx.stage.Screen;
 import javafx.stage.Stage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Controller;
 import pe.edu.upeu.athenium.components.StageManager;
 import pe.edu.upeu.athenium.components.Toast;
 import pe.edu.upeu.athenium.dto.SessionManager;
+import pe.edu.upeu.athenium.model.Perfil;
 import pe.edu.upeu.athenium.model.Usuario;
+import pe.edu.upeu.athenium.repository.PerfilRepository;
 import pe.edu.upeu.athenium.service.IUsuarioService;
+import javafx.scene.control.Label;
+import javafx.scene.layout.VBox;
 
 import java.io.IOException;
 
@@ -30,71 +35,122 @@ public class LoginController {
 
     @Autowired
     private ApplicationContext context;
+
     @Autowired
     IUsuarioService us;
+
+    //-----------------------------------
+    @Autowired
+    PerfilRepository perfilRepository; // Inyección de dependecia del repositorio necesario para registrar usuarios
+
+
+    // para lofin ----------
     @FXML
-    TextField txtUsuario;
+    TextField txtEmail; //Renombrado de txtUsuario a txtEmail para mayor claridad
     @FXML
     PasswordField txtClave;
     @FXML
     Button btnIngresar;
+    @FXML
+    private VBox loginPane;
+    @FXML
+    private Label lblStatus; // Etiqueta para mostrar mensajes de estado
 
-    /** ==== Métodos agregados para manejar alternancia entre Login y Registro ====*/
+    // ahora para register -----
+    @FXML
+    private VBox registerPane;
 
     @FXML
-    private javafx.scene.layout.VBox loginPane;
+    private TextField txtNombreReg, txtApellidoReg, txtEmailReg;
 
     @FXML
-    private javafx.scene.layout.VBox registerPane;
-
-    @FXML
-    private javafx.scene.control.Label lblStatus;
+    private PasswordField txtClaveReg, txtConfirmClaveReg;
 
     @FXML
     private void showRegisterPane(ActionEvent event) {
-        if (loginPane != null && registerPane != null) {
+        //if (loginPane != null && registerPane != null) {
             loginPane.setVisible(false);
             loginPane.setManaged(false);
             registerPane.setVisible(true);
             registerPane.setManaged(true);
-            if (lblStatus != null) lblStatus.setText("");
-        } else {
-            System.out.println("⚠️ Pane references are null; check FXML fx:id bindings.");
-        }
+            lblStatus.setText("");
+            lblStatus.setStyle("-fx-background-color: #f0f0f0;");// Restablecer el estilo predeterminado
+            //if (lblStatus != null) lblStatus.setText("");
+            //test->
+        //} else {
+        //    System.out.println("⚠️ Pane references are null; check FXML fx:id bindings.");
+        //}
     }
 
     @FXML
     private void showLoginPane(ActionEvent event) {
-        if (loginPane != null && registerPane != null) {
+        //if (loginPane != null && registerPane != null) {
             registerPane.setVisible(false);
             registerPane.setManaged(false);
             loginPane.setVisible(true);
             loginPane.setManaged(true);
-            if (lblStatus != null) lblStatus.setText("");
-        } else {
-            System.out.println("⚠️ Pane references are null; check FXML fx:id bindings.");
-        }
+            lblStatus.setText("");
+            lblStatus.setStyle("-fx-background-color: #f0f0f0;"); // Restablecer el estilo predeterminado
+            //if (lblStatus != null) lblStatus.setText("");
+        //} else {
+            //System.out.println("⚠️ Pane references are null; check FXML fx:id bindings.");
+        //}
     }
 
     @FXML
     private void handleRegister(ActionEvent event) {
-        if (lblStatus != null) {
-            lblStatus.setText("✅ Registro simulado correctamente.");
+        String nombre = txtNombreReg.getText();
+        String apellido = txtApellidoReg.getText();
+        String email = txtEmailReg.getText();
+        String clave = txtClaveReg.getText();
+        String confirmClave = txtConfirmClaveReg.getText();
+
+        if (nombre.isEmpty() || apellido.isEmpty() || email.isEmpty() || clave.isEmpty()) {
+            setStatusMessage("Por favor, complete todos los campos.", true);
+            return;
+        }
+
+        if (!clave.equals(confirmClave)) {
+            setStatusMessage("Las contraseñas no coinciden.", true);
+            return;
+        }
+
+        try {
+            // 3. Buscar el perfil por defecto (Asumimos que existe un perfil "ESTUDIANTE")
+            // Esto es crucial porque tu entidad Usuario tiene perfil como NO OPCIONAL.
+            Perfil perfilDefecto = perfilRepository.findByNombre("ESTUDIANTE");
+            if (perfilDefecto == null) {
+                setStatusMessage("Error de configuración: Perfil 'ESTUDIANTE' no encontrado.", true);
+                return;
+            }
+
+            Usuario nuevoUsuario = new Usuario();
+            nuevoUsuario.setNombre(nombre);
+            nuevoUsuario.setApellido(apellido);
+            nuevoUsuario.setEmail(email);
+            nuevoUsuario.setPassword(clave); // La clave será encriptada en el servicio
+            nuevoUsuario.setEstado("ACTIVO");
+            nuevoUsuario.setPerfil(perfilDefecto); // Asignar el perfil por defecto
+
+            // Guardar el nuevo usuario
+            us.save(nuevoUsuario);
+
+            setStatusMessage("Registro exitoso. Ahora puede iniciar sesión.", false);
+            limpiarCamposRegistro();
+            showLoginPane(null); // Volver al pane de login
+        } catch (DataIntegrityViolationException e) {
+            setStatusMessage("El email ya está registrado.", true);
+        } catch (Exception e) {
+            setStatusMessage("Error inesperado: " + e.getMessage(), true);
+            e.printStackTrace();
         }
     }
-/**en pruebaaa */
-    @FXML
-    public void cerrar(ActionEvent event) {
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        stage.close();
-        Platform.exit();
-        System.exit(0);
-    }
+
 
     @FXML
     public void login(ActionEvent event) throws IOException {
         try {
-            Usuario usu = us.loginUsuario(txtUsuario.getText(), txtClave.getText());
+            Usuario usu = us.loginUsuario(txtEmail.getText(), txtClave.getText());
 
             if (usu != null) {
                 SessionManager.getInstance().setUserId(usu.getId());
@@ -115,7 +171,7 @@ public class LoginController {
                 Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
                 stage.getIcons().add(new Image(getClass().getResource("/img/store.png").toExternalForm()));
                 stage.setScene(mainScene);
-                stage.setTitle("SysVentas SysCenterLife");
+                stage.setTitle("Athenium Athenium - Bienvenido " + usu.getNombre() + " " + usu.getApellido());
                 stage.setX(bounds.getMinX());
                 stage.setY(bounds.getMinY());
                 stage.setResizable(true);
@@ -132,5 +188,34 @@ public class LoginController {
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
+    }
+
+    @FXML
+    public void cerrar(ActionEvent event) {
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.close();
+        Platform.exit();
+        System.exit(0);
+    }
+
+    //Metodo para mostrar mensajes de estado
+    //Complementos
+    private void setStatusMessage(String message, boolean isError) {
+        if (lblStatus != null) {
+            lblStatus.setText(message);
+            if (isError) {
+                lblStatus.setStyle("-fx-text-fill: #e80808;"); // Rojo para error
+            } else {
+                lblStatus.setStyle("-fx-text-fill: #44ff1f;"); // Verde para éxito
+            }
+        }
+    }
+    //Metodo para limpiar campos despues de registro exitoso
+    private void limpiarCamposRegistro() {
+        txtNombreReg.clear();
+        txtApellidoReg.clear();
+        txtEmailReg.clear();
+        txtClaveReg.clear();
+        txtConfirmClaveReg.clear();
     }
 }
