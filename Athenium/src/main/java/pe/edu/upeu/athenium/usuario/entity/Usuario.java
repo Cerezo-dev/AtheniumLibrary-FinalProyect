@@ -13,7 +13,7 @@ import pe.edu.upeu.athenium.perfil.entity.Perfil;
 
 
 /**
- * Esta entidad reemplaza a 'Cliente.java' y a 'Usuario.java' del PDF.
+ * Esta entidad reemplaza a 'Cliente.java' y a 'Usuario.java' anterior.
  * Es la entidad base para TODOS los actores (Estudiante, Docente, etc.).
  * Su rol se define por la relación con 'Perfil'.
  * Implementa RBAC (Control de Acceso Basado en Roles) mediante la asociación con 'Perfil'.

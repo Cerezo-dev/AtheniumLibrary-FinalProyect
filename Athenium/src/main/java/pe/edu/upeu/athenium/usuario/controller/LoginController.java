@@ -45,10 +45,7 @@ public class LoginController {
     @FXML private PasswordField txtClaveReg, txtConfirmClaveReg;
     @FXML private Label lblStatusReg; // Nuevo Label para mensajes en Registro
 
-    //---------------------------------------------------------
-    //  MÉTODOS DE REDIRECCIÓN DE ESCENA (Separación Visual)
-    //---------------------------------------------------------
-
+    // metodo para redireccionar entre escenas
     @FXML
     private void redirectToRegister(ActionEvent event) {
         redirectToScene("/view/pMenus/usr-authAccess/register.fxml", event);
@@ -59,6 +56,7 @@ public class LoginController {
         redirectToScene("/view/pMenus/usr-authAccess/login.fxml", event);
     }
 
+    // Método genérico para redirigir entre escenas
     private void redirectToScene(String fxmlPath, ActionEvent event) {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(fxmlPath));
@@ -84,12 +82,13 @@ public class LoginController {
     }
 
 
-    //---------------------------------------------------------
-    //  LÓGICA DE REGISTRO
-    //---------------------------------------------------------
+
+// Dentro de pe.edu.upeu.athenium.usuario.controller.LoginController.java
 
     @FXML
     private void handleRegister(ActionEvent event) {
+
+        // Recuperar datos de los campos de texto
         String nombre = txtNombreReg.getText();
         String apellido = txtApellidoReg.getText();
         String email = txtEmailReg.getText();
@@ -106,30 +105,20 @@ public class LoginController {
         }
 
         try {
-            Perfil perfilDefecto = perfilRepository.findByNombre("ESTUDIANTE");
-            if (perfilDefecto == null) {
-                setStatusMessageReg("Error de configuración: Perfil 'ESTUDIANTE' no encontrado.", true);
-                return;
-            }
-
-            Usuario nuevoUsuario = new Usuario();
-            nuevoUsuario.setNombre(nombre);
-            nuevoUsuario.setApellido(apellido);
-            nuevoUsuario.setEmail(email);
-            nuevoUsuario.setPassword(clave);
-            nuevoUsuario.setEstado("ACTIVO");
-            nuevoUsuario.setPerfil(perfilDefecto);
-
-            us.save(nuevoUsuario);
+            // Lógica de Negocio delegada al Service
+            Usuario nuevoUsuario = us.registrarNuevoUsuario(nombre, apellido, email, clave);
 
             setStatusMessageReg("Registro exitoso. Redirigiendo a Login.", false);
             limpiarCamposRegistro();
 
-            // Redirigir automáticamente a Login después de un breve momento
             Platform.runLater(() -> redirectToLogin(event));
 
         } catch (DataIntegrityViolationException e) {
+            // La DataIntegrityViolationException (por email duplicado) es manejada aquí (en el Controller)
             setStatusMessageReg("El email ya está registrado.", true);
+        } catch (IllegalStateException e) {
+            // Manejo del error de configuración (Perfil no encontrado)
+            setStatusMessageReg("Error de configuración: " + e.getMessage(), true);
         } catch (Exception e) {
             setStatusMessageReg("Error inesperado: " + e.getMessage(), true);
             e.printStackTrace();
