@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+
+<?import javafx.scene.layout.Region?>
+<VBox prefHeight="200.0" prefWidth="250.0" spacing="5.0" styleClass="result-card-disponible">
+    <children>
+        <Label text="Cálculo Diferencial" styleClass="card-title" />
+        <Label text="James Stewart (2018)" styleClass="card-subtitle" />
+        <Label text="Ubicación: Piso 3, Estante A-12" styleClass="card-location" />
+
+        <HBox spacing="5.0" alignment="CENTER_LEFT">
+            <Label text="En estante" styleClass="status-badge-verde" />
+        </HBox>
+
+        <Region VBox.vgrow="ALWAYS" />
+
+        <Button text="Reservar" styleClass="primary-button-small" />
+    </children>
+    <padding>
+        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+    </padding>
+</VBox>

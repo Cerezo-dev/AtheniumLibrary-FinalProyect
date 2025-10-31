@@ -1,26 +1,26 @@
 package pe.edu.upeu.athenium.controller;
 
 import javafx.application.Platform;
-import javafx.event.ActionEvent;
-import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.scene.control.*;
+import javafx.scene.control.TabPane;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Controller;
+import pe.edu.upeu.athenium.components.StageManager;
+import pe.edu.upeu.athenium.components.Toast;
 import pe.edu.upeu.athenium.dto.MenuMenuItenTO;
 import pe.edu.upeu.athenium.dto.SessionManager;
 import pe.edu.upeu.athenium.service.IMenuMenuItemDao;
+import pe.edu.upeu.athenium.service.NavigationService;
 import pe.edu.upeu.athenium.utils.UtilsX;
 
 import java.io.IOException;
 import java.util.List;
-import java.util.Map;
 import java.util.Properties;
 import java.util.prefs.Preferences;
 
@@ -29,6 +29,8 @@ public class DashboardController {
 
     @Autowired
     private ApplicationContext context;
+    @Autowired
+    private NavigationService navigationService;
     Preferences userPrefs = Preferences.userRoot();
     UtilsX util = new UtilsX();
     Properties myresources = new Properties();
@@ -39,143 +41,140 @@ public class DashboardController {
     List<MenuMenuItenTO> lista;
     @FXML
     private BorderPane bp;
-    @FXML
-    private MenuBar menuBarFx;
-    private Parent parent;
     Stage stage;
 
+    // New sidebar icon fx:ids
     @FXML
-    private Menu menuEstilo=new Menu("Cambiar Estilo");
-    ComboBox<String> comboBox = new ComboBox<>(
-            javafx.collections.FXCollections.observableArrayList(
-                    "Estilo por Defecto",
-                    "Estilo Oscuro",
-                    "Estilo Azul",
-                    "Estilo Verde",
-                    "Estilo Rosado"
-            ) );
-
-    CustomMenuItem customItem = new CustomMenuItem(comboBox);
-    private Menu menuIdioma=new Menu("Idioma");
-    ComboBox<String> comboBoxIdioma = new ComboBox<>(
-            javafx.collections.FXCollections.observableArrayList(
-                    "Español",
-                    "Ingles", "Frances"
-            ) );
-    CustomMenuItem customItemIdioma = new CustomMenuItem(comboBoxIdioma);
+    private javafx.scene.Node iconBars;
+    @FXML
+    private javafx.scene.Node iconHome;
+    @FXML
+    private javafx.scene.Node iconAnalytics;
+    @FXML
+    private javafx.scene.Node iconGallery;
+    @FXML
+    private javafx.scene.Node iconSettings;
+    @FXML
+    private javafx.scene.Node iconAdd;
 
     @FXML
     public void initialize() {
-        // Asegura obtener el Stage solo cuando la Scene esté disponible
-        tabPaneFx.sceneProperty().addListener((obs, oldScene, newScene) -> {
-            if (newScene != null) {
+        try {
+            System.out.println("[Dashboard] initialize() invoked");
+            // Asegura obtener el Stage solo cuando la Scene esté disponible
+            tabPaneFx.sceneProperty().addListener((obs, oldScene, newScene) -> {
+                if (newScene != null) {
+                    Platform.runLater(() -> {
+                        stage = (Stage) newScene.getWindow();
+                        StageManager.setPrimaryStage(stage);
+                        System.out.println("[Dashboard] El título del stage es: " + (stage != null ? stage.getTitle() : "Stage nulo"));
+                    });
+                }
+            });
+
+            // Caso en que la Scene ya esté presente (ejecución temprana)
+            if (tabPaneFx.getScene() != null) {
                 Platform.runLater(() -> {
-                    stage = (Stage) newScene.getWindow();
-                    System.out.println("El título del stage es: " + (stage != null ? stage.getTitle() : "Stage nulo"));
+                    stage = (Stage) tabPaneFx.getScene().getWindow();
+                    StageManager.setPrimaryStage(stage);
+                    System.out.println("[Dashboard] El título del stage es: " + (stage != null ? stage.getTitle() : "Stage nulo"));
                 });
             }
-        });
 
-        // Caso en que la Scene ya esté presente (ejecución temprana)
-        if (tabPaneFx.getScene() != null) {
-            Platform.runLater(() -> {
-                stage = (Stage) tabPaneFx.getScene().getWindow();
-                System.out.println("El título del stage es: " + (stage != null ? stage.getTitle() : "Stage nulo"));
-            });
-        }
-
-        graficarMenus();
-        // Asegurarse de no usar tabPaneFx antes de que esté en la escena, pero centrarlo aquí está bien
-        bp.setCenter(tabPaneFx);
-    }
-
-
-    class MenuListener{
-        public void menuSelected(Event e){
-            if (((Menu) e.getSource()).getId().equals("mmiver1")) {
-                System.out.println("llego help");
+            // Register navigation callback
+            if (navigationService != null) {
+                navigationService.registerNavigateCallback((view, data) -> {
+                    Platform.runLater(() -> {
+                        System.out.println("[Dashboard] navigate request: " + view + " data=" + data);
+                        switch (String.valueOf(view)) {
+                            case "home": abrirPaginaEnContenido("/view/mHome.fxml"); break;
+                            case "book_detail": {
+                                try {
+                                    System.out.println("[Dashboard] Cargando book_detail FXML");
+                                    java.net.URL res = getClass().getResource("/view/page_book_detail.fxml");
+                                    System.out.println("[Dashboard] resource for page_book_detail: " + res);
+                                    if (res == null) {
+                                        System.out.println("[Dashboard] ERROR: resource /view/page_book_detail.fxml not found");
+                                        return;
+                                    }
+                                    FXMLLoader loader = new FXMLLoader(res);
+                                    if (context != null) loader.setControllerFactory(context::getBean); else System.out.println("[Dashboard] ADVERTENCIA: ApplicationContext es null; cargando controlador sin inyección Spring");
+                                    Parent content = loader.load();
+                                    // set id in controller if provided
+                                    Object ctrl = loader.getController();
+                                    if (ctrl != null && data != null) {
+                                        Long idLong = null;
+                                        if (data instanceof Integer) idLong = ((Integer) data).longValue();
+                                        else if (data instanceof Long) idLong = (Long) data;
+                                        else if (data instanceof String) {
+                                            try { idLong = Long.parseLong((String) data); } catch (Exception ignored) {}
+                                        }
+                                        if (idLong != null) {
+                                            try {
+                                                // Try Long method first
+                                                ctrl.getClass().getMethod("setBookId", Long.class).invoke(ctrl, idLong);
+                                            } catch (NoSuchMethodException nsme) {
+                                                try { ctrl.getClass().getMethod("setBookId", int.class).invoke(ctrl, idLong.intValue()); } catch (Exception ex) { ex.printStackTrace(); }
+                                            } catch (Exception ex) { ex.printStackTrace(); }
+                                        }
+                                    }
+                                    if (bp != null) bp.setCenter(content); else System.out.println("[Dashboard] ERROR: bp (BorderPane) es null; no se puede setCenter");
+                                } catch (IOException ex) {
+                                    System.out.println("[Dashboard] Error loading book_detail: " + ex);
+                                    ex.printStackTrace();
+                                }
+                                break;
+                            }
+                            case "dashboard": abrirPaginaEnContenido("/view/mHome.fxml"); break;
+                            case "admin": abrirPaginaEnContenido("/view/page_add.fxml"); break;
+                            default: abrirPaginaEnContenido("/view/mHome.fxml"); break;
+                        }
+                    });
+                });
+            } else {
+                System.out.println("[Dashboard] ADVERTENCIA: navigationService es null; no se registrará callback de navegación.");
             }
-        }
-    }
 
-    class MenuItemListener{
+            // No construimos más un MenuBar con MenuItems: navegación solo por sidebar
+            graficarMenus();
+            // Asegurarse de no usar tabPaneFx antes de que esté en la escena, pero centrarlo aquí está bien
+            bp.setCenter(tabPaneFx);
 
-        Map<String, String[]> menuConfig;
-        MenuItemListener(){
-            menuConfig = mmiDao.accesosAutorizados(lista);
-        }
-
-        public void handle(ActionEvent e){
-            String id = ((MenuItem) e.getSource()).getId();
-            System.out.println("Menu seleccionado: " + id);
-            if (menuConfig.containsKey(id)) {
-                String[] cfg = menuConfig.get(id);
-                if(cfg[2].equals("S") ){
-                    redireccionar(cfg[0]);
-                }else {
-                    abrirTabConFXML(cfg[0], cfg[1]);
-                }
-            }
-        }
-        private void abrirTabConFXML(String fxmlPath, String tituloTab) {
-            try {
-                FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlPath));
-                loader.setControllerFactory(context::getBean); // Inyección con Spring
-                Parent root = loader.load();
-                ScrollPane scrollPane = new ScrollPane(root);
-                scrollPane.setFitToWidth(true);
-                scrollPane.setFitToHeight(true);
-                Tab newTab = new Tab(tituloTab, scrollPane);
-                tabPaneFx.getTabs().clear(); // si quieres siempre limpiar
-                tabPaneFx.getTabs().add(newTab);
-            } catch (IOException e) {
-                throw new RuntimeException("Error al cargar FXML: " + fxmlPath, e);
-            }
-        }
-
-        private void redireccionar(String fxmlPath){
-            tabPaneFx.getTabs().clear();
-            try {
-                FXMLLoader fxmlLoader = new
-                        FXMLLoader(getClass().getResource(fxmlPath));
-                fxmlLoader.setControllerFactory(context::getBean);
-                parent= fxmlLoader.load();
-                Scene scene = new Scene(parent);
-                stage.sizeToScene();
-                stage.setScene(scene);
-                stage.centerOnScreen();
-                stage.setTitle("Athenium ");
-                stage.setResizable(false);
-                stage.show();
-            }catch (Exception ex){
-                throw new RuntimeException(ex);
-            }
+            // Abrir la página inicial en el centro
+            abrirPaginaEnContenido("/view/mHome.fxml");
+        } catch (Exception e) {
+            System.out.println("[Dashboard] Exception in initialize: " + e);
+            e.printStackTrace();
         }
     }
 
+    // handlers for sidebar icons
+    public void onIconHomeClicked(MouseEvent e) {
+        abrirPaginaEnContenido("/view/mHome.fxml");
+    }
+    public void onIconAnalyticsClicked(MouseEvent e) {
+        abrirPaginaEnContenido("/view/page_analytics.fxml");
+    }
+    public void onIconGalleryClicked(MouseEvent e) {
+        abrirPaginaEnContenido("/view/page_gallery.fxml");
+    }
+    public void onIconSettingsClicked(MouseEvent e) {
+        abrirPaginaEnContenido("/view/page_settings.fxml");
+    }
+    public void onIconAddClicked(MouseEvent e) {
+        abrirPaginaEnContenido("/view/page_add.fxml");
+    }
 
-    @FXML
-    private void cambiarEstilo() {
-        String estiloSeleccionado =
-                comboBox.getSelectionModel().getSelectedItem();
-        Scene escena = bp.getScene();
-        escena.getStylesheets().clear();
-        switch (estiloSeleccionado) {
-            case "Estilo Oscuro":
-                escena.getStylesheets().add(getClass().getResource("/css/estilo-oscuro.css").toExternalForm());
-                break;
-            case "Estilo Azul":
-                escena.getStylesheets().add(getClass().getResource("/css/estilo-azul.css").toExternalForm());
-                break;
-            case "Estilo Verde":
-                escena.getStylesheets().add(getClass().getResource("/css/estilo-verde.css").toExternalForm());
-                break;
-            case "Estilo Rosado":
-                escena.getStylesheets().add(getClass().getResource("/css/estilo-rosado.css").toExternalForm());
-                break;
-            default: break;
+    // helper para mostrar notificaciones usando Toast
+    public void showNotification(String message, int durationMillis) {
+        Stage st = StageManager.getPrimaryStage();
+        if (st != null) {
+            Toast.showToast(st, message, durationMillis, st.getWidth() / 2, st.getHeight() / 2);
+        } else {
+            System.out.println("NOTIF: " + message);
         }
     }
+
 
     public int[] contarMenuMunuItem(List<MenuMenuItenTO> data) {
         int menui = 0, menuitem = 0;
@@ -193,75 +192,50 @@ public class DashboardController {
     }
 
     private List<MenuMenuItenTO> listaAccesos() {
+        if (mmiDao == null) {
+            System.out.println("[Dashboard] listaAccesos: mmiDao es null, devolviendo lista vacía");
+            return java.util.Collections.emptyList();
+        }
         myresources = util.detectLanguage(userPrefs.get("IDIOMAX", "es"));
         return mmiDao.listaAccesos(SessionManager.getInstance().getUserPerfil(), myresources);
     }
 
     private void graficarMenus() {
-        lista = listaAccesos();
-        int[] mmi = contarMenuMunuItem(lista);
-        Menu[] menu = new Menu[mmi[0]];
-        MenuItem[] menuItem = new MenuItem[mmi[1]];
-        menuBarFx = new MenuBar();
-        MenuItemListener d = new MenuItemListener();
-        MenuListener m = new MenuListener();
-        String menuN = "";
-        int menui = 0, menuitem = 0;
-        char conti = 'N';
-        for (MenuMenuItenTO mmix : lista) {
-            if (!mmix.getMenunombre().equals(menuN)) {
-                menu[menui] = new Menu(mmix.getMenunombre());
-                menu[menui].setId("m" + mmix.getIdNombreObj());
-                menu[menui].setOnShowing(m::menuSelected);
-                if (!mmix.getMenuitemnombre().equals("")) {
-                    menuItem[menuitem] = new MenuItem(mmix.getMenuitemnombre());
-                    menuItem[menuitem].setId("mi" + mmix.getIdNombreObj());
-                    menuItem[menuitem].setOnAction(d::handle);
-                    menu[menui].getItems().add(menuItem[menuitem]);
-                    menuitem++;
-                }
-                menuBarFx.getMenus().add(menu[menui]);
-                menuN = mmix.getMenunombre();
-                conti = 'N';
-                menui++;
-            } else {
-                conti = 'S';
-            }
-            if (!mmix.getMenuitemnombre().equals("") &&
-                    mmix.getMenunombre().equals(menuN) && conti == 'S') {
-                menuItem[menuitem] = new MenuItem(mmix.getMenuitemnombre());
-                menuItem[menuitem].setId("mi" + mmix.getIdNombreObj());
-                menuItem[menuitem].setOnAction(d::handle);
-                menu[menui - 1].getItems().add(menuItem[menuitem]);
-                menuitem++;
-            }
+        // Evitar ejecutar lógica que requiere beans inyectados si no están presentes
+        if (mmiDao == null) {
+            System.out.println("[Dashboard] graficarMenus: mmiDao es null, omitiendo construcción de menús");
+            return;
         }
-        comboBox.setOnAction(e -> cambiarEstilo());
-        customItem.setHideOnClick(false);
-        menuEstilo.getItems().clear();
-        menuEstilo.getItems().add(customItem);
-        menuBarFx.getMenus().addAll(menuEstilo);
-        comboBoxIdioma.setOnAction(e -> cambiarIdioma());
-        customItemIdioma.setHideOnClick(false);
-        menuIdioma.getItems().clear();
-        menuIdioma.getItems().add(customItemIdioma);
-        menuBarFx.getMenus().addAll(menuIdioma);
-        bp.setTop(menuBarFx);
+        // Solo obtenemos la lista si necesitas control interno, pero no creamos MenuBar
+        lista = listaAccesos();
+        // Si quieres, puedes usar `lista` para mostrar badges o permisos, pero la navegación
+        // principal ahora proviene exclusivamente de los icons del sidebar.
+        System.out.println("Menus cargados (no renderizados): " + (lista != null ? lista.size() : 0));
+        // Asegurar que no haya un MenuBar en la parte superior
+        if (bp != null) bp.setTop(null);
     }
 
-    @FXML
-    private void cambiarIdioma() {
-        String idiomaSeleccionado =
-                comboBoxIdioma.getSelectionModel().getSelectedItem();
-        switch (idiomaSeleccionado) {
-            case "Español": userPrefs.put("IDIOMAX", "es"); break;
-            case "Ingles": userPrefs.put("IDIOMAX", "en"); break;
-            case "Frances": userPrefs.put("IDIOMAX", "fr"); break;
-            default: userPrefs.put("IDIOMAX", "es"); break;
-        }
-        System.out.println("Cambiando idioma a: " + idiomaSeleccionado);
-        graficarMenus();
-    }
+    // new helper to load simple content pages into the center while keeping sidebar
+    private void abrirPaginaEnContenido(String fxmlPath) {
+        System.out.println("[Dashboard] abrirPaginaEnContenido: " + fxmlPath + " -> resource: " + getClass().getResource(fxmlPath));
+        try {
+            java.net.URL res = getClass().getResource(fxmlPath);
+            if (res == null) {
+                System.out.println("[Dashboard] ERROR: recurso no encontrado: " + fxmlPath);
+                // show a toast if stage available
+                Stage st = StageManager.getPrimaryStage();
+                if (st != null) Toast.showToast(st, "Página no encontrada: " + fxmlPath, 3000, st.getWidth()/2, st.getHeight()/2);
+                return;
+            }
+            FXMLLoader loader = new FXMLLoader(res);
+            if (context != null) loader.setControllerFactory(context::getBean); else System.out.println("[Dashboard] ADVERTENCIA: ApplicationContext es null; cargando página sin controllerFactory");
+            Parent content = loader.load();
+            if (bp != null) bp.setCenter(content); else System.out.println("[Dashboard] ERROR: BorderPane bp es null, no se puede asignar contenido");
+         } catch (IOException ex) {
+             System.out.println("[Dashboard] Error al cargar la página: " + fxmlPath + " -> " + ex);
+             ex.printStackTrace();
+         }
+     }
 
 
 }

@@ -13,12 +13,14 @@ public class MenuMenuItemDaoImp implements IMenuMenuItemDao {
 
         List<MenuMenuItenTO> lista = new ArrayList<>();
 
-        lista.add(new MenuMenuItenTO("mDashboard", "/view/dashboard-view.fxml", "Principal", "Mi Dashboard", "Menu Principal", "T"));
-        lista.add(new MenuMenuItenTO("mCatalogo", "/view/catalogo-view.fxml", "Biblioteca", "Catálogo", "Catalogo de libros", "T"));
-        lista.add(new MenuMenuItenTO("mPrestamos", "/view/prestamos-view.fxml", "Biblioteca", "Gestionar Préstamos", "Gestion de prestamos", "T"));
-        lista.add(new MenuMenuItenTO("mUsuarios", "/view/usuarios-view.fxml", "Admin", "Gestionar Usuarios", "Menu de usuarios", "T"));
-        lista.add(new MenuMenuItenTO("mReportes", "/view/reportes-view.fxml", "Admin", "Reportes", "Reportes", "T"));
-        lista.add(new MenuMenuItenTO("miprincipal", "/view/login.fxml", idioma.getProperty("menu.nombre.principal"), idioma.getProperty("menuitem.nombre.salir"),"Salir", "S"));
+        // Rutas FXML actualizadas a los archivos que existen en resources/view
+        lista.add(new MenuMenuItenTO("mDashboard", "/view/mDashboard.fxml", "Principal", "Mi Dashboard", "Dashboard", "T"));
+        lista.add(new MenuMenuItenTO("mCatalogo", "/view/mCatalogo.fxml", "Biblioteca", "Catálogo", "Catálogo", "T"));
+        lista.add(new MenuMenuItenTO("mPrestamos", "/view/mPrestamos.fxml", "Biblioteca", "Gestionar Préstamos", "Préstamos", "T"));
+        lista.add(new MenuMenuItenTO("mUsuarios", "/view/mUsuarios.fxml", "Admin", "Gestionar Usuarios", "Usuarios", "T"));
+        lista.add(new MenuMenuItenTO("mReportes", "/view/mReportes.fxml", "Admin", "Reportes", "Reportes", "T"));
+        // "Salir" redirige a login.fxml (tipo 'S' para redirección completa)
+        lista.add(new MenuMenuItenTO("miprincipal", "/view/login.fxml", idioma.getProperty("menu.nombre.principal"), idioma.getProperty("menuitem.nombre.salir"), "Salir", "S"));
 
         List<MenuMenuItenTO> accesoReal = new ArrayList<>();
 
@@ -46,7 +48,7 @@ public class MenuMenuItemDaoImp implements IMenuMenuItemDao {
                 break;
 
             case "ADMINISTRADOR":
-                accesoReal = lista; // Ve todo (los 6 elementos)
+                accesoReal = lista; // Ve todo (los elementos)
                 break;
 
             default: // Visitante o usuario sin rol
