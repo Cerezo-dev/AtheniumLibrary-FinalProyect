@@ -9,7 +9,7 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>3.5.6</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <relativePath/>
     </parent>
 
     <groupId>pe.edu.upeu</groupId>
@@ -21,15 +21,35 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <encoding>UTF-8</encoding>
-        <java.version>21</java.version>    <!-- java 21/ se puee cambiara 17 -->
-        <javafx.version>25.0.1</javafx.version>  <!-- versión JavaFX actualizada -->
-        <maven.compiler.source>${java.version}</maven.compiler.source>
-        <maven.compiler.target>${java.version}</maven.compiler.target>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <!-- Recomendado: usar JDK 17 para compatibilidad con Lombok -->
+        <java.version>17</java.version>
+
+        <!-- JavaFX versión compatible con JDK 17 -->
+        <javafx.version>21.0.2</javafx.version>
+
+        <lombok.version>1.18.30</lombok.version>
+
+        <maven.compiler.plugin.version>3.10.1</maven.compiler.plugin.version>
+        <os-maven-plugin.version>1.7.0</os-maven-plugin.version>
+        <javafx-maven-plugin.version>0.0.8</javafx-maven-plugin.version>
+
+        <!-- Fallback para el classifier cuando el IDE no ejecuta os-maven-plugin -->
+        <os.detected.classifier>windows-x86_64</os.detected.classifier>
     </properties>
 
+    <repositories>
+        <repository>
+            <id>central</id>
+            <name>Maven Central</name>
+            <url>https://repo1.maven.org/maven2/</url>
+            <releases><enabled>true</enabled></releases>
+            <snapshots><enabled>false</enabled></snapshots>
+        </repository>
+    </repositories>
+
     <dependencies>
-        <!-- Spring Boot / JPA / etc -->
+        <!-- Spring Boot -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
@@ -38,11 +58,15 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-security</artifactId>
         </dependency>
+
+        <!-- Lombok -->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <optional>true</optional>
+            <version>${lombok.version}</version>
+            <scope>provided</scope>
         </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
@@ -61,37 +85,44 @@
             <version>6.4.4.Final</version>
         </dependency>
 
-        <!-- JavaFX (actualizado) -->
+        <!-- JavaFX (classifier resuelto por os-maven-plugin / fallback disponible) -->
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-controls</artifactId>
             <version>${javafx.version}</version>
+            <classifier>${os.detected.classifier}</classifier>
         </dependency>
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-fxml</artifactId>
             <version>${javafx.version}</version>
+            <classifier>${os.detected.classifier}</classifier>
         </dependency>
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-base</artifactId>
             <version>${javafx.version}</version>
+            <classifier>${os.detected.classifier}</classifier>
         </dependency>
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-media</artifactId>
             <version>${javafx.version}</version>
+            <classifier>${os.detected.classifier}</classifier>
         </dependency>
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-graphics</artifactId>
             <version>${javafx.version}</version>
+            <classifier>${os.detected.classifier}</classifier>
         </dependency>
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-swing</artifactId>
             <version>${javafx.version}</version>
+            <classifier>${os.detected.classifier}</classifier>
         </dependency>
+
         <dependency>
             <groupId>de.jensd</groupId>
             <artifactId>fontawesomefx-fontawesome</artifactId>
@@ -139,7 +170,7 @@
             <version>0.1.1</version>
         </dependency>
 
-        <!-- Importar de Excel -->
+        <!-- Importar desde Excel -->
         <dependency>
             <groupId>org.apache.groovy</groupId>
             <artifactId>groovy</artifactId>
@@ -163,33 +194,50 @@
             <version>2.2.4</version>
         </dependency>
 
-
+        <!-- Migraciones -->
         <dependency>
             <groupId>org.flywaydb</groupId>
             <artifactId>flyway-core</artifactId>
         </dependency>
-
-
     </dependencies>
 
     <build>
         <plugins>
+            <!-- Detectar OS para el classifier de JavaFX -->
+            <plugin>
+                <groupId>kr.motd.maven</groupId>
+                <artifactId>os-maven-plugin</artifactId>
+                <version>${os-maven-plugin.version}</version>
+                <executions>
+                    <execution>
+                        <id>detect-os</id>
+                        <goals>
+                            <goal>detect</goal>
+                        </goals>
+                        <phase>initialize</phase>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <!-- Compilador: usar release y registrar Lombok como annotation processor -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.10.1</version>
+                <version>${maven.compiler.plugin.version}</version>
                 <configuration>
-                    <source>${java.version}</source>
-                    <target>${java.version}</target>
+                    <release>${java.version}</release>
+                    <fork>true</fork>
                     <annotationProcessorPaths>
                         <path>
                             <groupId>org.projectlombok</groupId>
                             <artifactId>lombok</artifactId>
+                            <version>${lombok.version}</version>
                         </path>
                     </annotationProcessorPaths>
                 </configuration>
             </plugin>
 
+            <!-- Spring Boot plugin -->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
@@ -203,18 +251,15 @@
                 </configuration>
             </plugin>
 
-            <!-- Opcional: plugin para JavaFX si lo usas -->
+            <!-- JavaFX helper (opcional) -->
             <plugin>
                 <groupId>org.openjfx</groupId>
                 <artifactId>javafx-maven-plugin</artifactId>
-                <version>0.0.8</version>
+                <version>${javafx-maven-plugin.version}</version>
                 <configuration>
                     <mainClass>pe.edu.upeu.athenium.RunJavaFx</mainClass>
                 </configuration>
-
             </plugin>
-
         </plugins>
     </build>
-
 </project>
