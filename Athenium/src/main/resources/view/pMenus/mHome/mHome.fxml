@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane styleClass="home-content" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="pe.edu.upeu.athenium.common.controller.HomeContentController">
+    <children>
+        <HBox spacing="15.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+
+            <VBox prefWidth="280.0" styleClass="sidebar-filters-home">
+                <children>
+                    <Label text="Catálogo Inteligente" styleClass="filter-title-home">
+                        <font>
+                            <Font name="System Bold" size="18.0" />
+                        </font>
+                        <VBox.margin>
+                            <Insets bottom="10.0" />
+                        </VBox.margin>
+                    </Label>
+
+                    <TextField fx:id="txtSearch" promptText="Buscar libros, artículos, ebooks..." styleClass="search-input-home" />
+
+                    <Separator styleClass="filter-separator-home">
+                        <VBox.margin>
+                            <Insets top="20.0" bottom="20.0" />
+                        </VBox.margin>
+                    </Separator>
+
+                    <Label text="Filtros Avanzados" styleClass="filter-subtitle-home">
+                        <VBox.margin>
+                            <Insets bottom="10.0" />
+                        </VBox.margin>
+                    </Label>
+
+                    <CheckBox text="Solo disponibles" fx:id="chkAvailable" />
+
+                    <Label text="Año de Publicación">
+                        <VBox.margin>
+                            <Insets top="15.0" bottom="5.0" />
+                        </VBox.margin>
+                    </Label>
+                    <TextField fx:id="txtAnioPublicacion" promptText="Ej. 2020" />
+
+                    <Region VBox.vgrow="ALWAYS" />
+                    <Button text="Aplicar Filtros" styleClass="primary-button-home" maxWidth="1.7976931348623157E308" onAction="#handleAplicarFiltros" />
+                </children>
+                <padding>
+                    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                </padding>
+            </VBox>
+
+            <VBox spacing="10.0" HBox.hgrow="ALWAYS">
+                <children>
+                    <Label text="Resultados de Búsqueda" styleClass="results-header-home">
+                        <font>
+                            <Font name="System Bold" size="20.0" />
+                        </font>
+                        <VBox.margin>
+                            <Insets bottom="15.0" top="5.0" />
+                        </VBox.margin>
+                    </Label>
+
+                    <ScrollPane fitToWidth="true" VBox.vgrow="ALWAYS">
+                        <content>
+                            <FlowPane fx:id="resultsFlowPane" hgap="15.0" vgap="15.0" styleClass="results-grid-home">
+                                <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                </padding>
+
+                                <fx:include source="HomeComplements/card_template.fxml" />
+                                <fx:include source="HomeComplements/card_template_reservado.fxml" />
+                                <fx:include source="HomeComplements/card_template.fxml" />
+                                <fx:include source="HomeComplements/card_template-prestado.fxml" />
+                                <fx:include source="HomeComplements/card_template.fxml" />
+                                <fx:include source="HomeComplements/card_template_reservado.fxml" />
+                            </FlowPane>
+                        </content>
+                    </ScrollPane>
+                </children>
+            </VBox>
+        </HBox>
+    </children>
+</AnchorPane>

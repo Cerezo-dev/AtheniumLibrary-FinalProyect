@@ -280,7 +280,7 @@
 2025-10-31T06:18:20.985-05:00  INFO 18620 --- [SysVentas] [JavaFX-Launcher] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
 2025-10-31T06:18:21.023-05:00  INFO 18620 --- [SysVentas] [JavaFX-Launcher] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
 2025-10-31T06:18:21.376-05:00  INFO 18620 --- [SysVentas] [JavaFX-Launcher] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
-2025-10-31T06:18:21.913-05:00  WARN 18620 --- [SysVentas] [JavaFX-Launcher] s.c.a.AnnotationConfigApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'authService' defined in file [C:\Users\unacu\OneDrive - Universidad Peruana Unión\BACKUP-Documentos\GitHub\Final-proyect-with-CRUD\Athenium\target\classes\pe\edu\upeu\athenium\service\AuthService.class]: Failed to instantiate [pe.edu.upeu.athenium.service.AuthService]: Constructor threw exception
+2025-10-31T06:18:21.913-05:00  WARN 18620 --- [SysVentas] [JavaFX-Launcher] s.c.a.AnnotationConfigApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'authService' defined in file [C:\Users\unacu\OneDrive - Universidad Peruana Unión\BACKUP-Documentos\GitHub\Final-proyect-with-CRUD\Athenium\target\classes\pe\edu\upeu\athenium\service\AuthService.class]: Failed to instantiate [pe.edu.upeu.athenium.common.service.AuthService]: Constructor threw exception
 2025-10-31T06:18:21.913-05:00  INFO 18620 --- [SysVentas] [JavaFX-Launcher] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2025-10-31T06:18:21.916-05:00  INFO 18620 --- [SysVentas] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2025-10-31T06:18:21.918-05:00  INFO 18620 --- [SysVentas] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
@@ -289,7 +289,7 @@
 Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
 2025-10-31T06:18:21.947-05:00 ERROR 18620 --- [SysVentas] [JavaFX-Launcher] o.s.boot.SpringApplication               : Application run failed
 
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'authService' defined in file [C:\Users\unacu\OneDrive - Universidad Peruana Unión\BACKUP-Documentos\GitHub\Final-proyect-with-CRUD\Athenium\target\classes\pe\edu\upeu\athenium\service\AuthService.class]: Failed to instantiate [pe.edu.upeu.athenium.service.AuthService]: Constructor threw exception
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'authService' defined in file [C:\Users\unacu\OneDrive - Universidad Peruana Unión\BACKUP-Documentos\GitHub\Final-proyect-with-CRUD\Athenium\target\classes\pe\edu\upeu\athenium\service\AuthService.class]: Failed to instantiate [pe.edu.upeu.athenium.common.service.AuthService]: Constructor threw exception
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1357) ~[spring-beans-6.2.11.jar:6.2.11]
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1242) ~[spring-beans-6.2.11.jar:6.2.11]
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569) ~[spring-beans-6.2.11.jar:6.2.11]
@@ -311,7 +311,7 @@ org.springframework.beans.factory.BeanCreationException: Error creating bean wit
 	at com.sun.javafx.application.LauncherImpl.launchApplication1(LauncherImpl.java:817) ~[javafx-graphics-21.0.2-win.jar:na]
 	at com.sun.javafx.application.LauncherImpl.lambda$launchApplication$2(LauncherImpl.java:196) ~[javafx-graphics-21.0.2-win.jar:na]
 	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
-Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [pe.edu.upeu.athenium.service.AuthService]: Constructor threw exception
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [pe.edu.upeu.athenium.common.service.AuthService]: Constructor threw exception
 	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:223) ~[spring-beans-6.2.11.jar:6.2.11]
 	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:123) ~[spring-beans-6.2.11.jar:6.2.11]
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1351) ~[spring-beans-6.2.11.jar:6.2.11]
@@ -320,7 +320,7 @@ Caused by: java.lang.NullPointerException: null
 	at java.base/java.util.Objects.requireNonNull(Objects.java:209) ~[na:na]
 	at java.base/java.util.ImmutableCollections$MapN.<init>(ImmutableCollections.java:1186) ~[na:na]
 	at java.base/java.util.Map.of(Map.java:1395) ~[na:na]
-	at pe.edu.upeu.athenium.service.AuthService.<init>(AuthService.java:17) ~[classes/:na]
+	at pe.edu.upeu.athenium.common.service.AuthService.<init>(AuthService.java:17) ~[classes/:na]
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[na:na]
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:na]
@@ -351,7 +351,7 @@ Caused by: java.lang.NullPointerException: null
 2025-10-31T06:21:52.147-05:00  INFO 18496 --- [SysVentas] [JavaFX-Launcher] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
 2025-10-31T06:21:52.183-05:00  INFO 18496 --- [SysVentas] [JavaFX-Launcher] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
 2025-10-31T06:21:52.527-05:00  INFO 18496 --- [SysVentas] [JavaFX-Launcher] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
-2025-10-31T06:21:52.994-05:00  WARN 18496 --- [SysVentas] [JavaFX-Launcher] s.c.a.AnnotationConfigApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'authService' defined in file [C:\Users\unacu\OneDrive - Universidad Peruana Unión\BACKUP-Documentos\GitHub\Final-proyect-with-CRUD\Athenium\target\classes\pe\edu\upeu\athenium\service\AuthService.class]: Failed to instantiate [pe.edu.upeu.athenium.service.AuthService]: Constructor threw exception
+2025-10-31T06:21:52.994-05:00  WARN 18496 --- [SysVentas] [JavaFX-Launcher] s.c.a.AnnotationConfigApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'authService' defined in file [C:\Users\unacu\OneDrive - Universidad Peruana Unión\BACKUP-Documentos\GitHub\Final-proyect-with-CRUD\Athenium\target\classes\pe\edu\upeu\athenium\service\AuthService.class]: Failed to instantiate [pe.edu.upeu.athenium.common.service.AuthService]: Constructor threw exception
 2025-10-31T06:21:52.994-05:00  INFO 18496 --- [SysVentas] [JavaFX-Launcher] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2025-10-31T06:21:52.997-05:00  INFO 18496 --- [SysVentas] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2025-10-31T06:21:53.000-05:00  INFO 18496 --- [SysVentas] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
@@ -360,7 +360,7 @@ Caused by: java.lang.NullPointerException: null
 Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
 2025-10-31T06:21:53.028-05:00 ERROR 18496 --- [SysVentas] [JavaFX-Launcher] o.s.boot.SpringApplication               : Application run failed
 
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'authService' defined in file [C:\Users\unacu\OneDrive - Universidad Peruana Unión\BACKUP-Documentos\GitHub\Final-proyect-with-CRUD\Athenium\target\classes\pe\edu\upeu\athenium\service\AuthService.class]: Failed to instantiate [pe.edu.upeu.athenium.service.AuthService]: Constructor threw exception
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'authService' defined in file [C:\Users\unacu\OneDrive - Universidad Peruana Unión\BACKUP-Documentos\GitHub\Final-proyect-with-CRUD\Athenium\target\classes\pe\edu\upeu\athenium\service\AuthService.class]: Failed to instantiate [pe.edu.upeu.athenium.common.service.AuthService]: Constructor threw exception
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1357) ~[spring-beans-6.2.11.jar:6.2.11]
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1242) ~[spring-beans-6.2.11.jar:6.2.11]
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569) ~[spring-beans-6.2.11.jar:6.2.11]
@@ -382,7 +382,7 @@ org.springframework.beans.factory.BeanCreationException: Error creating bean wit
 	at com.sun.javafx.application.LauncherImpl.launchApplication1(LauncherImpl.java:817) ~[javafx-graphics-21.0.2-win.jar:na]
 	at com.sun.javafx.application.LauncherImpl.lambda$launchApplication$2(LauncherImpl.java:196) ~[javafx-graphics-21.0.2-win.jar:na]
 	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
-Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [pe.edu.upeu.athenium.service.AuthService]: Constructor threw exception
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [pe.edu.upeu.athenium.common.service.AuthService]: Constructor threw exception
 	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:223) ~[spring-beans-6.2.11.jar:6.2.11]
 	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:123) ~[spring-beans-6.2.11.jar:6.2.11]
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1351) ~[spring-beans-6.2.11.jar:6.2.11]
@@ -391,7 +391,7 @@ Caused by: java.lang.NullPointerException: null
 	at java.base/java.util.Objects.requireNonNull(Objects.java:209) ~[na:na]
 	at java.base/java.util.ImmutableCollections$MapN.<init>(ImmutableCollections.java:1186) ~[na:na]
 	at java.base/java.util.Map.of(Map.java:1395) ~[na:na]
-	at pe.edu.upeu.athenium.service.AuthService.<init>(AuthService.java:17) ~[classes/:na]
+	at pe.edu.upeu.athenium.common.service.AuthService.<init>(AuthService.java:17) ~[classes/:na]
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[na:na]
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:na]
@@ -422,7 +422,7 @@ Caused by: java.lang.NullPointerException: null
 2025-10-31T06:28:32.790-05:00  INFO 15084 --- [SysVentas] [JavaFX-Launcher] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
 2025-10-31T06:28:32.834-05:00  INFO 15084 --- [SysVentas] [JavaFX-Launcher] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
 2025-10-31T06:28:33.186-05:00  INFO 15084 --- [SysVentas] [JavaFX-Launcher] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
-2025-10-31T06:28:33.670-05:00  WARN 15084 --- [SysVentas] [JavaFX-Launcher] s.c.a.AnnotationConfigApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'authService' defined in file [C:\Users\unacu\OneDrive - Universidad Peruana Unión\BACKUP-Documentos\GitHub\Final-proyect-with-CRUD\Athenium\target\classes\pe\edu\upeu\athenium\service\AuthService.class]: Failed to instantiate [pe.edu.upeu.athenium.service.AuthService]: Constructor threw exception
+2025-10-31T06:28:33.670-05:00  WARN 15084 --- [SysVentas] [JavaFX-Launcher] s.c.a.AnnotationConfigApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'authService' defined in file [C:\Users\unacu\OneDrive - Universidad Peruana Unión\BACKUP-Documentos\GitHub\Final-proyect-with-CRUD\Athenium\target\classes\pe\edu\upeu\athenium\service\AuthService.class]: Failed to instantiate [pe.edu.upeu.athenium.common.service.AuthService]: Constructor threw exception
 2025-10-31T06:28:33.671-05:00  INFO 15084 --- [SysVentas] [JavaFX-Launcher] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2025-10-31T06:28:33.674-05:00  INFO 15084 --- [SysVentas] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2025-10-31T06:28:33.677-05:00  INFO 15084 --- [SysVentas] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
@@ -431,7 +431,7 @@ Caused by: java.lang.NullPointerException: null
 Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
 2025-10-31T06:28:33.709-05:00 ERROR 15084 --- [SysVentas] [JavaFX-Launcher] o.s.boot.SpringApplication               : Application run failed
 
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'authService' defined in file [C:\Users\unacu\OneDrive - Universidad Peruana Unión\BACKUP-Documentos\GitHub\Final-proyect-with-CRUD\Athenium\target\classes\pe\edu\upeu\athenium\service\AuthService.class]: Failed to instantiate [pe.edu.upeu.athenium.service.AuthService]: Constructor threw exception
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'authService' defined in file [C:\Users\unacu\OneDrive - Universidad Peruana Unión\BACKUP-Documentos\GitHub\Final-proyect-with-CRUD\Athenium\target\classes\pe\edu\upeu\athenium\service\AuthService.class]: Failed to instantiate [pe.edu.upeu.athenium.common.service.AuthService]: Constructor threw exception
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1357) ~[spring-beans-6.2.11.jar:6.2.11]
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1242) ~[spring-beans-6.2.11.jar:6.2.11]
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569) ~[spring-beans-6.2.11.jar:6.2.11]
@@ -453,7 +453,7 @@ org.springframework.beans.factory.BeanCreationException: Error creating bean wit
 	at com.sun.javafx.application.LauncherImpl.launchApplication1(LauncherImpl.java:817) ~[javafx-graphics-21.0.2-win.jar:na]
 	at com.sun.javafx.application.LauncherImpl.lambda$launchApplication$2(LauncherImpl.java:196) ~[javafx-graphics-21.0.2-win.jar:na]
 	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
-Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [pe.edu.upeu.athenium.service.AuthService]: Constructor threw exception
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [pe.edu.upeu.athenium.common.service.AuthService]: Constructor threw exception
 	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:223) ~[spring-beans-6.2.11.jar:6.2.11]
 	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:123) ~[spring-beans-6.2.11.jar:6.2.11]
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1351) ~[spring-beans-6.2.11.jar:6.2.11]
@@ -462,7 +462,7 @@ Caused by: java.lang.NullPointerException: null
 	at java.base/java.util.Objects.requireNonNull(Objects.java:209) ~[na:na]
 	at java.base/java.util.ImmutableCollections$MapN.<init>(ImmutableCollections.java:1186) ~[na:na]
 	at java.base/java.util.Map.of(Map.java:1395) ~[na:na]
-	at pe.edu.upeu.athenium.service.AuthService.<init>(AuthService.java:17) ~[classes/:na]
+	at pe.edu.upeu.athenium.common.service.AuthService.<init>(AuthService.java:17) ~[classes/:na]
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[na:na]
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:na]
