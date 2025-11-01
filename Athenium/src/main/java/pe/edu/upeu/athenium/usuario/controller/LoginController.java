@@ -171,8 +171,8 @@ public class LoginController {
 
                 // Intento normal con controllerFactory (Inyección Spring)
                 try {
-                    java.net.URL res = getClass().getResource("/view/pMenus/mDashboard/mDashboard.fxml");
-                    if (res == null) throw new IOException("Recurso /view/pMenus/mDashboard/mDashboard.fxml no encontrado");
+                    java.net.URL res = getClass().getResource("/view/pMenus/mMainMenu/mMainMenu.fxml");
+                    if (res == null) throw new IOException("Recurso /view/pMenus/mMainMenu/mMainMenu.fxml no encontrado");
                     FXMLLoader loader = new FXMLLoader(res);
                     loader.setControllerFactory(context::getBean);
                     Parent mainRoot = loader.load();
