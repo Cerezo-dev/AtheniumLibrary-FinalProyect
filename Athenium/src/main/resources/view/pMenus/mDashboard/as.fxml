@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+
+<BorderPane fx:id="bp" prefHeight="600.0" prefWidth="1024.0" styleClass="parent" stylesheets="@../../../css/predStyle.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pe.edu.upeu.athenium.common.controller.mMainMenuController">
+
+    <left>
+        <AnchorPane minWidth="80.0" styleClass="sidebar" BorderPane.alignment="CENTER">
+            <children>
+                <FontAwesomeIconView fx:id="iconBars" glyphName="BARS" layoutX="31.0" layoutY="36.0" size="1.5em" styleClass="icon" textAlignment="CENTER" wrappingWidth="15.285715103149414" AnchorPane.leftAnchor="22.0" AnchorPane.rightAnchor="23.0" AnchorPane.topAnchor="18.0" />
+
+                <VBox alignment="CENTER" layoutX="-1.0" layoutY="197.0" spacing="25.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="197.0">
+                    <children>
+                        <!-- se añade fx:id y mouse handlers para los icnos del lateral izquierdo -->
+                        <FontAwesomeIconView fx:id="iconHome" glyphName="HOME" onMouseClicked="#onIconHomeClicked" size="2em" styleClass="icon" />
+                        <FontAwesomeIconView fx:id="iconAnalytics" glyphName="LINE_CHART" onMouseClicked="#onIconAnalyticsClicked" size="2em" styleClass="icon" />
+                        <FontAwesomeIconView fx:id="iconGallery" glyphName="IMAGE" onMouseClicked="#onIconGalleryClicked" size="2em" styleClass="icon" />
+                        <FontAwesomeIconView fx:id="iconSettings" glyphName="COG" onMouseClicked="#onIconSettingsClicked" size="2em" styleClass="icon" />
+                        <FontAwesomeIconView fx:id="iconAdd" glyphName="PLUS" onMouseClicked="#onIconAddClicked" size="2em" styleClass="icon" />
+                    </children>
+                </VBox>
+
+                <Separator layoutX="7.0" layoutY="493.0" AnchorPane.bottomAnchor="120.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+
+                <Circle layoutX="32.0" layoutY="558.0" opacity="0.7" radius="15.0" styleClass="user-circle" AnchorPane.bottomAnchor="23.5" AnchorPane.leftAnchor="13.5" AnchorPane.rightAnchor="15.5" />
+            </children>
+        </AnchorPane>
+    </left>
+
+    <center>
+        <AnchorPane BorderPane.alignment="CENTER">
+            <children>
+                <VBox styleClass="main-panel" AnchorPane.leftAnchor="14.5" AnchorPane.rightAnchor="14.5" AnchorPane.topAnchor="14.5">
+                    <children>
+                        <HBox alignment="CENTER_LEFT" spacing="15.0">
+                            <children>
+                                <Label styleClass="header-title" text="Dashboard" />
+                                <Separator orientation="VERTICAL" prefHeight="30.0" />
+                                <Label styleClass="header-subtitle" text="Hello Mate, welcome back!" />
+                                <Region HBox.hgrow="ALWAYS" />
+                                <Label styleClass="header-date" text="2:03 29 May 2020" />
+                            </children>
+                            <padding>
+                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                            </padding>
+                        </HBox>
+
+                        <!-- TabPane que controla DashboardController -->
+                        <TabPane fx:id="tabPaneFx" prefHeight="400.0" prefWidth="900.0" VBox.vgrow="ALWAYS">
+                            <!-- Pestañas serán gestionadas dinámicamente por DashboardController -->
+                        </TabPane>
+
+                    </children>
+                    <padding>
+                        <Insets bottom="15.0" left="20.0" right="20.0" top="15.0" />
+                    </padding>
+                </VBox>
+            </children>
+        </AnchorPane>
+    </center>
+
+</BorderPane>
