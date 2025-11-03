@@ -9,7 +9,9 @@ import javafx.scene.chart.NumberAxis;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.Initializable;
+import org.springframework.stereotype.Controller;
 
+@Controller
 public class AdminPanelController implements Initializable {
 
     @FXML

@@ -9,9 +9,7 @@ import javafx.scene.Parent;
 import javafx.scene.control.Label;
 import javafx.scene.control.TabPane;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.VBox;
 import javafx.scene.shape.Circle;
 import javafx.stage.Popup;
 import javafx.stage.Stage;
@@ -357,7 +355,7 @@ public class mMainMenuController {
 
     @FXML
     public void onIconAnalyticsClicked(MouseEvent e) {
-        abrirPaginaEnContenido("/view/main_libro.fxml", "Gestionar Libros");
+        abrirPaginaEnContenido("/view/pMenus/mBookManagement/mBookManagement.fxml", "Gestionar Libros");
     }
 
     @FXML

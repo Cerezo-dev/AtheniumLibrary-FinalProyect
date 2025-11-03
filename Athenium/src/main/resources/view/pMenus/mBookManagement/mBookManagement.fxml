@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="miContenedor" styleClass="gestion-libros-root"
+            stylesheets="@../../../css/Themes/glass/pMenus/mMainMenu/gestion-libros-style.css"
+            maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="650.0" prefWidth="1200.0"
+            xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="pe.edu.upeu.athenium.libro.controller.LibroController">
+    <children>
+        <VBox spacing="20.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="15.0">
+            <children>
+                <VBox styleClass="section-panel" spacing="10.0">
+                    <children>
+                        <Label text="Gestionar Libros" styleClass="section-title" />
+                        <HBox alignment="CENTER_LEFT" spacing="15.0">
+                            <children>
+                                <Label text="Filtrar Libros (Título, Autor, ISBN):" styleClass="filter-label" />
+                                <TextField fx:id="txtFiltroDato" promptText="Buscar por título, autor o ISBN..." styleClass="filter-input" HBox.hgrow="ALWAYS" />
+                                <Button styleClass="btn-search" text="Buscar" visible="false" /> </children>
+                        </HBox>
+                    </children>
+                    <padding>
+                        <Insets bottom="15.0" left="20.0" right="20.0" top="15.0" />
+                    </padding>
+                </VBox>
+
+                <HBox spacing="20.0" VBox.vgrow="ALWAYS">
+                    <VBox styleClass="form-panel" minWidth="400.0" prefWidth="450.0">
+                        <children>
+                            <Label alignment="CENTER" maxWidth="1.7976931348623157E308" text="Formulario de Libro" styleClass="form-title">
+                                <font>
+                                    <Font name="System Bold" size="16.0" />
+                                </font>
+                                <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                </VBox.margin>
+                            </Label>
+
+                            <GridPane hgap="10.0" vgap="15.0">
+                                <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0" minWidth="90.0" prefWidth="120.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="300.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                <children>
+                                    <Label text="ID Libro" styleClass="form-label" GridPane.rowIndex="0" />
+                                    <TextField fx:id="txtIdLibro" promptText="Automático" editable="false" styleClass="form-input" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+                                    <Label text="Título" styleClass="form-label" GridPane.rowIndex="1" />
+                                    <TextField fx:id="txtTitulo" promptText="Título del libro" styleClass="form-input" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                                    <Label text="Autor" styleClass="form-label" GridPane.rowIndex="2" />
+                                    <TextField fx:id="txtAutor" promptText="Autor del libro" styleClass="form-input" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+                                    <Label text="ISBN" styleClass="form-label" GridPane.rowIndex="3" />
+                                    <TextField fx:id="txtIsbn" promptText="ISBN único" styleClass="form-input" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+                                    <Label text="Año Publicación" styleClass="form-label" GridPane.rowIndex="4" />
+                                    <TextField fx:id="txtAnio" promptText="Año de publicación" styleClass="form-input" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+
+                                    <Label text="Género" styleClass="form-label" GridPane.rowIndex="5" />
+                                    <ComboBox fx:id="cbxGenero" promptText="Seleccionar género" maxWidth="1.7976931348623157E308" styleClass="form-combobox" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+
+                                    <HBox alignment="CENTER_RIGHT" spacing="10.0" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="6">
+                                        <Button fx:id="btnGuardar" onAction="#validarFormulario" styleClass="btn-solid-primary" text="Guardar" />
+                                        <Button fx:id="btnCancelar" onAction="#clearForm" styleClass="btn-outline-danger" text="Cancelar" />
+                                        <Button fx:id="btnEditar" onAction="#edit" styleClass="btn-outline-info" text="Editar" />
+                                        <Button fx:id="btnEliminar" onAction="#delete" styleClass="btn-outline-warning" text="Eliminar" />
+                                    </HBox>
+
+                                    <Label fx:id="lbnMsg" alignment="TOP_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="message-label" wrapText="true" GridPane.columnSpan="2" GridPane.rowIndex="7" />
+                                </children>
+                            </GridPane>
+                        </children>
+                        <padding>
+                            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                        </padding>
+                    </VBox>
+
+                    <VBox styleClass="table-panel" HBox.hgrow="ALWAYS">
+                        <children>
+                            <TableView fx:id="tableViewBook" VBox.vgrow="ALWAYS" styleClass="books-table" />
+                        </children>
+                        <padding>
+                            <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                        </padding>
+                    </VBox>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>
