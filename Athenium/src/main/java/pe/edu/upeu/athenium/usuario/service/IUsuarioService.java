@@ -8,6 +8,8 @@ import pe.edu.upeu.athenium.usuario.entity.Usuario;
 public interface IUsuarioService extends ICrudGenericoService<Usuario,Long> {
     // Método para el login de usuario
     Usuario loginUsuario(String user, String clave);
+
+    Usuario buscarUsuario(String email);
     //Método para registrar un nuevo usuario
     Usuario registrarNuevoUsuario(String nombre, String apellido, String email, String clave);
 

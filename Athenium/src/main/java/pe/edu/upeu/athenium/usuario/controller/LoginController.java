@@ -95,6 +95,7 @@ public class LoginController {
         String clave = txtClaveReg.getText();
         String confirmClave = txtConfirmClaveReg.getText();
 
+
         if (nombre.isEmpty() || apellido.isEmpty() || email.isEmpty() || clave.isEmpty()) {
             setStatusMessageReg("Por favor, complete todos los campos.", true);
             return;

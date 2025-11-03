@@ -1,15 +1,15 @@
-2025-11-01T15:39:50.077-05:00  INFO 16204 --- [Athenium] [JavaFX-Launcher] o.s.boot.SpringApplication               : Starting application using Java 17.0.16 with PID 16204 (started by unacu in C:\Users\unacu\OneDrive - Universidad Peruana Unión\BACKUP-Documentos\GitHub\Final-proyect-with-CRUD\Athenium)
-2025-11-01T15:39:50.085-05:00  INFO 16204 --- [Athenium] [JavaFX-Launcher] o.s.boot.SpringApplication               : No active profile set, falling back to 1 default profile: "default"
-2025-11-01T15:39:51.355-05:00  INFO 16204 --- [Athenium] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-11-01T15:39:51.499-05:00  INFO 16204 --- [Athenium] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 132 ms. Found 8 JPA repository interfaces.
-2025-11-01T15:39:52.157-05:00  INFO 16204 --- [Athenium] [JavaFX-Launcher] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-11-01T15:39:52.281-05:00  INFO 16204 --- [Athenium] [JavaFX-Launcher] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.29.Final
-2025-11-01T15:39:52.341-05:00  INFO 16204 --- [Athenium] [JavaFX-Launcher] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-11-01T15:39:52.793-05:00  INFO 16204 --- [Athenium] [JavaFX-Launcher] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-11-01T15:39:52.848-05:00  INFO 16204 --- [Athenium] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-11-01T15:39:53.126-05:00  INFO 16204 --- [Athenium] [JavaFX-Launcher] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@427bebcf
-2025-11-01T15:39:53.129-05:00  INFO 16204 --- [Athenium] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-11-01T15:39:53.180-05:00  INFO 16204 --- [Athenium] [JavaFX-Launcher] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+2025-11-02T20:16:11.248-05:00  INFO 20412 --- [Athenium] [JavaFX-Launcher] o.s.boot.SpringApplication               : Starting application using Java 17.0.16 with PID 20412 (started by unacu in C:\Users\unacu\OneDrive - Universidad Peruana Unión\BACKUP-Documentos\GitHub\Final-proyect-with-CRUD\Athenium)
+2025-11-02T20:16:11.265-05:00  INFO 20412 --- [Athenium] [JavaFX-Launcher] o.s.boot.SpringApplication               : No active profile set, falling back to 1 default profile: "default"
+2025-11-02T20:16:13.135-05:00  INFO 20412 --- [Athenium] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-02T20:16:13.309-05:00  INFO 20412 --- [Athenium] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 159 ms. Found 8 JPA repository interfaces.
+2025-11-02T20:16:14.052-05:00  INFO 20412 --- [Athenium] [JavaFX-Launcher] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-02T20:16:14.178-05:00  INFO 20412 --- [Athenium] [JavaFX-Launcher] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-11-02T20:16:14.247-05:00  INFO 20412 --- [Athenium] [JavaFX-Launcher] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-02T20:16:14.812-05:00  INFO 20412 --- [Athenium] [JavaFX-Launcher] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-02T20:16:14.883-05:00  INFO 20412 --- [Athenium] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-02T20:16:15.251-05:00  INFO 20412 --- [Athenium] [JavaFX-Launcher] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@3facf305
+2025-11-02T20:16:15.254-05:00  INFO 20412 --- [Athenium] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-02T20:16:15.320-05:00  INFO 20412 --- [Athenium] [JavaFX-Launcher] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
 	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
 	Database driver: undefined/unknown
 	Database version: 3.46
@@ -17,13 +17,982 @@
 	Isolation level: undefined/unknown
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2025-11-01T15:39:54.501-05:00  INFO 16204 --- [Athenium] [JavaFX-Launcher] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-11-01T15:39:54.543-05:00  INFO 16204 --- [Athenium] [JavaFX-Launcher] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-11-01T15:39:54.952-05:00  INFO 16204 --- [Athenium] [JavaFX-Launcher] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
-2025-11-01T15:39:56.044-05:00  INFO 16204 --- [Athenium] [JavaFX-Launcher] o.s.boot.SpringApplication               : Started application in 6.672 seconds (process running for 13.044)
-2025-11-01T15:39:56.195-05:00  WARN 16204 --- [Athenium] [JavaFX-Launcher] javafx                                   : Loading FXML document with JavaFX API of version 25 by JavaFX runtime of version 21.0.2
-2025-11-01T15:40:26.857-05:00  WARN 16204 --- [Athenium] [JavaFX Application Thread] javafx                                   : Loading FXML document with JavaFX API of version 25 by JavaFX runtime of version 21.0.2
-2025-11-01T15:40:32.084-05:00  WARN 16204 --- [Athenium] [JavaFX Application Thread] javafx                                   : Loading FXML document with JavaFX API of version 25 by JavaFX runtime of version 21.0.2
-2025-11-01T15:40:55.678-05:00  INFO 16204 --- [Athenium] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-11-01T15:40:55.682-05:00  INFO 16204 --- [Athenium] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-11-01T15:40:55.689-05:00  INFO 16204 --- [Athenium] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-11-02T20:16:17.077-05:00  INFO 20412 --- [Athenium] [JavaFX-Launcher] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-02T20:16:17.139-05:00  INFO 20412 --- [Athenium] [JavaFX-Launcher] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-02T20:16:17.611-05:00  INFO 20412 --- [Athenium] [JavaFX-Launcher] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-11-02T20:16:18.944-05:00  INFO 20412 --- [Athenium] [JavaFX-Launcher] o.s.boot.SpringApplication               : Started application in 8.869 seconds (process running for 12.367)
+2025-11-02T20:16:19.090-05:00  WARN 20412 --- [Athenium] [JavaFX-Launcher] javafx                                   : Loading FXML document with JavaFX API of version 25 by JavaFX runtime of version 21.0.2
+2025-11-02T20:16:24.027-05:00  WARN 20412 --- [Athenium] [JavaFX Application Thread] javafx                                   : Loading FXML document with JavaFX API of version 25 by JavaFX runtime of version 21.0.2
+2025-11-02T20:16:33.486-05:00  INFO 20412 --- [Athenium] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-02T20:16:33.489-05:00  INFO 20412 --- [Athenium] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-02T20:16:33.499-05:00  INFO 20412 --- [Athenium] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-11-02T20:17:10.544-05:00  INFO 19080 --- [Athenium] [JavaFX-Launcher] o.s.boot.SpringApplication               : Starting application using Java 17.0.16 with PID 19080 (started by unacu in C:\Users\unacu\OneDrive - Universidad Peruana Unión\BACKUP-Documentos\GitHub\Final-proyect-with-CRUD\Athenium)
+2025-11-02T20:17:10.557-05:00  INFO 19080 --- [Athenium] [JavaFX-Launcher] o.s.boot.SpringApplication               : No active profile set, falling back to 1 default profile: "default"
+2025-11-02T20:17:12.138-05:00  INFO 19080 --- [Athenium] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-02T20:17:12.326-05:00  INFO 19080 --- [Athenium] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 174 ms. Found 8 JPA repository interfaces.
+2025-11-02T20:17:14.187-05:00  INFO 19080 --- [Athenium] [JavaFX-Launcher] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-02T20:17:14.301-05:00  INFO 19080 --- [Athenium] [JavaFX-Launcher] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-11-02T20:17:14.459-05:00  INFO 19080 --- [Athenium] [JavaFX-Launcher] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-02T20:17:15.015-05:00  INFO 19080 --- [Athenium] [JavaFX-Launcher] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-02T20:17:15.089-05:00  INFO 19080 --- [Athenium] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-02T20:17:15.485-05:00  INFO 19080 --- [Athenium] [JavaFX-Launcher] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@51becf9d
+2025-11-02T20:17:15.488-05:00  INFO 19080 --- [Athenium] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-02T20:17:15.551-05:00  INFO 19080 --- [Athenium] [JavaFX-Launcher] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 3.46
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-02T20:17:16.877-05:00  INFO 19080 --- [Athenium] [JavaFX-Launcher] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-02T20:17:16.921-05:00  INFO 19080 --- [Athenium] [JavaFX-Launcher] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-02T20:17:17.562-05:00  INFO 19080 --- [Athenium] [JavaFX-Launcher] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-11-02T20:17:19.920-05:00  INFO 19080 --- [Athenium] [JavaFX-Launcher] o.s.boot.SpringApplication               : Started application in 10.438 seconds (process running for 11.837)
+2025-11-02T20:17:20.252-05:00  WARN 19080 --- [Athenium] [JavaFX-Launcher] javafx                                   : Loading FXML document with JavaFX API of version 25 by JavaFX runtime of version 21.0.2
+2025-11-02T20:17:29.805-05:00  WARN 19080 --- [Athenium] [JavaFX Application Thread] javafx                                   : Loading FXML document with JavaFX API of version 25 by JavaFX runtime of version 21.0.2
+2025-11-02T20:17:38.246-05:00  INFO 19080 --- [Athenium] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-02T20:17:38.248-05:00  INFO 19080 --- [Athenium] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-02T20:17:38.251-05:00  INFO 19080 --- [Athenium] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-11-02T20:18:56.921-05:00  INFO 5048 --- [Athenium] [JavaFX-Launcher] o.s.boot.SpringApplication               : Starting application using Java 17.0.16 with PID 5048 (started by unacu in C:\Users\unacu\OneDrive - Universidad Peruana Unión\BACKUP-Documentos\GitHub\Final-proyect-with-CRUD\Athenium)
+2025-11-02T20:18:56.927-05:00  INFO 5048 --- [Athenium] [JavaFX-Launcher] o.s.boot.SpringApplication               : No active profile set, falling back to 1 default profile: "default"
+2025-11-02T20:18:58.828-05:00  INFO 5048 --- [Athenium] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-02T20:18:59.049-05:00  INFO 5048 --- [Athenium] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 206 ms. Found 8 JPA repository interfaces.
+2025-11-02T20:18:59.848-05:00  INFO 5048 --- [Athenium] [JavaFX-Launcher] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-02T20:18:59.941-05:00  INFO 5048 --- [Athenium] [JavaFX-Launcher] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-11-02T20:19:00.013-05:00  INFO 5048 --- [Athenium] [JavaFX-Launcher] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-02T20:19:00.546-05:00  INFO 5048 --- [Athenium] [JavaFX-Launcher] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-02T20:19:00.616-05:00  INFO 5048 --- [Athenium] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-02T20:19:01.001-05:00  INFO 5048 --- [Athenium] [JavaFX-Launcher] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@668426e6
+2025-11-02T20:19:01.003-05:00  INFO 5048 --- [Athenium] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-02T20:19:01.063-05:00  INFO 5048 --- [Athenium] [JavaFX-Launcher] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 3.46
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-02T20:19:02.415-05:00  INFO 5048 --- [Athenium] [JavaFX-Launcher] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-02T20:19:02.456-05:00  INFO 5048 --- [Athenium] [JavaFX-Launcher] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-02T20:19:03.056-05:00  INFO 5048 --- [Athenium] [JavaFX-Launcher] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-11-02T20:19:04.725-05:00  INFO 5048 --- [Athenium] [JavaFX-Launcher] o.s.boot.SpringApplication               : Started application in 8.913 seconds (process running for 10.646)
+2025-11-02T20:19:04.881-05:00  WARN 5048 --- [Athenium] [JavaFX-Launcher] javafx                                   : Loading FXML document with JavaFX API of version 25 by JavaFX runtime of version 21.0.2
+2025-11-02T20:19:10.454-05:00  WARN 5048 --- [Athenium] [JavaFX Application Thread] javafx                                   : Loading FXML document with JavaFX API of version 25 by JavaFX runtime of version 21.0.2
+2025-11-02T20:19:15.084-05:00  INFO 5048 --- [Athenium] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-02T20:19:15.086-05:00  INFO 5048 --- [Athenium] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-02T20:19:15.089-05:00  INFO 5048 --- [Athenium] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-11-02T20:20:28.574-05:00  INFO 4216 --- [Athenium] [JavaFX-Launcher] o.s.boot.SpringApplication               : Starting application using Java 17.0.16 with PID 4216 (started by unacu in C:\Users\unacu\OneDrive - Universidad Peruana Unión\BACKUP-Documentos\GitHub\Final-proyect-with-CRUD\Athenium)
+2025-11-02T20:20:28.579-05:00  INFO 4216 --- [Athenium] [JavaFX-Launcher] o.s.boot.SpringApplication               : No active profile set, falling back to 1 default profile: "default"
+2025-11-02T20:20:29.738-05:00  INFO 4216 --- [Athenium] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-02T20:20:29.916-05:00  INFO 4216 --- [Athenium] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 162 ms. Found 8 JPA repository interfaces.
+2025-11-02T20:20:30.674-05:00  INFO 4216 --- [Athenium] [JavaFX-Launcher] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-02T20:20:30.826-05:00  INFO 4216 --- [Athenium] [JavaFX-Launcher] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-11-02T20:20:30.901-05:00  INFO 4216 --- [Athenium] [JavaFX-Launcher] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-02T20:20:31.413-05:00  INFO 4216 --- [Athenium] [JavaFX-Launcher] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-02T20:20:31.488-05:00  INFO 4216 --- [Athenium] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-02T20:20:31.907-05:00  INFO 4216 --- [Athenium] [JavaFX-Launcher] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@1b2fb1b4
+2025-11-02T20:20:31.909-05:00  INFO 4216 --- [Athenium] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-02T20:20:32.003-05:00  INFO 4216 --- [Athenium] [JavaFX-Launcher] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 3.46
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-02T20:20:34.585-05:00  INFO 4216 --- [Athenium] [JavaFX-Launcher] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-02T20:20:34.664-05:00  INFO 4216 --- [Athenium] [JavaFX-Launcher] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-02T20:20:35.539-05:00  INFO 4216 --- [Athenium] [JavaFX-Launcher] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-11-02T20:20:37.238-05:00  INFO 4216 --- [Athenium] [JavaFX-Launcher] o.s.boot.SpringApplication               : Started application in 9.509 seconds (process running for 10.847)
+2025-11-02T20:20:37.393-05:00  WARN 4216 --- [Athenium] [JavaFX-Launcher] javafx                                   : Loading FXML document with JavaFX API of version 25 by JavaFX runtime of version 21.0.2
+2025-11-02T20:20:43.693-05:00  WARN 4216 --- [Athenium] [JavaFX Application Thread] javafx                                   : Loading FXML document with JavaFX API of version 25 by JavaFX runtime of version 21.0.2
+2025-11-02T20:20:51.610-05:00  INFO 4216 --- [Athenium] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-02T20:20:51.614-05:00  INFO 4216 --- [Athenium] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-02T20:20:51.619-05:00  INFO 4216 --- [Athenium] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-11-02T20:22:27.026-05:00  INFO 18936 --- [Athenium] [JavaFX-Launcher] o.s.boot.SpringApplication               : Starting application using Java 17.0.16 with PID 18936 (started by unacu in C:\Users\unacu\OneDrive - Universidad Peruana Unión\BACKUP-Documentos\GitHub\Final-proyect-with-CRUD\Athenium)
+2025-11-02T20:22:27.030-05:00  INFO 18936 --- [Athenium] [JavaFX-Launcher] o.s.boot.SpringApplication               : No active profile set, falling back to 1 default profile: "default"
+2025-11-02T20:22:28.103-05:00  INFO 18936 --- [Athenium] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-02T20:22:28.260-05:00  INFO 18936 --- [Athenium] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 146 ms. Found 8 JPA repository interfaces.
+2025-11-02T20:22:28.965-05:00  INFO 18936 --- [Athenium] [JavaFX-Launcher] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-02T20:22:29.060-05:00  INFO 18936 --- [Athenium] [JavaFX-Launcher] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-11-02T20:22:29.114-05:00  INFO 18936 --- [Athenium] [JavaFX-Launcher] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-02T20:22:29.504-05:00  INFO 18936 --- [Athenium] [JavaFX-Launcher] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-02T20:22:29.551-05:00  INFO 18936 --- [Athenium] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-02T20:22:29.839-05:00  INFO 18936 --- [Athenium] [JavaFX-Launcher] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@731a10e
+2025-11-02T20:22:29.843-05:00  INFO 18936 --- [Athenium] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-02T20:22:29.907-05:00  INFO 18936 --- [Athenium] [JavaFX-Launcher] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 3.46
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-02T20:22:31.204-05:00  INFO 18936 --- [Athenium] [JavaFX-Launcher] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-02T20:22:31.245-05:00  INFO 18936 --- [Athenium] [JavaFX-Launcher] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-02T20:22:31.700-05:00  INFO 18936 --- [Athenium] [JavaFX-Launcher] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-11-02T20:22:33.404-05:00  INFO 18936 --- [Athenium] [JavaFX-Launcher] o.s.boot.SpringApplication               : Started application in 7.235 seconds (process running for 8.466)
+2025-11-02T20:22:33.579-05:00  WARN 18936 --- [Athenium] [JavaFX-Launcher] javafx                                   : Loading FXML document with JavaFX API of version 25 by JavaFX runtime of version 21.0.2
+2025-11-02T20:22:38.403-05:00  WARN 18936 --- [Athenium] [JavaFX Application Thread] javafx                                   : Loading FXML document with JavaFX API of version 25 by JavaFX runtime of version 21.0.2
+2025-11-02T20:22:51.027-05:00  INFO 18936 --- [Athenium] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-02T20:22:51.036-05:00  INFO 18936 --- [Athenium] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-02T20:22:51.039-05:00  INFO 18936 --- [Athenium] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-11-02T20:28:09.848-05:00  INFO 18160 --- [Athenium] [JavaFX-Launcher] o.s.boot.SpringApplication               : Starting application using Java 17.0.16 with PID 18160 (started by unacu in C:\Users\unacu\OneDrive - Universidad Peruana Unión\BACKUP-Documentos\GitHub\Final-proyect-with-CRUD\Athenium)
+2025-11-02T20:28:09.867-05:00  INFO 18160 --- [Athenium] [JavaFX-Launcher] o.s.boot.SpringApplication               : No active profile set, falling back to 1 default profile: "default"
+2025-11-02T20:28:11.923-05:00  INFO 18160 --- [Athenium] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-02T20:28:12.186-05:00  INFO 18160 --- [Athenium] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 241 ms. Found 8 JPA repository interfaces.
+2025-11-02T20:28:13.101-05:00  INFO 18160 --- [Athenium] [JavaFX-Launcher] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-02T20:28:13.221-05:00  INFO 18160 --- [Athenium] [JavaFX-Launcher] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-11-02T20:28:13.304-05:00  INFO 18160 --- [Athenium] [JavaFX-Launcher] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-02T20:28:13.853-05:00  INFO 18160 --- [Athenium] [JavaFX-Launcher] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-02T20:28:13.917-05:00  INFO 18160 --- [Athenium] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-02T20:28:14.298-05:00  INFO 18160 --- [Athenium] [JavaFX-Launcher] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@ef24569
+2025-11-02T20:28:14.300-05:00  INFO 18160 --- [Athenium] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-02T20:28:14.376-05:00  INFO 18160 --- [Athenium] [JavaFX-Launcher] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 3.46
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-02T20:28:15.773-05:00  INFO 18160 --- [Athenium] [JavaFX-Launcher] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-02T20:28:15.833-05:00  INFO 18160 --- [Athenium] [JavaFX-Launcher] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-02T20:28:16.322-05:00  INFO 18160 --- [Athenium] [JavaFX-Launcher] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-11-02T20:28:18.074-05:00  INFO 18160 --- [Athenium] [JavaFX-Launcher] o.s.boot.SpringApplication               : Started application in 10.738 seconds (process running for 12.863)
+2025-11-02T20:28:18.252-05:00  WARN 18160 --- [Athenium] [JavaFX-Launcher] javafx                                   : Loading FXML document with JavaFX API of version 25 by JavaFX runtime of version 21.0.2
+2025-11-02T20:28:36.367-05:00  INFO 18160 --- [Athenium] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-02T20:28:36.370-05:00  INFO 18160 --- [Athenium] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-02T20:28:36.375-05:00  INFO 18160 --- [Athenium] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-11-02T20:30:02.559-05:00  INFO 19956 --- [Athenium] [JavaFX-Launcher] o.s.boot.SpringApplication               : Starting application using Java 17.0.16 with PID 19956 (started by unacu in C:\Users\unacu\OneDrive - Universidad Peruana Unión\BACKUP-Documentos\GitHub\Final-proyect-with-CRUD\Athenium)
+2025-11-02T20:30:02.563-05:00  INFO 19956 --- [Athenium] [JavaFX-Launcher] o.s.boot.SpringApplication               : No active profile set, falling back to 1 default profile: "default"
+2025-11-02T20:30:04.202-05:00  INFO 19956 --- [Athenium] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-02T20:30:04.468-05:00  INFO 19956 --- [Athenium] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 245 ms. Found 8 JPA repository interfaces.
+2025-11-02T20:30:05.382-05:00  INFO 19956 --- [Athenium] [JavaFX-Launcher] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-02T20:30:05.479-05:00  INFO 19956 --- [Athenium] [JavaFX-Launcher] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-11-02T20:30:05.557-05:00  INFO 19956 --- [Athenium] [JavaFX-Launcher] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-02T20:30:06.056-05:00  INFO 19956 --- [Athenium] [JavaFX-Launcher] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-02T20:30:06.114-05:00  INFO 19956 --- [Athenium] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-02T20:30:06.476-05:00  INFO 19956 --- [Athenium] [JavaFX-Launcher] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@3f28776b
+2025-11-02T20:30:06.478-05:00  INFO 19956 --- [Athenium] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-02T20:30:06.537-05:00  INFO 19956 --- [Athenium] [JavaFX-Launcher] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 3.46
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-02T20:30:07.928-05:00  INFO 19956 --- [Athenium] [JavaFX-Launcher] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-02T20:30:07.974-05:00  INFO 19956 --- [Athenium] [JavaFX-Launcher] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-02T20:30:08.398-05:00  INFO 19956 --- [Athenium] [JavaFX-Launcher] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-11-02T20:30:09.834-05:00  INFO 19956 --- [Athenium] [JavaFX-Launcher] o.s.boot.SpringApplication               : Started application in 8.463 seconds (process running for 9.911)
+2025-11-02T20:30:09.973-05:00  WARN 19956 --- [Athenium] [JavaFX-Launcher] javafx                                   : Loading FXML document with JavaFX API of version 25 by JavaFX runtime of version 21.0.2
+2025-11-02T20:30:15.205-05:00  WARN 19956 --- [Athenium] [JavaFX Application Thread] javafx                                   : Loading FXML document with JavaFX API of version 25 by JavaFX runtime of version 21.0.2
+2025-11-02T20:30:20.637-05:00  INFO 19956 --- [Athenium] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-02T20:30:20.643-05:00  INFO 19956 --- [Athenium] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-02T20:30:20.648-05:00  INFO 19956 --- [Athenium] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-11-02T20:36:01.224-05:00  INFO 13792 --- [Athenium] [JavaFX-Launcher] o.s.boot.SpringApplication               : Starting application using Java 17.0.16 with PID 13792 (started by unacu in C:\Users\unacu\OneDrive - Universidad Peruana Unión\BACKUP-Documentos\GitHub\Final-proyect-with-CRUD\Athenium)
+2025-11-02T20:36:01.229-05:00  INFO 13792 --- [Athenium] [JavaFX-Launcher] o.s.boot.SpringApplication               : No active profile set, falling back to 1 default profile: "default"
+2025-11-02T20:36:03.284-05:00  INFO 13792 --- [Athenium] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-02T20:36:03.525-05:00  INFO 13792 --- [Athenium] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 222 ms. Found 8 JPA repository interfaces.
+2025-11-02T20:36:04.245-05:00  INFO 13792 --- [Athenium] [JavaFX-Launcher] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-02T20:36:04.353-05:00  INFO 13792 --- [Athenium] [JavaFX-Launcher] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-11-02T20:36:04.423-05:00  INFO 13792 --- [Athenium] [JavaFX-Launcher] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-02T20:36:04.902-05:00  INFO 13792 --- [Athenium] [JavaFX-Launcher] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-02T20:36:04.966-05:00  INFO 13792 --- [Athenium] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-02T20:36:05.725-05:00  INFO 13792 --- [Athenium] [JavaFX-Launcher] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@92ffe62
+2025-11-02T20:36:05.727-05:00  INFO 13792 --- [Athenium] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-02T20:36:05.791-05:00  INFO 13792 --- [Athenium] [JavaFX-Launcher] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 3.46
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-02T20:36:08.068-05:00  INFO 13792 --- [Athenium] [JavaFX-Launcher] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-02T20:36:08.136-05:00  INFO 13792 --- [Athenium] [JavaFX-Launcher] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-02T20:36:08.754-05:00  INFO 13792 --- [Athenium] [JavaFX-Launcher] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-11-02T20:36:10.366-05:00  INFO 13792 --- [Athenium] [JavaFX-Launcher] o.s.boot.SpringApplication               : Started application in 10.406 seconds (process running for 12.319)
+2025-11-02T20:36:10.586-05:00  WARN 13792 --- [Athenium] [JavaFX-Launcher] javafx                                   : Loading FXML document with JavaFX API of version 25 by JavaFX runtime of version 21.0.2
+2025-11-02T20:36:25.419-05:00  INFO 13792 --- [Athenium] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-02T20:36:25.422-05:00  INFO 13792 --- [Athenium] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-02T20:36:25.426-05:00  INFO 13792 --- [Athenium] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-11-02T20:40:47.631-05:00  INFO 16932 --- [Athenium] [JavaFX-Launcher] o.s.boot.SpringApplication               : Starting application using Java 17.0.16 with PID 16932 (started by unacu in C:\Users\unacu\OneDrive - Universidad Peruana Unión\BACKUP-Documentos\GitHub\Final-proyect-with-CRUD\Athenium)
+2025-11-02T20:40:47.637-05:00  INFO 16932 --- [Athenium] [JavaFX-Launcher] o.s.boot.SpringApplication               : No active profile set, falling back to 1 default profile: "default"
+2025-11-02T20:40:52.971-05:00  INFO 16932 --- [Athenium] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-02T20:40:53.287-05:00  INFO 16932 --- [Athenium] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 282 ms. Found 8 JPA repository interfaces.
+2025-11-02T20:40:55.458-05:00  INFO 16932 --- [Athenium] [JavaFX-Launcher] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-02T20:40:55.624-05:00  INFO 16932 --- [Athenium] [JavaFX-Launcher] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-11-02T20:40:55.714-05:00  INFO 16932 --- [Athenium] [JavaFX-Launcher] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-02T20:40:56.455-05:00  INFO 16932 --- [Athenium] [JavaFX-Launcher] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-02T20:40:56.537-05:00  INFO 16932 --- [Athenium] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-02T20:40:57.100-05:00  INFO 16932 --- [Athenium] [JavaFX-Launcher] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@1236a7f0
+2025-11-02T20:40:57.103-05:00  INFO 16932 --- [Athenium] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-02T20:40:57.179-05:00  INFO 16932 --- [Athenium] [JavaFX-Launcher] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 3.46
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-02T20:40:59.183-05:00  INFO 16932 --- [Athenium] [JavaFX-Launcher] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-02T20:40:59.251-05:00  INFO 16932 --- [Athenium] [JavaFX-Launcher] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-02T20:40:59.898-05:00  INFO 16932 --- [Athenium] [JavaFX-Launcher] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-11-02T20:41:01.190-05:00  INFO 16932 --- [Athenium] [JavaFX-Launcher] o.s.boot.SpringApplication               : Started application in 16.571 seconds (process running for 19.55)
+2025-11-02T20:41:01.352-05:00  WARN 16932 --- [Athenium] [JavaFX-Launcher] javafx                                   : Loading FXML document with JavaFX API of version 25 by JavaFX runtime of version 21.0.2
+2025-11-02T20:41:18.284-05:00  INFO 16932 --- [Athenium] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-02T20:41:18.292-05:00  INFO 16932 --- [Athenium] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-02T20:41:18.298-05:00  INFO 16932 --- [Athenium] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-11-02T20:50:09.068-05:00  INFO 8692 --- [Athenium] [JavaFX-Launcher] o.s.boot.SpringApplication               : Starting application using Java 17.0.16 with PID 8692 (started by unacu in C:\Users\unacu\OneDrive - Universidad Peruana Unión\BACKUP-Documentos\GitHub\Final-proyect-with-CRUD\Athenium)
+2025-11-02T20:50:09.074-05:00  INFO 8692 --- [Athenium] [JavaFX-Launcher] o.s.boot.SpringApplication               : No active profile set, falling back to 1 default profile: "default"
+2025-11-02T20:50:11.014-05:00  INFO 8692 --- [Athenium] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-02T20:50:11.261-05:00  INFO 8692 --- [Athenium] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 229 ms. Found 8 JPA repository interfaces.
+2025-11-02T20:50:12.140-05:00  INFO 8692 --- [Athenium] [JavaFX-Launcher] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-02T20:50:12.272-05:00  INFO 8692 --- [Athenium] [JavaFX-Launcher] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-11-02T20:50:12.355-05:00  INFO 8692 --- [Athenium] [JavaFX-Launcher] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-02T20:50:12.994-05:00  INFO 8692 --- [Athenium] [JavaFX-Launcher] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-02T20:50:13.060-05:00  INFO 8692 --- [Athenium] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-02T20:50:13.737-05:00  INFO 8692 --- [Athenium] [JavaFX-Launcher] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@1e267148
+2025-11-02T20:50:13.739-05:00  INFO 8692 --- [Athenium] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-02T20:50:13.807-05:00  INFO 8692 --- [Athenium] [JavaFX-Launcher] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 3.46
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-02T20:50:15.610-05:00  INFO 8692 --- [Athenium] [JavaFX-Launcher] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-02T20:50:15.678-05:00  INFO 8692 --- [Athenium] [JavaFX-Launcher] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-02T20:50:16.321-05:00  INFO 8692 --- [Athenium] [JavaFX-Launcher] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-11-02T20:50:17.678-05:00  INFO 8692 --- [Athenium] [JavaFX-Launcher] o.s.boot.SpringApplication               : Started application in 9.78 seconds (process running for 11.719)
+2025-11-02T20:50:17.835-05:00  WARN 8692 --- [Athenium] [JavaFX-Launcher] javafx                                   : Loading FXML document with JavaFX API of version 25 by JavaFX runtime of version 21.0.2
+2025-11-02T20:50:27.615-05:00  INFO 8692 --- [Athenium] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-02T20:50:27.619-05:00  INFO 8692 --- [Athenium] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-02T20:50:27.624-05:00  INFO 8692 --- [Athenium] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-11-02T20:58:58.352-05:00  INFO 20080 --- [Athenium] [JavaFX-Launcher] o.s.boot.SpringApplication               : Starting application using Java 17.0.16 with PID 20080 (started by unacu in C:\Users\unacu\OneDrive - Universidad Peruana Unión\BACKUP-Documentos\GitHub\Final-proyect-with-CRUD\Athenium)
+2025-11-02T20:58:58.360-05:00  INFO 20080 --- [Athenium] [JavaFX-Launcher] o.s.boot.SpringApplication               : No active profile set, falling back to 1 default profile: "default"
+2025-11-02T20:59:00.396-05:00  INFO 20080 --- [Athenium] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-02T20:59:00.699-05:00  INFO 20080 --- [Athenium] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 279 ms. Found 8 JPA repository interfaces.
+2025-11-02T20:59:01.604-05:00  INFO 20080 --- [Athenium] [JavaFX-Launcher] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-02T20:59:01.759-05:00  INFO 20080 --- [Athenium] [JavaFX-Launcher] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-11-02T20:59:01.844-05:00  INFO 20080 --- [Athenium] [JavaFX-Launcher] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-02T20:59:02.436-05:00  INFO 20080 --- [Athenium] [JavaFX-Launcher] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-02T20:59:02.490-05:00  INFO 20080 --- [Athenium] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-02T20:59:02.841-05:00  INFO 20080 --- [Athenium] [JavaFX-Launcher] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@4d02d079
+2025-11-02T20:59:02.842-05:00  INFO 20080 --- [Athenium] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-02T20:59:02.912-05:00  INFO 20080 --- [Athenium] [JavaFX-Launcher] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 3.46
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-02T20:59:04.641-05:00  INFO 20080 --- [Athenium] [JavaFX-Launcher] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-02T20:59:04.720-05:00  INFO 20080 --- [Athenium] [JavaFX-Launcher] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-02T20:59:05.414-05:00  INFO 20080 --- [Athenium] [JavaFX-Launcher] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-11-02T20:59:07.139-05:00  INFO 20080 --- [Athenium] [JavaFX-Launcher] o.s.boot.SpringApplication               : Started application in 10.888 seconds (process running for 12.878)
+2025-11-02T20:59:07.371-05:00  WARN 20080 --- [Athenium] [JavaFX-Launcher] javafx                                   : Loading FXML document with JavaFX API of version 25 by JavaFX runtime of version 21.0.2
+2025-11-02T20:59:25.508-05:00  INFO 20080 --- [Athenium] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-02T20:59:25.512-05:00  INFO 20080 --- [Athenium] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-02T20:59:25.516-05:00  INFO 20080 --- [Athenium] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-11-02T21:00:29.521-05:00  INFO 15996 --- [Athenium] [JavaFX-Launcher] o.s.boot.SpringApplication               : Starting application using Java 17.0.16 with PID 15996 (started by unacu in C:\Users\unacu\OneDrive - Universidad Peruana Unión\BACKUP-Documentos\GitHub\Final-proyect-with-CRUD\Athenium)
+2025-11-02T21:00:29.531-05:00  INFO 15996 --- [Athenium] [JavaFX-Launcher] o.s.boot.SpringApplication               : No active profile set, falling back to 1 default profile: "default"
+2025-11-02T21:00:31.579-05:00  INFO 15996 --- [Athenium] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-02T21:00:31.904-05:00  INFO 15996 --- [Athenium] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 292 ms. Found 8 JPA repository interfaces.
+2025-11-02T21:00:32.953-05:00  INFO 15996 --- [Athenium] [JavaFX-Launcher] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-02T21:00:33.072-05:00  INFO 15996 --- [Athenium] [JavaFX-Launcher] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-11-02T21:00:33.166-05:00  INFO 15996 --- [Athenium] [JavaFX-Launcher] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-02T21:00:33.828-05:00  INFO 15996 --- [Athenium] [JavaFX-Launcher] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-02T21:00:33.912-05:00  INFO 15996 --- [Athenium] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-02T21:00:34.280-05:00  INFO 15996 --- [Athenium] [JavaFX-Launcher] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@4d02d079
+2025-11-02T21:00:34.282-05:00  INFO 15996 --- [Athenium] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-02T21:00:34.361-05:00  INFO 15996 --- [Athenium] [JavaFX-Launcher] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 3.46
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-02T21:00:36.746-05:00  INFO 15996 --- [Athenium] [JavaFX-Launcher] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-02T21:00:36.826-05:00  INFO 15996 --- [Athenium] [JavaFX-Launcher] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-02T21:00:37.540-05:00  INFO 15996 --- [Athenium] [JavaFX-Launcher] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-11-02T21:00:41.673-05:00  INFO 15996 --- [Athenium] [JavaFX-Launcher] o.s.boot.SpringApplication               : Started application in 13.524 seconds (process running for 15.294)
+2025-11-02T21:00:42.547-05:00  WARN 15996 --- [Athenium] [JavaFX-Launcher] javafx                                   : Loading FXML document with JavaFX API of version 25 by JavaFX runtime of version 21.0.2
+2025-11-02T21:00:54.966-05:00  INFO 15996 --- [Athenium] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-02T21:00:54.969-05:00  INFO 15996 --- [Athenium] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-02T21:00:54.971-05:00  INFO 15996 --- [Athenium] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-11-02T21:02:20.159-05:00  INFO 18704 --- [Athenium] [JavaFX-Launcher] o.s.boot.SpringApplication               : Starting application using Java 17.0.16 with PID 18704 (started by unacu in C:\Users\unacu\OneDrive - Universidad Peruana Unión\BACKUP-Documentos\GitHub\Final-proyect-with-CRUD\Athenium)
+2025-11-02T21:02:20.162-05:00  INFO 18704 --- [Athenium] [JavaFX-Launcher] o.s.boot.SpringApplication               : No active profile set, falling back to 1 default profile: "default"
+2025-11-02T21:02:21.657-05:00  INFO 18704 --- [Athenium] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-02T21:02:21.862-05:00  INFO 18704 --- [Athenium] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 191 ms. Found 8 JPA repository interfaces.
+2025-11-02T21:02:22.979-05:00  INFO 18704 --- [Athenium] [JavaFX-Launcher] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-02T21:02:23.075-05:00  INFO 18704 --- [Athenium] [JavaFX-Launcher] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-11-02T21:02:23.171-05:00  INFO 18704 --- [Athenium] [JavaFX-Launcher] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-02T21:02:24.352-05:00  INFO 18704 --- [Athenium] [JavaFX-Launcher] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-02T21:02:24.502-05:00  INFO 18704 --- [Athenium] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-02T21:02:25.216-05:00  INFO 18704 --- [Athenium] [JavaFX-Launcher] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@29a94eda
+2025-11-02T21:02:25.219-05:00  INFO 18704 --- [Athenium] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-02T21:02:25.326-05:00  INFO 18704 --- [Athenium] [JavaFX-Launcher] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 3.46
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-02T21:02:27.802-05:00  INFO 18704 --- [Athenium] [JavaFX-Launcher] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-02T21:02:27.986-05:00  INFO 18704 --- [Athenium] [JavaFX-Launcher] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-02T21:02:29.051-05:00  INFO 18704 --- [Athenium] [JavaFX-Launcher] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-11-02T21:02:31.352-05:00  INFO 18704 --- [Athenium] [JavaFX-Launcher] o.s.boot.SpringApplication               : Started application in 12.066 seconds (process running for 13.337)
+2025-11-02T21:02:31.621-05:00  WARN 18704 --- [Athenium] [JavaFX-Launcher] javafx                                   : Loading FXML document with JavaFX API of version 25 by JavaFX runtime of version 21.0.2
+2025-11-02T21:02:41.825-05:00  INFO 18704 --- [Athenium] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-02T21:02:41.828-05:00  INFO 18704 --- [Athenium] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-02T21:02:41.834-05:00  INFO 18704 --- [Athenium] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-11-02T21:05:25.313-05:00  INFO 3284 --- [Athenium] [JavaFX-Launcher] o.s.boot.SpringApplication               : Starting application using Java 17.0.16 with PID 3284 (started by unacu in C:\Users\unacu\OneDrive - Universidad Peruana Unión\BACKUP-Documentos\GitHub\Final-proyect-with-CRUD\Athenium)
+2025-11-02T21:05:25.318-05:00  INFO 3284 --- [Athenium] [JavaFX-Launcher] o.s.boot.SpringApplication               : No active profile set, falling back to 1 default profile: "default"
+2025-11-02T21:05:26.754-05:00  INFO 3284 --- [Athenium] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-02T21:05:26.939-05:00  INFO 3284 --- [Athenium] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 168 ms. Found 8 JPA repository interfaces.
+2025-11-02T21:05:27.756-05:00  INFO 3284 --- [Athenium] [JavaFX-Launcher] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-02T21:05:27.896-05:00  INFO 3284 --- [Athenium] [JavaFX-Launcher] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-11-02T21:05:27.996-05:00  INFO 3284 --- [Athenium] [JavaFX-Launcher] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-02T21:05:28.627-05:00  INFO 3284 --- [Athenium] [JavaFX-Launcher] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-02T21:05:28.715-05:00  INFO 3284 --- [Athenium] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-02T21:05:29.164-05:00  INFO 3284 --- [Athenium] [JavaFX-Launcher] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@87c6783
+2025-11-02T21:05:29.168-05:00  INFO 3284 --- [Athenium] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-02T21:05:29.257-05:00  INFO 3284 --- [Athenium] [JavaFX-Launcher] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 3.46
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-02T21:05:30.965-05:00  INFO 3284 --- [Athenium] [JavaFX-Launcher] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-02T21:05:31.031-05:00  INFO 3284 --- [Athenium] [JavaFX-Launcher] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-02T21:05:31.725-05:00  INFO 3284 --- [Athenium] [JavaFX-Launcher] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-11-02T21:05:33.966-05:00  INFO 3284 --- [Athenium] [JavaFX-Launcher] o.s.boot.SpringApplication               : Started application in 9.513 seconds (process running for 10.899)
+2025-11-02T21:05:34.183-05:00  WARN 3284 --- [Athenium] [JavaFX-Launcher] javafx                                   : Loading FXML document with JavaFX API of version 25 by JavaFX runtime of version 21.0.2
+2025-11-02T21:05:39.813-05:00  WARN 3284 --- [Athenium] [JavaFX Application Thread] javafx                                   : Loading FXML document with JavaFX API of version 25 by JavaFX runtime of version 21.0.2
+2025-11-02T21:06:04.313-05:00  INFO 3284 --- [Athenium] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-02T21:06:04.317-05:00  INFO 3284 --- [Athenium] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-02T21:06:04.322-05:00  INFO 3284 --- [Athenium] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-11-02T21:11:45.152-05:00  INFO 11960 --- [Athenium] [JavaFX-Launcher] o.s.boot.SpringApplication               : Starting application using Java 17.0.16 with PID 11960 (started by unacu in C:\Users\unacu\OneDrive - Universidad Peruana Unión\BACKUP-Documentos\GitHub\Final-proyect-with-CRUD\Athenium)
+2025-11-02T21:11:45.160-05:00  INFO 11960 --- [Athenium] [JavaFX-Launcher] o.s.boot.SpringApplication               : No active profile set, falling back to 1 default profile: "default"
+2025-11-02T21:11:46.943-05:00  INFO 11960 --- [Athenium] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-02T21:11:47.240-05:00  INFO 11960 --- [Athenium] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 274 ms. Found 8 JPA repository interfaces.
+2025-11-02T21:11:48.145-05:00  INFO 11960 --- [Athenium] [JavaFX-Launcher] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-02T21:11:48.291-05:00  INFO 11960 --- [Athenium] [JavaFX-Launcher] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-11-02T21:11:48.380-05:00  INFO 11960 --- [Athenium] [JavaFX-Launcher] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-02T21:11:48.889-05:00  INFO 11960 --- [Athenium] [JavaFX-Launcher] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-02T21:11:48.958-05:00  INFO 11960 --- [Athenium] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-02T21:11:49.255-05:00  INFO 11960 --- [Athenium] [JavaFX-Launcher] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@61dae541
+2025-11-02T21:11:49.259-05:00  INFO 11960 --- [Athenium] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-02T21:11:49.317-05:00  INFO 11960 --- [Athenium] [JavaFX-Launcher] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 3.46
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-02T21:11:51.017-05:00  INFO 11960 --- [Athenium] [JavaFX-Launcher] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-02T21:11:51.098-05:00  INFO 11960 --- [Athenium] [JavaFX-Launcher] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-02T21:11:52.162-05:00  INFO 11960 --- [Athenium] [JavaFX-Launcher] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-11-02T21:11:53.865-05:00  INFO 11960 --- [Athenium] [JavaFX-Launcher] o.s.boot.SpringApplication               : Started application in 10.1 seconds (process running for 11.94)
+2025-11-02T21:11:54.027-05:00  WARN 11960 --- [Athenium] [JavaFX-Launcher] javafx                                   : Loading FXML document with JavaFX API of version 25 by JavaFX runtime of version 21.0.2
+2025-11-02T21:12:12.370-05:00  INFO 11960 --- [Athenium] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-02T21:12:12.376-05:00  INFO 11960 --- [Athenium] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-02T21:12:12.380-05:00  INFO 11960 --- [Athenium] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-11-02T21:28:15.155-05:00  INFO 21828 --- [Athenium] [JavaFX-Launcher] o.s.boot.SpringApplication               : Starting application using Java 17.0.16 with PID 21828 (started by unacu in C:\Users\unacu\OneDrive - Universidad Peruana Unión\BACKUP-Documentos\GitHub\Final-proyect-with-CRUD\Athenium)
+2025-11-02T21:28:15.161-05:00  INFO 21828 --- [Athenium] [JavaFX-Launcher] o.s.boot.SpringApplication               : No active profile set, falling back to 1 default profile: "default"
+2025-11-02T21:28:17.218-05:00  INFO 21828 --- [Athenium] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-02T21:28:17.446-05:00  INFO 21828 --- [Athenium] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 210 ms. Found 9 JPA repository interfaces.
+2025-11-02T21:28:19.465-05:00  INFO 21828 --- [Athenium] [JavaFX-Launcher] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-02T21:28:19.600-05:00  INFO 21828 --- [Athenium] [JavaFX-Launcher] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-11-02T21:28:19.701-05:00  INFO 21828 --- [Athenium] [JavaFX-Launcher] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-02T21:28:20.394-05:00  INFO 21828 --- [Athenium] [JavaFX-Launcher] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-02T21:28:20.483-05:00  INFO 21828 --- [Athenium] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-02T21:28:20.929-05:00  INFO 21828 --- [Athenium] [JavaFX-Launcher] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@746e4126
+2025-11-02T21:28:20.931-05:00  INFO 21828 --- [Athenium] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-02T21:28:21.025-05:00  INFO 21828 --- [Athenium] [JavaFX-Launcher] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 3.46
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-02T21:28:24.043-05:00  INFO 21828 --- [Athenium] [JavaFX-Launcher] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-02T21:28:24.116-05:00  INFO 21828 --- [Athenium] [JavaFX-Launcher] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-02T21:28:24.783-05:00  INFO 21828 --- [Athenium] [JavaFX-Launcher] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-11-02T21:28:27.234-05:00  INFO 21828 --- [Athenium] [JavaFX-Launcher] o.s.boot.SpringApplication               : Started application in 13.477 seconds (process running for 15.651)
+2025-11-02T21:28:27.511-05:00  WARN 21828 --- [Athenium] [JavaFX-Launcher] javafx                                   : Loading FXML document with JavaFX API of version 25 by JavaFX runtime of version 21.0.2
+2025-11-02T21:28:32.571-05:00  WARN 21828 --- [Athenium] [JavaFX Application Thread] javafx                                   : Loading FXML document with JavaFX API of version 25 by JavaFX runtime of version 21.0.2
+2025-11-02T21:28:45.716-05:00  INFO 21828 --- [Athenium] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-02T21:28:45.723-05:00  INFO 21828 --- [Athenium] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-02T21:28:45.728-05:00  INFO 21828 --- [Athenium] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-11-02T21:40:21.084-05:00  INFO 15228 --- [Athenium] [JavaFX-Launcher] o.s.boot.SpringApplication               : Starting application using Java 17.0.16 with PID 15228 (started by unacu in C:\Users\unacu\OneDrive - Universidad Peruana Unión\BACKUP-Documentos\GitHub\Final-proyect-with-CRUD\Athenium)
+2025-11-02T21:40:21.094-05:00  INFO 15228 --- [Athenium] [JavaFX-Launcher] o.s.boot.SpringApplication               : No active profile set, falling back to 1 default profile: "default"
+2025-11-02T21:40:24.310-05:00  INFO 15228 --- [Athenium] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-02T21:40:24.610-05:00  INFO 15228 --- [Athenium] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 280 ms. Found 9 JPA repository interfaces.
+2025-11-02T21:40:25.726-05:00  INFO 15228 --- [Athenium] [JavaFX-Launcher] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-02T21:40:25.874-05:00  INFO 15228 --- [Athenium] [JavaFX-Launcher] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-11-02T21:40:25.979-05:00  INFO 15228 --- [Athenium] [JavaFX-Launcher] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-02T21:40:26.918-05:00  INFO 15228 --- [Athenium] [JavaFX-Launcher] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-02T21:40:27.010-05:00  INFO 15228 --- [Athenium] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-02T21:40:27.500-05:00  INFO 15228 --- [Athenium] [JavaFX-Launcher] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@52163533
+2025-11-02T21:40:27.503-05:00  INFO 15228 --- [Athenium] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-02T21:40:27.615-05:00  INFO 15228 --- [Athenium] [JavaFX-Launcher] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 3.46
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-02T21:40:29.324-05:00  INFO 15228 --- [Athenium] [JavaFX-Launcher] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-02T21:40:29.400-05:00  INFO 15228 --- [Athenium] [JavaFX-Launcher] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-02T21:40:29.917-05:00  INFO 15228 --- [Athenium] [JavaFX-Launcher] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-11-02T21:40:32.585-05:00  INFO 15228 --- [Athenium] [JavaFX-Launcher] o.s.boot.SpringApplication               : Started application in 13.434 seconds (process running for 15.971)
+2025-11-02T21:40:32.827-05:00  WARN 15228 --- [Athenium] [JavaFX-Launcher] javafx                                   : Loading FXML document with JavaFX API of version 25 by JavaFX runtime of version 21.0.2
+2025-11-02T21:40:44.265-05:00  WARN 15228 --- [Athenium] [JavaFX Application Thread] javafx                                   : Loading FXML document with JavaFX API of version 25 by JavaFX runtime of version 21.0.2
+2025-11-02T21:41:19.670-05:00  INFO 15228 --- [Athenium] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-02T21:41:19.684-05:00  INFO 15228 --- [Athenium] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-02T21:41:19.690-05:00  INFO 15228 --- [Athenium] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-11-02T21:41:37.368-05:00  INFO 19536 --- [Athenium] [JavaFX-Launcher] o.s.boot.SpringApplication               : Starting application using Java 17.0.16 with PID 19536 (started by unacu in C:\Users\unacu\OneDrive - Universidad Peruana Unión\BACKUP-Documentos\GitHub\Final-proyect-with-CRUD\Athenium)
+2025-11-02T21:41:37.376-05:00  INFO 19536 --- [Athenium] [JavaFX-Launcher] o.s.boot.SpringApplication               : No active profile set, falling back to 1 default profile: "default"
+2025-11-02T21:41:40.106-05:00  INFO 19536 --- [Athenium] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-02T21:41:40.614-05:00  INFO 19536 --- [Athenium] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 472 ms. Found 9 JPA repository interfaces.
+2025-11-02T21:41:42.035-05:00  INFO 19536 --- [Athenium] [JavaFX-Launcher] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-02T21:41:42.268-05:00  INFO 19536 --- [Athenium] [JavaFX-Launcher] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-11-02T21:41:42.452-05:00  INFO 19536 --- [Athenium] [JavaFX-Launcher] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-02T21:41:43.845-05:00  INFO 19536 --- [Athenium] [JavaFX-Launcher] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-02T21:41:43.970-05:00  INFO 19536 --- [Athenium] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-02T21:41:44.419-05:00  INFO 19536 --- [Athenium] [JavaFX-Launcher] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@1d802191
+2025-11-02T21:41:44.422-05:00  INFO 19536 --- [Athenium] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-02T21:41:44.515-05:00  INFO 19536 --- [Athenium] [JavaFX-Launcher] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 3.46
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-02T21:41:47.158-05:00  INFO 19536 --- [Athenium] [JavaFX-Launcher] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-02T21:41:47.267-05:00  INFO 19536 --- [Athenium] [JavaFX-Launcher] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-02T21:41:48.292-05:00  INFO 19536 --- [Athenium] [JavaFX-Launcher] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-11-02T21:41:51.684-05:00  INFO 19536 --- [Athenium] [JavaFX-Launcher] o.s.boot.SpringApplication               : Started application in 15.95 seconds (process running for 18.528)
+2025-11-02T21:41:51.937-05:00  WARN 19536 --- [Athenium] [JavaFX-Launcher] javafx                                   : Loading FXML document with JavaFX API of version 25 by JavaFX runtime of version 21.0.2
+2025-11-02T21:41:56.154-05:00  WARN 19536 --- [Athenium] [JavaFX Application Thread] javafx                                   : Loading FXML document with JavaFX API of version 25 by JavaFX runtime of version 21.0.2
+2025-11-02T21:44:44.227-05:00  INFO 19536 --- [Athenium] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-02T21:44:44.273-05:00  INFO 19536 --- [Athenium] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-02T21:44:44.351-05:00  INFO 19536 --- [Athenium] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-11-02T22:26:13.708-05:00  INFO 13516 --- [Athenium] [JavaFX-Launcher] o.s.boot.SpringApplication               : Starting application using Java 17.0.16 with PID 13516 (started by unacu in C:\Users\unacu\OneDrive - Universidad Peruana Unión\BACKUP-Documentos\GitHub\Final-proyect-with-CRUD\Athenium)
+2025-11-02T22:26:13.717-05:00  INFO 13516 --- [Athenium] [JavaFX-Launcher] o.s.boot.SpringApplication               : No active profile set, falling back to 1 default profile: "default"
+2025-11-02T22:26:16.971-05:00  INFO 13516 --- [Athenium] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-02T22:26:17.344-05:00  INFO 13516 --- [Athenium] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 348 ms. Found 9 JPA repository interfaces.
+2025-11-02T22:26:19.026-05:00  INFO 13516 --- [Athenium] [JavaFX-Launcher] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-02T22:26:19.259-05:00  INFO 13516 --- [Athenium] [JavaFX-Launcher] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-11-02T22:26:19.543-05:00  INFO 13516 --- [Athenium] [JavaFX-Launcher] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-02T22:26:20.810-05:00  INFO 13516 --- [Athenium] [JavaFX-Launcher] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-02T22:26:20.914-05:00  INFO 13516 --- [Athenium] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-02T22:26:21.484-05:00  INFO 13516 --- [Athenium] [JavaFX-Launcher] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@3a2a017d
+2025-11-02T22:26:21.486-05:00  INFO 13516 --- [Athenium] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-02T22:26:21.559-05:00  INFO 13516 --- [Athenium] [JavaFX-Launcher] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 3.46
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-02T22:26:23.610-05:00  INFO 13516 --- [Athenium] [JavaFX-Launcher] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-02T22:26:23.726-05:00  INFO 13516 --- [Athenium] [JavaFX-Launcher] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-02T22:26:25.005-05:00  INFO 13516 --- [Athenium] [JavaFX-Launcher] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-11-02T22:26:28.799-05:00  INFO 13516 --- [Athenium] [JavaFX-Launcher] o.s.boot.SpringApplication               : Started application in 16.807 seconds (process running for 21.682)
+2025-11-02T22:26:29.083-05:00  WARN 13516 --- [Athenium] [JavaFX-Launcher] javafx                                   : Loading FXML document with JavaFX API of version 25 by JavaFX runtime of version 21.0.2
+2025-11-02T22:26:47.976-05:00  WARN 13516 --- [Athenium] [JavaFX Application Thread] javafx                                   : Loading FXML document with JavaFX API of version 25 by JavaFX runtime of version 21.0.2
+2025-11-02T22:28:40.307-05:00  INFO 13516 --- [Athenium] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-02T22:28:40.628-05:00  INFO 13516 --- [Athenium] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-02T22:28:40.816-05:00  INFO 13516 --- [Athenium] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-11-02T22:34:43.419-05:00  INFO 7276 --- [Athenium] [JavaFX-Launcher] o.s.boot.SpringApplication               : Starting application using Java 17.0.16 with PID 7276 (started by unacu in C:\Users\unacu\OneDrive - Universidad Peruana Unión\BACKUP-Documentos\GitHub\Final-proyect-with-CRUD\Athenium)
+2025-11-02T22:34:43.435-05:00  INFO 7276 --- [Athenium] [JavaFX-Launcher] o.s.boot.SpringApplication               : No active profile set, falling back to 1 default profile: "default"
+2025-11-02T22:34:46.714-05:00  INFO 7276 --- [Athenium] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-02T22:34:47.039-05:00  INFO 7276 --- [Athenium] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 303 ms. Found 9 JPA repository interfaces.
+2025-11-02T22:34:47.819-05:00  INFO 7276 --- [Athenium] [JavaFX-Launcher] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-02T22:34:47.958-05:00  INFO 7276 --- [Athenium] [JavaFX-Launcher] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-11-02T22:34:48.044-05:00  INFO 7276 --- [Athenium] [JavaFX-Launcher] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-02T22:34:48.698-05:00  INFO 7276 --- [Athenium] [JavaFX-Launcher] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-02T22:34:48.780-05:00  INFO 7276 --- [Athenium] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-02T22:34:49.335-05:00  INFO 7276 --- [Athenium] [JavaFX-Launcher] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@547122df
+2025-11-02T22:34:49.337-05:00  INFO 7276 --- [Athenium] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-02T22:34:49.421-05:00  INFO 7276 --- [Athenium] [JavaFX-Launcher] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 3.46
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-02T22:34:51.218-05:00  INFO 7276 --- [Athenium] [JavaFX-Launcher] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-02T22:34:51.284-05:00  INFO 7276 --- [Athenium] [JavaFX-Launcher] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-02T22:34:51.755-05:00  INFO 7276 --- [Athenium] [JavaFX-Launcher] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-11-02T22:34:54.462-05:00  INFO 7276 --- [Athenium] [JavaFX-Launcher] o.s.boot.SpringApplication               : Started application in 12.806 seconds (process running for 16.273)
+2025-11-02T22:34:54.656-05:00  WARN 7276 --- [Athenium] [JavaFX-Launcher] javafx                                   : Loading FXML document with JavaFX API of version 25 by JavaFX runtime of version 21.0.2
+2025-11-02T22:35:01.255-05:00  WARN 7276 --- [Athenium] [JavaFX Application Thread] javafx                                   : Loading FXML document with JavaFX API of version 25 by JavaFX runtime of version 21.0.2
+2025-11-02T22:37:30.052-05:00  INFO 7276 --- [Athenium] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-02T22:37:30.067-05:00  INFO 7276 --- [Athenium] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-02T22:37:30.072-05:00  INFO 7276 --- [Athenium] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-11-02T22:47:00.958-05:00  INFO 19376 --- [Athenium] [JavaFX-Launcher] o.s.boot.SpringApplication               : Starting application using Java 17.0.16 with PID 19376 (started by unacu in C:\Users\unacu\OneDrive - Universidad Peruana Unión\BACKUP-Documentos\GitHub\Final-proyect-with-CRUD\Athenium)
+2025-11-02T22:47:00.968-05:00  INFO 19376 --- [Athenium] [JavaFX-Launcher] o.s.boot.SpringApplication               : No active profile set, falling back to 1 default profile: "default"
+2025-11-02T22:47:04.039-05:00  INFO 19376 --- [Athenium] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-02T22:47:04.322-05:00  INFO 19376 --- [Athenium] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 264 ms. Found 9 JPA repository interfaces.
+2025-11-02T22:47:05.435-05:00  INFO 19376 --- [Athenium] [JavaFX-Launcher] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-02T22:47:05.592-05:00  INFO 19376 --- [Athenium] [JavaFX-Launcher] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-11-02T22:47:05.732-05:00  INFO 19376 --- [Athenium] [JavaFX-Launcher] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-02T22:47:06.619-05:00  INFO 19376 --- [Athenium] [JavaFX-Launcher] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-02T22:47:06.718-05:00  INFO 19376 --- [Athenium] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-02T22:47:07.369-05:00  INFO 19376 --- [Athenium] [JavaFX-Launcher] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@4dfddd7e
+2025-11-02T22:47:07.372-05:00  INFO 19376 --- [Athenium] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-02T22:47:07.443-05:00  INFO 19376 --- [Athenium] [JavaFX-Launcher] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 3.46
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-02T22:47:08.957-05:00  INFO 19376 --- [Athenium] [JavaFX-Launcher] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-02T22:47:09.013-05:00  INFO 19376 --- [Athenium] [JavaFX-Launcher] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-02T22:47:09.484-05:00  INFO 19376 --- [Athenium] [JavaFX-Launcher] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-11-02T22:47:12.779-05:00  INFO 19376 --- [Athenium] [JavaFX-Launcher] o.s.boot.SpringApplication               : Started application in 13.961 seconds (process running for 17.663)
+2025-11-02T22:47:13.331-05:00  WARN 19376 --- [Athenium] [JavaFX-Launcher] javafx                                   : Loading FXML document with JavaFX API of version 25 by JavaFX runtime of version 21.0.2
+2025-11-02T22:47:20.014-05:00  WARN 19376 --- [Athenium] [JavaFX Application Thread] javafx                                   : Loading FXML document with JavaFX API of version 25 by JavaFX runtime of version 21.0.2
+2025-11-02T22:47:24.475-05:00  INFO 19376 --- [Athenium] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-02T22:47:24.478-05:00  INFO 19376 --- [Athenium] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-02T22:47:24.485-05:00  INFO 19376 --- [Athenium] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-11-02T22:48:14.332-05:00  INFO 20408 --- [Athenium] [JavaFX-Launcher] o.s.boot.SpringApplication               : Starting application using Java 17.0.16 with PID 20408 (started by unacu in C:\Users\unacu\OneDrive - Universidad Peruana Unión\BACKUP-Documentos\GitHub\Final-proyect-with-CRUD\Athenium)
+2025-11-02T22:48:14.338-05:00  INFO 20408 --- [Athenium] [JavaFX-Launcher] o.s.boot.SpringApplication               : No active profile set, falling back to 1 default profile: "default"
+2025-11-02T22:48:16.585-05:00  INFO 20408 --- [Athenium] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-02T22:48:16.997-05:00  INFO 20408 --- [Athenium] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 385 ms. Found 9 JPA repository interfaces.
+2025-11-02T22:48:18.541-05:00  INFO 20408 --- [Athenium] [JavaFX-Launcher] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-02T22:48:18.664-05:00  INFO 20408 --- [Athenium] [JavaFX-Launcher] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-11-02T22:48:18.765-05:00  INFO 20408 --- [Athenium] [JavaFX-Launcher] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-02T22:48:19.343-05:00  INFO 20408 --- [Athenium] [JavaFX-Launcher] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-02T22:48:19.427-05:00  INFO 20408 --- [Athenium] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-02T22:48:19.922-05:00  INFO 20408 --- [Athenium] [JavaFX-Launcher] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@5455b4dc
+2025-11-02T22:48:19.926-05:00  INFO 20408 --- [Athenium] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-02T22:48:20.015-05:00  INFO 20408 --- [Athenium] [JavaFX-Launcher] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 3.46
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-02T22:48:21.987-05:00  INFO 20408 --- [Athenium] [JavaFX-Launcher] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-02T22:48:22.091-05:00  INFO 20408 --- [Athenium] [JavaFX-Launcher] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-02T22:48:22.580-05:00  INFO 20408 --- [Athenium] [JavaFX-Launcher] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-11-02T22:48:24.511-05:00  INFO 20408 --- [Athenium] [JavaFX-Launcher] o.s.boot.SpringApplication               : Started application in 11.38 seconds (process running for 14.457)
+2025-11-02T22:48:24.881-05:00  WARN 20408 --- [Athenium] [JavaFX-Launcher] javafx                                   : Loading FXML document with JavaFX API of version 25 by JavaFX runtime of version 21.0.2
+2025-11-02T22:48:55.171-05:00  INFO 20408 --- [Athenium] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-02T22:48:55.175-05:00  INFO 20408 --- [Athenium] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-02T22:48:55.182-05:00  INFO 20408 --- [Athenium] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-11-02T22:50:15.297-05:00  INFO 15112 --- [Athenium] [JavaFX-Launcher] o.s.boot.SpringApplication               : Starting application using Java 17.0.16 with PID 15112 (started by unacu in C:\Users\unacu\OneDrive - Universidad Peruana Unión\BACKUP-Documentos\GitHub\Final-proyect-with-CRUD\Athenium)
+2025-11-02T22:50:15.303-05:00  INFO 15112 --- [Athenium] [JavaFX-Launcher] o.s.boot.SpringApplication               : No active profile set, falling back to 1 default profile: "default"
+2025-11-02T22:50:17.246-05:00  INFO 15112 --- [Athenium] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-02T22:50:17.532-05:00  INFO 15112 --- [Athenium] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 267 ms. Found 9 JPA repository interfaces.
+2025-11-02T22:50:18.420-05:00  INFO 15112 --- [Athenium] [JavaFX-Launcher] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-02T22:50:18.514-05:00  INFO 15112 --- [Athenium] [JavaFX-Launcher] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-11-02T22:50:18.586-05:00  INFO 15112 --- [Athenium] [JavaFX-Launcher] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-02T22:50:19.106-05:00  INFO 15112 --- [Athenium] [JavaFX-Launcher] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-02T22:50:19.160-05:00  INFO 15112 --- [Athenium] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-02T22:50:19.504-05:00  INFO 15112 --- [Athenium] [JavaFX-Launcher] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@7131ca5c
+2025-11-02T22:50:19.507-05:00  INFO 15112 --- [Athenium] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-02T22:50:19.565-05:00  INFO 15112 --- [Athenium] [JavaFX-Launcher] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 3.46
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-02T22:50:21.365-05:00  INFO 15112 --- [Athenium] [JavaFX-Launcher] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-02T22:50:21.454-05:00  INFO 15112 --- [Athenium] [JavaFX-Launcher] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-02T22:50:22.259-05:00  INFO 15112 --- [Athenium] [JavaFX-Launcher] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-11-02T22:50:24.919-05:00  INFO 15112 --- [Athenium] [JavaFX-Launcher] o.s.boot.SpringApplication               : Started application in 10.891 seconds (process running for 13.107)
+2025-11-02T22:50:25.238-05:00  WARN 15112 --- [Athenium] [JavaFX-Launcher] javafx                                   : Loading FXML document with JavaFX API of version 25 by JavaFX runtime of version 21.0.2
+2025-11-02T22:50:51.660-05:00  WARN 15112 --- [Athenium] [JavaFX Application Thread] javafx                                   : Loading FXML document with JavaFX API of version 25 by JavaFX runtime of version 21.0.2
+2025-11-02T22:50:53.677-05:00  INFO 15112 --- [Athenium] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-02T22:50:53.681-05:00  INFO 15112 --- [Athenium] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-02T22:50:53.687-05:00  INFO 15112 --- [Athenium] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-11-02T22:52:10.199-05:00  INFO 1972 --- [Athenium] [JavaFX-Launcher] o.s.boot.SpringApplication               : Starting application using Java 17.0.16 with PID 1972 (started by unacu in C:\Users\unacu\OneDrive - Universidad Peruana Unión\BACKUP-Documentos\GitHub\Final-proyect-with-CRUD\Athenium)
+2025-11-02T22:52:10.222-05:00  INFO 1972 --- [Athenium] [JavaFX-Launcher] o.s.boot.SpringApplication               : No active profile set, falling back to 1 default profile: "default"
+2025-11-02T22:52:13.030-05:00  INFO 1972 --- [Athenium] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-02T22:52:13.256-05:00  INFO 1972 --- [Athenium] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 209 ms. Found 9 JPA repository interfaces.
+2025-11-02T22:52:14.013-05:00  INFO 1972 --- [Athenium] [JavaFX-Launcher] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-02T22:52:14.093-05:00  INFO 1972 --- [Athenium] [JavaFX-Launcher] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-11-02T22:52:14.150-05:00  INFO 1972 --- [Athenium] [JavaFX-Launcher] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-02T22:52:14.588-05:00  INFO 1972 --- [Athenium] [JavaFX-Launcher] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-02T22:52:14.642-05:00  INFO 1972 --- [Athenium] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-02T22:52:14.980-05:00  INFO 1972 --- [Athenium] [JavaFX-Launcher] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@4ce0eb3c
+2025-11-02T22:52:14.983-05:00  INFO 1972 --- [Athenium] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-02T22:52:15.054-05:00  INFO 1972 --- [Athenium] [JavaFX-Launcher] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 3.46
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-02T22:52:16.729-05:00  INFO 1972 --- [Athenium] [JavaFX-Launcher] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-02T22:52:16.807-05:00  INFO 1972 --- [Athenium] [JavaFX-Launcher] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-02T22:52:17.362-05:00  INFO 1972 --- [Athenium] [JavaFX-Launcher] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-11-02T22:52:22.611-05:00  INFO 1972 --- [Athenium] [JavaFX-Launcher] o.s.boot.SpringApplication               : Started application in 14.643 seconds (process running for 16.72)
+2025-11-02T22:52:22.996-05:00  WARN 1972 --- [Athenium] [JavaFX-Launcher] javafx                                   : Loading FXML document with JavaFX API of version 25 by JavaFX runtime of version 21.0.2
+2025-11-02T22:52:27.971-05:00  WARN 1972 --- [Athenium] [JavaFX Application Thread] o.s.s.c.bcrypt.BCryptPasswordEncoder     : Encoded password does not look like BCrypt
+2025-11-02T22:52:49.183-05:00  WARN 1972 --- [Athenium] [JavaFX Application Thread] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 19, SQLState: null
+2025-11-02T22:52:49.184-05:00 ERROR 1972 --- [Athenium] [JavaFX Application Thread] o.h.engine.jdbc.spi.SqlExceptionHelper   : [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: athenium_usuario.email)
+2025-11-02T22:53:13.565-05:00  WARN 1972 --- [Athenium] [JavaFX Application Thread] javafx                                   : Loading FXML document with JavaFX API of version 25 by JavaFX runtime of version 21.0.2
+2025-11-02T22:53:17.526-05:00  WARN 1972 --- [Athenium] [JavaFX Application Thread] o.s.s.c.bcrypt.BCryptPasswordEncoder     : Encoded password does not look like BCrypt
+2025-11-02T22:53:17.904-05:00  WARN 1972 --- [Athenium] [JavaFX Application Thread] o.s.s.c.bcrypt.BCryptPasswordEncoder     : Encoded password does not look like BCrypt
+2025-11-02T22:53:18.253-05:00  WARN 1972 --- [Athenium] [JavaFX Application Thread] o.s.s.c.bcrypt.BCryptPasswordEncoder     : Encoded password does not look like BCrypt
+2025-11-02T22:53:18.893-05:00  WARN 1972 --- [Athenium] [JavaFX Application Thread] o.s.s.c.bcrypt.BCryptPasswordEncoder     : Encoded password does not look like BCrypt
+2025-11-02T22:53:36.142-05:00  WARN 1972 --- [Athenium] [JavaFX Application Thread] javafx                                   : Loading FXML document with JavaFX API of version 25 by JavaFX runtime of version 21.0.2
+2025-11-02T22:53:39.442-05:00  WARN 1972 --- [Athenium] [JavaFX Application Thread] javafx                                   : Loading FXML document with JavaFX API of version 25 by JavaFX runtime of version 21.0.2
+2025-11-02T22:54:23.254-05:00  INFO 1972 --- [Athenium] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-02T22:54:23.258-05:00  INFO 1972 --- [Athenium] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-02T22:54:23.260-05:00  INFO 1972 --- [Athenium] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-11-02T22:55:22.248-05:00  INFO 15232 --- [Athenium] [JavaFX-Launcher] o.s.boot.SpringApplication               : Starting application using Java 17.0.16 with PID 15232 (started by unacu in C:\Users\unacu\OneDrive - Universidad Peruana Unión\BACKUP-Documentos\GitHub\Final-proyect-with-CRUD\Athenium)
+2025-11-02T22:55:22.258-05:00  INFO 15232 --- [Athenium] [JavaFX-Launcher] o.s.boot.SpringApplication               : No active profile set, falling back to 1 default profile: "default"
+2025-11-02T22:55:25.276-05:00  INFO 15232 --- [Athenium] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-02T22:55:25.637-05:00  INFO 15232 --- [Athenium] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 334 ms. Found 9 JPA repository interfaces.
+2025-11-02T22:55:26.931-05:00  INFO 15232 --- [Athenium] [JavaFX-Launcher] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-02T22:55:27.085-05:00  INFO 15232 --- [Athenium] [JavaFX-Launcher] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-11-02T22:55:27.180-05:00  INFO 15232 --- [Athenium] [JavaFX-Launcher] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-02T22:55:28.227-05:00  INFO 15232 --- [Athenium] [JavaFX-Launcher] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-02T22:55:28.320-05:00  INFO 15232 --- [Athenium] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-02T22:55:29.416-05:00  INFO 15232 --- [Athenium] [JavaFX-Launcher] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@1fef647b
+2025-11-02T22:55:29.421-05:00  INFO 15232 --- [Athenium] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-02T22:55:29.610-05:00  INFO 15232 --- [Athenium] [JavaFX-Launcher] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 3.46
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-02T22:55:32.575-05:00  INFO 15232 --- [Athenium] [JavaFX-Launcher] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-02T22:55:33.087-05:00  INFO 15232 --- [Athenium] [JavaFX-Launcher] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-02T22:55:34.985-05:00  INFO 15232 --- [Athenium] [JavaFX-Launcher] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-11-02T22:55:39.444-05:00  INFO 15232 --- [Athenium] [JavaFX-Launcher] o.s.boot.SpringApplication               : Started application in 20.473 seconds (process running for 24.966)
+2025-11-02T22:55:40.062-05:00  WARN 15232 --- [Athenium] [JavaFX-Launcher] javafx                                   : Loading FXML document with JavaFX API of version 25 by JavaFX runtime of version 21.0.2
+2025-11-02T22:55:47.499-05:00  WARN 15232 --- [Athenium] [JavaFX Application Thread] javafx                                   : Loading FXML document with JavaFX API of version 25 by JavaFX runtime of version 21.0.2
+2025-11-02T22:56:50.634-05:00  INFO 15232 --- [Athenium] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-02T22:56:50.638-05:00  INFO 15232 --- [Athenium] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-02T22:56:50.643-05:00  INFO 15232 --- [Athenium] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-11-02T22:57:47.905-05:00  INFO 3836 --- [Athenium] [JavaFX-Launcher] o.s.boot.SpringApplication               : Starting application using Java 17.0.16 with PID 3836 (started by unacu in C:\Users\unacu\OneDrive - Universidad Peruana Unión\BACKUP-Documentos\GitHub\Final-proyect-with-CRUD\Athenium)
+2025-11-02T22:57:47.915-05:00  INFO 3836 --- [Athenium] [JavaFX-Launcher] o.s.boot.SpringApplication               : No active profile set, falling back to 1 default profile: "default"
+2025-11-02T22:57:50.205-05:00  INFO 3836 --- [Athenium] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-02T22:57:50.473-05:00  INFO 3836 --- [Athenium] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 250 ms. Found 9 JPA repository interfaces.
+2025-11-02T22:57:51.439-05:00  INFO 3836 --- [Athenium] [JavaFX-Launcher] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-02T22:57:51.575-05:00  INFO 3836 --- [Athenium] [JavaFX-Launcher] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-11-02T22:57:51.676-05:00  INFO 3836 --- [Athenium] [JavaFX-Launcher] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-02T22:57:52.449-05:00  INFO 3836 --- [Athenium] [JavaFX-Launcher] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-02T22:57:52.550-05:00  INFO 3836 --- [Athenium] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-02T22:57:53.677-05:00  INFO 3836 --- [Athenium] [JavaFX-Launcher] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@6192dda8
+2025-11-02T22:57:53.682-05:00  INFO 3836 --- [Athenium] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-02T22:57:53.778-05:00  INFO 3836 --- [Athenium] [JavaFX-Launcher] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 3.46
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-02T22:57:55.964-05:00  INFO 3836 --- [Athenium] [JavaFX-Launcher] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-02T22:57:56.098-05:00  INFO 3836 --- [Athenium] [JavaFX-Launcher] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-02T22:57:57.068-05:00  INFO 3836 --- [Athenium] [JavaFX-Launcher] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-11-02T22:58:09.535-05:00  INFO 3836 --- [Athenium] [JavaFX-Launcher] o.s.boot.SpringApplication               : Started application in 23.133 seconds (process running for 26.989)
+2025-11-02T22:58:10.700-05:00  WARN 3836 --- [Athenium] [JavaFX-Launcher] javafx                                   : Loading FXML document with JavaFX API of version 25 by JavaFX runtime of version 21.0.2
+2025-11-02T22:58:42.391-05:00  WARN 3836 --- [Athenium] [JavaFX Application Thread] javafx                                   : Loading FXML document with JavaFX API of version 25 by JavaFX runtime of version 21.0.2
+2025-11-02T22:58:45.639-05:00  WARN 3836 --- [Athenium] [JavaFX Application Thread] javafx                                   : Loading FXML document with JavaFX API of version 25 by JavaFX runtime of version 21.0.2
+2025-11-02T23:01:19.098-05:00  INFO 3836 --- [Athenium] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-02T23:01:19.203-05:00  INFO 3836 --- [Athenium] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-02T23:01:19.232-05:00  INFO 3836 --- [Athenium] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-11-02T23:09:02.535-05:00  INFO 9720 --- [Athenium] [JavaFX-Launcher] o.s.boot.SpringApplication               : Starting application using Java 17.0.16 with PID 9720 (started by unacu in C:\Users\unacu\OneDrive - Universidad Peruana Unión\BACKUP-Documentos\GitHub\Final-proyect-with-CRUD\Athenium)
+2025-11-02T23:09:02.543-05:00  INFO 9720 --- [Athenium] [JavaFX-Launcher] o.s.boot.SpringApplication               : No active profile set, falling back to 1 default profile: "default"
+2025-11-02T23:09:05.187-05:00  INFO 9720 --- [Athenium] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-02T23:09:05.484-05:00  INFO 9720 --- [Athenium] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 278 ms. Found 9 JPA repository interfaces.
+2025-11-02T23:09:06.656-05:00  INFO 9720 --- [Athenium] [JavaFX-Launcher] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-02T23:09:06.802-05:00  INFO 9720 --- [Athenium] [JavaFX-Launcher] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-11-02T23:09:06.892-05:00  INFO 9720 --- [Athenium] [JavaFX-Launcher] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-02T23:09:07.678-05:00  INFO 9720 --- [Athenium] [JavaFX-Launcher] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-02T23:09:07.817-05:00  INFO 9720 --- [Athenium] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-02T23:09:08.498-05:00  INFO 9720 --- [Athenium] [JavaFX-Launcher] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@695d0d50
+2025-11-02T23:09:08.501-05:00  INFO 9720 --- [Athenium] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-02T23:09:08.588-05:00  INFO 9720 --- [Athenium] [JavaFX-Launcher] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 3.46
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-02T23:09:10.776-05:00  INFO 9720 --- [Athenium] [JavaFX-Launcher] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-02T23:09:10.843-05:00  INFO 9720 --- [Athenium] [JavaFX-Launcher] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-02T23:09:11.423-05:00  INFO 9720 --- [Athenium] [JavaFX-Launcher] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-11-02T23:09:16.780-05:00  INFO 9720 --- [Athenium] [JavaFX-Launcher] o.s.boot.SpringApplication               : Started application in 15.947 seconds (process running for 18.731)
+2025-11-02T23:09:17.640-05:00  WARN 9720 --- [Athenium] [JavaFX-Launcher] javafx                                   : Loading FXML document with JavaFX API of version 25 by JavaFX runtime of version 21.0.2
+2025-11-02T23:09:25.738-05:00  WARN 9720 --- [Athenium] [JavaFX Application Thread] javafx                                   : Loading FXML document with JavaFX API of version 25 by JavaFX runtime of version 21.0.2
+2025-11-02T23:09:29.528-05:00  WARN 9720 --- [Athenium] [JavaFX Application Thread] javafx                                   : Loading FXML document with JavaFX API of version 25 by JavaFX runtime of version 21.0.2
+2025-11-02T23:09:59.649-05:00  INFO 9720 --- [Athenium] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-02T23:09:59.653-05:00  INFO 9720 --- [Athenium] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-02T23:09:59.665-05:00  INFO 9720 --- [Athenium] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-11-02T23:10:32.389-05:00  INFO 16544 --- [Athenium] [JavaFX-Launcher] o.s.boot.SpringApplication               : Starting application using Java 17.0.16 with PID 16544 (started by unacu in C:\Users\unacu\OneDrive - Universidad Peruana Unión\BACKUP-Documentos\GitHub\Final-proyect-with-CRUD\Athenium)
+2025-11-02T23:10:32.417-05:00  INFO 16544 --- [Athenium] [JavaFX-Launcher] o.s.boot.SpringApplication               : No active profile set, falling back to 1 default profile: "default"
+2025-11-02T23:10:37.288-05:00  INFO 16544 --- [Athenium] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-02T23:10:37.707-05:00  INFO 16544 --- [Athenium] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 386 ms. Found 9 JPA repository interfaces.
+2025-11-02T23:10:39.877-05:00  INFO 16544 --- [Athenium] [JavaFX-Launcher] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-02T23:10:40.604-05:00  INFO 16544 --- [Athenium] [JavaFX-Launcher] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-11-02T23:10:40.859-05:00  INFO 16544 --- [Athenium] [JavaFX-Launcher] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-02T23:10:42.609-05:00  INFO 16544 --- [Athenium] [JavaFX-Launcher] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-02T23:10:42.847-05:00  INFO 16544 --- [Athenium] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-02T23:10:43.963-05:00  INFO 16544 --- [Athenium] [JavaFX-Launcher] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@697bdb2d
+2025-11-02T23:10:43.970-05:00  INFO 16544 --- [Athenium] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-02T23:10:44.132-05:00  INFO 16544 --- [Athenium] [JavaFX-Launcher] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 3.46
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-02T23:10:48.795-05:00  INFO 16544 --- [Athenium] [JavaFX-Launcher] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-02T23:10:48.969-05:00  INFO 16544 --- [Athenium] [JavaFX-Launcher] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-02T23:10:49.727-05:00  INFO 16544 --- [Athenium] [JavaFX-Launcher] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-11-02T23:10:54.829-05:00  INFO 16544 --- [Athenium] [JavaFX-Launcher] o.s.boot.SpringApplication               : Started application in 24.727 seconds (process running for 27.052)
+2025-11-02T23:10:57.464-05:00  WARN 16544 --- [Athenium] [JavaFX-Launcher] javafx                                   : Loading FXML document with JavaFX API of version 25 by JavaFX runtime of version 21.0.2
+2025-11-02T23:11:11.776-05:00  WARN 16544 --- [Athenium] [JavaFX Application Thread] javafx                                   : Loading FXML document with JavaFX API of version 25 by JavaFX runtime of version 21.0.2
+2025-11-02T23:11:14.726-05:00  WARN 16544 --- [Athenium] [JavaFX Application Thread] javafx                                   : Loading FXML document with JavaFX API of version 25 by JavaFX runtime of version 21.0.2
+2025-11-02T23:11:15.678-05:00  WARN 16544 --- [Athenium] [JavaFX Application Thread] javafx                                   : Loading FXML document with JavaFX API of version 25 by JavaFX runtime of version 21.0.2
+2025-11-02T23:11:15.879-05:00  WARN 16544 --- [Athenium] [JavaFX Application Thread] javafx                                   : Loading FXML document with JavaFX API of version 25 by JavaFX runtime of version 21.0.2
+2025-11-02T23:11:27.911-05:00  WARN 16544 --- [Athenium] [JavaFX Application Thread] javafx                                   : Loading FXML document with JavaFX API of version 25 by JavaFX runtime of version 21.0.2
+2025-11-02T23:11:36.744-05:00  INFO 16544 --- [Athenium] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-02T23:11:36.751-05:00  INFO 16544 --- [Athenium] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-02T23:11:36.760-05:00  INFO 16544 --- [Athenium] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-11-02T23:24:58.773-05:00  INFO 12812 --- [Athenium] [JavaFX-Launcher] o.s.boot.SpringApplication               : Starting application using Java 17.0.16 with PID 12812 (started by unacu in C:\Users\unacu\OneDrive - Universidad Peruana Unión\BACKUP-Documentos\GitHub\Final-proyect-with-CRUD\Athenium)
+2025-11-02T23:24:58.780-05:00  INFO 12812 --- [Athenium] [JavaFX-Launcher] o.s.boot.SpringApplication               : No active profile set, falling back to 1 default profile: "default"
+2025-11-02T23:25:00.958-05:00  INFO 12812 --- [Athenium] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-02T23:25:01.188-05:00  INFO 12812 --- [Athenium] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 213 ms. Found 9 JPA repository interfaces.
+2025-11-02T23:25:02.004-05:00  INFO 12812 --- [Athenium] [JavaFX-Launcher] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-02T23:25:02.121-05:00  INFO 12812 --- [Athenium] [JavaFX-Launcher] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-11-02T23:25:02.191-05:00  INFO 12812 --- [Athenium] [JavaFX-Launcher] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-02T23:25:02.779-05:00  INFO 12812 --- [Athenium] [JavaFX-Launcher] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-02T23:25:02.850-05:00  INFO 12812 --- [Athenium] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-02T23:25:03.249-05:00  INFO 12812 --- [Athenium] [JavaFX-Launcher] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@35f1c0ab
+2025-11-02T23:25:03.252-05:00  INFO 12812 --- [Athenium] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-02T23:25:03.323-05:00  INFO 12812 --- [Athenium] [JavaFX-Launcher] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 3.46
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-02T23:25:04.787-05:00  INFO 12812 --- [Athenium] [JavaFX-Launcher] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-02T23:25:04.846-05:00  INFO 12812 --- [Athenium] [JavaFX-Launcher] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-02T23:25:05.542-05:00  INFO 12812 --- [Athenium] [JavaFX-Launcher] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-11-02T23:25:08.078-05:00  INFO 12812 --- [Athenium] [JavaFX-Launcher] o.s.boot.SpringApplication               : Started application in 10.753 seconds (process running for 13.984)
+2025-11-02T23:25:08.505-05:00  WARN 12812 --- [Athenium] [JavaFX-Launcher] javafx                                   : Loading FXML document with JavaFX API of version 25 by JavaFX runtime of version 21.0.2
+2025-11-02T23:25:14.273-05:00  WARN 12812 --- [Athenium] [JavaFX Application Thread] javafx                                   : Loading FXML document with JavaFX API of version 25 by JavaFX runtime of version 21.0.2
+2025-11-02T23:25:20.364-05:00  WARN 12812 --- [Athenium] [JavaFX Application Thread] javafx                                   : Loading FXML document with JavaFX API of version 25 by JavaFX runtime of version 21.0.2
+2025-11-02T23:25:20.712-05:00  WARN 12812 --- [Athenium] [JavaFX Application Thread] javafx                                   : Loading FXML document with JavaFX API of version 25 by JavaFX runtime of version 21.0.2
+2025-11-02T23:25:39.364-05:00  INFO 12812 --- [Athenium] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-02T23:25:39.370-05:00  INFO 12812 --- [Athenium] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-02T23:25:39.376-05:00  INFO 12812 --- [Athenium] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-11-02T23:25:53.677-05:00  INFO 17140 --- [Athenium] [JavaFX-Launcher] o.s.boot.SpringApplication               : Starting application using Java 17.0.16 with PID 17140 (started by unacu in C:\Users\unacu\OneDrive - Universidad Peruana Unión\BACKUP-Documentos\GitHub\Final-proyect-with-CRUD\Athenium)
+2025-11-02T23:25:53.684-05:00  INFO 17140 --- [Athenium] [JavaFX-Launcher] o.s.boot.SpringApplication               : No active profile set, falling back to 1 default profile: "default"
+2025-11-02T23:25:56.145-05:00  INFO 17140 --- [Athenium] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-02T23:25:56.456-05:00  INFO 17140 --- [Athenium] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 283 ms. Found 9 JPA repository interfaces.
+2025-11-02T23:25:57.663-05:00  INFO 17140 --- [Athenium] [JavaFX-Launcher] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-02T23:25:57.881-05:00  INFO 17140 --- [Athenium] [JavaFX-Launcher] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-11-02T23:25:57.965-05:00  INFO 17140 --- [Athenium] [JavaFX-Launcher] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-02T23:25:59.350-05:00  INFO 17140 --- [Athenium] [JavaFX-Launcher] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-02T23:25:59.489-05:00  INFO 17140 --- [Athenium] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-02T23:26:01.339-05:00  INFO 17140 --- [Athenium] [JavaFX-Launcher] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@7b1c4464
+2025-11-02T23:26:01.352-05:00  INFO 17140 --- [Athenium] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-02T23:26:01.976-05:00  INFO 17140 --- [Athenium] [JavaFX-Launcher] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 3.46
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-02T23:26:04.526-05:00  INFO 17140 --- [Athenium] [JavaFX-Launcher] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-02T23:26:04.588-05:00  INFO 17140 --- [Athenium] [JavaFX-Launcher] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-02T23:26:05.218-05:00  INFO 17140 --- [Athenium] [JavaFX-Launcher] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-11-02T23:26:09.730-05:00  INFO 17140 --- [Athenium] [JavaFX-Launcher] o.s.boot.SpringApplication               : Started application in 17.614 seconds (process running for 20.042)
+2025-11-02T23:26:10.536-05:00  WARN 17140 --- [Athenium] [JavaFX-Launcher] javafx                                   : Loading FXML document with JavaFX API of version 25 by JavaFX runtime of version 21.0.2
+2025-11-02T23:26:16.932-05:00  WARN 17140 --- [Athenium] [JavaFX Application Thread] javafx                                   : Loading FXML document with JavaFX API of version 25 by JavaFX runtime of version 21.0.2
+2025-11-02T23:26:19.742-05:00  WARN 17140 --- [Athenium] [JavaFX Application Thread] javafx                                   : Loading FXML document with JavaFX API of version 25 by JavaFX runtime of version 21.0.2
+2025-11-02T23:27:06.627-05:00  WARN 17140 --- [Athenium] [JavaFX Application Thread] javafx                                   : Loading FXML document with JavaFX API of version 25 by JavaFX runtime of version 21.0.2
+2025-11-02T23:27:08.295-05:00  WARN 17140 --- [Athenium] [JavaFX Application Thread] javafx                                   : Loading FXML document with JavaFX API of version 25 by JavaFX runtime of version 21.0.2
+2025-11-02T23:27:11.713-05:00  INFO 17140 --- [Athenium] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-02T23:27:11.719-05:00  INFO 17140 --- [Athenium] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-02T23:27:11.740-05:00  INFO 17140 --- [Athenium] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-11-02T23:33:18.260-05:00  INFO 14700 --- [Athenium] [JavaFX-Launcher] o.s.boot.SpringApplication               : Starting application using Java 17.0.16 with PID 14700 (started by unacu in C:\Users\unacu\OneDrive - Universidad Peruana Unión\BACKUP-Documentos\GitHub\Final-proyect-with-CRUD\Athenium)
+2025-11-02T23:33:18.265-05:00  INFO 14700 --- [Athenium] [JavaFX-Launcher] o.s.boot.SpringApplication               : No active profile set, falling back to 1 default profile: "default"
+2025-11-02T23:33:20.353-05:00  INFO 14700 --- [Athenium] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-02T23:33:20.699-05:00  INFO 14700 --- [Athenium] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 325 ms. Found 9 JPA repository interfaces.
+2025-11-02T23:33:21.892-05:00  INFO 14700 --- [Athenium] [JavaFX-Launcher] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-02T23:33:22.010-05:00  INFO 14700 --- [Athenium] [JavaFX-Launcher] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-11-02T23:33:22.071-05:00  INFO 14700 --- [Athenium] [JavaFX-Launcher] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-02T23:33:22.585-05:00  INFO 14700 --- [Athenium] [JavaFX-Launcher] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-02T23:33:22.655-05:00  INFO 14700 --- [Athenium] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-02T23:33:23.013-05:00  INFO 14700 --- [Athenium] [JavaFX-Launcher] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@6b54c2ff
+2025-11-02T23:33:23.016-05:00  INFO 14700 --- [Athenium] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-02T23:33:23.083-05:00  INFO 14700 --- [Athenium] [JavaFX-Launcher] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 3.46
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-02T23:33:24.476-05:00  INFO 14700 --- [Athenium] [JavaFX-Launcher] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-02T23:33:24.537-05:00  INFO 14700 --- [Athenium] [JavaFX-Launcher] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-02T23:33:25.019-05:00  INFO 14700 --- [Athenium] [JavaFX-Launcher] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-11-02T23:33:27.449-05:00  INFO 14700 --- [Athenium] [JavaFX-Launcher] o.s.boot.SpringApplication               : Started application in 10.383 seconds (process running for 12.308)
+2025-11-02T23:33:27.752-05:00  WARN 14700 --- [Athenium] [JavaFX-Launcher] javafx                                   : Loading FXML document with JavaFX API of version 25 by JavaFX runtime of version 21.0.2
+2025-11-02T23:33:33.805-05:00  WARN 14700 --- [Athenium] [JavaFX Application Thread] javafx                                   : Loading FXML document with JavaFX API of version 25 by JavaFX runtime of version 21.0.2
+2025-11-02T23:33:41.887-05:00  WARN 14700 --- [Athenium] [JavaFX Application Thread] javafx                                   : Loading FXML document with JavaFX API of version 25 by JavaFX runtime of version 21.0.2
+2025-11-02T23:33:44.112-05:00  WARN 14700 --- [Athenium] [JavaFX Application Thread] javafx                                   : Loading FXML document with JavaFX API of version 25 by JavaFX runtime of version 21.0.2
+2025-11-02T23:33:59.416-05:00  INFO 14700 --- [Athenium] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-02T23:33:59.419-05:00  INFO 14700 --- [Athenium] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-02T23:33:59.425-05:00  INFO 14700 --- [Athenium] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-11-02T23:34:12.744-05:00  INFO 15664 --- [Athenium] [JavaFX-Launcher] o.s.boot.SpringApplication               : Starting application using Java 17.0.16 with PID 15664 (started by unacu in C:\Users\unacu\OneDrive - Universidad Peruana Unión\BACKUP-Documentos\GitHub\Final-proyect-with-CRUD\Athenium)
+2025-11-02T23:34:12.752-05:00  INFO 15664 --- [Athenium] [JavaFX-Launcher] o.s.boot.SpringApplication               : No active profile set, falling back to 1 default profile: "default"
+2025-11-02T23:34:14.499-05:00  INFO 15664 --- [Athenium] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-02T23:34:14.671-05:00  INFO 15664 --- [Athenium] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 157 ms. Found 9 JPA repository interfaces.
+2025-11-02T23:34:15.305-05:00  INFO 15664 --- [Athenium] [JavaFX-Launcher] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-02T23:34:15.393-05:00  INFO 15664 --- [Athenium] [JavaFX-Launcher] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-11-02T23:34:15.464-05:00  INFO 15664 --- [Athenium] [JavaFX-Launcher] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-02T23:34:16.107-05:00  INFO 15664 --- [Athenium] [JavaFX-Launcher] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-02T23:34:16.163-05:00  INFO 15664 --- [Athenium] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-02T23:34:16.437-05:00  INFO 15664 --- [Athenium] [JavaFX-Launcher] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@18811d22
+2025-11-02T23:34:16.440-05:00  INFO 15664 --- [Athenium] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-02T23:34:16.484-05:00  INFO 15664 --- [Athenium] [JavaFX-Launcher] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 3.46
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-02T23:34:17.645-05:00  INFO 15664 --- [Athenium] [JavaFX-Launcher] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-02T23:34:17.699-05:00  INFO 15664 --- [Athenium] [JavaFX-Launcher] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-02T23:34:18.181-05:00  INFO 15664 --- [Athenium] [JavaFX-Launcher] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-11-02T23:34:20.329-05:00  INFO 15664 --- [Athenium] [JavaFX-Launcher] o.s.boot.SpringApplication               : Started application in 8.72 seconds (process running for 11.219)
+2025-11-02T23:34:20.695-05:00  WARN 15664 --- [Athenium] [JavaFX-Launcher] javafx                                   : Loading FXML document with JavaFX API of version 25 by JavaFX runtime of version 21.0.2
+2025-11-02T23:34:31.048-05:00  WARN 15664 --- [Athenium] [JavaFX Application Thread] javafx                                   : Loading FXML document with JavaFX API of version 25 by JavaFX runtime of version 21.0.2
+2025-11-02T23:34:37.753-05:00  WARN 15664 --- [Athenium] [JavaFX Application Thread] javafx                                   : Loading FXML document with JavaFX API of version 25 by JavaFX runtime of version 21.0.2
+2025-11-02T23:35:00.129-05:00  WARN 15664 --- [Athenium] [JavaFX Application Thread] javafx                                   : Loading FXML document with JavaFX API of version 25 by JavaFX runtime of version 21.0.2
+2025-11-02T23:35:07.440-05:00  WARN 15664 --- [Athenium] [JavaFX Application Thread] javafx                                   : Loading FXML document with JavaFX API of version 25 by JavaFX runtime of version 21.0.2
+2025-11-02T23:35:48.784-05:00  WARN 15664 --- [Athenium] [JavaFX Application Thread] javafx                                   : Loading FXML document with JavaFX API of version 25 by JavaFX runtime of version 21.0.2
+2025-11-02T23:36:23.448-05:00  INFO 15664 --- [Athenium] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-02T23:36:23.454-05:00  INFO 15664 --- [Athenium] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-02T23:36:23.460-05:00  INFO 15664 --- [Athenium] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-11-02T23:39:30.049-05:00  INFO 16820 --- [Athenium] [JavaFX-Launcher] o.s.boot.SpringApplication               : Starting application using Java 17.0.16 with PID 16820 (started by unacu in C:\Users\unacu\OneDrive - Universidad Peruana Unión\BACKUP-Documentos\GitHub\Final-proyect-with-CRUD\Athenium)
+2025-11-02T23:39:30.053-05:00  INFO 16820 --- [Athenium] [JavaFX-Launcher] o.s.boot.SpringApplication               : No active profile set, falling back to 1 default profile: "default"
+2025-11-02T23:39:31.631-05:00  INFO 16820 --- [Athenium] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-02T23:39:31.863-05:00  INFO 16820 --- [Athenium] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 213 ms. Found 9 JPA repository interfaces.
+2025-11-02T23:39:32.750-05:00  INFO 16820 --- [Athenium] [JavaFX-Launcher] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-02T23:39:32.878-05:00  INFO 16820 --- [Athenium] [JavaFX-Launcher] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-11-02T23:39:32.944-05:00  INFO 16820 --- [Athenium] [JavaFX-Launcher] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-02T23:39:33.421-05:00  INFO 16820 --- [Athenium] [JavaFX-Launcher] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-02T23:39:33.483-05:00  INFO 16820 --- [Athenium] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-02T23:39:33.911-05:00  INFO 16820 --- [Athenium] [JavaFX-Launcher] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@549d0982
+2025-11-02T23:39:33.913-05:00  INFO 16820 --- [Athenium] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-02T23:39:34.002-05:00  INFO 16820 --- [Athenium] [JavaFX-Launcher] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 3.46
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-02T23:39:36.413-05:00  INFO 16820 --- [Athenium] [JavaFX-Launcher] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-02T23:39:36.517-05:00  INFO 16820 --- [Athenium] [JavaFX-Launcher] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-02T23:39:37.225-05:00  INFO 16820 --- [Athenium] [JavaFX-Launcher] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-11-02T23:39:39.408-05:00  INFO 16820 --- [Athenium] [JavaFX-Launcher] o.s.boot.SpringApplication               : Started application in 10.423 seconds (process running for 12.245)
+2025-11-02T23:39:39.785-05:00  WARN 16820 --- [Athenium] [JavaFX-Launcher] javafx                                   : Loading FXML document with JavaFX API of version 25 by JavaFX runtime of version 21.0.2
+2025-11-02T23:39:44.620-05:00  WARN 16820 --- [Athenium] [JavaFX Application Thread] javafx                                   : Loading FXML document with JavaFX API of version 25 by JavaFX runtime of version 21.0.2
+2025-11-02T23:40:01.877-05:00  INFO 16820 --- [Athenium] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-02T23:40:01.888-05:00  INFO 16820 --- [Athenium] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-02T23:40:01.901-05:00  INFO 16820 --- [Athenium] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-11-02T23:41:02.502-05:00  INFO 1736 --- [Athenium] [JavaFX-Launcher] o.s.boot.SpringApplication               : Starting application using Java 17.0.16 with PID 1736 (started by unacu in C:\Users\unacu\OneDrive - Universidad Peruana Unión\BACKUP-Documentos\GitHub\Final-proyect-with-CRUD\Athenium)
+2025-11-02T23:41:02.513-05:00  INFO 1736 --- [Athenium] [JavaFX-Launcher] o.s.boot.SpringApplication               : No active profile set, falling back to 1 default profile: "default"
+2025-11-02T23:41:10.461-05:00  INFO 1736 --- [Athenium] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-02T23:41:11.677-05:00  INFO 1736 --- [Athenium] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1167 ms. Found 9 JPA repository interfaces.
+2025-11-02T23:41:13.716-05:00  INFO 1736 --- [Athenium] [JavaFX-Launcher] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-02T23:41:13.936-05:00  INFO 1736 --- [Athenium] [JavaFX-Launcher] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-11-02T23:41:14.070-05:00  INFO 1736 --- [Athenium] [JavaFX-Launcher] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-02T23:41:14.990-05:00  INFO 1736 --- [Athenium] [JavaFX-Launcher] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-02T23:41:15.112-05:00  INFO 1736 --- [Athenium] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-02T23:41:15.698-05:00  INFO 1736 --- [Athenium] [JavaFX-Launcher] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@311c64b0
+2025-11-02T23:41:15.703-05:00  INFO 1736 --- [Athenium] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-02T23:41:15.835-05:00  INFO 1736 --- [Athenium] [JavaFX-Launcher] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 3.46
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-02T23:41:19.128-05:00  INFO 1736 --- [Athenium] [JavaFX-Launcher] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-02T23:41:19.286-05:00  INFO 1736 --- [Athenium] [JavaFX-Launcher] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-02T23:41:20.593-05:00  INFO 1736 --- [Athenium] [JavaFX-Launcher] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-11-02T23:41:27.174-05:00  INFO 1736 --- [Athenium] [JavaFX-Launcher] o.s.boot.SpringApplication               : Started application in 32.679 seconds (process running for 35.644)
+2025-11-02T23:41:29.514-05:00  WARN 1736 --- [Athenium] [JavaFX-Launcher] javafx                                   : Loading FXML document with JavaFX API of version 25 by JavaFX runtime of version 21.0.2
+2025-11-02T23:41:40.467-05:00  WARN 1736 --- [Athenium] [JavaFX Application Thread] javafx                                   : Loading FXML document with JavaFX API of version 25 by JavaFX runtime of version 21.0.2
+2025-11-02T23:41:42.883-05:00  WARN 1736 --- [Athenium] [JavaFX Application Thread] javafx                                   : Loading FXML document with JavaFX API of version 25 by JavaFX runtime of version 21.0.2
+2025-11-02T23:42:49.969-05:00  INFO 1736 --- [Athenium] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-02T23:42:49.979-05:00  INFO 1736 --- [Athenium] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-02T23:42:49.987-05:00  INFO 1736 --- [Athenium] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-11-02T23:51:18.386-05:00  INFO 20652 --- [Athenium] [JavaFX-Launcher] o.s.boot.SpringApplication               : Starting application using Java 17.0.16 with PID 20652 (started by unacu in C:\Users\unacu\OneDrive - Universidad Peruana Unión\BACKUP-Documentos\GitHub\Final-proyect-with-CRUD\Athenium)
+2025-11-02T23:51:18.394-05:00  INFO 20652 --- [Athenium] [JavaFX-Launcher] o.s.boot.SpringApplication               : No active profile set, falling back to 1 default profile: "default"
+2025-11-02T23:51:20.240-05:00  INFO 20652 --- [Athenium] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-02T23:51:20.510-05:00  INFO 20652 --- [Athenium] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 252 ms. Found 9 JPA repository interfaces.
+2025-11-02T23:51:21.199-05:00  INFO 20652 --- [Athenium] [JavaFX-Launcher] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-02T23:51:21.314-05:00  INFO 20652 --- [Athenium] [JavaFX-Launcher] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-11-02T23:51:21.383-05:00  INFO 20652 --- [Athenium] [JavaFX-Launcher] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-02T23:51:21.964-05:00  INFO 20652 --- [Athenium] [JavaFX-Launcher] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-02T23:51:22.046-05:00  INFO 20652 --- [Athenium] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-02T23:51:22.503-05:00  INFO 20652 --- [Athenium] [JavaFX-Launcher] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@52422d18
+2025-11-02T23:51:22.506-05:00  INFO 20652 --- [Athenium] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-02T23:51:22.582-05:00  INFO 20652 --- [Athenium] [JavaFX-Launcher] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 3.46
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-02T23:51:24.473-05:00  INFO 20652 --- [Athenium] [JavaFX-Launcher] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-02T23:51:24.550-05:00  INFO 20652 --- [Athenium] [JavaFX-Launcher] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-02T23:51:25.215-05:00  INFO 20652 --- [Athenium] [JavaFX-Launcher] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-11-02T23:51:27.586-05:00  INFO 20652 --- [Athenium] [JavaFX-Launcher] o.s.boot.SpringApplication               : Started application in 10.353 seconds (process running for 12.47)
+2025-11-02T23:51:28.192-05:00  WARN 20652 --- [Athenium] [JavaFX-Launcher] javafx                                   : Loading FXML document with JavaFX API of version 25 by JavaFX runtime of version 21.0.2
+2025-11-02T23:51:33.869-05:00  WARN 20652 --- [Athenium] [JavaFX Application Thread] javafx                                   : Loading FXML document with JavaFX API of version 25 by JavaFX runtime of version 21.0.2
+2025-11-02T23:51:49.515-05:00  INFO 20652 --- [Athenium] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-02T23:51:49.564-05:00  INFO 20652 --- [Athenium] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-02T23:51:49.591-05:00  INFO 20652 --- [Athenium] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

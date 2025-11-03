@@ -5,15 +5,15 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
-import pe.edu.upeu.athenium.common.dto.PersonaDto;
+import pe.edu.upeu.athenium.common.dto.UsuarioDto;
 
 import java.io.IOException;
 
 public  class ConsultaDNI {
 
-    public PersonaDto consultarDNI(String dni){
+    public UsuarioDto consultarDNI(String dni){
 
-        PersonaDto personaDto=new PersonaDto();
+        UsuarioDto usuarioDto =new UsuarioDto();
         String url = "https://eldni.com/pe/buscar-datos-por-dni";
         try {
 
@@ -38,20 +38,20 @@ public  class ConsultaDNI {
             Element fila = resultDoc.select("table tbody tr").first();
             if (fila != null) {
                 Elements celdas = fila.select("td");
-                personaDto.setDni(celdas.get(0).text());
-                personaDto.setNombre(celdas.get(1).text());
-                personaDto.setApellidoPaterno(celdas.get(2).text());
-                personaDto.setApellidoMaterno(celdas.get(3).text());
+                usuarioDto.setDni(celdas.get(0).text());
+                usuarioDto.setNombre(celdas.get(1).text());
+                usuarioDto.setApellidoPaterno(celdas.get(2).text());
+                usuarioDto.setApellidoMaterno(celdas.get(3).text());
             }
         }catch (IOException e) {
             e.printStackTrace();
         }
-        return personaDto;
+        return usuarioDto;
     }
 
     public static void main(String[] args) {
         ConsultaDNI c=new ConsultaDNI();
-        PersonaDto p=c.consultarDNI("43631917");
+        UsuarioDto p=c.consultarDNI("43631917");
         System.out.println(p.getDni()+" "+p.getNombre()
                 +"  "+p.getApellidoPaterno()+"  "+p.getApellidoMaterno());
     }

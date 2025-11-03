@@ -76,4 +76,10 @@ public class UsuarioServiceImp extends CrudGenericoServiceImp<Usuario, Long> imp
         boolean matches = passwordEncoder.matches(clave, u.getPassword());//Verifica si la clave proporcionada coincide con la clave encriptada
         return matches ? u : null;//Si coincide, retorna el usuario, sino retorna null
     }
+
+    @Override
+    public Usuario buscarUsuario(String email) {
+        // Simplemente delega la llamada al repositorio
+        return usuarioRepository.buscarUsuario(email);
+    }
 }

@@ -1,23 +1,20 @@
 package pe.edu.upeu.athenium.libro.service;
 
-import pe.edu.upeu.athenium.common.dto.ModeloDataAutocomplet;
+import pe.edu.upeu.athenium.common.service.ICrudGenericoService;
 import pe.edu.upeu.athenium.libro.entity.Libro;
 
 import java.util.List;
-/**
+
 public interface ILibroService extends ICrudGenericoService<Libro, Long> {
-    List<ModeloDataAutocomplet> listAutoCompletProducto(String nombre);
-    List<ModeloDataAutocomplet> listAutoCompletProducto();
-} */
-// Temporarl (Creo)
-public interface ILibroService {
-    Libro save(Libro libro);
-    List<Libro> findAll();
-    Libro update(Libro producto);
-    void delete(Long id);
-    Libro findById(Long id);
-    List<ModeloDataAutocomplet> listAutoCompletProducto(String nombre);
-    public List<ModeloDataAutocomplet> listAutoCompletProducto();
 
+    // Métodos específicos para Libro
+    List<Libro> buscarPorTitulo(String titulo);
+    List<Libro> buscarPorAutor(String autor);
+    Libro buscarPorIsbn(String isbn);
+    List<Libro> buscarPorGenero(Long generoId);
+    List<Libro> filtrarLibros(String filtro);
 
+    // Validaciones específicas
+    boolean existeIsbn(String isbn);
+    boolean existeIsbnParaOtroLibro(String isbn, Long id);
 }

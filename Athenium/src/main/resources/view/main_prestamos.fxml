@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pe.edu.upeu.library.crudlibrary.controller.ControllerPrestamos">
+   <children>
+      <Button layoutX="347.0" layoutY="279.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="216.0" text="Button" />
+      <TextField layoutX="347.0" layoutY="236.0" prefHeight="25.0" prefWidth="216.0" />
+      <TextField layoutX="347.0" layoutY="123.0" prefHeight="25.0" prefWidth="216.0" />
+      <Label layoutX="347.0" layoutY="81.0" text="Folio Usuario" />
+      <Label layoutX="347.0" layoutY="200.0" text="Libro ID" />
+   </children>
+</AnchorPane>

@@ -1,10 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import de.jensd.fx.glyphs.fontawesome.*?>
-<?import javafx.geometry.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.shape.*?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
 
 <BorderPane fx:id="bp" prefHeight="600.0" prefWidth="1024.0" styleClass="parent"
             stylesheets="@../../../css/predStyle.css"
@@ -13,59 +21,71 @@
             fx:controller="pe.edu.upeu.athenium.common.controller.mMainMenuController">
 
     <left>
-        <AnchorPane styleClass="sidebar" BorderPane.alignment="CENTER">
+        <AnchorPane prefHeight="557.0" prefWidth="61.0" styleClass="sidebar" BorderPane.alignment="CENTER">
             <children>
-                <FontAwesomeIconView fx:id="iconBars" glyphName="BARS" layoutX="31.0" layoutY="36.0" size="1.5em" styleClass="icon"
-                                     textAlignment="CENTER" wrappingWidth="15.285715103149414"
-                                     AnchorPane.leftAnchor="22.0" AnchorPane.rightAnchor="23.0" AnchorPane.topAnchor="18.0" />
-
-                <VBox alignment="CENTER" layoutX="-1.0" layoutY="197.0" spacing="25.0"
-                      AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="197.0">
+                <FontAwesomeIconView fx:id="iconBars" glyphName="BARS" layoutX="31.0" layoutY="36.0" size="1.5em" styleClass="icon" textAlignment="CENTER" wrappingWidth="15.285715103149414" AnchorPane.leftAnchor="22.0" AnchorNext: rightAnchor="23.0" AnchorPane.topAnchor="18.0" />
+                <VBox alignment="TOP_CENTER" layoutX="-1.0" layoutY="197.0" spacing="25.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="197.0">
                     <children>
-                        <!-- se añade fx:id y mouse handlers para los icnos del lateral izquierdo -->
-                        <FontAwesomeIconView fx:id="iconHome" glyphName="HOME" size="2em" styleClass="icon" onMouseClicked="#onIconHomeClicked" />
-                        <FontAwesomeIconView fx:id="iconAnalytics" glyphName="LINE_CHART" size="2em" styleClass="icon" onMouseClicked="#onIconAnalyticsClicked" />
-                        <FontAwesomeIconView fx:id="iconGallery" glyphName="IMAGE" size="2em" styleClass="icon" onMouseClicked="#onIconGalleryClicked" />
-                        <FontAwesomeIconView fx:id="iconSettings" glyphName="COG" size="2em" styleClass="icon" onMouseClicked="#onIconSettingsClicked" />
-                        <FontAwesomeIconView fx:id="iconAdd" glyphName="PLUS" size="2em" styleClass="icon" onMouseClicked="#onIconAddClicked" />
+                        <ImageView fx:id="iconHome" fitHeight="32.0" fitWidth="36.0" onMouseClicked="#onIconHomeClicked" pickOnBounds="true" preserveRatio="true" styleClass="icon">
+                            <image>
+                                <Image url="@../../../icons/ShoopAndCommerce/Home_duotone@3x.png" />
+                            </image>
+                        </ImageView>
+                        <ImageView fx:id="iconAnalytics" fitHeight="32.0" fitWidth="36.0" onMouseClicked="#onIconAnalyticsClicked" pickOnBounds="true" preserveRatio="true" styleClass="icon">
+                            <image>
+                                <Image url="@../../../icons/BookMark/notebook_duotone@3x.png" />
+                            </image>
+                        </ImageView>
+                        <FontAwesomeIconView fx:id="iconGallery" glyphName="IMAGE" onMouseClicked="#onIconGalleryClicked" size="2em" styleClass="icon" />
+                        <FontAwesomeIconView fx:id="iconSettings" glyphName="COG" onMouseClicked="#onIconSettingsClicked" size="2em" styleClass="icon" />
+                        <FontAwesomeIconView fx:id="iconAdd" glyphName="PLUS" onMouseClicked="#onIconAddClicked" size="2em" styleClass="icon" />
                     </children>
                 </VBox>
-
                 <Separator layoutX="7.0" layoutY="493.0" AnchorPane.bottomAnchor="120.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
-
-                <Circle layoutX="32.0" layoutY="558.0" opacity="0.7" radius="15.0" styleClass="user-circle"
-                        AnchorPane.bottomAnchor="23.5" AnchorPane.leftAnchor="13.5" AnchorPane.rightAnchor="15.5" />
+                <Circle fx:id="circleUsuario" layoutX="32.0" layoutY="558.0" onMouseClicked="#onUserCircleClicked" opacity="0.7" radius="15.0" styleClass="user-circle" AnchorPane.bottomAnchor="23.5" AnchorPane.leftAnchor="13.5" AnchorPane.rightAnchor="15.5" />
             </children>
         </AnchorPane>
     </left>
 
-    <center>
-        <AnchorPane BorderPane.alignment="CENTER">
+    <top>
+        <AnchorPane prefHeight="70.0" BorderPane.alignment="CENTER">
             <children>
-                <VBox styleClass="main-panel" AnchorPane.leftAnchor="14.5" AnchorPane.rightAnchor="14.5" AnchorPane.topAnchor="14.5">
+                <VBox prefHeight="81.0" prefWidth="1024.0" styleClass="main-panel" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                     <children>
-                        <HBox alignment="CENTER_LEFT" spacing="15.0">
+                        <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="907.0" spacing="15.0">
                             <children>
-                                <Label styleClass="header-title" text="Dashboard" />
-                                <Separator orientation="VERTICAL" prefHeight="30.0" />
-                                <Label styleClass="header-subtitle" text="Hello Mate, welcome back!" />
+                                <ImageView fx:id="appLogo" fitHeight="32.0" fitWidth="36.0" preserveRatio="true" styleClass="icon">
+                                    <image>
+                                        <Image url="@../../../icons/ShoopAndCommerce/Home_duotone@3x.png" />
+                                    </image>
+                                </ImageView>
+
                                 <Region HBox.hgrow="ALWAYS" />
-                                <Label styleClass="header-date" text="2:03 29 May 2020" />
+
+                                <FontAwesomeIconView fx:id="iconTopBars" glyphName="BARS" size="1.5em" styleClass="icon" />
                             </children>
                             <padding>
                                 <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                             </padding>
                         </HBox>
 
-                        <!-- TabPane que controla DashboardController -->
-                        <TabPane fx:id="tabPaneFx" prefHeight="400.0" prefWidth="900.0" VBox.vgrow="ALWAYS">
-                            <!-- Pestañas serán gestionadas dinámicamente por DashboardController -->
-                        </TabPane>
-
                     </children>
                     <padding>
                         <Insets bottom="15.0" left="20.0" right="20.0" top="15.0" />
                     </padding>
+                </VBox>
+            </children>
+        </AnchorPane>
+    </top>
+
+    <center>
+        <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <children>
+                <VBox styleClass="main-panel-content" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="0.0">
+                    <children>
+                        <TabPane fx:id="tabPaneFx" prefHeight="400.0" prefWidth="900.0" VBox.vgrow="ALWAYS">
+                        </TabPane>
+                    </children>
                 </VBox>
             </children>
         </AnchorPane>

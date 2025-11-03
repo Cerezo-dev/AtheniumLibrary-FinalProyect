@@ -7,6 +7,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-public class PersonaDto {
+public class UsuarioDto {
     String dni, nombre, apellidoPaterno, apellidoMaterno;
 }

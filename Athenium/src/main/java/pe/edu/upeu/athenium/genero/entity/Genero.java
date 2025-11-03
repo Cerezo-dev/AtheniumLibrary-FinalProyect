@@ -1,17 +1,13 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package pe.edu.upeu.athenium.genero.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.AllArgsConstructor;
 
-/**
-    * Modelo de entidad para representar géneros de libros en la base de datos.
-    * Este reemplaza 'categoria', de los requerimientos del excel (Creo)
- */
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
 @Table(name = "athenium_genero")
 public class Genero {
@@ -20,5 +16,5 @@ public class Genero {
     private Long id;
 
     @Column(nullable = false, length = 100)
-    private String nombre; // "Ficción", "Ciencia", "Ingeniería de Software"
+    private String nombre;
 }

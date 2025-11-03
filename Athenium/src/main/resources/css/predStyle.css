@@ -8,6 +8,15 @@
     -fx-background-color: #FFFFFF; /* Un gris oscuro azulado */
 }
 
+/* * NUEVA REGLA:
+ * Fondo blanco para el contenedor de la barra superior.
+ * Esto rellena el hueco gris de la esquina.
+ */
+.top-bar-container {
+    -fx-background-color: #FFFFFF;
+}
+
+
 /* Estilo de los iconos en la barra lateral */
 .sidebar .icon {
     -fx-fill: #B0BEC5; /* Color de icono gris claro */

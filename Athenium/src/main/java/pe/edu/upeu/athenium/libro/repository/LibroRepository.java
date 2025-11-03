@@ -1,26 +1,34 @@
 package pe.edu.upeu.athenium.libro.repository;
 
-import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
-import org.springframework.stereotype.Repository;
+import pe.edu.upeu.athenium.common.repository.ICrudGenericoRepository;
 import pe.edu.upeu.athenium.libro.entity.Libro;
 
 import java.util.List;
 
-@Repository
-public interface LibroRepository extends JpaRepository<Libro, Long> {
-    // Aquí puedes agregar métodos personalizados si necesitas realizar consultas específicas
-    @Query(value = "SELECT l.* FROM athenium_libro p WHERE l.titulo like :filter", nativeQuery = true)
-    List<Libro> listAutoCompletProducto(@Param("filter") String filter);
+public interface LibroRepository extends ICrudGenericoRepository<Libro, Long> {
 
-    @Query("SELECT l FROM Libro l WHERE l.titulo LIKE :filter")
-    List<Libro> listAutoCompletProductoJ(@Param("filter") String filter);
+    // Buscar libros por título (búsqueda parcial)
+    List<Libro> findByTituloContainingIgnoreCase(String titulo);
 
+    // Buscar libros por autor (búsqueda parcial)
+    List<Libro> findByAutorContainingIgnoreCase(String autor);
 
-    @Query(value = "SELECT l.* FROM athenium_libro l WHERE l.id=:filter", nativeQuery = true)
-    List<Libro> listProductoMarca(@Param("filter") Integer filter);
+    // Buscar libros por ISBN (búsqueda exacta)
+    Libro findByIsbn(String isbn);
 
-    @Query("SELECT l FROM Libro l WHERE l.autor = :filter")
-    List<Libro> listProductoMarcaJ(@Param("filter") Integer filter);
+    // Buscar libros por género
+    List<Libro> findByGeneroId(Long generoId);
+
+    // Búsqueda avanzada: filtrar por título, autor o ISBN
+    @Query("SELECT l FROM Libro l WHERE " +
+            "LOWER(l.titulo) LIKE LOWER(CONCAT('%', :filtro, '%')) OR " +
+            "LOWER(l.autor) LIKE LOWER(CONCAT('%', :filtro, '%')) OR " +
+            "LOWER(l.isbn) LIKE LOWER(CONCAT('%', :filtro, '%'))")
+    List<Libro> filtrarLibros(@Param("filtro") String filtro);
+
+    // Verificar si existe un libro con el mismo ISBN (excluyendo el actual para edición)
+    @Query("SELECT COUNT(l) > 0 FROM Libro l WHERE l.isbn = :isbn AND l.id != :id")
+    boolean existsByIsbnAndIdNot(@Param("isbn") String isbn, @Param("id") Long id);
 }

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pe.edu.upeu.athenium.devoluciones.controller.DevolucionesController">
+   <children>
+      <Label layoutX="14.0" layoutY="21.0" prefHeight="43.0" prefWidth="212.0" text="Devolucion de Libros">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+
+      <Label layoutX="14.0" layoutY="95.0" text="Folio usuario" />
+      <Label layoutX="14.0" layoutY="183.0" text="Libro ID" />
+
+      <Button fx:id="devolverButton" layoutX="9.0" layoutY="279.0" mnemonicParsing="false"
+              prefHeight="43.0" prefWidth="224.0" text="Devolver"
+              onAction="#procesarDevolucion">
+         <font>
+            <Font size="33.0" />
+         </font>
+      </Button>
+
+      <TextField fx:id="folioUsuarioField" layoutX="14.0" layoutY="122.0"
+                 prefWidth="200.0" promptText="Ingrese folio de usuario"/>
+
+      <TextField fx:id="libroIdField" layoutX="14.0" layoutY="209.0"
+                 prefWidth="200.0" promptText="Ingrese ID del libro"/>
+
+      <Label fx:id="lblStatus" layoutX="14.0" layoutY="340.0"
+             prefWidth="572.0" prefHeight="50.0"
+             wrapText="true" />
+   </children>
+</AnchorPane>

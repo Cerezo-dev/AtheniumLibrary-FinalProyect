@@ -33,7 +33,7 @@ public class Ejemplar {
     @JoinColumn(name = "id_libro", referencedColumnName = "id")
     private Libro libro;
 
-    // Relación: Un ejemplar está en UNA Ubicacion (antes 'UnidadMedida' [cite: 1285-1290])
+    // Relación: Un ejemplar está en UNA Ubicacion específica
     @ManyToOne(optional = false)
     @JoinColumn(name = "id_ubicacion", referencedColumnName = "id")
     private Ubicacion ubicacion; // "Piso 2, Estante B-05"
