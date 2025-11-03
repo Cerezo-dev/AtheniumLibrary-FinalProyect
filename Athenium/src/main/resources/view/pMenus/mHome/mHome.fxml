@@ -1,11 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane styleClass="home-content" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1"
+<AnchorPane styleClass="home-content" stylesheets="@../../../css/Themes/glass/pMenus/mHome/home-content.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1"
             fx:controller="pe.edu.upeu.athenium.common.controller.HomeContentController">
     <children>
         <HBox spacing="15.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
@@ -35,14 +44,14 @@
                         </VBox.margin>
                     </Label>
 
-                    <CheckBox text="Solo disponibles" fx:id="chkAvailable" />
+                    <CheckBox text="Solo disponibles" fx:id="chkAvailable" styleClass="checkbox-home" />
 
-                    <Label text="Año de Publicación">
+                    <Label text="Año de Publicación" styleClass="label-filter-home">
                         <VBox.margin>
                             <Insets top="15.0" bottom="5.0" />
                         </VBox.margin>
                     </Label>
-                    <TextField fx:id="txtAnioPublicacion" promptText="Ej. 2020" />
+                    <TextField fx:id="txtAnioPublicacion" promptText="Ej. 2020" styleClass="text-field-home" />
 
                     <Region VBox.vgrow="ALWAYS" />
                     <Button text="Aplicar Filtros" styleClass="primary-button-home" maxWidth="1.7976931348623157E308" onAction="#handleAplicarFiltros" />
@@ -63,7 +72,7 @@
                         </VBox.margin>
                     </Label>
 
-                    <ScrollPane fitToWidth="true" VBox.vgrow="ALWAYS">
+                    <ScrollPane fitToWidth="true" VBox.vgrow="ALWAYS" styleClass="scroll-pane-home">
                         <content>
                             <FlowPane fx:id="resultsFlowPane" hgap="15.0" vgap="15.0" styleClass="results-grid-home">
                                 <padding>
@@ -73,7 +82,7 @@
                         </content>
                     </ScrollPane>
 
-                    <HBox alignment="CENTER" spacing="10.0" VBox.vgrow="NEVER">
+                    <HBox alignment="CENTER" spacing="10.0" VBox.vgrow="NEVER" styleClass="pagination-container">
                         <padding>
                             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                         </padding>

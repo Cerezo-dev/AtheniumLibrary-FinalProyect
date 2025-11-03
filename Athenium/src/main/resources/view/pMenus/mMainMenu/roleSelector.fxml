@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox fx:id="roleSelectorPane" spacing="10" styleClass="role-popup-container" stylesheets="@../../../css/Themes/glass/pMenus/mMainMenu/role-selector-style.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pe.edu.upeu.athenium.common.controller.RoleSimulatorController">
+
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <children>
+        <Label styleClass="popup-title" text="Iniciar Sesión como:">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Label>
+        <Label styleClass="popup-subtitle" text="Elige un rol para ver el prototipo." />
+        <Region prefHeight="10.0" />
+        <Button maxWidth="1.7976931348623157E308" onAction="#handleEstudiante" styleClass="role-button-primary" text="Entrar como Estudiante" />
+        <Button maxWidth="1.7976931348623157E308" onAction="#handleDocente" styleClass="role-button-primary" text="Entrar como Docente" />
+        <Button maxWidth="1.7976931348623157E308" onAction="#handleBibliotecario" styleClass="role-button-primary" text="Entrar como Bibliotecario" />
+        <Button maxWidth="1.7976931348623157E308" onAction="#handleAdministrador" styleClass="role-button-primary" text="Entrar como Administrador" />
+        <Region prefHeight="5.0" />
+        <Button maxWidth="1.7976931348623157E308" onAction="#handlePublico" styleClass="role-button-secondary" text="Cancelar (Ver como Público)" />
+    </children>
+</VBox>

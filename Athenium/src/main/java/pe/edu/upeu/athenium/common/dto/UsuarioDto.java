@@ -8,5 +8,5 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Data
 public class UsuarioDto {
-    String dni, nombre, apellidoPaterno, apellidoMaterno;
+    String nombre, apellido, email, perfil;
 }

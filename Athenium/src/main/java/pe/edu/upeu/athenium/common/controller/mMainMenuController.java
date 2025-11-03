@@ -380,7 +380,7 @@ public class mMainMenuController {
         if (rolePopup == null) {
             try {
                 // 1. Cargar el FXML del Pop-up
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/simular_login_popup.fxml"));
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/pMenus/mMainMenu/roleSelector.fxml"));
                 loader.setControllerFactory(context::getBean);
                 Parent content = loader.load();
 

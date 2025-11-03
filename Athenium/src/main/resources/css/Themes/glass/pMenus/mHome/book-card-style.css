@@ -1,0 +1,63 @@
+/*
+ * Hoja de estilos para BookCard
+ * Ruta: /css/Themes/glass/pMenus/mMainMenu/book-card-style.css
+ */
+
+/* Importar variables de color y redondeo del main-menu-style */
+@import "main-menu-style.css";
+
+.book-card {
+    -fx-background-color: -glass-bg-card; /* Fondo de vidrio azul oscuro para la tarjeta */
+    -fx-background-radius: -border-radius-medium; /* Redondeo como las tarjetas de la imagen */
+    -fx-border-radius: -border-radius-medium;
+    -fx-border-color: -glass-border-light; /* Borde sutil blanco */
+    -fx-border-width: 1px;
+    -fx-effect: dropshadow(gaussian, -shadow-color-dark, 15, 0.2, 0, 5); /* Sombra para profundidad */
+    -fx-min-width: 250px; /* Asegura un ancho mínimo para los mosaicos */
+    -fx-max-width: 250px; /* Asegura un ancho máximo */
+    -fx-pref-height: 200px; /* Altura preferida */
+}
+
+.card-title {
+    -fx-text-fill: -text-primary-white; /* Título blanco */
+    -fx-font-size: 1.2em;
+    -fx-font-weight: bold;
+    -fx-padding: 0 0 5px 0;
+}
+
+.card-author {
+    -fx-text-fill: -text-secondary-grey; /* Autor en gris claro */
+    -fx-font-size: 0.9em;
+    -fx-padding: 0 0 5px 0;
+}
+
+.card-location {
+    -fx-text-fill: -text-light-grey; /* Ubicación/Género en gris sutil */
+    -fx-font-size: 0.85em;
+}
+
+.card-status-available {
+    -fx-text-fill: #66BB6A; /* Verde para disponible */
+    -fx-font-weight: bold;
+    -fx-font-size: 0.9em;
+}
+
+.card-status-unavailable {
+    -fx-text-fill: #EF5350; /* Rojo para no disponible */
+    -fx-font-weight: bold;
+    -fx-font-size: 0.9em;
+}
+
+.card-button {
+    -fx-background-color: -primary-blue-accent; /* Botón de acento azul */
+    -fx-text-fill: -text-primary-white;
+    -fx-font-weight: bold;
+    -fx-background-radius: -border-radius-small; /* Redondeo pequeño */
+    -fx-border-radius: -border-radius-small;
+    -fx-padding: 6 12;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0, 123, 255, 0.3), 8, 0.4, 0, 0);
+}
+.card-button:hover {
+    -fx-background-color: derive(-primary-blue-accent, -10%);
+}

@@ -178,7 +178,7 @@ public class LoginController {
                     Parent mainRoot = loader.load();
 
                     Scene mainScene = new Scene(mainRoot, bounds.getWidth(), bounds.getHeight() - 30);
-                    java.net.URL cssUrl = getClass().getResource("/css/Themes/default/styles.css");
+                    java.net.URL cssUrl = getClass().getResource("/css/Themes/glass/main-menu-style.css");
                     if (cssUrl != null) mainScene.getStylesheets().add(cssUrl.toExternalForm());
 
                     Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();

@@ -5,7 +5,6 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
@@ -20,7 +19,6 @@ import pe.edu.upeu.athenium.libro.entity.Libro;
 import pe.edu.upeu.athenium.libro.service.ILibroService;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 
 @Controller
@@ -111,7 +109,7 @@ public class HomeContentController {
             // --- CAMBIO CLAVE AQUÍ ---
             for (Libro libro : booksForPage) {
                 try {
-                    FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/pMenus/mHome/HomeComplements/book_card.fxml"));
+                    FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/pMenus/mHome/book_card.fxml"));
 
                     // 1. Usar el contexto de Spring para crear el BookCardController (prototype)
                     loader.setControllerFactory(context::getBean);
