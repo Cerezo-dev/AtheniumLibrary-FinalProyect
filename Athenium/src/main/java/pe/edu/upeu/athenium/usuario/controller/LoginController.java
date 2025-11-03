@@ -20,7 +20,6 @@ import org.springframework.stereotype.Controller;
 import pe.edu.upeu.athenium.common.components.StageManager;
 import pe.edu.upeu.athenium.common.components.Toast;
 import pe.edu.upeu.athenium.common.dto.SessionManager;
-import pe.edu.upeu.athenium.perfil.entity.Perfil;
 import pe.edu.upeu.athenium.usuario.entity.Usuario;
 import pe.edu.upeu.athenium.perfil.repository.PerfilRepository;
 import pe.edu.upeu.athenium.usuario.service.IUsuarioService;
@@ -68,8 +67,8 @@ public class LoginController {
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             Scene newScene = new Scene(root);
 
-            // Añadimos el CSS (asumiendo que "styles.css" contiene el tema oscuro)
-            java.net.URL cssUrl = getClass().getResource("/css/styles.css");
+            // Añadimos el CSS (asumiendo que "styles.back" contiene el tema oscuro)
+            java.net.URL cssUrl = getClass().getResource("/css/Themes/default/styles.css");
             if (cssUrl != null) newScene.getStylesheets().add(cssUrl.toExternalForm());
 
             stage.setScene(newScene);
@@ -179,7 +178,7 @@ public class LoginController {
                     Parent mainRoot = loader.load();
 
                     Scene mainScene = new Scene(mainRoot, bounds.getWidth(), bounds.getHeight() - 30);
-                    java.net.URL cssUrl = getClass().getResource("/css/styles.css");
+                    java.net.URL cssUrl = getClass().getResource("/css/Themes/default/styles.css");
                     if (cssUrl != null) mainScene.getStylesheets().add(cssUrl.toExternalForm());
 
                     Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();

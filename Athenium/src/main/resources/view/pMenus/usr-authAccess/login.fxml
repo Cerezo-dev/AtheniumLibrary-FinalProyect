@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.VBox?>
 
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
-<AnchorPane prefHeight="600.0" prefWidth="450.0" styleClass="root-dark" stylesheets="@../../../css/styles.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pe.edu.upeu.athenium.usuario.controller.LoginController">
+<AnchorPane prefHeight="600.0" prefWidth="450.0" styleClass="root-dark" stylesheets="@../../../css/Themes/default/styles.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pe.edu.upeu.athenium.usuario.controller.LoginController">
     <padding>
         <Insets bottom="20.0" left="30.0" right="30.0" top="20.0" />
     </padding>

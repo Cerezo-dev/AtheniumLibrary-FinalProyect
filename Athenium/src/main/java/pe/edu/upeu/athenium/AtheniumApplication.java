@@ -36,8 +36,8 @@ public class AtheniumApplication extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         Scene scene = new Scene(root);
-        // Cargar la hoja de estilos principal (styles.css)
-        scene.getStylesheets().add(getClass().getResource("/css/styles.css").toExternalForm());
+        // Cargar la hoja de estilos principal (styles.back)
+        scene.getStylesheets().add(getClass().getResource("/css/Themes/default/styles.css").toExternalForm());
         stage.setScene(scene);
 
         stage.setTitle("Athenium - EGBD");

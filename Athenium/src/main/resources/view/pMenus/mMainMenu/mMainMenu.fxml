@@ -15,7 +15,7 @@
 <?import javafx.scene.shape.Circle?>
 
 
-<BorderPane fx:id="bp" prefHeight="600.0" prefWidth="1024.0" styleClass="parent" stylesheets="@../../../css/predStyle.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pe.edu.upeu.athenium.common.controller.mMainMenuController">
+<BorderPane fx:id="bp" prefHeight="600.0" prefWidth="1024.0" styleClass="parent" stylesheets="@../../../css/Themes/default/predStyle.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pe.edu.upeu.athenium.common.controller.mMainMenuController">
 
     <!--=====AnchorPane de la izquierda, sidebar===-->
 

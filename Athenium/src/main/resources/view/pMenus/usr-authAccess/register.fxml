@@ -5,7 +5,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="828.0" prefWidth="450.0" styleClass="root-dark" stylesheets="@../../../css/styles.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pe.edu.upeu.athenium.usuario.controller.LoginController"> <padding>
+<AnchorPane prefHeight="828.0" prefWidth="450.0" styleClass="root-dark" stylesheets="@../../../css/Themes/default/styles.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pe.edu.upeu.athenium.usuario.controller.LoginController"> <padding>
     <Insets bottom="20.0" left="30.0" right="30.0" top="20.0" />
 </padding>
     <children>
