@@ -180,8 +180,9 @@
     -fx-text-fill: -text-primary-white;
 }
 
+
 /* ====================================
-   7. TableView
+   7. TableView (MODIFICADO)
    ==================================== */
 .books-table {
     -fx-background-color: transparent; /* Fondo transparente */
@@ -203,20 +204,25 @@
 }
 
 .books-table .table-cell {
-    -fx-background-color: -glass-bg-card; /* Celdas con fondo de vidrio */
-    -fx-text-fill: -text-secondary-grey; /* Texto de celdas gris claro */
+    /* Aquí definimos el estilo para las celdas en estado normal */
+    -fx-background-color: -glass-bg-card; /* Mantenemos este color para el fondo normal de las celdas */
+    -fx-text-fill: -text-primary-white; /* Texto blanco para las celdas normales */
     -fx-border-color: -glass-border-dark;
     -fx-border-width: 0 0 0.5px 0; /* Borde sutil entre filas */
     -fx-padding: 10px;
 }
 
-.books-table .table-row-cell:selected {
-    -fx-background-color: -glass-bg-selected; /* Fila seleccionada con vidrio azul */
-    -fx-text-fill: -text-primary-white;
+.books-table .table-row-cell:filled:selected {
+    /* MODIFICADO: Estilo para la fila seleccionada (más clara) */
+    -fx-background-color: rgba(255, 255, 255, 0.2); /* Un blanco muy sutil y transparente */
+    -fx-text-fill: -text-primary-white; /* Texto blanco en la fila seleccionada */
+    -fx-border-color: -primary-blue-accent; /* Un borde sutil que indique selección */
+    -fx-border-width: 0 0 0.5px 0;
 }
 
-.books-table .table-row-cell:hover {
-    -fx-background-color: -glass-bg-hover; /* Fila al pasar el ratón */
+.books-table .table-row-cell:filled:hover {
+    /* MODIFICADO: Estilo para la fila al pasar el ratón (un poco más claro o con un borde) */
+    -fx-background-color: -glass-bg-hover; /* Puedes ajustar este a tu gusto, o incluso hacerlo igual al normal si solo quieres el cambio en el seleccionado */
     -fx-text-fill: -text-primary-white;
 }
 

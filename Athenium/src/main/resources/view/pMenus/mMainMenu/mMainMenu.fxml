@@ -31,7 +31,11 @@
                                 <Image url="@../../../icons/BookMark/StackedBooksWhitre.png" />
                             </image>
                         </ImageView>
-                        <FontAwesomeIconView fx:id="iconGallery" glyphName="IMAGE" onMouseClicked="#onIconGalleryClicked" size="2em" styleClass="icon-sidebar" />
+                        <ImageView fx:id="iconGallery" fitHeight="32.0" fitWidth="36.0" onMouseClicked="#onIconGalleryClicked" pickOnBounds="true" preserveRatio="true" styleClass="icon-sidebar">
+                            <image>
+                                <Image url="@../../../icons/Charts/Char@3WhiteVer.png" />
+                            </image>
+                        </ImageView>
                         <FontAwesomeIconView fx:id="iconSettings" glyphName="COG" onMouseClicked="#onIconSettingsClicked" size="2em" styleClass="icon-sidebar" />
                         <FontAwesomeIconView fx:id="iconAdd" glyphName="PLUS" onMouseClicked="#onIconAddClicked" size="2em" styleClass="icon-sidebar" />
                     </children>
@@ -60,7 +64,12 @@
                         <Label fx:id="lblHeaderTitle" styleClass="header-title" text="Dashboard" />
                         <Separator orientation="VERTICAL" prefHeight="30.0" styleClass="header-separator" />
                         <Label fx:id="lblUserInfo" styleClass="header-subtitle" text="Hello Mate, welcome back!" />
-                        <Region HBox.hgrow="ALWAYS" />
+                        <Region prefHeight="55.0" prefWidth="478.0" HBox.hgrow="ALWAYS" />
+                  <ImageView fitHeight="35.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../icons/Date/Date_range_fill@3xWhiteVer.png" />
+                     </image>
+                  </ImageView>
                         <Label fx:id="lblDate" styleClass="header-date" text="2:03 29 May 2020" />
                     </children>
                     <padding>
