@@ -362,7 +362,7 @@ public class mMainMenuController {
 
     @FXML
     public void onIconGalleryClicked(MouseEvent e) {
-        abrirPaginaEnContenido("/view/main_devoluciones.fxml", "Libros Devueltos");
+        abrirPaginaEnContenido("/view/pMenus/mAdminPanel/mAdminPanel.fxml", "Panel de Administración");
     }
 
     @FXML

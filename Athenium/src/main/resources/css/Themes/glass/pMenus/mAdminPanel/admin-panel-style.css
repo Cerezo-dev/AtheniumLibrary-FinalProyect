@@ -1,0 +1,158 @@
+/*
+ * Hoja de estilos para el Panel de Administración
+ * Ruta: /css/Themes/glass/pMenus/mMainMenu/admin-panel-style.css
+ */
+
+/* 1. Importar las variables de color y redondeo del main-menu-style */
+@import "main-menu-style.css";
+
+/* 2. Estilo de la raíz del panel (se ajusta al tab-content-area) */
+.admin-panel-root {
+    -fx-background-color: transparent;
+}
+
+.admin-title {
+    -fx-font-size: 2.2em;
+    -fx-font-weight: bold;
+    -fx-text-fill: -text-primary-white;
+    -fx-padding: 0 0 10px 0;
+}
+
+.admin-subtitle {
+    -fx-font-size: 1.4em;
+    -fx-font-weight: bold;
+    -fx-text-fill: -text-primary-white;
+    -fx-padding: 0 0 5px 0;
+}
+
+.admin-description {
+    -fx-text-fill: -text-secondary-grey;
+    -fx-padding: 0 0 10px 0;
+}
+
+/* 3. Paneles de Contenido (usa la clase de main-menu-style.css) */
+/* .content-glass-panel { ... } ya está definido en el import */
+
+
+/* ====================================
+   4. Tarjetas de Estadísticas (Nuevos Estilos)
+   ==================================== */
+
+/* Tarjeta Azul con Degradado (Inspirada en la imagen de la bicicleta) */
+.stat-card-blue {
+    -fx-background-color: linear-gradient(to right bottom, -gradient-start, -gradient-end);
+    -fx-background-radius: -border-radius-medium;
+    -fx-border-radius: -border-radius-medium;
+    -fx-padding: 20px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 123, 255, 0.4), 15, 0.5, 0, 5);
+    -fx-min-height: 150px;
+}
+
+.stat-card-title-light,
+.stat-card-footer-light {
+    -fx-text-fill: rgba(255, 255, 255, 0.85); /* Texto blanco semitransparente */
+    -fx-font-size: 1.0em;
+}
+
+.stat-card-number-large {
+    -fx-text-fill: -text-primary-white;
+    -fx-font-size: 2.8em;
+    -fx-font-weight: bold;
+    -fx-padding: 10px 0;
+}
+
+/* Tarjeta Oscura (para "Libros Disponibles") */
+.stat-card-dark {
+    -fx-background-color: -glass-bg-base; /* Vidrio base oscuro */
+    -fx-background-radius: -border-radius-medium;
+    -fx-border-radius: -border-radius-medium;
+    -fx-padding: 20px;
+    -fx-effect: dropshadow(gaussian, -shadow-color-light, 10, 0.1, 0, 3);
+    -fx-border-color: -glass-border-light;
+    -fx-border-width: 1px;
+    -fx-min-height: 150px;
+}
+
+.stat-card-title-dark,
+.stat-card-footer-dark {
+    -fx-text-fill: -text-secondary-grey; /* Texto gris claro */
+    -fx-font-size: 1.0em;
+}
+
+.stat-card-number-large-dark {
+    -fx-text-fill: -text-primary-white; /* Texto blanco */
+    -fx-font-size: 2.8em;
+    -fx-font-weight: bold;
+    -fx-padding: 10px 0;
+}
+
+/* Tarjeta para el Gráfico */
+.stat-card-chart {
+    -fx-background-color: -glass-bg-base;
+    -fx-background-radius: -border-radius-medium;
+    -fx-border-radius: -border-radius-medium;
+    -fx-padding: 20px;
+    -fx-border-color: -glass-border-light;
+    -fx-border-width: 1px;
+    -fx-min-height: 150px;
+}
+
+/* ====================================
+   5. Estilos del Gráfico de Barras
+   ==================================== */
+.stat-card-chart .chart {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+}
+.stat-card-chart .plot-background {
+    -fx-background-color: transparent;
+}
+.stat-card-chart .axis {
+    -fx-tick-label-fill: -text-light-grey; /* Texto de ejes gris sutil */
+    -fx-border-color: transparent; /* Sin bordes en los ejes */
+}
+.stat-card-chart .axis .axis-label {
+    -fx-text-fill: -text-secondary-grey;
+}
+.stat-card-chart .chart-bar {
+    -fx-bar-fill: -primary-blue-accent; /* Barras azules */
+    -fx-background-color: -primary-blue-accent;
+    -fx-background-radius: -border-radius-small;
+}
+.stat-card-chart .chart-bar:hover {
+    -fx-background-color: derive(-primary-blue-accent, -10%);
+}
+
+/* ====================================
+   6. Botones (Heredados de login-style.css, pero definidos aquí por si acaso)
+   ==================================== */
+
+.button-solid-primary {
+    -fx-background-color: -primary-blue-accent;
+    -fx-text-fill: -text-primary-white;
+    -fx-font-weight: bold;
+    -fx-background-radius: -border-radius-small;
+    -fx-border-radius: -border-radius-small;
+    -fx-padding: 10 18;
+    -fx-cursor: hand;
+}
+.button-solid-primary:hover {
+    -fx-background-color: derive(-primary-blue-accent, -10%);
+}
+
+.button-outline-primary {
+    -fx-background-color: transparent;
+    -fx-text-fill: -text-secondary-grey;
+    -fx-border-color: -text-secondary-grey;
+    -fx-border-width: 1px;
+    -fx-background-radius: -border-radius-small;
+    -fx-border-radius: -border-radius-small;
+    -fx-padding: 10 18;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+.button-outline-primary:hover {
+    -fx-background-color: -glass-bg-hover;
+    -fx-text-fill: -text-primary-white;
+    -fx-border-color: -text-primary-white;
+}

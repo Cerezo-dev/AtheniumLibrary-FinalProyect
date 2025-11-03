@@ -36,24 +36,25 @@ public  class ConsultaDNI {
             // Paso 3: parsear respuesta
             Document resultDoc = Jsoup.parse(postResponse.body());
             Element fila = resultDoc.select("table tbody tr").first();
-            if (fila != null) {
+            /*if (fila != null) {
                 Elements celdas = fila.select("td");
                 usuarioDto.setDni(celdas.get(0).text());
                 usuarioDto.setNombre(celdas.get(1).text());
                 usuarioDto.setApellidoPaterno(celdas.get(2).text());
                 usuarioDto.setApellidoMaterno(celdas.get(3).text());
-            }
+            }*/
         }catch (IOException e) {
             e.printStackTrace();
         }
         return usuarioDto;
     }
 
+    /*
     public static void main(String[] args) {
         ConsultaDNI c=new ConsultaDNI();
         UsuarioDto p=c.consultarDNI("43631917");
         System.out.println(p.getDni()+" "+p.getNombre()
                 +"  "+p.getApellidoPaterno()+"  "+p.getApellidoMaterno());
     }
-
+    */
 }

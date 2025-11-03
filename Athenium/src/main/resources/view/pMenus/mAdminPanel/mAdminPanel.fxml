@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+
+<AnchorPane styleClass="admin-panel-root"
+            stylesheets="@../../../css/Themes/glass/pMenus/mAdminPanel/admin-panel-style.css"
+            xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="pe.edu.upeu.athenium.common.controller.AdminPanelController">
+    <children>
+        <VBox spacing="25.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <Label text="Panel de Administración" styleClass="admin-title" />
+
+                <VBox styleClass="content-glass-panel" spacing="15.0">
+                    <children>
+                        <Label text="Dashboard de Reportes" styleClass="admin-subtitle" />
+                        <HBox spacing="20.0" alignment="TOP_LEFT">
+
+                            <VBox styleClass="stat-card-blue" HBox.hgrow="ALWAYS">
+                                <children>
+                                    <Label text="Total Préstamos (Mes)" styleClass="stat-card-title-light" />
+                                    <Label text="1,250" styleClass="stat-card-number-large" />
+                                    <Label text="↑ 12% respecto al mes anterior" styleClass="stat-card-footer-light" />
+                                </children>
+                            </VBox>
+
+                            <VBox styleClass="stat-card-dark" HBox.hgrow="ALWAYS">
+                                <children>
+                                    <Label text="Libros Disponibles" styleClass="stat-card-title-dark" />
+                                    <Label text="45,890" styleClass="stat-card-number-large-dark" />
+                                    <Label text="85% de la colección total" styleClass="stat-card-footer-dark" />
+                                </children>
+                            </VBox>
+
+                            <VBox styleClass="stat-card-chart" HBox.hgrow="ALWAYS">
+                                <children>
+                                    <Label text="Préstamos por Hora (Últimos 7 días)" styleClass="stat-card-title-dark" />
+                                    <BarChart fx:id="prestamosChart" VBox.vgrow="ALWAYS" legendVisible="false" animated="false">
+                                        <xAxis>
+                                            <CategoryAxis side="BOTTOM" />
+                                        </xAxis>
+                                        <yAxis>
+                                            <NumberAxis side="LEFT" />
+                                        </yAxis>
+                                    </BarChart>
+                                </children>
+                            </VBox>
+                        </HBox>
+                    </children>
+                </VBox>
+
+                <VBox styleClass="content-glass-panel" spacing="10.0">
+                    <children>
+                        <Label text="Gestión de Inventario" styleClass="admin-subtitle" />
+                        <Label text="Identifica libros que no han sido prestados para optimizar espacio." styleClass="admin-description" />
+                        <HBox>
+                            <Button text="Generar Reporte de Inventario Inactivo" styleClass="button-outline-primary" />
+                        </HBox>
+                    </children>
+                </VBox>
+
+                <VBox styleClass="content-glass-panel" spacing="10.0">
+                    <children>
+                        <Label text="Acciones del Bibliotecario" styleClass="admin-subtitle" />
+                        <HBox spacing="15.0">
+                            <Button text="Validar Préstamo (Escanear)" styleClass="button-solid-primary" />
+                            <Button text="Registrar Devolución" styleClass="button-solid-primary" />
+                            <Button text="Gestionar Usuarios" styleClass="button-outline-primary" />
+                            <Button text="Gestionar Inventario" styleClass="button-outline-primary" />
+                        </HBox>
+                    </children>
+                </VBox>
+
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

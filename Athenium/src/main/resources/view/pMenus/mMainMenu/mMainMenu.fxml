@@ -14,10 +14,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Circle?>
 
-<BorderPane fx:id="bp" prefHeight="600.0" prefWidth="1024.0" styleClass="root-main-menu"
-            stylesheets="@../../../css/Themes/glass/pMenus/mMainMenu/main-menu-style.css"
-            xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="pe.edu.upeu.athenium.common.controller.mMainMenuController">
+<BorderPane fx:id="bp" prefHeight="600.0" prefWidth="1024.0" styleClass="root-main-menu" stylesheets="@../../../css/Themes/glass/pMenus/mMainMenu/main-menu-style.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pe.edu.upeu.athenium.common.controller.mMainMenuController">
 
     <left>
         <AnchorPane maxWidth="221.0" minWidth="58.0" prefHeight="522.0" prefWidth="64.0" styleClass="sidebar-glass" BorderPane.alignment="CENTER">
@@ -26,12 +23,12 @@
                     <children>
                         <ImageView fx:id="iconHome" fitHeight="32.0" fitWidth="36.0" onMouseClicked="#onIconHomeClicked" pickOnBounds="true" preserveRatio="true" styleClass="icon-sidebar">
                             <image>
-                                <Image url="@../../../icons/ShoopAndCommerce/Home_duotone@3x.png" />
+                                <Image url="@../../../icons/ShoopAndCommerce/Home@3xWhiteVer.png" />
                             </image>
                         </ImageView>
                         <ImageView fx:id="iconAnalytics" fitHeight="32.0" fitWidth="36.0" onMouseClicked="#onIconAnalyticsClicked" pickOnBounds="true" preserveRatio="true" styleClass="icon-sidebar">
                             <image>
-                                <Image url="@../../../icons/BookMark/notebook_duotone@3x.png" />
+                                <Image url="@../../../icons/BookMark/StackedBooksWhitre.png" />
                             </image>
                         </ImageView>
                         <FontAwesomeIconView fx:id="iconGallery" glyphName="IMAGE" onMouseClicked="#onIconGalleryClicked" size="2em" styleClass="icon-sidebar" />
@@ -39,7 +36,7 @@
                         <FontAwesomeIconView fx:id="iconAdd" glyphName="PLUS" onMouseClicked="#onIconAddClicked" size="2em" styleClass="icon-sidebar" />
                     </children>
                 </VBox>
-                <Separator layoutX="7.0" layoutY="493.0" AnchorPane.bottomAnchor="120.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" styleClass="sidebar-separator"/>
+                <Separator layoutX="7.0" layoutY="493.0" styleClass="sidebar-separator" AnchorPane.bottomAnchor="120.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
                 <Circle fx:id="circleUsuario" layoutX="32.0" layoutY="558.0" onMouseClicked="#onUserCircleClicked" opacity="0.7" radius="15.0" styleClass="user-circle" AnchorPane.bottomAnchor="23.5" AnchorPane.leftAnchor="13.5" AnchorPane.rightAnchor="15.5" />
             </children>
         </AnchorPane>
@@ -61,7 +58,7 @@
                         </ImageView>
                         <FontAwesomeIconView fx:id="iconBars" glyphName="BARS" size="1.5em" styleClass="icon-header" textAlignment="CENTER" wrappingWidth="15.285715103149414" />
                         <Label fx:id="lblHeaderTitle" styleClass="header-title" text="Dashboard" />
-                        <Separator orientation="VERTICAL" prefHeight="30.0" styleClass="header-separator"/>
+                        <Separator orientation="VERTICAL" prefHeight="30.0" styleClass="header-separator" />
                         <Label fx:id="lblUserInfo" styleClass="header-subtitle" text="Hello Mate, welcome back!" />
                         <Region HBox.hgrow="ALWAYS" />
                         <Label fx:id="lblDate" styleClass="header-date" text="2:03 29 May 2020" />
@@ -79,7 +76,7 @@
             <children>
                 <VBox styleClass="main-panel-content" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="0.0">
                     <children>
-                        <TabPane fx:id="tabPaneFx" prefHeight="400.0" prefWidth="900.0" VBox.vgrow="ALWAYS" styleClass="main-tab-pane">
+                        <TabPane fx:id="tabPaneFx" prefHeight="400.0" prefWidth="900.0" styleClass="main-tab-pane" VBox.vgrow="ALWAYS">
                         </TabPane>
                     </children>
                 </VBox>
