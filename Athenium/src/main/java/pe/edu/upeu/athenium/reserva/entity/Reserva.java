@@ -7,11 +7,6 @@ import pe.edu.upeu.athenium.usuario.entity.Usuario;
 
 import java.time.LocalDateTime;
 
-/**
- *
- *
- * */
-
 @Data
 @Entity
 @Table(name = "athenium_reserva")
