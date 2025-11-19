@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import org.controlsfx.glyphfont.Glyph?>
+
+<BorderPane fx:id="mainRoot" prefHeight="800.0" prefWidth="1200.0" styleClass="root-pane"
+            xmlns="http://javafx.com/javafx/17.0.12"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="pe.edu.upeu.syslibrary.controller.MainguiController">
+
+    <left>
+        <VBox fx:id="sidebar" prefWidth="220.0" styleClass="sidebar">
+            <Label styleClass="logo-text-sidebar">
+                <graphic>
+                    <Glyph fontFamily="FontAwesome" icon="BOOK" style="-fx-fill: white;" styleClass="logo-sidebar-icon" />
+                </graphic>
+                <text>  SysLibrary</text>
+                <VBox.margin><Insets top="30.0" bottom="50.0" left="20.0" /></VBox.margin>
+            </Label>
+
+            <Button onAction="#showDashboard" styleClass="sidebar-button" >
+                <graphic><Glyph fontFamily="FontAwesome" icon="DASHBOARD" styleClass="sidebar-icon" /></graphic>
+                <text>  Panel Principal</text>
+            </Button>
+
+            <Button onAction="#showLibros" styleClass="sidebar-button" > <graphic><Glyph fontFamily="FontAwesome" icon="BOOK" styleClass="sidebar-icon" /></graphic>
+                <text>  Libros</text>
+            </Button>
+
+            <Button onAction="#showExemplars" styleClass="sidebar-button" > <graphic><Glyph fontFamily="FontAwesome" icon="LIST_UL" styleClass="sidebar-icon" /></graphic>
+                <text>  Ejemplares</text>
+            </Button>
+
+            <Button onAction="#showCategories" styleClass="sidebar-button" > <graphic><Glyph fontFamily="FontAwesome" icon="TAGS" styleClass="sidebar-icon" /></graphic>
+                <text>  Categorías</text>
+            </Button>
+
+            <Button onAction="#showAddUser" styleClass="sidebar-button" > <graphic><Glyph fontFamily="FontAwesome" icon="USER_PLUS" styleClass="sidebar-icon" /></graphic>
+                <text>  Usuarios</text>
+            </Button>
+
+            <Button onAction="#showIssueBook" styleClass="sidebar-button" > <graphic><Glyph fontFamily="FontAwesome" icon="SHARE" styleClass="sidebar-icon" /></graphic>
+                <text>  Préstamos</text>
+            </Button>
+
+            <Button onAction="#showReturnBook" styleClass="sidebar-button" >
+                <graphic><Glyph fontFamily="FontAwesome" icon="CHECK_SQUARE_O" styleClass="sidebar-icon" /></graphic>
+                <text>  Devolver Libro</text>
+            </Button>
+            <Button onAction="#showReports" styleClass="sidebar-button" >
+                <graphic><Glyph fontFamily="FontAwesome" icon="FILE_TEXT_ALT" styleClass="sidebar-icon" /></graphic>
+                <text>  Reportes</text>
+            </Button>
+            <Button onAction="#showSettings" styleClass="sidebar-button" >
+                <graphic><Glyph fontFamily="FontAwesome" icon="COG" styleClass="sidebar-icon" /></graphic>
+                <text>  Configuración</text>
+            </Button>
+
+            <Region VBox.vgrow="ALWAYS" />
+
+            <Button onAction="#handleLogout" styleClass="sidebar-button-logout">
+                <graphic><Glyph fontFamily="FontAwesome" icon="SIGN_OUT" styleClass="sidebar-icon-logout" /></graphic>
+                <text>  Logout</text>
+                <VBox.margin><Insets bottom="20.0" /></VBox.margin>
+            </Button>
+        </VBox>
+    </left>
+
+    <center>
+        <VBox fx:id="contentArea" styleClass="content-area">
+            <HBox alignment="CENTER_LEFT" prefHeight="60.0" styleClass="content-header">
+                <Label fx:id="lblDashboardTitle" text="Dashboard Principal" styleClass="content-title">
+                    <HBox.margin><Insets left="30.0" /></HBox.margin>
+                </Label>
+                <Region HBox.hgrow="ALWAYS" />
+                <Label fx:id="lblUserGreeting" styleClass="user-greeting">
+                    <HBox.margin><Insets right="30.0" /></HBox.margin>
+                </Label>
+            </HBox>
+
+            <VBox VBox.vgrow="ALWAYS">
+                <Label text="Contenido del área central se carga dinámicamente..." />
+            </VBox>
+        </VBox>
+    </center>
+</BorderPane>

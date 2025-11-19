@@ -1,0 +1,506 @@
+.text-field-error {
+    -fx-border-color: red;
+    -fx-border-width: 2px;
+    -fx-background-color: #ffeeee;
+}
+/* styles.css - Reglas necesarias */
+/* Paleta de Colores Principal */
+.root-pane {
+    -fx-background-color: #f4f4f4; /* Fondo general muy claro */
+    -fx-font-family: "Segoe UI", sans-serif;
+}
+
+/* --- BARRA LATERAL (LEFT) --- */
+.sidebar {
+    -fx-background-color: #172b4d; /* Azul Profundo */
+    -fx-padding: 0;
+}
+
+.logo-area {
+    -fx-padding: 20px 0;
+    -fx-border-color: #2c4464;
+    -fx-border-width: 0 0 1px 0;
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 0 20px;
+}
+
+.logo-icon-sidebar {
+    -fx-fill: #3498db; /* Azul vibrante */
+    -fx-font-size: 32px;
+}
+
+.logo-text-sidebar {
+    -fx-text-fill: white;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}
+
+/* Botones de Navegación */
+.sidebar-button, .sidebar-button-active {
+    -fx-background-color: transparent;
+    -fx-text-fill: #bdc3c7; /* Gris claro */
+    -fx-font-size: 15px;
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 15px 20px;
+    -fx-max-width: Infinity;
+    -fx-graphic-text-gap: 15;
+}
+
+.sidebar-button:hover {
+    -fx-background-color: #253a61; /* Oscuro al pasar el ratón */
+    -fx-text-fill: white;
+}
+
+.sidebar-button-active {
+    -fx-background-color: #0d1e3a; /* Más oscuro para activo */
+    -fx-text-fill: white;
+    -fx-border-color: #3498db;
+    -fx-border-width: 0 0 0 5px; /* Barra activa a la izquierda */
+}
+
+.sidebar-icon {
+    -fx-fill: #bdc3c7;
+    -fx-font-size: 18px;
+}
+
+.sidebar-button-active .sidebar-icon,
+.sidebar-button:hover .sidebar-icon {
+    -fx-fill: white;
+}
+
+.sidebar-button-logout {
+    -fx-background-color: #e74c3c; /* Rojo para Logout */
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-alignment: CENTER;
+    -fx-padding: 12px;
+    -fx-max-width: 80%;
+    -fx-background-radius: 5px;
+    -fx-cursor: hand;
+}
+.sidebar-button-logout:hover {
+    -fx-background-color: #c0392b;
+}
+
+.sidebar-icon-logout {
+    -fx-fill: white;
+    -fx-font-size: 18px;
+}
+
+/* --- CONTENIDO PRINCIPAL (CENTER) --- */
+.content-area {
+    -fx-background-color: #f4f7f6;
+}
+
+.top-gradient-bar {
+    -fx-background-color: linear-gradient(to right, #9b59b6, #e67e22); /* Púrpura a Naranja */
+}
+
+/* Área de Tarjetas */
+.summary-bar {
+    -fx-background-color: #f4f7f6;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.05), 5, 0.5, 0, 1);
+}
+
+.summary-card-red, .summary-card-blue, .summary-card-cyan, .summary-card-gray {
+    -fx-background-color: white;
+    -fx-padding: 15px 20px;
+    -fx-background-radius: 5px;
+    -fx-min-width: 200px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 8, 0.0, 0, 2);
+}
+
+/* Colores del Borde Superior (similar a la referencia) */
+.summary-card-red { -fx-border-color: #e74c3c; -fx-border-width: 5 0 0 0; }
+.summary-card-blue { -fx-border-color: #3498db; -fx-border-width: 5 0 0 0; }
+.summary-card-cyan { -fx-border-color: #1abc9c; -fx-border-width: 5 0 0 0; }
+.summary-card-gray { -fx-border-color: #95a5a6; -fx-border-width: 5 0 0 0; }
+
+
+.card-category-light {
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #7f8c8d;
+}
+
+.card-value-light {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50;
+}
+
+.card-icon-summary {
+    -fx-fill: #7f8c8d;
+    -fx-font-size: 24px;
+}
+
+/* --- PANELES DE GRÁFICOS --- */
+.chart-panel {
+    -fx-background-color: white;
+    -fx-background-radius: 8px;
+    -fx-padding: 0;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 8, 0.0, 0, 2);
+}
+
+.chart-title-main {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #34495e;
+}
+
+.chart-placeholder {
+    -fx-background-color: #f7f7f7;
+    -fx-background-radius: 5px;
+}
+
+.placeholder-text {
+    -fx-text-fill: #bdc3c7;
+    -fx-font-weight: bold;
+    -fx-font-size: 18px;
+}
+.logo-sidebar-icon {
+    -fx-font-size: 32px; /* Tamaño para el icono principal del logo */
+    -fx-fill: white;
+}
+
+.sidebar-icon {
+    -fx-font-size: 18px; /* Tamaño para los iconos de navegación */
+    -fx-fill: #bdc3c7;
+}
+
+.sidebar-icon-logout {
+    -fx-font-size: 18px; /* Tamaño para el icono de logout */
+    -fx-fill: white;
+}
+
+.card-icon-summary {
+    -fx-font-size: 28px; /* Tamaño para los iconos de las tarjetas de resumen */
+    -fx-fill: #3498db;
+}
+/* Colores de la paleta (puedes ajustarlos) */
+.root-pane {
+    -fx-background-color: #f4f7f6; /* Fondo general muy claro */
+    -fx-font-family: "Segoe UI", sans-serif;
+}
+
+/* --- BARRA LATERAL (LEFT) --- */
+.sidebar {
+    -fx-background-color: #2c3e50; /* Azul oscuro */
+    -fx-padding: 0;
+}
+
+.logo-text-sidebar {
+    -fx-text-fill: white;
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-padding: 0 0 0 10px; /* Ajusta el padding para alinear el texto con el icono */
+}
+
+.sidebar-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #bdc3c7; /* Gris claro */
+    -fx-font-size: 16px;
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 15px 20px;
+    -fx-max-width: Infinity; /* Hace que el botón ocupe todo el ancho */
+    -fx-graphic-text-gap: 10; /* Espacio entre icono y texto */
+}
+
+.sidebar-button:hover {
+    -fx-background-color: #34495e; /* Azul un poco más claro al pasar el ratón */
+    -fx-text-fill: white;
+}
+
+.sidebar-button:pressed {
+    -fx-background-color: #1a242f; /* Azul más oscuro al hacer clic */
+}
+
+.sidebar-button:focused {
+    -fx-background-color: #3498db; /* Azul vibrante al estar seleccionado/enfocado */
+    -fx-text-fill: white;
+}
+
+.sidebar-icon {
+    -fx-fill: #bdc3c7; /* Color del icono por defecto */
+}
+
+.sidebar-button:hover .sidebar-icon,
+.sidebar-button:focused .sidebar-icon {
+    -fx-fill: white; /* Color del icono al pasar el ratón o enfocado */
+}
+
+.sidebar-button-logout {
+    -fx-background-color: #c0392b; /* Rojo para logout */
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 15px 20px;
+    -fx-max-width: Infinity;
+    -fx-graphic-text-gap: 10;
+}
+.sidebar-button-logout:hover {
+    -fx-background-color: #e74c3c;
+}
+.sidebar-icon-logout {
+    -fx-fill: white;
+}
+
+/* --- CONTENIDO PRINCIPAL (CENTER) --- */
+.content-area {
+    -fx-background-color: #f4f7f6; /* Fondo del área de contenido */
+}
+
+.content-header {
+    -fx-background-color: white;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.05), 5, 0.5, 0, 1);
+    -fx-padding: 0 10px;
+}
+
+.content-title {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #34495e;
+}
+
+.user-greeting {
+    -fx-font-size: 14px;
+    -fx-text-fill: #7f8c8d;
+}
+
+/* --- TARJETAS DE RESUMEN --- */
+.summary-card {
+    -fx-background-color: white;
+    -fx-background-radius: 8px;
+    -fx-padding: 15px 20px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 8, 0.0, 0, 2);
+    -fx-min-width: 200px;
+    -fx-max-width: 200px;
+    -fx-spacing: 5px;
+}
+
+.card-category {
+    -fx-font-size: 13px;
+    -fx-text-fill: #7f8c8d;
+}
+
+.card-value {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50;
+}
+
+.card-icon-summary {
+    -fx-fill: #3498db; /* Azul para iconos de resumen */
+    -fx-font-size: 28px;
+}
+
+/* --- PANELES DE GRÁFICOS --- */
+.chart-panel {
+    -fx-background-color: white;
+    -fx-background-radius: 8px;
+    -fx-padding: 0;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 8, 0.0, 0, 2);
+}
+
+.chart-title {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #34495e;
+}
+/* Estilos del Contenedor Principal (para todas las vistas modulares) */
+.view-container {
+    -fx-background-color: #f7f9fc; /* Fondo muy claro */
+    -fx-padding: 20px;
+}
+
+/* Estilos de Títulos y Subtítulos */
+.view-title {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+}
+.view-subtitle {
+    -fx-font-size: 14px;
+    -fx-text-fill: #777777;
+}
+
+/* Estilo de la Barra de Búsqueda */
+.search-bar {
+    -fx-background-color: white;
+    -fx-background-radius: 10px;
+    -fx-padding: 10px 15px;
+    -fx-border-color: #e0e0e0;
+    -fx-border-width: 1px;
+    -fx-border-radius: 10px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.05), 5, 0.0, 0, 1);
+}
+.search-field {
+    -fx-background-color: transparent;
+    -fx-border-width: 0;
+    -fx-font-size: 14px;
+}
+.search-icon {
+    -fx-fill: #888888;
+    -fx-font-size: 16px;
+}
+
+/* ScrollPane Transparente */
+.transparent-scrollpane {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+}
+.transparent-scrollpane .scroll-bar:vertical,
+.transparent-scrollpane .scroll-bar:horizontal {
+    -fx-background-color: transparent;
+}
+/* --- ESTILOS GENERALES DE TARJETAS --- */
+.book-card-primary, .book-card-secondary, .book-card-tertiary, .category-card, .user-card {
+    -fx-background-color: white;
+    -fx-background-radius: 12px;
+    -fx-padding: 15px;
+    -fx-border-radius: 12px;
+    -fx-border-width: 3px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0.0, 0, 2);
+    -fx-spacing: 10px;
+}
+
+/* --- COLORES DE BORDE DE LAS TARJETAS DE LIBROS/CATEGORÍAS --- */
+.book-card-primary { -fx-border-color: #8A2BE2; } /* Púrpura */
+.book-card-secondary { -fx-border-color: #1E90FF; } /* Azul */
+.book-card-tertiary { -fx-border-color: #FF8C00; } /* Naranja */
+.category-card { -fx-border-color: #e0e0e0; } /* Gris claro por defecto */
+.user-card { -fx-border-color: #3CB371; } /* Verde para usuarios (ejemplo) */
+
+
+/* --- ESTILOS DE CONTENIDO DE TARJETAS (Libros/Usuarios) --- */
+.card-book-title, .card-user-name {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+}
+.card-book-author, .card-user-email {
+    -fx-font-size: 13px;
+    -fx-text-fill: #777777;
+}
+.card-description {
+    -fx-font-size: 12px;
+    -fx-text-fill: #555555;
+    -fx-opacity: 0.9;
+}
+.card-details-panel {
+    -fx-background-color: #f7f7f7;
+    -fx-padding: 8px;
+    -fx-background-radius: 6px;
+    -fx-font-size: 12px;
+}
+.card-detail-label { -fx-font-weight: bold; -fx-text-fill: #555555; }
+.card-detail-value { -fx-text-fill: #333333; }
+
+
+/* --- ESTILOS DE ÍCONOS Y ETIQUETAS (TAGS) --- */
+.card-tag-violet {
+    -fx-background-color: #e6e0ff;
+    -fx-text-fill: #8A2BE2;
+    -fx-padding: 3px 8px;
+    -fx-background-radius: 4px;
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+}
+.card-tag-blue {
+    -fx-background-color: #e0f0ff;
+    -fx-text-fill: #1E90FF;
+    -fx-padding: 3px 8px;
+    -fx-background-radius: 4px;
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+}
+.card-tag-orange {
+    -fx-background-color: #fff0e0;
+    -fx-text-fill: #FF8C00;
+    -fx-padding: 3px 8px;
+    -fx-background-radius: 4px;
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+}
+.card-user-icon-green {
+    -fx-fill: white;
+    -fx-background-color: #3CB371;
+    -fx-padding: 10px;
+    -fx-background-radius: 50%;
+    -fx-font-size: 20px;
+}
+
+/* --- CATEGORÍA ICONOS (para la vista de Categorías) --- */
+.category-icon-violet { -fx-fill: #8A2BE2; -fx-font-size: 18px; }
+.category-icon-green { -fx-fill: #3CB371; -fx-font-size: 18px; }
+.category-icon-blue { -fx-fill: #1E90FF; -fx-font-size: 18px; }
+.card-category-title { -fx-font-weight: bold; -fx-font-size: 16px; }
+.card-category-description { -fx-text-fill: #777777; -fx-font-size: 12px; }
+/* --- ESTILOS DE TABLA (Ejemplares / Préstamos) --- */
+.table-view {
+    -fx-background-color: white;
+    -fx-background-radius: 10px;
+    -fx-border-color: #e0e0e0;
+    -fx-border-radius: 10px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.05), 5, 0.0, 0, 1);
+}
+.table-view .column-header-background {
+    -fx-background-color: #f0f0f0;
+    -fx-background-radius: 10px 10px 0 0;
+}
+.table-view .column-header {
+    -fx-font-weight: bold;
+    -fx-text-fill: #555555;
+}
+.table-row-cell:odd {
+    -fx-background-color: #fcfcfc;
+}
+.table-row-cell:even {
+    -fx-background-color: white;
+}
+
+/* --- ESTILOS DE BOTONES --- */
+.primary-action-button, .primary-action-button-purple, .primary-action-button-blue {
+    -fx-background-color: #6a5acd; /* Base Morado */
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 8px 15px;
+    -fx-background-radius: 8px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 5, 0.0, 0, 1);
+}
+.primary-action-button-purple { -fx-background-color: #6a5acd; } /* Morado (Categorías) */
+.primary-action-button-blue { -fx-background-color: #1E90FF; } /* Azul (Usuarios) */
+
+
+/* Botones Secundarios (Editar/Eliminar) - Estilo Plano/Claro */
+.secondary-button-light {
+    -fx-background-color: #e0eaff; /* Azul muy claro */
+    -fx-text-fill: #1E90FF;
+    -fx-font-weight: bold;
+    -fx-padding: 6px 10px;
+    -fx-background-radius: 6px;
+    -fx-cursor: hand;
+}
+.danger-button-light {
+    -fx-background-color: #ffe0e0; /* Rojo muy claro */
+    -fx-text-fill: #e65c5c;
+    -fx-font-weight: bold;
+    -fx-padding: 6px 10px;
+    -fx-background-radius: 6px;
+    -fx-cursor: hand;
+}
+
+/* Botones dentro de HBox (Para que sean más compactos en las tarjetas) */
+.secondary-button-light, .danger-button-light {
+    -fx-font-size: 12px;
+}
+/* COLORES DEGRADADOS PARA LA CABECERA (OPCIONAL, si quieres el degradado del ejemplo) */
+/* Esto requiere un HBox o AnchorPane con un ID específico o clase para aplicarlo */
+/* Por ejemplo, si tienes un HBox con id="topGradientBar" */
+/*
+#topGradientBar {
+    -fx-background-color: linear-gradient(to right, #8e44ad, #f1c40f);
+    -fx-pref-height: 5px;
+}
+*/

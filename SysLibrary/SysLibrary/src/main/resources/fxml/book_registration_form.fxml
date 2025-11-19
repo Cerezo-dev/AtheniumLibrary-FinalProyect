@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import org.controlsfx.glyphfont.Glyph?>
+
+<?import javafx.scene.control.DatePicker?>
+<VBox alignment="TOP_CENTER" spacing="20.0" styleClass="view-container"
+      xmlns="http://javafx.com/javafx/17.0.12"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="pe.edu.upeu.syslibrary.controller.BookRegistrationController">
+
+    <padding><Insets top="20.0" right="20.0" bottom="20.0" left="20.0" /></padding>
+
+    <VBox alignment="TOP_LEFT" styleClass="form-window-container" maxWidth="800.0">
+        <Label text="Nuevo Libro" styleClass="dialog-title">
+            <VBox.margin><Insets bottom="10.0" /></VBox.margin>
+        </Label>
+
+        <VBox styleClass="form-panel" spacing="15.0">
+
+            <GridPane hgap="20.0" vgap="15.0">
+
+                <columnConstraints>
+                    <ColumnConstraints hgrow="SOMETIMES" percentWidth="50.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" percentWidth="50.0" />
+                </columnConstraints>
+
+                <Label text="Título *" GridPane.columnIndex="0" GridPane.rowIndex="0" styleClass="form-label" />
+                <TextField fx:id="txtTitulo" GridPane.columnIndex="0" GridPane.rowIndex="1" GridPane.columnSpan="2" styleClass="form-field" promptText="Ingrese el título completo" />
+
+                <Label text="Autor *" GridPane.columnIndex="0" GridPane.rowIndex="2" styleClass="form-label" />
+                <TextField fx:id="txtAutor" GridPane.columnIndex="0" GridPane.rowIndex="3" styleClass="form-field" promptText="Nombre del autor" />
+
+                <Label text="ISBN *" GridPane.columnIndex="1" GridPane.rowIndex="2" styleClass="form-label" />
+                <TextField fx:id="txtISBN" GridPane.columnIndex="1" GridPane.rowIndex="3" styleClass="form-field" promptText="978-XXXX-XXXX" />
+
+                <Label text="Editorial" GridPane.columnIndex="0" GridPane.rowIndex="4" styleClass="form-label" />
+                <TextField fx:id="txtEditorial" GridPane.columnIndex="0" GridPane.rowIndex="5" styleClass="form-field" promptText="Nombre de la editorial" />
+
+                <Label text="Categoría" GridPane.columnIndex="1" GridPane.rowIndex="4" styleClass="form-label" />
+                <ComboBox fx:id="cmbCategoria" promptText="Seleccionar categoría" GridPane.columnIndex="1" GridPane.rowIndex="5" styleClass="form-field" />
+
+                <Label text="Fecha de Publicación" GridPane.columnIndex="0" GridPane.rowIndex="6" styleClass="form-label" />
+                <DatePicker fx:id="dpFechaPublicacion" GridPane.columnIndex="0" GridPane.rowIndex="7" styleClass="form-field" promptText="AAAA-MM-DD" />
+
+
+                <Label text="Número de Páginas" GridPane.columnIndex="1" GridPane.rowIndex="6" styleClass="form-label" />
+                <TextField fx:id="txtNumeroPaginas" GridPane.columnIndex="1" GridPane.rowIndex="7" styleClass="form-field" promptText="Solo números" />
+
+                <Label text="Idioma" GridPane.columnIndex="0" GridPane.rowIndex="8" styleClass="form-label" />
+                <TextField fx:id="txtIdioma" GridPane.columnIndex="0" GridPane.rowIndex="9" styleClass="form-field" promptText="Español" />
+
+                <Label text="Ejemplares Iniciales" GridPane.columnIndex="1" GridPane.rowIndex="8" styleClass="form-label" />
+                <TextField fx:id="txtNumeroEjemplares" GridPane.columnIndex="1" GridPane.rowIndex="9" styleClass="form-field" promptText="Stock inicial (Solo números)" />
+
+                <!-- ✅ Campo agregado -->
+                <Label text="Descripción" GridPane.columnIndex="0" GridPane.rowIndex="10" styleClass="form-label" />
+                <TextArea fx:id="txtDescripcion"
+                          GridPane.columnIndex="0"
+                          GridPane.rowIndex="11"
+                          GridPane.columnSpan="2"
+                          styleClass="form-field"
+                          promptText="Breve descripción del libro"
+                          prefRowCount="3"
+                          wrapText="true" />
+
+                <HBox alignment="CENTER_RIGHT" spacing="10.0">
+                    <Button text="Cancelar" onAction="#handleCancel" styleClass="danger-button-light" />
+                    <Button text="Guardar" onAction="#handleSave" styleClass="success-button-light" />
+                </HBox>
+            </GridPane>
+
+        </VBox>
+
+    </VBox>
+</VBox>

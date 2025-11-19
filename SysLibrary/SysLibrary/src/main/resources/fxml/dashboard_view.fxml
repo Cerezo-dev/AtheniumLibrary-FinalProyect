@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import org.controlsfx.glyphfont.Glyph?>
+
+<VBox fx:id="mainDashboardRoot" spacing="20.0" styleClass="view-container"
+      xmlns="http://javafx.com/javafx/17.0.12"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="pe.edu.upeu.syslibrary.controller.DashboardController"> <padding><Insets top="20.0" left="20.0" right="20.0" bottom="20.0" /></padding>
+
+    <HBox spacing="20.0" alignment="CENTER_LEFT">
+        <VBox styleClass="summary-card" HBox.hgrow="ALWAYS">
+            <HBox alignment="CENTER_LEFT" spacing="15.0">
+                <Glyph fontFamily="FontAwesome" icon="BOOK" styleClass="card-icon-large" style="-fx-fill: #1E90FF;"/>
+                <VBox>
+                    <Label styleClass="card-category" text="Total Libros" />
+                    <Label fx:id="lblTotalLibros" styleClass="card-value" text="3" />
+                </VBox>
+            </HBox>
+        </VBox>
+
+        <VBox styleClass="summary-card" HBox.hgrow="ALWAYS">
+            <HBox alignment="CENTER_LEFT" spacing="15.0">
+                <Glyph fontFamily="FontAwesome" icon="USER" styleClass="card-icon-large" style="-fx-fill: #3CB371;"/>
+                <VBox>
+                    <Label styleClass="card-category" text="Usuarios Registrados" />
+                    <Label fx:id="lblUsuariosRegistrados" styleClass="card-value" text="1" />
+                </VBox>
+            </HBox>
+        </VBox>
+
+        <VBox styleClass="summary-card" HBox.hgrow="ALWAYS">
+            <HBox alignment="CENTER_LEFT" spacing="15.0">
+                <Glyph fontFamily="FontAwesome" icon="LINE_CHART" styleClass="card-icon-large" style="-fx-fill: #8A2BE2;"/>
+                <VBox>
+                    <Label styleClass="card-category" text="Préstamos Activos" />
+                    <Label fx:id="lblPrestamosActivos" styleClass="card-value" text="0" />
+                </VBox>
+            </HBox>
+        </VBox>
+
+        <VBox styleClass="summary-card" HBox.hgrow="ALWAYS">
+            <HBox alignment="CENTER_LEFT" spacing="15.0">
+                <Glyph fontFamily="FontAwesome" icon="CUBE" styleClass="card-icon-large" style="-fx-fill: #FF8C00;"/>
+                <VBox>
+                    <Label styleClass="card-category" text="Ejemplares Disponibles" />
+                    <Label fx:id="lblEjemplaresDisponibles" styleClass="card-value" text="4" />
+                </VBox>
+            </HBox>
+        </VBox>
+    </HBox>
+
+    <VBox spacing="10.0">
+        <Label text="Accesos Rápidos" styleClass="section-title-dashboard" />
+        <HBox spacing="20.0" alignment="CENTER_LEFT">
+            <Button onAction="#showLibros" styleClass="quick-access-button">
+                <graphic><Glyph fontFamily="FontAwesome" icon="PLUS" styleClass="quick-access-icon" /></graphic>
+                <text>Agregar Libro</text>
+            </Button>
+            <Button onAction="#showAddUser" styleClass="quick-access-button">
+                <graphic><Glyph fontFamily="FontAwesome" icon="PLUS" styleClass="quick-access-icon" /></graphic>
+                <text>Registrar Usuario</text>
+            </Button>
+            <Button onAction="#showIssueBook" styleClass="quick-access-button">
+                <graphic><Glyph fontFamily="FontAwesome" icon="PLUS" styleClass="quick-access-icon" /></graphic>
+                <text>Nuevo Préstamo</text>
+            </Button>
+            <Region HBox.hgrow="ALWAYS" />
+        </HBox>
+    </VBox>
+
+    <Region VBox.vgrow="ALWAYS" />
+
+</VBox>

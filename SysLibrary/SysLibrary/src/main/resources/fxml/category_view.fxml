@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import org.controlsfx.glyphfont.Glyph?>
+
+<VBox alignment="TOP_LEFT" spacing="20.0" styleClass="view-container"
+      xmlns="http://javafx.com/javafx/17.0.12"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="pe.edu.upeu.syslibrary.controller.CategoryController">
+
+    <padding><Insets top="20.0" right="20.0" bottom="20.0" left="20.0" /></padding>
+
+    <HBox alignment="CENTER_LEFT" spacing="10.0">
+        <VBox>
+            <Label text="Categorías" styleClass="view-title" />
+            <Label text="Clasificación de libros" styleClass="view-subtitle" />
+        </VBox>
+
+        <Region HBox.hgrow="ALWAYS" />
+
+        <Button onAction="#handleNewCategory" styleClass="primary-action-button-purple">
+            <graphic><Glyph fontFamily="FontAwesome" icon="PLUS" /></graphic>
+            <text> Nueva Categoría</text>
+        </Button>
+    </HBox>
+
+    <ScrollPane fitToWidth="true" VBox.vgrow="ALWAYS" styleClass="transparent-scrollpane">
+        <FlowPane fx:id="categoriesContainer" hgap="20.0" vgap="20.0" alignment="TOP_LEFT">
+            <VBox styleClass="category-card" prefWidth="300.0" maxWidth="300.0">
+                <HBox alignment="TOP_LEFT" spacing="10.0">
+                    <Glyph fontFamily="FontAwesome" icon="PAINT_BRUSH" styleClass="category-icon-violet" />
+                    <VBox>
+                        <Label text="Arte" styleClass="card-category-title" />
+                        <Label text="Libros de arte y cultura" styleClass="card-category-description" wrapText="true" />
+                    </VBox>
+                </HBox>
+
+                <Region VBox.vgrow="ALWAYS" minHeight="10.0" />
+
+                <HBox spacing="10.0" alignment="CENTER">
+                    <Button text="Editar" styleClass="secondary-button-light" HBox.hgrow="ALWAYS" />
+                    <Button text="Eliminar" styleClass="danger-button-light" HBox.hgrow="ALWAYS" />
+                </HBox>
+            </VBox>
+
+            <VBox styleClass="category-card" prefWidth="300.0" maxWidth="300.0">
+                <HBox alignment="TOP_LEFT" spacing="10.0">
+                    <Glyph fontFamily="FontAwesome" icon="FLASK" styleClass="category-icon-green" />
+                    <VBox>
+                        <Label text="Ciencias" styleClass="card-category-title" />
+                        <Label text="Libros de ciencias exactas y naturales" styleClass="card-category-description" wrapText="true" />
+                    </VBox>
+                </HBox>
+                <Region VBox.vgrow="ALWAYS" minHeight="10.0" />
+                <HBox spacing="10.0" alignment="CENTER">
+                    <Button text="Editar" styleClass="secondary-button-light" HBox.hgrow="ALWAYS" />
+                    <Button text="Eliminar" styleClass="danger-button-light" HBox.hgrow="ALWAYS" />
+                </HBox>
+            </VBox>
+
+            <VBox styleClass="category-card" prefWidth="300.0" maxWidth="300.0">
+                <HBox alignment="TOP_LEFT" spacing="10.0">
+                    <Glyph fontFamily="FontAwesome" icon="BALANCE_SCALE" styleClass="category-icon-blue" />
+                    <VBox>
+                        <Label text="Derecho" styleClass="card-category-title" />
+                        <Label text="Libros de leyes y jurisprudencia" styleClass="card-category-description" wrapText="true" />
+                    </VBox>
+                </HBox>
+                <Region VBox.vgrow="ALWAYS" minHeight="10.0" />
+                <HBox spacing="10.0" alignment="CENTER">
+                    <Button text="Editar" styleClass="secondary-button-light" HBox.hgrow="ALWAYS" />
+                    <Button text="Eliminar" styleClass="danger-button-light" HBox.hgrow="ALWAYS" />
+                </HBox>
+            </VBox>
+
+        </FlowPane>
+    </ScrollPane>
+</VBox>
