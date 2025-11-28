@@ -24,108 +24,100 @@ import java.util.ResourceBundle;
 @Controller
 public class PrestamoLibroController implements Initializable {
 
-    // --- Servicios Inyectados ---
     @Autowired private IUsuarioService usuarioService;
     @Autowired private PrestamoService prestamoService;
     @Autowired private EjemplarService ejemplarService;
 
-    // --- Elementos FXML (Deben coincidir con SceneBuilder) ---
-    @FXML private TextField txtUserId; // Input para buscar Usuario (DNI o Código)
+    // --- UI Elements ---
+    @FXML private TextField txtUserId;
     @FXML private Label lblUserName;
     @FXML private Label lblAccountStatus;
 
-    // Estadísticas visuales (Opcionales, manejamos nulos por seguridad)
+    // Stats Labels
     @FXML private Label lblOverueCount;
     @FXML private Label lblPendingFine;
     @FXML private Label lblLoanLimit;
     @FXML private Label lblTotalSelected;
 
-    @FXML private TextField txtExemplarId; // Input para buscar Libro (Scanner)
+    @FXML private TextField txtExemplarId;
     @FXML private Button btnProcessLoan;
+    @FXML private Button btnAddBook;
+    @FXML private Button btnCancel;
 
-    // Tabla y Columnas
+    // Tabla
     @FXML private TableView<PrestamoItemDto> tblBooksToLoan;
-    @FXML private TableColumn<PrestamoItemDto, String> colCodigo;
+    @FXML private TableColumn<PrestamoItemDto, String> colIdEjemplar; // fx:id="colIdEjemplar"
     @FXML private TableColumn<PrestamoItemDto, String> colTitulo;
     @FXML private TableColumn<PrestamoItemDto, String> colAutor;
+    // Las otras columnas (FechaLimite, Accion) son visuales o futuras
 
-    // --- Datos en Memoria ---
     private Usuario usuarioSeleccionado;
     private ObservableList<PrestamoItemDto> listaPrestamos = FXCollections.observableArrayList();
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        // 1. Configurar columnas de la tabla
-        if(colCodigo != null) colCodigo.setCellValueFactory(new PropertyValueFactory<>("codigo"));
-        colTitulo.setCellValueFactory(new PropertyValueFactory<>("titulo"));
-        colAutor.setCellValueFactory(new PropertyValueFactory<>("autor"));
+        setupTable();
 
-        tblBooksToLoan.setItems(listaPrestamos);
-
-        // 2. Eventos al presionar ENTER
         txtUserId.setOnAction(e -> buscarUsuario());
-        txtUserId.setPromptText("Escanear Código de Estudiante"); // Texto guía
         txtExemplarId.setOnAction(this::handleAddBookAction);
     }
 
-    // --- Lógica de Usuario ---
+    private void setupTable() {
+        colIdEjemplar.setCellValueFactory(new PropertyValueFactory<>("codigo"));
+        colTitulo.setCellValueFactory(new PropertyValueFactory<>("titulo"));
+        colAutor.setCellValueFactory(new PropertyValueFactory<>("autor"));
+        tblBooksToLoan.setItems(listaPrestamos);
+    }
+
     private void buscarUsuario() {
         String busqueda = txtUserId.getText().trim();
         if (busqueda.isEmpty()) return;
 
-        // Busca por DNI o Código usando tu servicio (Lógica dual)
         Optional<Usuario> optUser = usuarioService.buscarPorDniOCodigo(busqueda);
 
         if (optUser.isPresent()) {
             usuarioSeleccionado = optUser.get();
             lblUserName.setText(usuarioSeleccionado.getNombre() + " " + usuarioSeleccionado.getApellidos());
+            lblAccountStatus.setText("ACTIVO");
+            lblAccountStatus.setStyle("-fx-text-fill: green; -fx-font-weight: bold;");
 
-            // Estilos visuales según perfil
-            String perfil = (usuarioSeleccionado.getPerfil() != null) ? usuarioSeleccionado.getPerfil().getNombre() : "SIN PERFIL";
-            lblAccountStatus.setText("Perfil: " + perfil);
-            lblAccountStatus.setStyle("-fx-text-fill: #2ecc71; -fx-font-weight: bold;"); // Verde
+            // Aquí podrías cargar estadísticas reales del usuario si tuvieras los métodos en el servicio
+            // Por ahora placeholders:
+            lblOverueCount.setText("0");
+            lblPendingFine.setText("S/ 0.00");
+            lblLoanLimit.setText("3/5");
 
             btnProcessLoan.setDisable(false);
-            txtExemplarId.requestFocus(); // Saltar al campo de libro automáticamente
+            txtExemplarId.requestFocus();
         } else {
             usuarioSeleccionado = null;
-            lblUserName.setText("Usuario no encontrado");
+            lblUserName.setText("No encontrado");
             lblAccountStatus.setText("---");
-            lblAccountStatus.setStyle("-fx-text-fill: red;");
             btnProcessLoan.setDisable(true);
-            mostrarAlerta("Error", "No se encontró usuario con el dato: " + busqueda, Alert.AlertType.ERROR);
+            mostrarAlerta("Error", "Usuario no encontrado.");
         }
     }
 
-    // --- Lógica de Libro (Agregar a la tabla) ---
     @FXML
     private void handleAddBookAction(ActionEvent event) {
         String codigo = txtExemplarId.getText().trim();
-        if (codigo.isEmpty()) {
-            txtExemplarId.requestFocus();
-            return;
-        }
+        if (codigo.isEmpty()) return;
 
-        // 1. Evitar duplicados en la lista visual
-        if (listaPrestamos.stream().anyMatch(p -> p.getCodigo().equalsIgnoreCase(codigo))) {
-            mostrarAlerta("Duplicado", "El libro ya está en la lista.", Alert.AlertType.WARNING);
+        if (listaPrestamos.stream().anyMatch(p -> p.getCodigo().equals(codigo))) {
+            mostrarAlerta("Duplicado", "Este libro ya está en la lista.");
             txtExemplarId.clear();
             return;
         }
 
-        // 2. Buscar Ejemplar en BD
         Optional<Ejemplar> optEjemplar = ejemplarService.buscarPorCodigo(codigo);
 
         if (optEjemplar.isPresent()) {
             Ejemplar ej = optEjemplar.get();
-
-            // 3. Validar Disponibilidad (Regla de Negocio)
             if (ej.getEstado() != pe.edu.upeu.syslibrary.enums.EstadoEjemplar.DISPONIBLE) {
-                mostrarAlerta("No Disponible", "El libro figura como " + ej.getEstado(), Alert.AlertType.WARNING);
+                mostrarAlerta("No Disponible", "Libro en estado: " + ej.getEstado());
                 return;
             }
 
-            // 4. Agregar a la tabla
             listaPrestamos.add(new PrestamoItemDto(
                     ej.getIdEjemplar(),
                     ej.getCodigo(),
@@ -133,38 +125,26 @@ public class PrestamoLibroController implements Initializable {
                     ej.getLibro().getAutor()
             ));
 
-            if(lblTotalSelected != null) lblTotalSelected.setText(String.valueOf(listaPrestamos.size()));
-
-            // Limpiar y preparar para el siguiente scanner
+            lblTotalSelected.setText(String.valueOf(listaPrestamos.size()));
             txtExemplarId.clear();
             txtExemplarId.requestFocus();
-
         } else {
-            mostrarAlerta("Error", "Código de ejemplar no encontrado.", Alert.AlertType.ERROR);
-            txtExemplarId.selectAll();
+            mostrarAlerta("Error", "Ejemplar no encontrado.");
         }
     }
 
-    // --- Procesar el Préstamo Final ---
     @FXML
     private void handleProcessLoanAction(ActionEvent event) {
-        if (usuarioSeleccionado == null || listaPrestamos.isEmpty()) {
-            mostrarAlerta("Atención", "Seleccione usuario y agregue al menos un libro.", Alert.AlertType.WARNING);
-            return;
-        }
+        if (usuarioSeleccionado == null || listaPrestamos.isEmpty()) return;
 
         try {
-            // Iterar y guardar cada préstamo
             for (PrestamoItemDto item : listaPrestamos) {
                 prestamoService.registrarPrestamo(item.getIdEjemplar(), usuarioSeleccionado.getIdUsuario());
             }
-
-            mostrarAlerta("Éxito", "Préstamo registrado correctamente.", Alert.AlertType.INFORMATION);
-            handleCancelAction(null); // Limpiar formulario
-
+            mostrarAlerta("Éxito", "Préstamo registrado.");
+            handleCancelAction(null);
         } catch (Exception e) {
-            e.printStackTrace();
-            mostrarAlerta("Error Crítico", "Fallo al registrar: " + e.getMessage(), Alert.AlertType.ERROR);
+            mostrarAlerta("Error", e.getMessage());
         }
     }
 
@@ -175,22 +155,22 @@ public class PrestamoLibroController implements Initializable {
         lblAccountStatus.setText("---");
         txtExemplarId.clear();
         listaPrestamos.clear();
-
-        if(lblTotalSelected != null) lblTotalSelected.setText("0");
-
+        lblTotalSelected.setText("0");
+        lblOverueCount.setText("0");
+        lblPendingFine.setText("S/ 0.00");
+        lblLoanLimit.setText("-/-");
         usuarioSeleccionado = null;
         btnProcessLoan.setDisable(true);
     }
 
-    private void mostrarAlerta(String titulo, String contenido, Alert.AlertType tipo) {
-        Alert alert = new Alert(tipo);
+    private void mostrarAlerta(String titulo, String contenido) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle(titulo);
         alert.setHeaderText(null);
         alert.setContentText(contenido);
         alert.showAndWait();
     }
 
-    // --- DTO Interno para la Tabla ---
     @Data
     @AllArgsConstructor
     public static class PrestamoItemDto {

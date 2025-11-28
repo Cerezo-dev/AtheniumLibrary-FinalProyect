@@ -1,6 +1,5 @@
 package pe.edu.upeu.syslibrary.controller;
 
-import javafx.beans.property.SimpleObjectProperty;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -19,7 +18,7 @@ import lombok.RequiredArgsConstructor;
 import org.controlsfx.glyphfont.Glyph;
 import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Controller;
-import pe.edu.upeu.syslibrary.model.Usuario; // USAMOS USUARIO
+import pe.edu.upeu.syslibrary.model.Usuario;
 import pe.edu.upeu.syslibrary.service.IUsuarioService;
 
 import java.util.ArrayList;
@@ -33,7 +32,7 @@ public class UsuarioMainController {
     private final IUsuarioService usuarioService;
     private final ApplicationContext applicationContext;
 
-    @FXML private TableView<Usuario> studentTable; // Tabla de USUARIOS
+    @FXML private TableView<Usuario> studentTable;
     @FXML private TextField txtSearch;
     @FXML private ComboBox<String> cmbFiltroCarrera;
 
@@ -42,7 +41,7 @@ public class UsuarioMainController {
     @FXML private Button btnNext;
     @FXML private Label lblPaginacion;
 
-    // --- COLUMNAS (Apuntan a Usuario) ---
+    // --- COLUMNAS ---
     @FXML private TableColumn<Usuario, Void> colNum;
     @FXML private TableColumn<Usuario, String> colCodigo;
     @FXML private TableColumn<Usuario, String> colDNI;
@@ -65,20 +64,18 @@ public class UsuarioMainController {
     }
 
     private void loadData() {
-        // TRUCO: Obtenemos TODOS los usuarios y filtramos en memoria por el perfil "ESTUDIANTE"
-        // O idealmente: usuarioService.listarPorPerfil("ESTUDIANTE");
+        // Cargar SOLO estudiantes
         masterList = usuarioService.findAll().stream()
-                .filter(u -> u.getPerfil().getNombre().equals("ESTUDIANTE"))
+                .filter(u -> "ESTUDIANTE".equals(u.getPerfil().getNombre()))
                 .collect(Collectors.toList());
-
         applyFilters();
     }
 
     private void setupFilters() {
         cmbFiltroCarrera.getItems().clear();
         cmbFiltroCarrera.getItems().add("Todas las carreras");
-        // Aquí podrías cargar las carreras dinámicamente si tuvieras una tabla de carreras
-        cmbFiltroCarrera.getItems().addAll("Ing. Sistemas", "Enfermería", "Teología", "Arquitectura");
+        // Aquí podrías cargar carreras dinámicamente si tuvieras una tabla
+        cmbFiltroCarrera.getItems().addAll("Ing. Sistemas", "Enfermería", "Psicología", "Contabilidad", "Teología");
         cmbFiltroCarrera.getSelectionModel().selectFirst();
 
         cmbFiltroCarrera.getSelectionModel().selectedItemProperty().addListener((obs, oldVal, newVal) -> applyFilters());
@@ -92,7 +89,6 @@ public class UsuarioMainController {
 
         filteredList = masterList.stream()
                 .filter(u -> {
-                    // Buscamos en los campos de Usuario
                     boolean matchText = (u.getCodigoEstudiante() != null && u.getCodigoEstudiante().toLowerCase().contains(searchText)) ||
                             u.getNombre().toLowerCase().contains(searchText) ||
                             (u.getApellidos() != null && u.getApellidos().toLowerCase().contains(searchText)) ||
@@ -132,23 +128,26 @@ public class UsuarioMainController {
 
     @FXML
     private void handleNewStudent(ActionEvent event) {
+        // Asegúrate de que el nombre del FXML coincida con tu archivo: usuarioFrom.fxml (o usuarioForm.fxml si lo renombraste)
         abrirFormulario(null, "Registrar Estudiante", ((Node)event.getSource()).getScene().getWindow());
     }
 
     @FXML
     private void handleRefrescar(ActionEvent event) {
         txtSearch.clear();
+        cmbFiltroCarrera.getSelectionModel().selectFirst();
         loadData();
     }
 
     private void abrirFormulario(Usuario usuario, String titulo, Window owner) {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/usuarioFrom.fxml")); // Asegúrate que la ruta sea correcta
+            // Nombre del archivo FXML del formulario
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/usuarioFrom.fxml"));
             loader.setControllerFactory(applicationContext::getBean);
             Parent root = loader.load();
 
             UsuarioFormController controller = loader.getController();
-            // Si estuviéramos editando, pasaríamos el usuario aquí: controller.setUsuario(usuario);
+            // controller.setUsuario(usuario); // Si implementas edición
 
             Stage stage = new Stage();
             stage.setTitle(titulo);
@@ -158,7 +157,7 @@ public class UsuarioMainController {
             stage.setResizable(false);
             stage.showAndWait();
 
-            loadData(); // Recargar tabla al cerrar
+            loadData(); // Recargar al cerrar
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -173,26 +172,17 @@ public class UsuarioMainController {
             }
         });
 
-        // OJO: Aquí usamos los nombres de variables de la clase USUARIO
-        colCodigo.setCellValueFactory(new PropertyValueFactory<>("codigoEstudiante")); // variable nueva
+        colCodigo.setCellValueFactory(new PropertyValueFactory<>("codigoEstudiante"));
         colDNI.setCellValueFactory(new PropertyValueFactory<>("dni"));
         colNombres.setCellValueFactory(new PropertyValueFactory<>("nombre"));
         colApellidos.setCellValueFactory(new PropertyValueFactory<>("apellidos"));
-        colCarrera.setCellValueFactory(new PropertyValueFactory<>("carrera")); // variable nueva
+        colCarrera.setCellValueFactory(new PropertyValueFactory<>("carrera"));
 
-        colActions.setCellValueFactory(cellData -> new SimpleObjectProperty<>(cellData.getValue()));
         colActions.setCellFactory(param -> new TableCell<>() {
-            private final Button btnEdit = new Button("", new Glyph("FontAwesome", "PENCIL"));
-            private final Button btnDelete = new Button("", new Glyph("FontAwesome", "TRASH"));
-            private final HBox pane = new HBox(10, btnEdit, btnDelete);
-
+            private final Button btnDel = new Button("", new Glyph("FontAwesome", "TRASH"));
             {
-                pane.setAlignment(Pos.CENTER);
-                btnEdit.getStyleClass().addAll("action-button", "btn-editar");
-                btnDelete.getStyleClass().addAll("action-button", "btn-eliminar");
-
-                // Acción Eliminar
-                btnDelete.setOnAction(e -> {
+                btnDel.getStyleClass().add("danger-button-light"); // Usando tu clase CSS
+                btnDel.setOnAction(e -> {
                     Usuario u = getItem();
                     if(u != null) {
                         usuarioService.deleteById(u.getIdUsuario());
@@ -200,11 +190,13 @@ public class UsuarioMainController {
                     }
                 });
             }
-
             @Override protected void updateItem(Usuario item, boolean empty) {
                 super.updateItem(item, empty);
-                setGraphic(empty ? null : pane);
+                setGraphic(empty ? null : new HBox(btnDel));
+                setAlignment(Pos.CENTER);
             }
         });
+        // Necesario para que la celda de acciones se renderice correctamente aunque no tenga valor propio
+        colActions.setCellValueFactory(cellData -> new javafx.beans.property.SimpleObjectProperty<>(cellData.getValue()));
     }
 }

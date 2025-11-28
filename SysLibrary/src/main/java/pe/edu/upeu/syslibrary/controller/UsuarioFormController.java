@@ -9,39 +9,39 @@ import pe.edu.upeu.syslibrary.model.Perfil;
 import pe.edu.upeu.syslibrary.model.Usuario;
 import pe.edu.upeu.syslibrary.repositorio.PerfilRepository;
 import pe.edu.upeu.syslibrary.service.IUsuarioService;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder; // Necesitas spring-security-crypto
+import org.springframework.security.crypto.password.PasswordEncoder; // Usar el encoder inyectado
 
 @Controller
 @RequiredArgsConstructor
 public class UsuarioFormController {
 
     private final IUsuarioService usuarioService;
-    private final PerfilRepository perfilRepository; // Para buscar el rol
+    private final PerfilRepository perfilRepository;
+    private final PasswordEncoder passwordEncoder; // Inyectado desde tu SecurityConfig
 
     @FXML private TextField txtCodigo;
     @FXML private TextField txtDni;
     @FXML private TextField txtNombre;
     @FXML private TextField txtApellidos;
-    @FXML private TextField txtEmail; // ¡IMPORTANTE! Agregado
-    @FXML private ComboBox<String> cmbCarrera;
+    @FXML private TextField txtEmail;
     @FXML private TextField txtTelefono;
+    @FXML private ComboBox<String> cmbCarrera;
 
     @FXML
     public void initialize() {
-        // Cargar carreras en el combo
         cmbCarrera.getItems().addAll("Ing. Sistemas", "Enfermería", "Psicología", "Contabilidad", "Teología");
     }
 
     @FXML
     private void saveStudent() {
         try {
-            // 1. Validaciones
-            if (txtCodigo.getText().isEmpty() || txtDni.getText().isEmpty() || txtNombre.getText().isEmpty() || txtEmail.getText().isEmpty()) {
-                mostrarAlerta("Error", "Complete los campos obligatorios (Código, DNI, Nombre, Email).");
+            if (txtCodigo.getText().isEmpty() || txtDni.getText().isEmpty() ||
+                    txtNombre.getText().isEmpty() || txtApellidos.getText().isEmpty() ||
+                    txtEmail.getText().isEmpty() || cmbCarrera.getValue() == null) {
+                mostrarAlerta("Validación", "Todos los campos con * son obligatorios.");
                 return;
             }
 
-            // 2. Crear Objeto Usuario
             Usuario u = new Usuario();
             u.setCodigoEstudiante(txtCodigo.getText());
             u.setDni(txtDni.getText());
@@ -50,35 +50,32 @@ public class UsuarioFormController {
             u.setEmail(txtEmail.getText());
             u.setTelefono(txtTelefono.getText());
             u.setCarrera(cmbCarrera.getValue());
-            u.setEstado("Activo");
+            u.setEstado("ACTIVO");
 
-            // 3. Asignar Perfil "ESTUDIANTE"
             Perfil perfilEst = perfilRepository.findByNombre("ESTUDIANTE");
-            // Si no usas findByNombre, usa findById(2L) o lo que corresponda en tu BD
-            if(perfilEst == null) {
-                mostrarAlerta("Error Crítico", "El rol 'ESTUDIANTE' no existe en la BD.");
+            if (perfilEst == null) {
+                mostrarAlerta("Error de Configuración", "No existe el rol 'ESTUDIANTE' en la base de datos.");
                 return;
             }
             u.setPerfil(perfilEst);
 
-            // 4. Contraseña por defecto = DNI (Encriptada)
-            BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
-            u.setPassword(encoder.encode(txtDni.getText()));
+            // Contraseña por defecto es el DNI
+            u.setPassword(passwordEncoder.encode(txtDni.getText()));
 
-            // 5. Guardar
             usuarioService.save(u);
 
             mostrarAlerta("Éxito", "Estudiante registrado correctamente.");
             closeForm();
 
         } catch (Exception e) {
+            e.printStackTrace();
             mostrarAlerta("Error", "No se pudo guardar: " + e.getMessage());
         }
     }
 
     @FXML
     private void closeForm() {
-        Stage stage = (Stage) txtDni.getScene().getWindow();
+        Stage stage = (Stage) txtCodigo.getScene().getWindow();
         stage.close();
     }
 

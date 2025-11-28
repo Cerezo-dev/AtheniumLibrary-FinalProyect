@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<ScrollPane fitToWidth="true" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pe.edu.upeu.syslibrary.controller.student.StudentCatalogController">
+    <content>
+        <VBox spacing="30.0">
+            <padding><Insets bottom="30" left="50" right="50" top="30" /></padding>
+
+            <VBox style="-fx-background-color: linear-gradient(to right, #2ecc71, #27ae60); -fx-background-radius: 15; -fx-padding: 40;">
+                <Label style="-fx-text-fill: white; -fx-font-size: 28px; -fx-font-weight: bold;" text="Explora el conocimiento" />
+                <Label style="-fx-text-fill: white; -fx-font-size: 16px;" text="Busca libros, reserva ejemplares y gestiona tus préstamos." />
+                <HBox style="-fx-padding: 20 0 0 0;">
+                    <TextField fx:id="txtSearch" onAction="#handleSearch" promptText="¿Qué quieres leer hoy?" style="-fx-background-radius: 20 0 0 20; -fx-padding: 10 20; -fx-pref-width: 300;" />
+                    <Button onAction="#handleSearch" style="-fx-background-color: #2c3e50; -fx-text-fill: white; -fx-background-radius: 0 20 20 0; -fx-padding: 10 20;" text="Buscar" />
+                </HBox>
+            </VBox>
+
+            <Label style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #333;" text="Novedades en Biblioteca" />
+
+            <FlowPane fx:id="booksContainer" hgap="20" vgap="20">
+            </FlowPane>
+
+        </VBox>
+    </content>
+</ScrollPane>

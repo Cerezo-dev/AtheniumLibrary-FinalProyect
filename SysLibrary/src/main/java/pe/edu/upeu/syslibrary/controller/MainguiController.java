@@ -47,7 +47,7 @@ public class MainguiController {
     @FXML private Button btnEstudiantes;
     @FXML private Button btnUsuariosAdmin;
     @FXML private Button btnReportes;
-    @FXML private Button btnConfiguracion;
+    @FXML private Button btnConfiguracion, btnGuia;
 
     // --- VARIABLES DE ESTADO ---
     private boolean isSidebarExpanded = true;
@@ -239,4 +239,5 @@ public class MainguiController {
             }
         }
     }
+
 }

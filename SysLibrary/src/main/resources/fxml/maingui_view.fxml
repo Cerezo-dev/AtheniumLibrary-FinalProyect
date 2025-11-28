@@ -7,7 +7,7 @@
 <?import javafx.scene.text.*?>
 <?import org.controlsfx.glyphfont.*?>
 
-<BorderPane fx:id="mainRoot" prefHeight="800.0" prefWidth="1200.0" stylesheets="@/css/styles.css" styleClass="root-pane" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pe.edu.upeu.syslibrary.controller.MainguiController">
+<BorderPane fx:id="mainRoot" prefHeight="800.0" prefWidth="1200.0" styleClass="root-pane" stylesheets="@/css/styles.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pe.edu.upeu.syslibrary.controller.MainguiController">
 
     <left>
         <VBox fx:id="sidebar" prefHeight="800.0" prefWidth="255.0" styleClass="sidebar">
@@ -111,6 +111,7 @@
                     </Button>
                     <TextField promptText="Buscar en el sistema..." styleClass="search-field" HBox.hgrow="ALWAYS" />
                 </HBox>
+            <Button fx:id="btnGuia" mnemonicParsing="false" text="Guia" />
 
                 <Region HBox.hgrow="ALWAYS" />
 

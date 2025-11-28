@@ -169,3 +169,512 @@
 2025-11-28T11:18:09.350-05:00  INFO 21448 --- [SysVentas] [JavaFX Application Thread] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2025-11-28T11:18:09.379-05:00  INFO 21448 --- [SysVentas] [JavaFX Application Thread] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2025-11-28T11:18:09.390-05:00  INFO 21448 --- [SysVentas] [JavaFX Application Thread] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-11-28T11:52:11.272-05:00  INFO 5444 --- [SysVentas] [JavaFX-Launcher] o.s.boot.SpringApplication               : Starting application using Java 21.0.6 with PID 5444 (started by unacu in C:\Users\unacu\OneDrive - Universidad Peruana Unión\BACKUP-Documentos\GitHub\Final-proyect-with-CRUD\SysLibrary)
+2025-11-28T11:52:11.280-05:00  INFO 5444 --- [SysVentas] [JavaFX-Launcher] o.s.boot.SpringApplication               : No active profile set, falling back to 1 default profile: "default"
+2025-11-28T11:52:12.992-05:00  INFO 5444 --- [SysVentas] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-28T11:52:13.173-05:00  INFO 5444 --- [SysVentas] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 165 ms. Found 7 JPA repository interfaces.
+2025-11-28T11:52:14.144-05:00  INFO 5444 --- [SysVentas] [JavaFX-Launcher] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-28T11:52:14.289-05:00  INFO 5444 --- [SysVentas] [JavaFX-Launcher] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.33.Final
+2025-11-28T11:52:14.373-05:00  INFO 5444 --- [SysVentas] [JavaFX-Launcher] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-28T11:52:15.030-05:00  INFO 5444 --- [SysVentas] [JavaFX-Launcher] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-28T11:52:15.099-05:00  INFO 5444 --- [SysVentas] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-28T11:52:15.304-05:00  INFO 5444 --- [SysVentas] [JavaFX-Launcher] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@7a044ab8
+2025-11-28T11:52:15.309-05:00  INFO 5444 --- [SysVentas] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-28T11:52:15.400-05:00  INFO 5444 --- [SysVentas] [JavaFX-Launcher] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 3.46
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-28T11:52:16.599-05:00  INFO 5444 --- [SysVentas] [JavaFX-Launcher] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-28T11:52:16.647-05:00  INFO 5444 --- [SysVentas] [JavaFX-Launcher] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-28T11:52:17.128-05:00  INFO 5444 --- [SysVentas] [JavaFX-Launcher] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-11-28T11:52:20.415-05:00  INFO 5444 --- [SysVentas] [JavaFX-Launcher] o.s.boot.SpringApplication               : Started application in 11.548 seconds (process running for 13.907)
+2025-11-28T11:52:21.352-05:00  WARN 5444 --- [SysVentas] [JavaFX Application Thread] javafx.css                               : CSS Error parsing file:/C:/Users/unacu/OneDrive%20-%20Universidad%20Peruana%20Uni%c3%b3n/BACKUP-Documentos/GitHub/Final-proyect-with-CRUD/SysLibrary/target/classes/css/userAuth/login.css: Unexpected function 'gaussian(' while parsing '-fx-effect' at [28,16]
+2025-11-28T11:52:29.836-05:00  WARN 5444 --- [SysVentas] [JavaFX Application Thread] javafx.css                               : CSS Error parsing file:/C:/Users/unacu/OneDrive%20-%20Universidad%20Peruana%20Uni%c3%b3n/BACKUP-Documentos/GitHub/Final-proyect-with-CRUD/SysLibrary/target/classes/css/userAuth/login.css: Unexpected function 'gaussian(' while parsing '-fx-effect' at [28,16]
+2025-11-28T11:52:35.356-05:00  WARN 5444 --- [SysVentas] [JavaFX Application Thread] javafx.css                               : CSS Error parsing file:/C:/Users/unacu/OneDrive%20-%20Universidad%20Peruana%20Uni%c3%b3n/BACKUP-Documentos/GitHub/Final-proyect-with-CRUD/SysLibrary/target/classes/css/userAuth/login.css: Unexpected function 'gaussian(' while parsing '-fx-effect' at [28,16]
+2025-11-28T11:53:16.709-05:00  WARN 5444 --- [SysVentas] [JavaFX Application Thread] javafx.css                               : CSS Error parsing file:/C:/Users/unacu/OneDrive%20-%20Universidad%20Peruana%20Uni%c3%b3n/BACKUP-Documentos/GitHub/Final-proyect-with-CRUD/SysLibrary/target/classes/css/userAuth/login.css: Unexpected function 'gaussian(' while parsing '-fx-effect' at [28,16]
+2025-11-28T11:53:20.992-05:00  WARN 5444 --- [SysVentas] [JavaFX Application Thread] javafx.css                               : CSS Error parsing file:/C:/Users/unacu/OneDrive%20-%20Universidad%20Peruana%20Uni%c3%b3n/BACKUP-Documentos/GitHub/Final-proyect-with-CRUD/SysLibrary/target/classes/css/userAuth/login.css: Unexpected function 'gaussian(' while parsing '-fx-effect' at [28,16]
+2025-11-28T11:53:22.598-05:00  INFO 5444 --- [SysVentas] [JavaFX Application Thread] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-28T11:53:22.602-05:00  INFO 5444 --- [SysVentas] [JavaFX Application Thread] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-28T11:53:22.620-05:00  INFO 5444 --- [SysVentas] [JavaFX Application Thread] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-11-28T11:53:28.182-05:00  INFO 23792 --- [SysVentas] [JavaFX-Launcher] o.s.boot.SpringApplication               : Starting application using Java 21.0.6 with PID 23792 (started by unacu in C:\Users\unacu\OneDrive - Universidad Peruana Unión\BACKUP-Documentos\GitHub\Final-proyect-with-CRUD\SysLibrary)
+2025-11-28T11:53:28.186-05:00  INFO 23792 --- [SysVentas] [JavaFX-Launcher] o.s.boot.SpringApplication               : No active profile set, falling back to 1 default profile: "default"
+2025-11-28T11:53:29.558-05:00  INFO 23792 --- [SysVentas] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-28T11:53:29.706-05:00  INFO 23792 --- [SysVentas] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 137 ms. Found 7 JPA repository interfaces.
+2025-11-28T11:53:30.557-05:00  INFO 23792 --- [SysVentas] [JavaFX-Launcher] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-28T11:53:30.694-05:00  INFO 23792 --- [SysVentas] [JavaFX-Launcher] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.33.Final
+2025-11-28T11:53:30.770-05:00  INFO 23792 --- [SysVentas] [JavaFX-Launcher] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-28T11:53:31.248-05:00  INFO 23792 --- [SysVentas] [JavaFX-Launcher] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-28T11:53:31.300-05:00  INFO 23792 --- [SysVentas] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-28T11:53:31.495-05:00  INFO 23792 --- [SysVentas] [JavaFX-Launcher] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@26e52ec2
+2025-11-28T11:53:31.498-05:00  INFO 23792 --- [SysVentas] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-28T11:53:31.578-05:00  INFO 23792 --- [SysVentas] [JavaFX-Launcher] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 3.46
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-28T11:53:32.839-05:00  INFO 23792 --- [SysVentas] [JavaFX-Launcher] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-28T11:53:32.885-05:00  INFO 23792 --- [SysVentas] [JavaFX-Launcher] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-28T11:53:33.519-05:00  INFO 23792 --- [SysVentas] [JavaFX-Launcher] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-11-28T11:53:37.007-05:00  INFO 23792 --- [SysVentas] [JavaFX-Launcher] o.s.boot.SpringApplication               : Started application in 9.586 seconds (process running for 11.107)
+2025-11-28T11:53:38.224-05:00  WARN 23792 --- [SysVentas] [JavaFX Application Thread] javafx.css                               : CSS Error parsing file:/C:/Users/unacu/OneDrive%20-%20Universidad%20Peruana%20Uni%c3%b3n/BACKUP-Documentos/GitHub/Final-proyect-with-CRUD/SysLibrary/target/classes/css/userAuth/login.css: Unexpected function 'gaussian(' while parsing '-fx-effect' at [28,16]
+2025-11-28T11:53:46.197-05:00  WARN 23792 --- [SysVentas] [JavaFX Application Thread] javafx.css                               : CSS Error parsing file:/C:/Users/unacu/OneDrive%20-%20Universidad%20Peruana%20Uni%c3%b3n/BACKUP-Documentos/GitHub/Final-proyect-with-CRUD/SysLibrary/target/classes/css/userAuth/login.css: Unexpected function 'gaussian(' while parsing '-fx-effect' at [28,16]
+2025-11-28T11:53:55.478-05:00  WARN 23792 --- [SysVentas] [JavaFX Application Thread] javafx.css                               : CSS Error parsing file:/C:/Users/unacu/OneDrive%20-%20Universidad%20Peruana%20Uni%c3%b3n/BACKUP-Documentos/GitHub/Final-proyect-with-CRUD/SysLibrary/target/classes/css/userAuth/login.css: Unexpected function 'gaussian(' while parsing '-fx-effect' at [28,16]
+2025-11-28T11:53:58.083-05:00  WARN 23792 --- [SysVentas] [JavaFX Application Thread] javafx.css                               : CSS Error parsing file:/C:/Users/unacu/OneDrive%20-%20Universidad%20Peruana%20Uni%c3%b3n/BACKUP-Documentos/GitHub/Final-proyect-with-CRUD/SysLibrary/target/classes/css/userAuth/login.css: Unexpected function 'gaussian(' while parsing '-fx-effect' at [28,16]
+2025-11-28T11:56:19.186-05:00  INFO 23792 --- [SysVentas] [JavaFX Application Thread] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-28T11:56:19.208-05:00  INFO 23792 --- [SysVentas] [JavaFX Application Thread] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-28T11:56:19.216-05:00  INFO 23792 --- [SysVentas] [JavaFX Application Thread] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-11-28T12:00:02.961-05:00  INFO 7008 --- [SysVentas] [JavaFX-Launcher] o.s.boot.SpringApplication               : Starting application using Java 21.0.6 with PID 7008 (started by unacu in C:\Users\unacu\OneDrive - Universidad Peruana Unión\BACKUP-Documentos\GitHub\Final-proyect-with-CRUD\SysLibrary)
+2025-11-28T12:00:02.970-05:00  INFO 7008 --- [SysVentas] [JavaFX-Launcher] o.s.boot.SpringApplication               : No active profile set, falling back to 1 default profile: "default"
+2025-11-28T12:00:05.323-05:00  INFO 7008 --- [SysVentas] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-28T12:00:05.480-05:00  INFO 7008 --- [SysVentas] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 143 ms. Found 7 JPA repository interfaces.
+2025-11-28T12:00:06.585-05:00  INFO 7008 --- [SysVentas] [JavaFX-Launcher] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-28T12:00:06.775-05:00  INFO 7008 --- [SysVentas] [JavaFX-Launcher] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.33.Final
+2025-11-28T12:00:06.879-05:00  INFO 7008 --- [SysVentas] [JavaFX-Launcher] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-28T12:00:07.880-05:00  INFO 7008 --- [SysVentas] [JavaFX-Launcher] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-28T12:00:07.995-05:00  INFO 7008 --- [SysVentas] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-28T12:00:08.242-05:00  INFO 7008 --- [SysVentas] [JavaFX-Launcher] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@5016502b
+2025-11-28T12:00:08.251-05:00  INFO 7008 --- [SysVentas] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-28T12:00:08.347-05:00  INFO 7008 --- [SysVentas] [JavaFX-Launcher] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 3.46
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-28T12:00:09.906-05:00  INFO 7008 --- [SysVentas] [JavaFX-Launcher] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-28T12:00:09.972-05:00  INFO 7008 --- [SysVentas] [JavaFX-Launcher] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-28T12:00:10.602-05:00  INFO 7008 --- [SysVentas] [JavaFX-Launcher] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-11-28T12:00:18.433-05:00  INFO 7008 --- [SysVentas] [JavaFX-Launcher] o.s.boot.SpringApplication               : Started application in 16.777 seconds (process running for 18.863)
+2025-11-28T12:00:19.633-05:00  WARN 7008 --- [SysVentas] [JavaFX Application Thread] javafx.css                               : CSS Error parsing file:/C:/Users/unacu/OneDrive%20-%20Universidad%20Peruana%20Uni%c3%b3n/BACKUP-Documentos/GitHub/Final-proyect-with-CRUD/SysLibrary/target/classes/css/userAuth/login.css: Unexpected function 'gaussian(' while parsing '-fx-effect' at [28,16]
+2025-11-28T12:00:29.907-05:00  WARN 7008 --- [SysVentas] [JavaFX Application Thread] javafx.css                               : CSS Error parsing file:/C:/Users/unacu/OneDrive%20-%20Universidad%20Peruana%20Uni%c3%b3n/BACKUP-Documentos/GitHub/Final-proyect-with-CRUD/SysLibrary/target/classes/css/userAuth/login.css: Unexpected function 'gaussian(' while parsing '-fx-effect' at [28,16]
+2025-11-28T12:00:34.428-05:00  WARN 7008 --- [SysVentas] [JavaFX Application Thread] javafx.css                               : CSS Error parsing file:/C:/Users/unacu/OneDrive%20-%20Universidad%20Peruana%20Uni%c3%b3n/BACKUP-Documentos/GitHub/Final-proyect-with-CRUD/SysLibrary/target/classes/css/userAuth/login.css: Unexpected function 'gaussian(' while parsing '-fx-effect' at [28,16]
+2025-11-28T12:00:35.927-05:00  WARN 7008 --- [SysVentas] [JavaFX Application Thread] javafx.css                               : CSS Error parsing file:/C:/Users/unacu/OneDrive%20-%20Universidad%20Peruana%20Uni%c3%b3n/BACKUP-Documentos/GitHub/Final-proyect-with-CRUD/SysLibrary/target/classes/css/userAuth/login.css: Unexpected function 'gaussian(' while parsing '-fx-effect' at [28,16]
+2025-11-28T12:01:23.242-05:00  INFO 7008 --- [SysVentas] [JavaFX Application Thread] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-28T12:01:23.257-05:00  INFO 7008 --- [SysVentas] [JavaFX Application Thread] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-28T12:01:23.278-05:00  INFO 7008 --- [SysVentas] [JavaFX Application Thread] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-11-28T12:12:34.400-05:00  INFO 21744 --- [SysVentas] [JavaFX-Launcher] o.s.boot.SpringApplication               : Starting application using Java 21.0.6 with PID 21744 (started by unacu in C:\Users\unacu\OneDrive - Universidad Peruana Unión\BACKUP-Documentos\GitHub\Final-proyect-with-CRUD\SysLibrary)
+2025-11-28T12:12:34.405-05:00  INFO 21744 --- [SysVentas] [JavaFX-Launcher] o.s.boot.SpringApplication               : No active profile set, falling back to 1 default profile: "default"
+2025-11-28T12:12:35.879-05:00  INFO 21744 --- [SysVentas] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-28T12:12:36.105-05:00  INFO 21744 --- [SysVentas] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 207 ms. Found 7 JPA repository interfaces.
+2025-11-28T12:12:37.500-05:00  INFO 21744 --- [SysVentas] [JavaFX-Launcher] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-28T12:12:37.674-05:00  INFO 21744 --- [SysVentas] [JavaFX-Launcher] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.33.Final
+2025-11-28T12:12:37.768-05:00  INFO 21744 --- [SysVentas] [JavaFX-Launcher] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-28T12:12:38.545-05:00  INFO 21744 --- [SysVentas] [JavaFX-Launcher] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-28T12:12:38.631-05:00  INFO 21744 --- [SysVentas] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-28T12:12:38.865-05:00  INFO 21744 --- [SysVentas] [JavaFX-Launcher] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@65246600
+2025-11-28T12:12:38.869-05:00  INFO 21744 --- [SysVentas] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-28T12:12:38.954-05:00  INFO 21744 --- [SysVentas] [JavaFX-Launcher] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 3.46
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-28T12:12:40.375-05:00  INFO 21744 --- [SysVentas] [JavaFX-Launcher] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-28T12:12:40.437-05:00  INFO 21744 --- [SysVentas] [JavaFX-Launcher] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-28T12:12:40.994-05:00  INFO 21744 --- [SysVentas] [JavaFX-Launcher] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-11-28T12:12:44.876-05:00  INFO 21744 --- [SysVentas] [JavaFX-Launcher] o.s.boot.SpringApplication               : Started application in 11.187 seconds (process running for 12.639)
+2025-11-28T12:12:47.457-05:00  WARN 21744 --- [SysVentas] [JavaFX Application Thread] javafx.css                               : CSS Error parsing file:/C:/Users/unacu/OneDrive%20-%20Universidad%20Peruana%20Uni%c3%b3n/BACKUP-Documentos/GitHub/Final-proyect-with-CRUD/SysLibrary/target/classes/css/userAuth/login.css: Unexpected function 'gaussian(' while parsing '-fx-effect' at [28,16]
+2025-11-28T12:14:18.988-05:00  INFO 21744 --- [SysVentas] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-28T12:14:19.045-05:00  INFO 21744 --- [SysVentas] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-28T12:14:19.058-05:00  INFO 21744 --- [SysVentas] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-11-28T12:14:33.812-05:00  INFO 10236 --- [SysVentas] [JavaFX-Launcher] o.s.boot.SpringApplication               : Starting application using Java 21.0.6 with PID 10236 (started by unacu in C:\Users\unacu\OneDrive - Universidad Peruana Unión\BACKUP-Documentos\GitHub\Final-proyect-with-CRUD\SysLibrary)
+2025-11-28T12:14:33.822-05:00  INFO 10236 --- [SysVentas] [JavaFX-Launcher] o.s.boot.SpringApplication               : No active profile set, falling back to 1 default profile: "default"
+2025-11-28T12:14:37.986-05:00  INFO 10236 --- [SysVentas] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-28T12:14:38.221-05:00  INFO 10236 --- [SysVentas] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 217 ms. Found 7 JPA repository interfaces.
+2025-11-28T12:14:39.283-05:00  INFO 10236 --- [SysVentas] [JavaFX-Launcher] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-28T12:14:39.482-05:00  INFO 10236 --- [SysVentas] [JavaFX-Launcher] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.33.Final
+2025-11-28T12:14:39.631-05:00  INFO 10236 --- [SysVentas] [JavaFX-Launcher] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-28T12:14:40.520-05:00  INFO 10236 --- [SysVentas] [JavaFX-Launcher] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-28T12:14:40.584-05:00  INFO 10236 --- [SysVentas] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-28T12:14:40.776-05:00  INFO 10236 --- [SysVentas] [JavaFX-Launcher] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@51efb09
+2025-11-28T12:14:40.781-05:00  INFO 10236 --- [SysVentas] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-28T12:14:40.854-05:00  INFO 10236 --- [SysVentas] [JavaFX-Launcher] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 3.46
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-28T12:14:42.173-05:00  INFO 10236 --- [SysVentas] [JavaFX-Launcher] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-28T12:14:42.229-05:00  INFO 10236 --- [SysVentas] [JavaFX-Launcher] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-28T12:14:42.696-05:00  INFO 10236 --- [SysVentas] [JavaFX-Launcher] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-11-28T12:14:46.586-05:00  INFO 10236 --- [SysVentas] [JavaFX-Launcher] o.s.boot.SpringApplication               : Started application in 14.947 seconds (process running for 18.39)
+2025-11-28T12:14:47.634-05:00  WARN 10236 --- [SysVentas] [JavaFX Application Thread] javafx.css                               : CSS Error parsing file:/C:/Users/unacu/OneDrive%20-%20Universidad%20Peruana%20Uni%c3%b3n/BACKUP-Documentos/GitHub/Final-proyect-with-CRUD/SysLibrary/target/classes/css/userAuth/login.css: Unexpected function 'gaussian(' while parsing '-fx-effect' at [28,16]
+2025-11-28T12:15:09.897-05:00  INFO 10236 --- [SysVentas] [JavaFX Application Thread] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-28T12:15:09.902-05:00  INFO 10236 --- [SysVentas] [JavaFX Application Thread] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-28T12:15:09.907-05:00  INFO 10236 --- [SysVentas] [JavaFX Application Thread] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-11-28T12:17:01.254-05:00  INFO 20684 --- [SysVentas] [JavaFX-Launcher] o.s.boot.SpringApplication               : Starting application using Java 21.0.6 with PID 20684 (started by unacu in C:\Users\unacu\OneDrive - Universidad Peruana Unión\BACKUP-Documentos\GitHub\Final-proyect-with-CRUD\SysLibrary)
+2025-11-28T12:17:01.262-05:00  INFO 20684 --- [SysVentas] [JavaFX-Launcher] o.s.boot.SpringApplication               : No active profile set, falling back to 1 default profile: "default"
+2025-11-28T12:17:02.840-05:00  INFO 20684 --- [SysVentas] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-28T12:17:02.972-05:00  INFO 20684 --- [SysVentas] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 120 ms. Found 7 JPA repository interfaces.
+2025-11-28T12:17:03.664-05:00  INFO 20684 --- [SysVentas] [JavaFX-Launcher] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-28T12:17:03.775-05:00  INFO 20684 --- [SysVentas] [JavaFX-Launcher] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.33.Final
+2025-11-28T12:17:03.830-05:00  INFO 20684 --- [SysVentas] [JavaFX-Launcher] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-28T12:17:04.329-05:00  INFO 20684 --- [SysVentas] [JavaFX-Launcher] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-28T12:17:04.387-05:00  INFO 20684 --- [SysVentas] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-28T12:17:04.560-05:00  INFO 20684 --- [SysVentas] [JavaFX-Launcher] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@46c53742
+2025-11-28T12:17:04.563-05:00  INFO 20684 --- [SysVentas] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-28T12:17:04.645-05:00  INFO 20684 --- [SysVentas] [JavaFX-Launcher] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 3.46
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-28T12:17:05.818-05:00  INFO 20684 --- [SysVentas] [JavaFX-Launcher] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-28T12:17:05.867-05:00  INFO 20684 --- [SysVentas] [JavaFX-Launcher] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-28T12:17:06.366-05:00  INFO 20684 --- [SysVentas] [JavaFX-Launcher] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-11-28T12:17:09.629-05:00  INFO 20684 --- [SysVentas] [JavaFX-Launcher] o.s.boot.SpringApplication               : Started application in 9.237 seconds (process running for 10.814)
+2025-11-28T12:17:10.492-05:00  WARN 20684 --- [SysVentas] [JavaFX Application Thread] javafx.css                               : CSS Error parsing file:/C:/Users/unacu/OneDrive%20-%20Universidad%20Peruana%20Uni%c3%b3n/BACKUP-Documentos/GitHub/Final-proyect-with-CRUD/SysLibrary/target/classes/css/userAuth/login.css: Unexpected function 'gaussian(' while parsing '-fx-effect' at [28,16]
+2025-11-28T12:17:28.613-05:00  INFO 20684 --- [SysVentas] [JavaFX Application Thread] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-28T12:17:28.616-05:00  INFO 20684 --- [SysVentas] [JavaFX Application Thread] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-28T12:17:28.621-05:00  INFO 20684 --- [SysVentas] [JavaFX Application Thread] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-11-28T12:19:06.441-05:00  INFO 1952 --- [SysVentas] [JavaFX-Launcher] o.s.boot.SpringApplication               : Starting application using Java 21.0.6 with PID 1952 (started by unacu in C:\Users\unacu\OneDrive - Universidad Peruana Unión\BACKUP-Documentos\GitHub\Final-proyect-with-CRUD\SysLibrary)
+2025-11-28T12:19:06.450-05:00  INFO 1952 --- [SysVentas] [JavaFX-Launcher] o.s.boot.SpringApplication               : No active profile set, falling back to 1 default profile: "default"
+2025-11-28T12:19:08.298-05:00  INFO 1952 --- [SysVentas] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-28T12:19:08.448-05:00  INFO 1952 --- [SysVentas] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 138 ms. Found 7 JPA repository interfaces.
+2025-11-28T12:19:09.434-05:00  INFO 1952 --- [SysVentas] [JavaFX-Launcher] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-28T12:19:09.560-05:00  INFO 1952 --- [SysVentas] [JavaFX-Launcher] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.33.Final
+2025-11-28T12:19:09.618-05:00  INFO 1952 --- [SysVentas] [JavaFX-Launcher] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-28T12:19:10.147-05:00  INFO 1952 --- [SysVentas] [JavaFX-Launcher] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-28T12:19:10.211-05:00  INFO 1952 --- [SysVentas] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-28T12:19:10.353-05:00  INFO 1952 --- [SysVentas] [JavaFX-Launcher] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@374e4682
+2025-11-28T12:19:10.356-05:00  INFO 1952 --- [SysVentas] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-28T12:19:10.423-05:00  INFO 1952 --- [SysVentas] [JavaFX-Launcher] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 3.46
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-28T12:19:11.817-05:00  INFO 1952 --- [SysVentas] [JavaFX-Launcher] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-28T12:19:11.877-05:00  INFO 1952 --- [SysVentas] [JavaFX-Launcher] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-28T12:19:12.549-05:00  INFO 1952 --- [SysVentas] [JavaFX-Launcher] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-11-28T12:19:16.205-05:00  INFO 1952 --- [SysVentas] [JavaFX-Launcher] o.s.boot.SpringApplication               : Started application in 11.306 seconds (process running for 13.037)
+2025-11-28T12:19:17.274-05:00  WARN 1952 --- [SysVentas] [JavaFX Application Thread] javafx.css                               : CSS Error parsing file:/C:/Users/unacu/OneDrive%20-%20Universidad%20Peruana%20Uni%c3%b3n/BACKUP-Documentos/GitHub/Final-proyect-with-CRUD/SysLibrary/target/classes/css/userAuth/login.css: Unexpected function 'gaussian(' while parsing '-fx-effect' at [28,16]
+2025-11-28T12:19:58.150-05:00  WARN 1952 --- [SysVentas] [JavaFX Application Thread] javafx.css                               : CSS Error parsing file:/C:/Users/unacu/OneDrive%20-%20Universidad%20Peruana%20Uni%c3%b3n/BACKUP-Documentos/GitHub/Final-proyect-with-CRUD/SysLibrary/target/classes/css/userAuth/login.css: Unexpected function 'gaussian(' while parsing '-fx-effect' at [28,16]
+2025-11-28T12:20:37.678-05:00  INFO 1952 --- [SysVentas] [JavaFX Application Thread] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-28T12:20:37.684-05:00  INFO 1952 --- [SysVentas] [JavaFX Application Thread] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-28T12:20:37.689-05:00  INFO 1952 --- [SysVentas] [JavaFX Application Thread] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-11-28T12:20:42.558-05:00  INFO 2344 --- [SysVentas] [JavaFX-Launcher] o.s.boot.SpringApplication               : Starting application using Java 21.0.6 with PID 2344 (started by unacu in C:\Users\unacu\OneDrive - Universidad Peruana Unión\BACKUP-Documentos\GitHub\Final-proyect-with-CRUD\SysLibrary)
+2025-11-28T12:20:42.562-05:00  INFO 2344 --- [SysVentas] [JavaFX-Launcher] o.s.boot.SpringApplication               : No active profile set, falling back to 1 default profile: "default"
+2025-11-28T12:20:43.734-05:00  INFO 2344 --- [SysVentas] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-28T12:20:43.864-05:00  INFO 2344 --- [SysVentas] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 121 ms. Found 7 JPA repository interfaces.
+2025-11-28T12:20:44.417-05:00  INFO 2344 --- [SysVentas] [JavaFX-Launcher] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-28T12:20:44.498-05:00  INFO 2344 --- [SysVentas] [JavaFX-Launcher] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.33.Final
+2025-11-28T12:20:44.545-05:00  INFO 2344 --- [SysVentas] [JavaFX-Launcher] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-28T12:20:45.005-05:00  INFO 2344 --- [SysVentas] [JavaFX-Launcher] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-28T12:20:45.054-05:00  INFO 2344 --- [SysVentas] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-28T12:20:45.183-05:00  INFO 2344 --- [SysVentas] [JavaFX-Launcher] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@88260e2
+2025-11-28T12:20:45.185-05:00  INFO 2344 --- [SysVentas] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-28T12:20:45.246-05:00  INFO 2344 --- [SysVentas] [JavaFX-Launcher] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 3.46
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-28T12:20:46.302-05:00  INFO 2344 --- [SysVentas] [JavaFX-Launcher] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-28T12:20:46.349-05:00  INFO 2344 --- [SysVentas] [JavaFX-Launcher] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-28T12:20:46.726-05:00  INFO 2344 --- [SysVentas] [JavaFX-Launcher] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-11-28T12:20:49.247-05:00  INFO 2344 --- [SysVentas] [JavaFX-Launcher] o.s.boot.SpringApplication               : Started application in 7.357 seconds (process running for 8.56)
+2025-11-28T12:20:49.924-05:00  WARN 2344 --- [SysVentas] [JavaFX Application Thread] javafx.css                               : CSS Error parsing file:/C:/Users/unacu/OneDrive%20-%20Universidad%20Peruana%20Uni%c3%b3n/BACKUP-Documentos/GitHub/Final-proyect-with-CRUD/SysLibrary/target/classes/css/userAuth/login.css: Unexpected function 'gaussian(' while parsing '-fx-effect' at [28,16]
+2025-11-28T12:24:09.567-05:00  INFO 2344 --- [SysVentas] [JavaFX Application Thread] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-28T12:24:09.611-05:00  INFO 2344 --- [SysVentas] [JavaFX Application Thread] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-28T12:24:09.628-05:00  INFO 2344 --- [SysVentas] [JavaFX Application Thread] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-11-28T12:37:30.252-05:00  INFO 11300 --- [SysVentas] [JavaFX-Launcher] o.s.boot.SpringApplication               : Starting application using Java 21.0.6 with PID 11300 (started by unacu in C:\Users\unacu\OneDrive - Universidad Peruana Unión\BACKUP-Documentos\GitHub\Final-proyect-with-CRUD\SysLibrary)
+2025-11-28T12:37:30.256-05:00  INFO 11300 --- [SysVentas] [JavaFX-Launcher] o.s.boot.SpringApplication               : No active profile set, falling back to 1 default profile: "default"
+2025-11-28T12:37:31.502-05:00  INFO 11300 --- [SysVentas] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-28T12:37:31.614-05:00  INFO 11300 --- [SysVentas] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 102 ms. Found 8 JPA repository interfaces.
+2025-11-28T12:37:32.254-05:00  INFO 11300 --- [SysVentas] [JavaFX-Launcher] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-28T12:37:32.380-05:00  INFO 11300 --- [SysVentas] [JavaFX-Launcher] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.33.Final
+2025-11-28T12:37:32.444-05:00  INFO 11300 --- [SysVentas] [JavaFX-Launcher] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-28T12:37:32.878-05:00  INFO 11300 --- [SysVentas] [JavaFX-Launcher] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-28T12:37:32.927-05:00  INFO 11300 --- [SysVentas] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-28T12:37:33.053-05:00  INFO 11300 --- [SysVentas] [JavaFX-Launcher] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@47c0598f
+2025-11-28T12:37:33.055-05:00  INFO 11300 --- [SysVentas] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-28T12:37:33.123-05:00  INFO 11300 --- [SysVentas] [JavaFX-Launcher] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 3.46
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-28T12:37:34.277-05:00  INFO 11300 --- [SysVentas] [JavaFX-Launcher] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-28T12:37:34.331-05:00  INFO 11300 --- [SysVentas] [JavaFX-Launcher] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-28T12:37:34.892-05:00  INFO 11300 --- [SysVentas] [JavaFX-Launcher] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-11-28T12:37:38.311-05:00  INFO 11300 --- [SysVentas] [JavaFX-Launcher] o.s.boot.SpringApplication               : Started application in 8.737 seconds (process running for 10.003)
+2025-11-28T12:37:39.222-05:00  WARN 11300 --- [SysVentas] [JavaFX Application Thread] javafx.css                               : CSS Error parsing file:/C:/Users/unacu/OneDrive%20-%20Universidad%20Peruana%20Uni%c3%b3n/BACKUP-Documentos/GitHub/Final-proyect-with-CRUD/SysLibrary/target/classes/css/userAuth/login.css: Unexpected function 'gaussian(' while parsing '-fx-effect' at [28,16]
+2025-11-28T12:39:01.324-05:00  INFO 11300 --- [SysVentas] [JavaFX Application Thread] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-28T12:39:01.333-05:00  INFO 11300 --- [SysVentas] [JavaFX Application Thread] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-28T12:39:01.341-05:00  INFO 11300 --- [SysVentas] [JavaFX Application Thread] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-11-28T13:52:36.268-05:00  INFO 14352 --- [SysVentas] [JavaFX-Launcher] o.s.boot.SpringApplication               : Starting application using Java 21.0.6 with PID 14352 (started by unacu in C:\Users\unacu\OneDrive - Universidad Peruana Unión\BACKUP-Documentos\GitHub\Final-proyect-with-CRUD\SysLibrary)
+2025-11-28T13:52:36.280-05:00  INFO 14352 --- [SysVentas] [JavaFX-Launcher] o.s.boot.SpringApplication               : No active profile set, falling back to 1 default profile: "default"
+2025-11-28T13:52:38.818-05:00  INFO 14352 --- [SysVentas] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-28T13:52:39.092-05:00  INFO 14352 --- [SysVentas] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 245 ms. Found 8 JPA repository interfaces.
+2025-11-28T13:52:40.331-05:00  INFO 14352 --- [SysVentas] [JavaFX-Launcher] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-28T13:52:40.559-05:00  INFO 14352 --- [SysVentas] [JavaFX-Launcher] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.33.Final
+2025-11-28T13:52:40.667-05:00  INFO 14352 --- [SysVentas] [JavaFX-Launcher] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-28T13:52:41.582-05:00  INFO 14352 --- [SysVentas] [JavaFX-Launcher] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-28T13:52:41.692-05:00  INFO 14352 --- [SysVentas] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-28T13:52:41.971-05:00  INFO 14352 --- [SysVentas] [JavaFX-Launcher] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@664d1535
+2025-11-28T13:52:41.975-05:00  INFO 14352 --- [SysVentas] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-28T13:52:42.105-05:00  INFO 14352 --- [SysVentas] [JavaFX-Launcher] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 3.46
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-28T13:52:44.440-05:00  INFO 14352 --- [SysVentas] [JavaFX-Launcher] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-28T13:52:44.532-05:00  INFO 14352 --- [SysVentas] [JavaFX-Launcher] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-28T13:52:45.287-05:00  INFO 14352 --- [SysVentas] [JavaFX-Launcher] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-11-28T13:52:51.702-05:00  INFO 14352 --- [SysVentas] [JavaFX-Launcher] o.s.boot.SpringApplication               : Started application in 17.04 seconds (process running for 19.658)
+2025-11-28T13:52:52.995-05:00  WARN 14352 --- [SysVentas] [JavaFX Application Thread] javafx.css                               : CSS Error parsing file:/C:/Users/unacu/OneDrive%20-%20Universidad%20Peruana%20Uni%c3%b3n/BACKUP-Documentos/GitHub/Final-proyect-with-CRUD/SysLibrary/target/classes/css/userAuth/login.css: Unexpected function 'gaussian(' while parsing '-fx-effect' at [28,16]
+2025-11-28T13:57:32.528-05:00  INFO 14352 --- [SysVentas] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-28T13:57:32.540-05:00  INFO 14352 --- [SysVentas] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-28T13:57:32.548-05:00  INFO 14352 --- [SysVentas] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-11-28T13:57:42.997-05:00  INFO 14452 --- [SysVentas] [JavaFX-Launcher] o.s.boot.SpringApplication               : Starting application using Java 21.0.6 with PID 14452 (started by unacu in C:\Users\unacu\OneDrive - Universidad Peruana Unión\BACKUP-Documentos\GitHub\Final-proyect-with-CRUD\SysLibrary)
+2025-11-28T13:57:43.004-05:00  INFO 14452 --- [SysVentas] [JavaFX-Launcher] o.s.boot.SpringApplication               : No active profile set, falling back to 1 default profile: "default"
+2025-11-28T13:57:45.491-05:00  INFO 14452 --- [SysVentas] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-28T13:57:45.766-05:00  INFO 14452 --- [SysVentas] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 255 ms. Found 8 JPA repository interfaces.
+2025-11-28T13:57:47.559-05:00  INFO 14452 --- [SysVentas] [JavaFX-Launcher] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-28T13:57:47.727-05:00  INFO 14452 --- [SysVentas] [JavaFX-Launcher] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.33.Final
+2025-11-28T13:57:47.832-05:00  INFO 14452 --- [SysVentas] [JavaFX-Launcher] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-28T13:57:48.683-05:00  INFO 14452 --- [SysVentas] [JavaFX-Launcher] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-28T13:57:48.789-05:00  INFO 14452 --- [SysVentas] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-28T13:57:49.079-05:00  INFO 14452 --- [SysVentas] [JavaFX-Launcher] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@99d6f0a
+2025-11-28T13:57:49.083-05:00  INFO 14452 --- [SysVentas] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-28T13:57:49.198-05:00  INFO 14452 --- [SysVentas] [JavaFX-Launcher] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 3.46
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-28T13:57:51.404-05:00  INFO 14452 --- [SysVentas] [JavaFX-Launcher] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-28T13:57:51.483-05:00  INFO 14452 --- [SysVentas] [JavaFX-Launcher] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-28T13:57:52.220-05:00  INFO 14452 --- [SysVentas] [JavaFX-Launcher] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-11-28T13:57:57.018-05:00  INFO 14452 --- [SysVentas] [JavaFX-Launcher] o.s.boot.SpringApplication               : Started application in 15.388 seconds (process running for 17.722)
+2025-11-28T13:57:58.197-05:00  WARN 14452 --- [SysVentas] [JavaFX Application Thread] javafx.css                               : CSS Error parsing file:/C:/Users/unacu/OneDrive%20-%20Universidad%20Peruana%20Uni%c3%b3n/BACKUP-Documentos/GitHub/Final-proyect-with-CRUD/SysLibrary/target/classes/css/userAuth/login.css: Unexpected function 'gaussian(' while parsing '-fx-effect' at [28,16]
+2025-11-28T14:00:22.454-05:00  WARN 14452 --- [SysVentas] [JavaFX Application Thread] javafx.css                               : CSS Error parsing file:/C:/Users/unacu/OneDrive%20-%20Universidad%20Peruana%20Uni%c3%b3n/BACKUP-Documentos/GitHub/Final-proyect-with-CRUD/SysLibrary/target/classes/css/userAuth/login.css: Unexpected function 'gaussian(' while parsing '-fx-effect' at [28,16]
+2025-11-28T14:00:33.485-05:00  INFO 14452 --- [SysVentas] [JavaFX Application Thread] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-28T14:00:33.490-05:00  INFO 14452 --- [SysVentas] [JavaFX Application Thread] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-28T14:00:33.499-05:00  INFO 14452 --- [SysVentas] [JavaFX Application Thread] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-11-28T14:01:21.792-05:00  INFO 5648 --- [SysVentas] [JavaFX-Launcher] o.s.boot.SpringApplication               : Starting application using Java 21.0.6 with PID 5648 (started by unacu in C:\Users\unacu\OneDrive - Universidad Peruana Unión\BACKUP-Documentos\GitHub\Final-proyect-with-CRUD\SysLibrary)
+2025-11-28T14:01:21.802-05:00  INFO 5648 --- [SysVentas] [JavaFX-Launcher] o.s.boot.SpringApplication               : No active profile set, falling back to 1 default profile: "default"
+2025-11-28T14:01:24.000-05:00  INFO 5648 --- [SysVentas] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-28T14:01:24.237-05:00  INFO 5648 --- [SysVentas] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 218 ms. Found 8 JPA repository interfaces.
+2025-11-28T14:01:25.368-05:00  INFO 5648 --- [SysVentas] [JavaFX-Launcher] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-28T14:01:25.547-05:00  INFO 5648 --- [SysVentas] [JavaFX-Launcher] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.33.Final
+2025-11-28T14:01:25.651-05:00  INFO 5648 --- [SysVentas] [JavaFX-Launcher] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-28T14:01:26.405-05:00  INFO 5648 --- [SysVentas] [JavaFX-Launcher] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-28T14:01:26.500-05:00  INFO 5648 --- [SysVentas] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-28T14:01:26.785-05:00  INFO 5648 --- [SysVentas] [JavaFX-Launcher] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@4e9ce676
+2025-11-28T14:01:26.789-05:00  INFO 5648 --- [SysVentas] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-28T14:01:26.884-05:00  INFO 5648 --- [SysVentas] [JavaFX-Launcher] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 3.46
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-28T14:01:28.725-05:00  INFO 5648 --- [SysVentas] [JavaFX-Launcher] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-28T14:01:28.812-05:00  INFO 5648 --- [SysVentas] [JavaFX-Launcher] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-28T14:01:29.708-05:00  INFO 5648 --- [SysVentas] [JavaFX-Launcher] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-11-28T14:01:34.190-05:00  INFO 5648 --- [SysVentas] [JavaFX-Launcher] o.s.boot.SpringApplication               : Started application in 13.604 seconds (process running for 15.613)
+2025-11-28T14:01:35.138-05:00  WARN 5648 --- [SysVentas] [JavaFX Application Thread] javafx.css                               : CSS Error parsing file:/C:/Users/unacu/OneDrive%20-%20Universidad%20Peruana%20Uni%c3%b3n/BACKUP-Documentos/GitHub/Final-proyect-with-CRUD/SysLibrary/target/classes/css/userAuth/login.css: Unexpected function 'gaussian(' while parsing '-fx-effect' at [28,16]
+2025-11-28T14:01:43.204-05:00  WARN 5648 --- [SysVentas] [JavaFX Application Thread] javafx.css                               : CSS Error parsing file:/C:/Users/unacu/OneDrive%20-%20Universidad%20Peruana%20Uni%c3%b3n/BACKUP-Documentos/GitHub/Final-proyect-with-CRUD/SysLibrary/target/classes/css/userAuth/login.css: Unexpected function 'gaussian(' while parsing '-fx-effect' at [28,16]
+2025-11-28T14:03:47.893-05:00  WARN 5648 --- [SysVentas] [JavaFX Application Thread] javafx.css                               : CSS Error parsing file:/C:/Users/unacu/OneDrive%20-%20Universidad%20Peruana%20Uni%c3%b3n/BACKUP-Documentos/GitHub/Final-proyect-with-CRUD/SysLibrary/target/classes/css/userAuth/login.css: Unexpected function 'gaussian(' while parsing '-fx-effect' at [28,16]
+2025-11-28T14:12:10.026-05:00  INFO 5648 --- [SysVentas] [JavaFX Application Thread] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-28T14:12:10.033-05:00  INFO 5648 --- [SysVentas] [JavaFX Application Thread] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-28T14:12:10.051-05:00  INFO 5648 --- [SysVentas] [JavaFX Application Thread] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-11-28T14:12:18.667-05:00  INFO 16568 --- [SysVentas] [JavaFX-Launcher] o.s.boot.SpringApplication               : Starting application using Java 21.0.6 with PID 16568 (started by unacu in C:\Users\unacu\OneDrive - Universidad Peruana Unión\BACKUP-Documentos\GitHub\Final-proyect-with-CRUD\SysLibrary)
+2025-11-28T14:12:18.678-05:00  INFO 16568 --- [SysVentas] [JavaFX-Launcher] o.s.boot.SpringApplication               : No active profile set, falling back to 1 default profile: "default"
+2025-11-28T14:12:20.968-05:00  INFO 16568 --- [SysVentas] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-28T14:12:21.228-05:00  INFO 16568 --- [SysVentas] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 232 ms. Found 8 JPA repository interfaces.
+2025-11-28T14:12:22.379-05:00  INFO 16568 --- [SysVentas] [JavaFX-Launcher] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-28T14:12:22.599-05:00  INFO 16568 --- [SysVentas] [JavaFX-Launcher] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.33.Final
+2025-11-28T14:12:22.706-05:00  INFO 16568 --- [SysVentas] [JavaFX-Launcher] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-28T14:12:23.711-05:00  INFO 16568 --- [SysVentas] [JavaFX-Launcher] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-28T14:12:23.836-05:00  INFO 16568 --- [SysVentas] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-28T14:12:24.168-05:00  INFO 16568 --- [SysVentas] [JavaFX-Launcher] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@732e9761
+2025-11-28T14:12:24.172-05:00  INFO 16568 --- [SysVentas] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-28T14:12:24.299-05:00  INFO 16568 --- [SysVentas] [JavaFX-Launcher] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 3.46
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-28T14:12:26.687-05:00  INFO 16568 --- [SysVentas] [JavaFX-Launcher] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-28T14:12:26.821-05:00  INFO 16568 --- [SysVentas] [JavaFX-Launcher] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-28T14:12:28.706-05:00  INFO 16568 --- [SysVentas] [JavaFX-Launcher] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-11-28T14:12:35.937-05:00  INFO 16568 --- [SysVentas] [JavaFX-Launcher] o.s.boot.SpringApplication               : Started application in 18.715 seconds (process running for 20.876)
+2025-11-28T14:12:37.156-05:00  WARN 16568 --- [SysVentas] [JavaFX Application Thread] javafx.css                               : CSS Error parsing file:/C:/Users/unacu/OneDrive%20-%20Universidad%20Peruana%20Uni%c3%b3n/BACKUP-Documentos/GitHub/Final-proyect-with-CRUD/SysLibrary/target/classes/css/userAuth/login.css: Unexpected function 'gaussian(' while parsing '-fx-effect' at [28,16]
+2025-11-28T14:12:41.686-05:00  WARN 16568 --- [SysVentas] [JavaFX Application Thread] javafx.css                               : CSS Error parsing file:/C:/Users/unacu/OneDrive%20-%20Universidad%20Peruana%20Uni%c3%b3n/BACKUP-Documentos/GitHub/Final-proyect-with-CRUD/SysLibrary/target/classes/css/userAuth/login.css: Unexpected function 'gaussian(' while parsing '-fx-effect' at [28,16]
+2025-11-28T14:13:56.647-05:00  INFO 16568 --- [SysVentas] [JavaFX Application Thread] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-28T14:13:56.651-05:00  INFO 16568 --- [SysVentas] [JavaFX Application Thread] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-28T14:13:56.659-05:00  INFO 16568 --- [SysVentas] [JavaFX Application Thread] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-11-28T14:14:05.822-05:00  INFO 23108 --- [SysVentas] [JavaFX-Launcher] o.s.boot.SpringApplication               : Starting application using Java 21.0.6 with PID 23108 (started by unacu in C:\Users\unacu\OneDrive - Universidad Peruana Unión\BACKUP-Documentos\GitHub\Final-proyect-with-CRUD\SysLibrary)
+2025-11-28T14:14:05.830-05:00  INFO 23108 --- [SysVentas] [JavaFX-Launcher] o.s.boot.SpringApplication               : No active profile set, falling back to 1 default profile: "default"
+2025-11-28T14:14:08.014-05:00  INFO 23108 --- [SysVentas] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-28T14:14:08.266-05:00  INFO 23108 --- [SysVentas] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 224 ms. Found 8 JPA repository interfaces.
+2025-11-28T14:14:09.483-05:00  INFO 23108 --- [SysVentas] [JavaFX-Launcher] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-28T14:14:09.644-05:00  INFO 23108 --- [SysVentas] [JavaFX-Launcher] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.33.Final
+2025-11-28T14:14:09.734-05:00  INFO 23108 --- [SysVentas] [JavaFX-Launcher] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-28T14:14:10.501-05:00  INFO 23108 --- [SysVentas] [JavaFX-Launcher] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-28T14:14:10.594-05:00  INFO 23108 --- [SysVentas] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-28T14:14:10.924-05:00  INFO 23108 --- [SysVentas] [JavaFX-Launcher] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@55ce54cb
+2025-11-28T14:14:10.928-05:00  INFO 23108 --- [SysVentas] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-28T14:14:11.038-05:00  INFO 23108 --- [SysVentas] [JavaFX-Launcher] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 3.46
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-28T14:14:12.938-05:00  INFO 23108 --- [SysVentas] [JavaFX-Launcher] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-28T14:14:13.019-05:00  INFO 23108 --- [SysVentas] [JavaFX-Launcher] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-28T14:14:13.760-05:00  INFO 23108 --- [SysVentas] [JavaFX-Launcher] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-11-28T14:14:18.497-05:00  INFO 23108 --- [SysVentas] [JavaFX-Launcher] o.s.boot.SpringApplication               : Started application in 13.827 seconds (process running for 15.722)
+2025-11-28T14:14:19.439-05:00  WARN 23108 --- [SysVentas] [JavaFX Application Thread] javafx.css                               : CSS Error parsing file:/C:/Users/unacu/OneDrive%20-%20Universidad%20Peruana%20Uni%c3%b3n/BACKUP-Documentos/GitHub/Final-proyect-with-CRUD/SysLibrary/target/classes/css/userAuth/login.css: Unexpected function 'gaussian(' while parsing '-fx-effect' at [28,16]
+2025-11-28T14:14:27.877-05:00  WARN 23108 --- [SysVentas] [JavaFX Application Thread] javafx.css                               : CSS Error parsing file:/C:/Users/unacu/OneDrive%20-%20Universidad%20Peruana%20Uni%c3%b3n/BACKUP-Documentos/GitHub/Final-proyect-with-CRUD/SysLibrary/target/classes/css/userAuth/login.css: Unexpected function 'gaussian(' while parsing '-fx-effect' at [28,16]
+2025-11-28T14:18:54.252-05:00  INFO 23108 --- [SysVentas] [JavaFX Application Thread] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-28T14:18:54.257-05:00  INFO 23108 --- [SysVentas] [JavaFX Application Thread] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-28T14:18:54.274-05:00  INFO 23108 --- [SysVentas] [JavaFX Application Thread] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-11-28T14:19:00.825-05:00  INFO 21176 --- [SysVentas] [JavaFX-Launcher] o.s.boot.SpringApplication               : Starting application using Java 21.0.6 with PID 21176 (started by unacu in C:\Users\unacu\OneDrive - Universidad Peruana Unión\BACKUP-Documentos\GitHub\Final-proyect-with-CRUD\SysLibrary)
+2025-11-28T14:19:00.833-05:00  INFO 21176 --- [SysVentas] [JavaFX-Launcher] o.s.boot.SpringApplication               : No active profile set, falling back to 1 default profile: "default"
+2025-11-28T14:19:03.102-05:00  INFO 21176 --- [SysVentas] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-28T14:19:03.322-05:00  INFO 21176 --- [SysVentas] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 200 ms. Found 8 JPA repository interfaces.
+2025-11-28T14:19:04.490-05:00  INFO 21176 --- [SysVentas] [JavaFX-Launcher] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-28T14:19:04.626-05:00  INFO 21176 --- [SysVentas] [JavaFX-Launcher] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.33.Final
+2025-11-28T14:19:04.700-05:00  INFO 21176 --- [SysVentas] [JavaFX-Launcher] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-28T14:19:05.445-05:00  INFO 21176 --- [SysVentas] [JavaFX-Launcher] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-28T14:19:05.559-05:00  INFO 21176 --- [SysVentas] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-28T14:19:05.827-05:00  INFO 21176 --- [SysVentas] [JavaFX-Launcher] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@2849ef81
+2025-11-28T14:19:05.830-05:00  INFO 21176 --- [SysVentas] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-28T14:19:05.914-05:00  INFO 21176 --- [SysVentas] [JavaFX-Launcher] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 3.46
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-28T14:19:07.971-05:00  INFO 21176 --- [SysVentas] [JavaFX-Launcher] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-28T14:19:08.061-05:00  INFO 21176 --- [SysVentas] [JavaFX-Launcher] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-28T14:19:08.927-05:00  INFO 21176 --- [SysVentas] [JavaFX-Launcher] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-11-28T14:19:13.458-05:00  INFO 21176 --- [SysVentas] [JavaFX-Launcher] o.s.boot.SpringApplication               : Started application in 13.836 seconds (process running for 15.722)
+2025-11-28T14:19:14.493-05:00  WARN 21176 --- [SysVentas] [JavaFX Application Thread] javafx.css                               : CSS Error parsing file:/C:/Users/unacu/OneDrive%20-%20Universidad%20Peruana%20Uni%c3%b3n/BACKUP-Documentos/GitHub/Final-proyect-with-CRUD/SysLibrary/target/classes/css/userAuth/login.css: Unexpected function 'gaussian(' while parsing '-fx-effect' at [28,16]
+2025-11-28T14:19:53.944-05:00  WARN 21176 --- [SysVentas] [JavaFX Application Thread] javafx.css                               : CSS Error parsing file:/C:/Users/unacu/OneDrive%20-%20Universidad%20Peruana%20Uni%c3%b3n/BACKUP-Documentos/GitHub/Final-proyect-with-CRUD/SysLibrary/target/classes/css/userAuth/login.css: Unexpected function 'gaussian(' while parsing '-fx-effect' at [28,16]
+2025-11-28T14:24:00.229-05:00  INFO 21176 --- [SysVentas] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-28T14:24:00.235-05:00  INFO 21176 --- [SysVentas] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-28T14:24:00.242-05:00  INFO 21176 --- [SysVentas] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-11-28T14:29:07.374-05:00  INFO 4952 --- [SysVentas] [JavaFX-Launcher] o.s.boot.SpringApplication               : Starting application using Java 21.0.6 with PID 4952 (started by unacu in C:\Users\unacu\OneDrive - Universidad Peruana Unión\BACKUP-Documentos\GitHub\Final-proyect-with-CRUD\SysLibrary)
+2025-11-28T14:29:07.386-05:00  INFO 4952 --- [SysVentas] [JavaFX-Launcher] o.s.boot.SpringApplication               : No active profile set, falling back to 1 default profile: "default"
+2025-11-28T14:29:09.832-05:00  INFO 4952 --- [SysVentas] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-28T14:29:10.071-05:00  INFO 4952 --- [SysVentas] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 218 ms. Found 8 JPA repository interfaces.
+2025-11-28T14:29:11.333-05:00  INFO 4952 --- [SysVentas] [JavaFX-Launcher] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-28T14:29:11.532-05:00  INFO 4952 --- [SysVentas] [JavaFX-Launcher] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.33.Final
+2025-11-28T14:29:11.629-05:00  INFO 4952 --- [SysVentas] [JavaFX-Launcher] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-28T14:29:12.517-05:00  INFO 4952 --- [SysVentas] [JavaFX-Launcher] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-28T14:29:12.601-05:00  INFO 4952 --- [SysVentas] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-28T14:29:12.865-05:00  INFO 4952 --- [SysVentas] [JavaFX-Launcher] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@f8b50d1
+2025-11-28T14:29:12.869-05:00  INFO 4952 --- [SysVentas] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-28T14:29:12.975-05:00  INFO 4952 --- [SysVentas] [JavaFX-Launcher] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 3.46
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-28T14:29:16.351-05:00  INFO 4952 --- [SysVentas] [JavaFX-Launcher] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-28T14:29:16.481-05:00  INFO 4952 --- [SysVentas] [JavaFX-Launcher] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-28T14:29:18.991-05:00  INFO 4952 --- [SysVentas] [JavaFX-Launcher] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-11-28T14:29:28.740-05:00  INFO 4952 --- [SysVentas] [JavaFX-Launcher] o.s.boot.SpringApplication               : Started application in 22.739 seconds (process running for 25.167)
+2025-11-28T14:29:36.707-05:00  WARN 4952 --- [SysVentas] [JavaFX Application Thread] javafx.css                               : CSS Error parsing file:/C:/Users/unacu/OneDrive%20-%20Universidad%20Peruana%20Uni%c3%b3n/BACKUP-Documentos/GitHub/Final-proyect-with-CRUD/SysLibrary/target/classes/css/userAuth/login.css: Unexpected function 'gaussian(' while parsing '-fx-effect' at [28,16]
+2025-11-28T14:31:40.772-05:00  WARN 4952 --- [SysVentas] [JavaFX Application Thread] javafx.css                               : CSS Error parsing file:/C:/Users/unacu/OneDrive%20-%20Universidad%20Peruana%20Uni%c3%b3n/BACKUP-Documentos/GitHub/Final-proyect-with-CRUD/SysLibrary/target/classes/css/userAuth/login.css: Unexpected function 'gaussian(' while parsing '-fx-effect' at [28,16]
+2025-11-28T14:34:53.702-05:00  INFO 4952 --- [SysVentas] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-28T14:34:53.708-05:00  INFO 4952 --- [SysVentas] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-28T14:34:53.715-05:00  INFO 4952 --- [SysVentas] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-11-28T14:44:00.131-05:00  INFO 20276 --- [SysVentas] [JavaFX-Launcher] o.s.boot.SpringApplication               : Starting application using Java 21.0.6 with PID 20276 (started by unacu in C:\Users\unacu\OneDrive - Universidad Peruana Unión\BACKUP-Documentos\GitHub\Final-proyect-with-CRUD\SysLibrary)
+2025-11-28T14:44:00.138-05:00  INFO 20276 --- [SysVentas] [JavaFX-Launcher] o.s.boot.SpringApplication               : No active profile set, falling back to 1 default profile: "default"
+2025-11-28T14:44:02.214-05:00  INFO 20276 --- [SysVentas] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-28T14:44:02.525-05:00  INFO 20276 --- [SysVentas] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 285 ms. Found 8 JPA repository interfaces.
+2025-11-28T14:44:03.761-05:00  INFO 20276 --- [SysVentas] [JavaFX-Launcher] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-28T14:44:03.971-05:00  INFO 20276 --- [SysVentas] [JavaFX-Launcher] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.33.Final
+2025-11-28T14:44:04.082-05:00  INFO 20276 --- [SysVentas] [JavaFX-Launcher] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-28T14:44:04.941-05:00  INFO 20276 --- [SysVentas] [JavaFX-Launcher] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-28T14:44:05.046-05:00  INFO 20276 --- [SysVentas] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-28T14:44:05.316-05:00  INFO 20276 --- [SysVentas] [JavaFX-Launcher] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@655bdb68
+2025-11-28T14:44:05.320-05:00  INFO 20276 --- [SysVentas] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-28T14:44:05.442-05:00  INFO 20276 --- [SysVentas] [JavaFX-Launcher] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 3.46
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-28T14:44:07.523-05:00  INFO 20276 --- [SysVentas] [JavaFX-Launcher] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-28T14:44:07.599-05:00  INFO 20276 --- [SysVentas] [JavaFX-Launcher] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-28T14:44:08.395-05:00  INFO 20276 --- [SysVentas] [JavaFX-Launcher] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-11-28T14:44:13.272-05:00  INFO 20276 --- [SysVentas] [JavaFX-Launcher] o.s.boot.SpringApplication               : Started application in 14.401 seconds (process running for 16.641)
+2025-11-28T14:44:13.307-05:00  INFO 20276 --- [SysVentas] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-28T14:44:13.320-05:00  INFO 20276 --- [SysVentas] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-28T14:44:13.332-05:00  INFO 20276 --- [SysVentas] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-11-28T14:44:13.363-05:00  INFO 20276 --- [SysVentas] [JavaFX-Launcher] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-11-28T14:44:29.010-05:00  INFO 13612 --- [SysVentas] [JavaFX-Launcher] o.s.boot.SpringApplication               : Starting application using Java 21.0.6 with PID 13612 (started by unacu in C:\Users\unacu\OneDrive - Universidad Peruana Unión\BACKUP-Documentos\GitHub\Final-proyect-with-CRUD\SysLibrary)
+2025-11-28T14:44:29.016-05:00  INFO 13612 --- [SysVentas] [JavaFX-Launcher] o.s.boot.SpringApplication               : No active profile set, falling back to 1 default profile: "default"
+2025-11-28T14:44:31.345-05:00  INFO 13612 --- [SysVentas] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-28T14:44:31.603-05:00  INFO 13612 --- [SysVentas] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 239 ms. Found 8 JPA repository interfaces.
+2025-11-28T14:44:33.012-05:00  INFO 13612 --- [SysVentas] [JavaFX-Launcher] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-28T14:44:33.173-05:00  INFO 13612 --- [SysVentas] [JavaFX-Launcher] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.33.Final
+2025-11-28T14:44:33.267-05:00  INFO 13612 --- [SysVentas] [JavaFX-Launcher] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-28T14:44:34.062-05:00  INFO 13612 --- [SysVentas] [JavaFX-Launcher] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-28T14:44:34.141-05:00  INFO 13612 --- [SysVentas] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-28T14:44:34.406-05:00  INFO 13612 --- [SysVentas] [JavaFX-Launcher] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@6b931835
+2025-11-28T14:44:34.411-05:00  INFO 13612 --- [SysVentas] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-28T14:44:34.527-05:00  INFO 13612 --- [SysVentas] [JavaFX-Launcher] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 3.46
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-28T14:44:36.729-05:00  INFO 13612 --- [SysVentas] [JavaFX-Launcher] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-28T14:44:36.806-05:00  INFO 13612 --- [SysVentas] [JavaFX-Launcher] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-28T14:44:37.572-05:00  INFO 13612 --- [SysVentas] [JavaFX-Launcher] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-11-28T14:44:42.870-05:00  INFO 13612 --- [SysVentas] [JavaFX-Launcher] o.s.boot.SpringApplication               : Started application in 15.143 seconds (process running for 17.266)
+2025-11-28T14:44:44.109-05:00  WARN 13612 --- [SysVentas] [JavaFX Application Thread] javafx.css                               : CSS Error parsing file:/C:/Users/unacu/OneDrive%20-%20Universidad%20Peruana%20Uni%c3%b3n/BACKUP-Documentos/GitHub/Final-proyect-with-CRUD/SysLibrary/target/classes/css/userAuth/login.css: Unexpected function 'gaussian(' while parsing '-fx-effect' at [28,16]
+2025-11-28T14:59:18.441-05:00  WARN 13612 --- [SysVentas] [JavaFX Application Thread] javafx.css                               : CSS Error parsing file:/C:/Users/unacu/OneDrive%20-%20Universidad%20Peruana%20Uni%c3%b3n/BACKUP-Documentos/GitHub/Final-proyect-with-CRUD/SysLibrary/target/classes/css/userAuth/login.css: Unexpected function 'gaussian(' while parsing '-fx-effect' at [28,16]
+2025-11-28T15:00:23.082-05:00  WARN 13612 --- [SysVentas] [JavaFX Application Thread] javafx.css                               : CSS Error parsing file:/C:/Users/unacu/OneDrive%20-%20Universidad%20Peruana%20Uni%c3%b3n/BACKUP-Documentos/GitHub/Final-proyect-with-CRUD/SysLibrary/target/classes/css/userAuth/login.css: Unexpected function 'gaussian(' while parsing '-fx-effect' at [28,16]
+2025-11-28T15:01:52.280-05:00  WARN 13612 --- [SysVentas] [JavaFX Application Thread] javafx.css                               : CSS Error parsing file:/C:/Users/unacu/OneDrive%20-%20Universidad%20Peruana%20Uni%c3%b3n/BACKUP-Documentos/GitHub/Final-proyect-with-CRUD/SysLibrary/target/classes/css/userAuth/login.css: Unexpected function 'gaussian(' while parsing '-fx-effect' at [28,16]
+2025-11-28T15:06:04.743-05:00  INFO 13612 --- [SysVentas] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-28T15:06:05.651-05:00  INFO 13612 --- [SysVentas] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-28T15:06:06.064-05:00  INFO 13612 --- [SysVentas] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
