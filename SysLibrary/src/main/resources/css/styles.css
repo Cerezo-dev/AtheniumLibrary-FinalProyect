@@ -1,0 +1,1136 @@
+/* =========================================================
+   ESTILOS BASE Y PALETA DE COLORES (MODERNO/CLARO)
+   ========================================================= */
+
+/* Fondo general de la aplicación */
+.root-pane {
+    -fx-background-color: #F7F7F7; /* Gris muy claro */
+    -fx-font-family: "Segoe UI", sans-serif;
+}
+
+/* Campos de Texto con Error */
+.text-field-error {
+    -fx-border-color: red;
+    -fx-border-width: 2px;
+    -fx-background-color: #ffeeee;
+}
+
+/* --- BARRA LATERAL (SIDEBAR) --- */
+.sidebar {
+    -fx-background-color: white; /* Fondo BLANCO (Estilo moderno) */
+    -fx-padding: 20px 0;
+    -fx-background-radius: 0 15px 15px 0; /* Bordes redondeados sutiles */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.08), 10, 0.0, 3, 3); /* Sombra suave */
+    -fx-border-radius: 0 15px 15px 0;
+}
+
+.logo-text-sidebar {
+    -fx-text-fill: #333333; /* Texto oscuro */
+    -fx-font-weight: bold;
+    -fx-font-size: 28px;
+}
+
+.logo-sidebar-icon {
+    -fx-fill: #3F51B5; /* Icono de logo con color de acento */
+    -fx-font-size: 24px;
+}
+
+
+/* --- BOTONES DE NAVEGACIÓN --- */
+.sidebar-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #4A4A4A; /* Gris oscuro */
+    -fx-font-size: 15px;
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 12px 20px;
+    -fx-max-width: Infinity;
+    -fx-graphic-text-gap: 15;
+    -fx-border-radius: 10px;
+    -fx-background-insets: 0 10px 0 10px; /* Margen para el hover/selected */
+}
+
+/* Estado Hover (pasar el ratón) */
+.sidebar-button:hover {
+    -fx-background-color: #EFEFEF; /* Gris muy claro al pasar el ratón */
+    -fx-text-fill: #3F51B5; /* Texto azul de acento */
+}
+
+/* Estado Activo/Seleccionado */
+.sidebar-button-active, .sidebar-button:pressed {
+    -fx-background-color: #E3F2FD; /* Fondo azul pastel */
+    -fx-text-fill: #3F51B5; /* Texto azul fuerte */
+    -fx-font-weight: bold;
+    -fx-border-color: #3F51B5; /* Opcional: barra de acento a la izquierda */
+    -fx-border-width: 0 0 0 4px;
+}
+
+/* Iconos de Navegación */
+.sidebar-icon {
+    -fx-fill: #777777; /* Iconos grises por defecto */
+    -fx-font-size: 18px;
+}
+
+/* Cambiar color del icono al estar activo o hover */
+.sidebar-button-active .sidebar-icon,
+.sidebar-button:hover .sidebar-icon,
+.sidebar-button:pressed .sidebar-icon {
+    -fx-fill: #3F51B5;
+}
+
+/* Botón de Logout */
+.sidebar-button-logout {
+    -fx-background-color: #e74c3c; /* Rojo de emergencia */
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 12px 20px;
+    -fx-max-width: Infinity;
+    -fx-background-radius: 8px;
+    -fx-background-insets: 0 10px 0 10px;
+}
+.sidebar-button-logout:hover {
+    -fx-background-color: #c0392b;
+}
+
+
+/* --- LÓGICA DE CONTRACCIÓN DE BARRA LATERAL (Controller dependent) --- */
+.sidebar-collapsed {
+    -fx-pref-width: 60px;
+}
+
+.sidebar-collapsed .logo-text-sidebar {
+    -fx-opacity: 0;
+}
+
+.sidebar-collapsed .sidebar-button {
+    -fx-alignment: CENTER; /* Centra el icono */
+    -fx-padding: 15px 0;
+}
+.sidebar-collapsed .sidebar-button text {
+    -fx-opacity: 0;
+}
+
+
+/* =========================================================
+   ESTILOS DE CONTENIDO CENTRAL (DASHBOARD)
+   ========================================================= */
+
+.content-area {
+    -fx-background-color: #f4f7f6; /* Fondo del área de contenido */
+}
+
+/* --- ENCABEZADO Y TÍTULOS --- */
+.content-header {
+    -fx-background-color: white;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.05), 5, 0.5, 0, 1);
+    -fx-padding: 0 10px;
+}
+
+.content-title {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #34495e;
+}
+
+.user-greeting {
+    -fx-font-size: 14px;
+    -fx-text-fill: #7f8c8d;
+}
+
+/* --- TARJETAS DE RESUMEN (SUMMARY CARDS) --- */
+.summary-card-red, .summary-card-blue, .summary-card-cyan, .summary-card-gray {
+    -fx-background-color: white;
+    -fx-padding: 15px 20px;
+    -fx-background-radius: 8px; /* Bordes redondeados más sutiles */
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 8, 0.0, 0, 2);
+}
+
+.card-category-light {
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #7f8c8d;
+}
+
+.card-value-light {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50;
+}
+
+.card-icon-summary {
+    -fx-font-size: 24px;
+    -fx-fill: #3498db; /* Color de acento para iconos de resumen */
+}
+
+/* --- PANELES DE GRÁFICOS Y VISTAS --- */
+.chart-panel {
+    -fx-background-color: white;
+    -fx-background-radius: 8px;
+    -fx-padding: 15px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 8, 0.0, 0, 2);
+}
+
+.view-container {
+    -fx-background-color: #f7f9fc;
+    -fx-padding: 20px;
+}
+
+/* --- ESTILOS DE TABLAS Y BOTONES DE ACCIÓN --- */
+
+.table-view {
+    -fx-background-color: white;
+    -fx-background-radius: 10px;
+    -fx-border-color: #e0e0e0;
+    -fx-border-radius: 10px;
+}
+
+.primary-action-button-purple, .primary-action-button-blue {
+    -fx-background-color: #6a5acd;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 8px 15px;
+    -fx-background-radius: 8px;
+}
+.secondary-button-light {
+    -fx-background-color: #e0eaff;
+    -fx-text-fill: #1E90FF;
+    -fx-font-size: 12px;
+}
+.danger-button-light {
+    -fx-background-color: #ffe0e0;
+    -fx-text-fill: #e65c5c;
+    -fx-font-size: 12px;
+}
+/* 1. Cursor para todos los botones principales */
+.sidebar-button,
+.sidebar-button-logout,
+.primary-action-button-purple,
+#sidebarToggleButton,
+#LibroIcon,
+.primary-action-button-blue {
+    -fx-cursor: hand; /* O 'pointer' en navegadores, pero en JavaFX se usa 'hand' */
+}
+
+/* 2. Cursor para otros elementos cliqueables (ej. enlaces) */
+.hyperlink,
+.card-tag-violet:hover, /* Ejemplo: Si la etiqueta es cliqueable */
+.table-row-cell:hover { /* Opcional: Para filas de tabla */
+    -fx-cursor: hand;
+}
+/* =========================================================
+   ESTILOS RESTAURADOS Y MEJORADOS PARA TARJETAS/CATEGORÍAS
+   ========================================================= */
+
+/* Estilo Base de Todas las Tarjetas (Categorías, Libros, etc.) */
+.category-card, .book-card-primary, .book-card-secondary, .book-card-tertiary, .user-card {
+    -fx-background-color: white; /* Fondo blanco */
+    -fx-background-radius: 12px;
+    -fx-border-radius: 12px;
+    -fx-padding: 15px;
+    -fx-spacing: 10px;
+    /* Sombra más suave y moderna */
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0.0, 0, 2);
+    -fx-min-width: 280px; /* Asegura que tengan un ancho mínimo para la cuadrícula */
+}
+
+/* --- COLORES DE BORDE DE LAS TARJETAS (INDICADORES DE CATEGORÍA) --- */
+/* Restauramos la idea de la paleta de colores en el borde */
+.book-card-primary {
+    -fx-border-color: #8A2BE2; /* Púrpura */
+    -fx-border-width: 3px;
+}
+.book-card-secondary {
+    -fx-border-color: #1E90FF; /* Azul */
+    -fx-border-width: 3px;
+}
+.book-card-tertiary {
+    -fx-border-color: #FF8C00; /* Naranja */
+    -fx-border-width: 3px;
+}
+.user-card {
+    -fx-border-color: #3CB371; /* Verde (para usuarios) */
+    -fx-border-width: 3px;
+}
+
+/* Estilo para la tarjeta base de categoría (sin color de acento) */
+.category-card {
+    -fx-border-color: #e0e0e0; /* Gris claro por defecto */
+    -fx-border-width: 1px;
+}
+
+/* --- ESTILOS DE TEXTO DENTRO DE LAS TARJETAS --- */
+.card-book-title, .card-category-title {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+}
+.card-book-author, .card-category-description {
+    -fx-font-size: 13px;
+    -fx-text-fill: #777777;
+}
+
+/* Botones de acción dentro de las tarjetas */
+.danger-button-light {
+    -fx-background-color: #ffe0e0; /* Fondo rojo muy claro */
+    -fx-text-fill: #e65c5c; /* Texto rojo */
+    -fx-font-weight: bold;
+    -fx-padding: 6px 10px;
+    -fx-background-radius: 6px;
+    -fx-cursor: hand;
+}
+.secondary-button-light {
+    -fx-background-color: #e0eaff; /* Fondo azul muy claro */
+    -fx-text-fill: #1E90FF; /* Texto azul */
+    -fx-font-weight: bold;
+    -fx-padding: 6px 10px;
+    -fx-background-radius: 6px;
+    -fx-cursor: hand;
+}
+/* --- CONTENEDOR DE VISTA MODULAR --- */
+.view-container {
+    -fx-background-color: #F7F7F7; /* Fondo del área de contenido (para vistas modulares) */
+}
+
+/* --- ESTILOS DE TARJETAS DE MÉTRICAS (SUMMARY CARDS) --- */
+
+.summary-card-red, .summary-card-purple, .summary-card-cyan, .summary-card-blue {
+    -fx-background-color: white;
+    -fx-padding: 15px 20px;
+    -fx-background-radius: 8px;
+    -fx-border-radius: 8px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 8, 0.0, 0, 2);
+    -fx-border-width: 5 0 0 0; /* Barra de color en el borde superior */
+}
+
+/* Definición de colores de borde superior */
+.summary-card-red    { -fx-border-color: #e74c3c; }  /* Rojo */
+.summary-card-purple { -fx-border-color: #8A2BE2; } /* Púrpura */
+.summary-card-cyan   { -fx-border-color: #1abc9c; }  /* Cian/Verde */
+.summary-card-blue   { -fx-border-color: #3498db; }  /* Azul */
+
+.card-category-light {
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #7f8c8d;
+}
+
+.card-value-light {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50;
+    -fx-padding: 5px 0 0 0;
+}
+
+
+/* --- PANELES DE GRÁFICOS Y REPORTES --- */
+
+.chart-panel {
+    -fx-background-color: white;
+    -fx-background-radius: 8px;
+    -fx-padding: 0;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 8, 0.0, 0, 2);
+}
+
+.chart-title {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #34495e;
+}
+
+/* Placeholder visual para el área donde irá el gráfico real */
+.chart-placeholder {
+    -fx-background-color: #f7f7f7;
+    -fx-background-radius: 5px;
+    -fx-alignment: center;
+    -fx-padding: 15px;
+}
+/* =========================================================
+   ESTILOS DE ENCABEZADO Y BÚSQUEDA
+   ========================================================= */
+
+/* Contenedor de la barra de búsqueda (El fondo azul claro y redondeado) */
+.search-bar-container {
+    -fx-background-color: #e0eaff; /* Azul claro pastel */
+    -fx-background-radius: 20px;
+    -fx-padding: 0 10px;
+    -fx-border-color: #d0d0ff; /* Borde muy sutil */
+    -fx-border-radius: 20px;
+    -fx-border-width: 1px;
+    -fx-spacing: 5;
+    -fx-alignment: CENTER_LEFT;
+    -fx-min-height: 35px;
+    -fx-max-height: 35px;
+    -fx-margin: 0 0 0 20px; /* Separación del botón de toggle */
+}
+
+/* Campo de entrada de texto (Debe ser transparente) */
+.search-field {
+    -fx-background-color: transparent;
+    -fx-border-width: 0;
+    -fx-prompt-text-fill: #99aaff; /* Color del texto guía (gris azulado) */
+    -fx-font-size: 14px;
+}
+
+.search-field:focused {
+    -fx-border-color: transparent; /* Quitar el borde azul por defecto al enfocar */
+    -fx-faint-focus-color: transparent;
+}
+
+/* Icono de búsqueda (Lupa) */
+.search-icon {
+    -fx-fill: #6677cc; /* Azul oscuro suave */
+    -fx-font-size: 16px;
+}
+
+/* --- ESTILOS DEL ÁREA DE PERFIL (Derecha) --- */
+.user-profile-area {
+    -fx-padding: 0 10px;
+    -fx-alignment: CENTER_RIGHT;
+}
+
+/* Icono del Avatar */
+.avatar-icon {
+    -fx-background-color: #d6e0ff; /* Fondo del círculo del avatar */
+    -fx-background-radius: 50%;
+    -fx-min-width: 30px;
+    -fx-max-width: 30px;
+    -fx-min-height: 30px;
+    -fx-max-height: 30px;
+    -fx-alignment: CENTER;
+}
+
+.avatar-glyph {
+    -fx-fill: #6677cc; /* Icono de usuario dentro del círculo */
+    -fx-font-size: 16px;
+}
+
+.dropdown-arrow {
+    -fx-text-fill: #777777;
+    -fx-font-size: 10px;
+}
+/* Estilo general para todos los paneles de gráficos y tablas */
+.chart-panel {
+    -fx-background-color: white;
+    -fx-background-radius: 15px; /* ⬅️ Bordes más grandes para un look moderno */
+    -fx-padding: 0; /* Padding interno se aplica en FXML si es necesario */
+    /* Sombra más notable para dar el efecto flotante */
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 15, 0.0, 0, 4);
+}
+
+.chart-title-large {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+}
+.summary-card-red, .summary-card-purple, .summary-card-cyan, .summary-card-blue {
+    -fx-background-color: white;
+    -fx-padding: 15px 20px;
+    -fx-background-radius: 10px; /* Redondeo de las tarjetas */
+    -fx-border-radius: 10px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 10, 0.0, 0, 2);
+    -fx-border-width: 0 0 0 0; /* Si quieres eliminar la barra de color superior y solo usar el color del texto */
+
+    /* Si quieres la barra de color superior de la imagen */
+    -fx-border-width: 3 0 0 0;
+}
+.search-bar-container {
+    -fx-background-color: #f0f3f7; /* Gris muy claro/casi blanco */
+    -fx-background-radius: 18px; /* ⬅️ Bordes redondeados */
+    -fx-padding: 0 15px;
+    -fx-spacing: 5;
+    -fx-alignment: CENTER_LEFT;
+    -fx-min-height: 38px;
+    -fx-max-height: 38px;
+    -fx-margin: 0 0 0 20px;
+}
+
+.search-field {
+    -fx-background-color: transparent; /* ⬅️ Fondo transparente sobre el contenedor */
+    -fx-border-width: 0;
+    -fx-prompt-text-fill: #99aabf; /* Color del texto guía */
+    -fx-font-size: 14px;
+}
+
+
+.user-profile-area {
+    -fx-padding: 0 10px;
+    -fx-alignment: CENTER_RIGHT;
+}
+
+.avatar-icon {
+    -fx-background-color: #ffffff; /* Círculo blanco o muy claro */
+    -fx-background-radius: 50%; /* ⬅️ Forma circular */
+    -fx-min-width: 34px;
+    -fx-max-width: 34px;
+    -fx-min-height: 34px;
+    -fx-max-height: 34px;
+    -fx-alignment: CENTER;
+    -fx-border-color: #c7eedd; /* Borde verde pálido del avatar */
+    -fx-border-width: 2px;
+    -fx-border-radius: 50%;
+}
+
+.avatar-glyph {
+    -fx-fill: #4CAF50; /* Icono de usuario verde */
+    -fx-font-size: 16px;
+}
+/* --- TARJETAS BLANCAS GENERALES --- */
+.white-card {
+    -fx-background-color: white;
+    -fx-background-radius: 15px; /* Bordes redondeados */
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.05), 15, 0.0, 0, 5); /* Sombra suave */
+}
+
+/* --- Títulos y Textos --- */
+.card-title-gray {
+    -fx-font-size: 12px;
+    -fx-text-fill: #9E9E9E;
+    -fx-font-weight: bold;
+}
+
+.card-value-large {
+    -fx-font-size: 28px;
+    -fx-font-weight: 900; /* Muy negrita */
+    -fx-text-fill: #333333;
+}
+
+.section-title {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+}
+
+/* --- ICONOS CIRCULARES DE COLORES --- */
+.icon-container-red, .icon-container-blue, .icon-container-green, .icon-container-gray, .avatar-circle-small {
+    -fx-background-radius: 50%;
+    -fx-min-width: 40px;
+    -fx-min-height: 40px;
+    -fx-max-width: 40px;
+    -fx-max-height: 40px;
+    -fx-alignment: center;
+}
+
+.icon-container-red   { -fx-background-color: #FFEBEE; }
+.icon-container-red .glyph-icon { -fx-fill: #EF5350; -fx-font-size: 18px; }
+
+.icon-container-blue  { -fx-background-color: #E3F2FD; }
+.icon-container-blue .glyph-icon { -fx-fill: #42A5F5; -fx-font-size: 18px; }
+
+.icon-container-green { -fx-background-color: #E8F5E9; }
+.icon-container-green .glyph-icon { -fx-fill: #66BB6A; -fx-font-size: 18px; }
+
+.icon-container-gray  { -fx-background-color: #F5F5F5; }
+.icon-container-gray .glyph-icon { -fx-fill: #BDBDBD; -fx-font-size: 18px; }
+
+.avatar-circle-small { -fx-background-color: #FFF3E0; -fx-min-width: 35px; -fx-min-height: 35px;}
+.avatar-circle-small .glyph-icon { -fx-fill: #FF9800; }
+
+/* --- TARJETAS PEQUEÑAS INFERIORES --- */
+.small-card-green { -fx-background-color: #E8F5E9; -fx-background-radius: 10px; }
+.small-card-blue  { -fx-background-color: #E3F2FD; -fx-background-radius: 10px; }
+.small-card-red   { -fx-background-color: #FFEBEE; -fx-background-radius: 10px; }
+
+/* --- BOTONES PEQUEÑOS --- */
+.small-button {
+    -fx-background-color: #f0f0f0;
+    -fx-text-fill: #666;
+    -fx-background-radius: 5px;
+    -fx-font-size: 10px;
+}
+/* =========================================================
+   ESTILOS ESPECÍFICOS PARA FORMULARIOS MODALES
+   ========================================================= */
+
+/* Título del Formulario (Hereda estilo, pero forzamos color) */
+.form-title {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #34495e; /* Gris oscuro azulado */
+}
+
+/* Etiquetas de los Campos (Labels) */
+.form-label {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #546e7a; /* Gris medio para etiquetas */
+}
+
+/* Campos de Texto y ComboBoxes */
+.form-field, .text-field, .text-area, .combo-box-base {
+    -fx-background-color: #f9fbfd; /* Fondo muy claro, casi blanco */
+    -fx-border-color: #dce4ec; /* Borde gris azulado claro */
+    -fx-border-radius: 6px;
+    -fx-background-radius: 6px;
+    -fx-padding: 8px;
+    -fx-font-size: 14px;
+    -fx-text-fill: #333333; /* Color del texto escrito */
+}
+
+/* Estado Hover (pasar el mouse) y Focus (seleccionado) de los campos */
+.form-field:hover, .text-field:hover, .text-area:hover, .combo-box-base:hover {
+    -fx-border-color: #b0bec5; /* Borde un poco más oscuro al pasar el mouse */
+}
+
+.form-field:focused, .text-field:focused, .text-area:focused, .combo-box-base:focused {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #3F51B5; /* Borde AZUL de acento al seleccionar */
+    -fx-border-width: 2px;
+    -fx-background-insets: 0;
+    /* Pequeña sombra azul */
+    -fx-effect: dropshadow(gaussian, rgba(63, 81, 181, 0.2), 5, 0.0, 0, 1);
+}
+
+/* --- Botones Principales (Guardar, Buscar) --- */
+/* Usamos el color púrpura/azul de tu paleta */
+.primary-button {
+    -fx-background-color: #6a5acd; /* Púrpura medio */
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 10px 20px;
+    -fx-background-radius: 6px;
+    -fx-cursor: hand;
+}
+
+.primary-button:hover {
+    -fx-background-color: #5848b8; /* Púrpura un poco más oscuro al pasar el mouse */
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 5, 0.0, 0, 2);
+}
+
+/* --- Botones Secundarios (Generar) --- */
+.secondary-button {
+    -fx-background-color: #e0eaff; /* Fondo azul muy claro */
+    -fx-text-fill: #1E90FF; /* Texto azul */
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 10px 15px;
+    -fx-background-radius: 6px;
+    -fx-border-color: #1E90FF;
+    -fx-border-radius: 6px;
+    -fx-cursor: hand;
+}
+
+.secondary-button:hover {
+    -fx-background-color: #d0e0ff; /* Azul claro un poco más oscuro */
+}
+
+/* --- Botón de Cancelar (Ya lo tenías, pero lo reafirmo aquí) --- */
+.secondary-button-light {
+    -fx-background-color: transparent;
+    -fx-text-fill: #7f8c8d; /* Gris */
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 10px 20px;
+    -fx-border-color: #bdc3c7;
+    -fx-border-radius: 6px;
+    -fx-cursor: hand;
+}
+
+.secondary-button-light:hover {
+    -fx-background-color: #f0f2f5;
+    -fx-text-fill: #333333;
+}
+/* =========================================================
+   ESTILOS PARA EL FORMULARIO MODAL DE REGISTRO (MODERNO)
+   ========================================================= */
+
+/* Estilo para el título principal de la ventana modal */
+.dialog-title {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50; /* Azul oscuro profesional */
+}
+
+/* Etiquetas (Labels) encima de los campos */
+.form-label {
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #546e7a; /* Gris azulado para un look moderno */
+    -fx-padding: 0 0 3 0; /* Un pequeño espacio debajo de la etiqueta */
+}
+
+/* --- ESTILOS PARA CAMPOS DE ENTRADA (TextField, TextArea, ComboBox) --- */
+.form-field, .text-field, .text-area, .combo-box-base {
+    -fx-background-color: #f4f7fc; /* Fondo gris azulado muy claro */
+    -fx-border-color: #dce4ec;     /* Borde gris suave */
+    -fx-border-radius: 6px;        /* Esquinas redondeadas */
+    -fx-background-radius: 6px;
+    -fx-padding: 8px 10px;
+    -fx-font-size: 14px;
+    -fx-text-fill: #333333;        /* Color del texto al escribir */
+}
+
+/* Cuando pasas el ratón por encima del campo */
+.form-field:hover, .text-field:hover, .text-area:hover, .combo-box-base:hover {
+    -fx-border-color: #b0bec5; /* El borde se oscurece ligeramente */
+    -fx-background-color: #edf2f7;
+}
+
+/* Cuando el campo está seleccionado (foco) para escribir */
+.form-field:focused, .text-field:focused, .text-area:focused, .combo-box-base:focused {
+    -fx-background-color: #ffffff; /* El fondo se vuelve blanco puro */
+    -fx-border-color: #6a5acd;     /* Borde VIOLETA/AZUL de acento */
+    -fx-border-width: 2px;
+    /* Añade una suave sombra azul alrededor */
+    -fx-effect: dropshadow(gaussian, rgba(106, 90, 205, 0.25), 5, 0.0, 0, 1);
+}
+
+
+/* --- ESTILOS PARA BOTONES PRINCIPALES (Guardar, Buscar) --- */
+.primary-button {
+    -fx-background-color: #6a5acd; /* Color VIOLETA principal de tu diseño */
+    -fx-text-fill: white;          /* Texto blanco */
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 10px 20px;
+    -fx-background-radius: 6px;
+    -fx-cursor: hand;              /* Cambia el cursor a manita */
+}
+
+.primary-button:hover {
+    -fx-background-color: #5848b8; /* Un púrpura un poco más oscuro al pasar el mouse */
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 5, 0.0, 0, 2);
+}
+
+.primary-button:pressed {
+    -fx-background-color: #4a3a9c; /* Color al hacer clic */
+}
+
+
+/* --- ESTILOS PARA BOTONES SECUNDARIOS (Generar, etc.) --- */
+.secondary-button {
+    -fx-background-color: #e0eaff; /* Fondo azul muy claro */
+    -fx-text-fill: #1E90FF;        /* Texto AZUL vibrante */
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 10px 15px;
+    -fx-background-radius: 6px;
+    -fx-border-color: #1E90FF;
+    -fx-border-radius: 6px;
+    -fx-cursor: hand;
+}
+
+.secondary-button:hover {
+    -fx-background-color: #d0e0ff;
+}
+
+.secondary-button:pressed {
+    -fx-background-color: #bad0ff;
+}
+
+
+/* --- ESTILOS PARA EL BOTÓN CANCELAR --- */
+/* Usa un estilo más sutil, sin fondo de color fuerte */
+.secondary-button-light {
+    -fx-background-color: transparent;
+    -fx-text-fill: #7f8c8d; /* Texto gris */
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 10px 20px;
+    -fx-border-color: #bdc3c7; /* Borde gris claro */
+    -fx-border-radius: 6px;
+    -fx-cursor: hand;
+}
+
+.secondary-button-light:hover {
+    -fx-background-color: #f0f2f5;
+    -fx-text-fill: #333333; /* Texto se vuelve más oscuro */
+}
+
+/* --- ESTILOS ESPECÍFICOS PARA EL COMBOBOX Y DATEPICKER --- */
+/* Asegura que el botón de la flecha se integre bien */
+.combo-box-base .arrow-button, .date-picker .arrow-button {
+    -fx-background-color: transparent;
+}
+
+.combo-box-base .arrow, .date-picker .arrow {
+    -fx-background-color: #546e7a; /* Color de la flechita */
+}
+/* =========================================================
+   ESTILOS DE BOTONES MODERNOS PARA EL FORMULARIO
+   ========================================================= */
+
+/* --- BOTÓN PRINCIPAL VIOLETA (Ej. Guardar) --- */
+.primary-button {
+    -fx-background-color: linear-gradient(to right, #6a5acd, #7b6bd6); /* Degradado sutil */
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 10px 24px; /* Un poco más ancho */
+    -fx-background-radius: 8px; /* Bordes más redondeados */
+    -fx-cursor: hand;
+    /* Sombra suave para efecto de elevación */
+    -fx-effect: dropshadow(gaussian, rgba(106, 90, 205, 0.3), 8, 0.0, 0, 2);
+    -fx-transition: all 0.3s ease; /* Transición suave al pasar el mouse */
+}
+
+.primary-button:hover {
+    -fx-background-color: linear-gradient(to right, #5848b8, #6a5acd);
+    -fx-effect: dropshadow(gaussian, rgba(106, 90, 205, 0.4), 10, 0.0, 0, 3);
+    -fx-translate-y: -1px; /* Efecto de "levantarse" ligeramente */
+}
+
+.primary-button:pressed {
+    -fx-background-color: #4a3a9c;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 4, 0.0, 0, 1);
+    -fx-translate-y: 1px; /* Efecto de "hundirse" al hacer clic */
+}
+
+/* --- BOTÓN DE BÚSQUEDA AZUL FUERTE (Ej. Buscar ISBN) --- */
+/* Aplicamos este estilo al botón que está al lado del ISBN */
+.search-action-button {
+    -fx-background-color: #1E90FF; /* Azul vibrante */
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 10px 15px;
+    -fx-background-radius: 8px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(30, 144, 255, 0.3), 6, 0.0, 0, 2);
+}
+
+.search-action-button:hover {
+    -fx-background-color: #187bcd;
+    -fx-effect: dropshadow(gaussian, rgba(30, 144, 255, 0.4), 8, 0.0, 0, 3);
+}
+
+/* --- BOTÓN SECUNDARIO AZUL CLARO (Ej. Generar, Editar en tabla) --- */
+.secondary-button {
+    -fx-background-color: #e6f0ff; /* Fondo azul muy claro */
+    -fx-text-fill: #1E90FF;        /* Texto azul fuerte */
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 10px 15px;
+    -fx-background-radius: 8px;
+    -fx-border-color: #b3d7ff;     /* Borde azul claro */
+    -fx-border-radius: 8px;
+    -fx-cursor: hand;
+    -fx-transition: all 0.2s ease;
+}
+
+.secondary-button:hover {
+    -fx-background-color: #d0e5ff;
+    -fx-border-color: #1E90FF; /* El borde se vuelve del color del texto */
+}
+
+/* --- BOTÓN DE CANCELAR SUTIL (Gris) --- */
+.secondary-button-light {
+    -fx-background-color: transparent;
+    -fx-text-fill: #7f8c8d; /* Gris */
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 10px 20px;
+    -fx-border-color: #bdc3c7;
+    -fx-border-radius: 8px;
+    -fx-cursor: hand;
+}
+
+.secondary-button-light:hover {
+    -fx-background-color: #f5f7fa;
+    -fx-text-fill: #34495e;
+    -fx-border-color: #a0aeb7;
+}
+/* --- ESTILO PARA EL CONTENEDOR PRINCIPAL TIPO "TARJETA" --- */
+.content-card {
+    -fx-background-color: white; /* Fondo blanco puro */
+    -fx-background-radius: 12px; /* Esquinas redondeadas */
+    -fx-border-radius: 12px;
+    -fx-padding: 25px;          /* Espacio interno alrededor del contenido */
+    /* Sombra suave y moderna */
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.05), 15, 0.0, 0, 3);
+    /* Borde muy sutil opcional */
+    -fx-border-color: #f0f2f5;
+    -fx-border-width: 1px;
+}
+
+/* Ajuste para el contenedor de la tabla dentro de la tarjeta */
+.content-card .table-view {
+    /* Quitamos el borde predeterminado de la tabla para que se integre mejor */
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+    /* Opcional: quitar el header de la tabla si quieres un diseño más limpio */
+    /* -fx-table-header-border-color: transparent; */
+}
+/* --- DISEÑO MODERNO DE TABLA --- */
+.table-view {
+    -fx-background-color: transparent;
+    -fx-padding: 20; /* Espacio alrededor */
+}
+
+/* Cabecera (Header) */
+.table-view .column-header-background {
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header {
+    -fx-background-color: #2c3e50; /* Azul oscuro elegante */
+    -fx-size: 45px;
+    -fx-border-color: transparent;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 13px;
+    -fx-alignment: center-left;
+}
+
+/* Filas (Rows) */
+.table-row-cell {
+    -fx-background-color: white;
+    -fx-border-color: transparent transparent #e0e0e0 transparent; /* Línea gris suave abajo */
+    -fx-padding: 5px 0; /* Espacio vertical para que no se vea apretado */
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #f8f9fa; /* Gris muy claro para filas impares */
+}
+
+.table-row-cell:hover {
+    -fx-background-color: #e8f4fd; /* Azul muy suave al pasar el mouse */
+    -fx-cursor: hand;
+}
+
+/* Celdas generales */
+.table-cell {
+    -fx-alignment: center-left;
+    -fx-text-fill: #555;
+    -fx-font-size: 14px;
+}
+
+/* --- ESTILO PARA BOTONES DE ACCIONES --- */
+/* Estas clases las usamos en el código Java del paso 3 */
+
+.action-button {
+    -fx-background-color: white;
+    -fx-background-radius: 50%; /* Redondos */
+    -fx-border-radius: 50%;
+    -fx-border-color: #ddd;
+    -fx-min-width: 32px;
+    -fx-min-height: 32px;
+    -fx-max-width: 32px;
+    -fx-max-height: 32px;
+    -fx-padding: 0;
+    -fx-alignment: center;
+    -fx-cursor: hand;
+}
+
+.action-button:hover {
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 3, 0, 0, 1);
+}
+
+/* Colores al pasar el mouse */
+.btn-ver:hover { -fx-background-color: #3498db; -fx-border-color: #3498db; }
+.btn-ver:hover .glyph-icon { -fx-text-fill: white; }
+
+.btn-editar:hover { -fx-background-color: #f1c40f; -fx-border-color: #f1c40f; }
+.btn-editar:hover .glyph-icon { -fx-text-fill: white; }
+
+.btn-eliminar:hover { -fx-background-color: #e74c3c; -fx-border-color: #e74c3c; }
+.btn-eliminar:hover .glyph-icon { -fx-text-fill: white; }
+
+/* Iconos por defecto */
+.glyph-icon {
+    -fx-text-fill: #777;
+    -fx-font-size: 14px;
+}
+/* --- ARREGLAR FONDO NEGRO SOBRANTE --- */
+/* Esto quita el color oscuro de las zonas vacías de la tabla */
+.table-view .filler,
+.table-view .column-header-background {
+    -fx-background-color: transparent;
+}
+
+/* --- NUEVA COLUMNA DE INVENTARIO (Estilo Badge/Pastilla) --- */
+.stock-badge {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 11px;
+    -fx-background-radius: 15px; /* Bordes redondos */
+    -fx-padding: 3 10 3 10;
+    -fx-alignment: center;
+    -fx-min-width: 80px;
+}
+
+/* Colores según disponibilidad */
+.stock-alto { -fx-background-color: #2ecc71; } /* Verde moderno */
+.stock-bajo { -fx-background-color: #f1c40f; } /* Amarillo alerta */
+.stock-agotado { -fx-background-color: #e74c3c; } /* Rojo error */
+
+
+/* =========================================
+   ESTILOS PARA FORMULARIOS MODALES (CLEAN)
+   ========================================= */
+
+/* Título superior (Ej. "Datos de la Categoría") */
+.dialog-title {
+    -fx-font-family: "Segoe UI", sans-serif;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #546e7a; /* Gris azulado elegante */
+}
+
+/* Etiquetas de los campos */
+.form-label {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #34495e;
+    -fx-padding: 0 0 2 0;
+}
+
+/* Campos de Texto (TextField y TextArea) */
+.form-field, .text-field, .text-area {
+    -fx-background-color: #f9fbfd; /* Fondo muy sutil (no blanco puro) */
+    -fx-border-color: #dce4ec;     /* Borde gris suave */
+    -fx-border-radius: 6px;
+    -fx-background-radius: 6px;
+    -fx-padding: 10px;             /* Padding interno cómodo */
+    -fx-font-size: 14px;
+    -fx-text-fill: #333333;
+}
+
+/* Al pasar el mouse por el campo */
+.form-field:hover, .text-field:hover, .text-area:hover {
+    -fx-border-color: #b0bec5;
+    -fx-background-color: #f0f4f8;
+}
+
+/* ESTADO DE FOCO (Cuando escribes) - EL EFECTO AZUL/VIOLETA */
+.form-field:focused, .text-field:focused, .text-area:focused {
+    -fx-background-color: #ffffff;
+    /* Aquí definimos el color del borde al hacer clic.
+       Uso el violeta de tu tema (#6a5acd) o si prefieres el azul de la imagen usa #1E90FF */
+    -fx-border-color: #6a5acd;
+    -fx-border-width: 2px;
+
+    /* Sombra suave "Glow" */
+    -fx-effect: dropshadow(gaussian, rgba(106, 90, 205, 0.25), 8, 0.0, 0, 1);
+}
+
+/* Eliminar el borde extra que JavaFX pone a veces en los TextArea */
+.text-area:focused .content {
+    -fx-background-color: transparent;
+}
+.text-area .content {
+    -fx-background-color: transparent;
+}
+
+/* --- BOTONES (Del CSS que me pasaste) --- */
+
+/* Botón Guardar (Sólido) */
+.primary-button {
+    -fx-background-color: #6a5acd; /* Violeta */
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-padding: 8px 25px;         /* Más ancho */
+    -fx-background-radius: 6px;
+    -fx-cursor: hand;
+}
+.primary-button:hover {
+    -fx-background-color: #5848b8;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 5, 0, 0, 1);
+}
+
+/* Botón Cancelar (Sutil/Outline) */
+.secondary-button-light {
+    -fx-background-color: #f2f2f2;
+    -fx-text-fill: #555555;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-padding: 8px 20px;
+    -fx-background-radius: 6px;
+    -fx-cursor: hand;
+    -fx-border-color: #dcdcdc;
+    -fx-border-radius: 6px;
+}
+.secondary-button-light:hover {
+    -fx-background-color: #e0e0e0;
+    -fx-text-fill: #333;
+}
+/* --- FONDO GENERAL --- */
+.root-pane {
+    -fx-background-color: #f4f6f8; /* Gris azulado muy suave */
+}
+
+/* --- TÍTULOS DE PÁGINA --- */
+.page-title {
+    -fx-font-family: "Segoe UI", sans-serif;
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50;
+}
+.page-subtitle {
+    -fx-font-family: "Segoe UI", sans-serif;
+    -fx-font-size: 14px;
+    -fx-text-fill: #7f8c8d;
+}
+
+/* === EL CONTENEDOR BLANCO PRINCIPAL === */
+.content-card {
+    -fx-background-color: white;
+    -fx-background-radius: 12px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 10, 0, 0, 3); /* Sombra suave */
+    -fx-padding: 20px;
+    -fx-border-color: #eaeff2;
+    -fx-border-width: 1px;
+    -fx-border-radius: 12px;
+}
+
+/* --- TARJETAS INDIVIDUALES (Mejoradas) --- */
+.category-card {
+    -fx-background-color: white;
+    -fx-border-color: #e0e0e0;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-padding: 15px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.02), 5, 0, 0, 1);
+    -fx-min-width: 280px;
+}
+
+.category-card:hover {
+    -fx-border-color: #6a5acd; /* Borde violeta al pasar el mouse */
+    -fx-effect: dropshadow(gaussian, rgba(106, 90, 205, 0.15), 10, 0, 0, 2);
+}
+
+/* Tipografía de las tarjetas */
+.card-category-title {
+    -fx-font-family: "Segoe UI", sans-serif;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #34495e;
+}
+.card-category-description {
+    -fx-font-family: "Segoe UI", sans-serif;
+    -fx-font-size: 13px;
+    -fx-text-fill: #7f8c8d; /* Gris suave */
+    -fx-line-spacing: 2px;
+}
+
+/* --- PAGINACIÓN --- */
+.pagination-bar {
+    -fx-padding: 10px 0 0 0;
+    -fx-border-color: #eee;
+    -fx-border-width: 1px 0 0 0; /* Línea separadora arriba */
+}
+
+.pagination-label {
+    -fx-font-weight: bold;
+    -fx-text-fill: #555;
+}
+
+.pagination-button {
+    -fx-background-color: white;
+    -fx-border-color: #ddd;
+    -fx-border-radius: 4px;
+    -fx-text-fill: #555;
+    -fx-cursor: hand;
+    -fx-padding: 5px 12px;
+}
+.pagination-button:hover {
+    -fx-background-color: #f0f0f0;
+    -fx-border-color: #bbb;
+}
+.pagination-button:disabled {
+    -fx-opacity: 0.5;
+}

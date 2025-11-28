@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import org.controlsfx.glyphfont.*?>
+
+<BorderPane fx:id="mainRoot" prefHeight="800.0" prefWidth="1200.0" stylesheets="@/css/styles.css" styleClass="root-pane" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pe.edu.upeu.syslibrary.controller.MainguiController">
+
+    <left>
+        <VBox fx:id="sidebar" prefHeight="800.0" prefWidth="255.0" styleClass="sidebar">
+
+            <Label alignment="CENTER_LEFT" prefHeight="113.0" prefWidth="255.0" styleClass="logo-text-sidebar">
+                <graphic>
+                    <ImageView fitHeight="40" fitWidth="40">
+                        <image><Image url="@/icons/logo.png" /></image>
+                    </ImageView>
+                </graphic>
+                <text>LIBRARY</text>
+                <VBox.margin><Insets bottom="30.0" left="20.0" top="30.0" /></VBox.margin>
+                <font><Font name="Eras Bold ITC" size="35.0" /></font>
+            </Label>
+
+            <Button fx:id="btnDashboard" onAction="#showDashboard" styleClass="sidebar-button" text="  Panel Principal">
+                <graphic>
+                    <ImageView fx:id="panelprincipalIcon" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                        <image><Image url="@/icons/home.png" /></image>
+                    </ImageView>
+                </graphic>
+            </Button>
+
+            <Button fx:id="btnLibros" onAction="#showLibros" styleClass="sidebar-button" text="  Libros">
+                <graphic>
+                    <ImageView fx:id="LibroIcon" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                        <image><Image url="@/icons/libro.png" /></image>
+                    </ImageView>
+                </graphic>
+            </Button>
+
+            <Button fx:id="btnCategorias" onAction="#showCategories" styleClass="sidebar-button">
+                <graphic><Glyph fontFamily="FontAwesome" icon="TAGS" styleClass="sidebar-icon" /></graphic>
+                <text>  Categorías</text>
+            </Button>
+
+            <Button fx:id="btnEjemplares" onAction="#showExemplars" styleClass="sidebar-button">
+                <graphic><Glyph fontFamily="FontAwesome" icon="BARCODE" styleClass="sidebar-icon" /></graphic>
+                <text>  Ejemplares</text>
+            </Button>
+
+            <Button fx:id="btnPrestamos" onAction="#showIssueBook" styleClass="sidebar-button">
+                <graphic><Glyph fontFamily="FontAwesome" icon="SHARE" styleClass="sidebar-icon" /></graphic>
+                <text>  Préstamos</text>
+            </Button>
+
+            <Button fx:id="btnDevoluciones" onAction="#showReturnBooks" styleClass="sidebar-button">
+                <graphic><Glyph fontFamily="FontAwesome" icon="RETWEET" styleClass="sidebar-icon" /></graphic>
+                <text>  Devoluciones</text>
+            </Button>
+
+            <Button fx:id="btnEstudiantes" onAction="#showStudents" styleClass="sidebar-button">
+                <graphic><Glyph fontFamily="FontAwesome" icon="GRADUATION_CAP" styleClass="sidebar-icon" /></graphic>
+                <text>  Estudiantes</text>
+            </Button>
+
+            <Button fx:id="btnUsuariosAdmin" onAction="#showAddUser" styleClass="sidebar-button">
+                <graphic><Glyph fontFamily="FontAwesome" icon="USERS" styleClass="sidebar-icon" /></graphic>
+                <text>  Usuarios (Admin)</text>
+            </Button>
+
+            <Button fx:id="btnReportes" onAction="#showReports" styleClass="sidebar-button">
+                <graphic><Glyph fontFamily="FontAwesome" icon="FILE_TEXT_ALT" styleClass="sidebar-icon" /></graphic>
+                <text>  Reportes</text>
+            </Button>
+
+            <Button fx:id="btnConfiguracion" onAction="#showSettings" styleClass="sidebar-button">
+                <graphic><Glyph fontFamily="FontAwesome" icon="COG" styleClass="sidebar-icon" /></graphic>
+                <text>  Configuración</text>
+            </Button>
+
+            <Region VBox.vgrow="ALWAYS" />
+
+            <Button onAction="#handleLogout" styleClass="sidebar-button-logout">
+                <graphic><Glyph fontFamily="FontAwesome" icon="SIGN_OUT" styleClass="sidebar-icon-logout" /></graphic>
+                <text>  Cerrar Sesión</text>
+                <VBox.margin><Insets bottom="20.0" /></VBox.margin>
+            </Button>
+        </VBox>
+    </left>
+
+    <center>
+        <VBox fx:id="contentArea" styleClass="content-area">
+
+            <HBox alignment="CENTER_LEFT" prefHeight="60.0" spacing="15" styleClass="content-header">
+                <padding><Insets left="10" right="20" /></padding>
+
+                <Button fx:id="sidebarToggleButton" onAction="#toggleSidebar" style="-fx-background-color: transparent; -fx-cursor: hand;">
+                    <graphic>
+                        <ImageView fx:id="sidebarToggleIcon" fitHeight="20" fitWidth="20">
+                            <image><Image url="@/icons/Menu.png" /></image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+
+                <Label fx:id="lblPageTitle" styleClass="page-header-title" text="Panel Principal" />
+
+                <HBox fx:id="searchBarContainer" alignment="CENTER" prefHeight="35" prefWidth="350" styleClass="search-bar-container">
+                    <Button style="-fx-background-color: transparent;" styleClass="search-icon-button">
+                        <graphic><Glyph fontFamily="FontAwesome" icon="SEARCH" styleClass="search-icon" /></graphic>
+                    </Button>
+                    <TextField promptText="Buscar en el sistema..." styleClass="search-field" HBox.hgrow="ALWAYS" />
+                </HBox>
+
+                <Region HBox.hgrow="ALWAYS" />
+
+                <Separator orientation="VERTICAL" />
+
+                <HBox alignment="CENTER_RIGHT" spacing="10" styleClass="user-profile-area">
+                    <Label styleClass="avatar-icon">
+                        <graphic><Glyph fontFamily="FontAwesome" icon="USER" styleClass="avatar-glyph" /></graphic>
+                    </Label>
+
+                    <VBox alignment="CENTER_LEFT">
+                        <Label style="-fx-font-size: 10px; -fx-text-fill: #999;" text="Bienvenido," />
+                        <Label fx:id="lblUserGreeting" style="-fx-font-weight: bold; -fx-text-fill: #555;" />
+                    </VBox>
+                </HBox>
+            </HBox>
+
+            <VBox VBox.vgrow="ALWAYS">
+            </VBox>
+        </VBox>
+    </center>
+</BorderPane>

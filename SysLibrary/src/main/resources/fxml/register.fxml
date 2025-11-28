@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="700.0" prefWidth="450.0" styleClass="root-glass-login" stylesheets="@/css/userAuth/login.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pe.edu.upeu.syslibrary.controller.LoginController">
+    <padding>
+        <Insets bottom="20.0" left="30.0" right="30.0" top="20.0" />
+    </padding>
+    <children>
+
+        <VBox alignment="TOP_CENTER" layoutX="45.0" layoutY="50.0" prefHeight="600.0" prefWidth="360.0" spacing="15.0" styleClass="glass-pane" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="45.0" AnchorPane.rightAnchor="45.0" AnchorPane.topAnchor="50.0">
+            <padding>
+                <Insets bottom="20.0" left="30.0" right="30.0" top="20.0" />
+            </padding>
+            <children>
+
+                <VBox alignment="CENTER" spacing="10.0">
+                    <children>
+                        <FontAwesomeIconView fill="WHITE" glyphName="USER_PLUS" size="4em" />
+                        <Label style="-fx-font-size: 1.5em; -fx-font-weight: bold;" text="Crear Cuenta" textFill="WHITE" />
+                    </children>
+                    <VBox.margin>
+                        <Insets bottom="10.0" />
+                    </VBox.margin>
+                </VBox>
+
+                <VBox spacing="15.0">
+                    <children>
+                        <HBox alignment="CENTER_LEFT" spacing="10.0" styleClass="input-group">
+                            <FontAwesomeIconView fill="WHITE" glyphName="USER_CIRCLE" size="1.2em" styleClass="input-icon" />
+                            <TextField fx:id="txtNombreReg" promptText="Nombre(s)" styleClass="text-field-glass" HBox.hgrow="ALWAYS" />
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" spacing="10.0" styleClass="input-group">
+                            <FontAwesomeIconView fill="WHITE" glyphName="USER_CIRCLE_ALT" size="1.2em" styleClass="input-icon" />
+                            <TextField fx:id="txtApellidoReg" promptText="Apellido(s)" styleClass="text-field-glass" HBox.hgrow="ALWAYS" />
+                        </HBox>
+
+                        <!-- NUEVO: Selector de Rol -->
+                        <HBox alignment="CENTER_LEFT" spacing="10.0" styleClass="input-group">
+                            <FontAwesomeIconView fill="WHITE" glyphName="ID_BADGE" size="1.2em" styleClass="input-icon" />
+                            <ComboBox fx:id="cbxRolReg" maxWidth="Infinity" promptText="Seleccione Rol" styleClass="combo-box-glass" HBox.hgrow="ALWAYS" />
+                        </HBox>
+
+                        <HBox alignment="CENTER_LEFT" spacing="10.0" styleClass="input-group">
+                            <FontAwesomeIconView fill="WHITE" glyphName="ENVELOPE" size="1.2em" styleClass="input-icon" />
+                            <TextField fx:id="txtEmailReg" promptText="Email Institucional" styleClass="text-field-glass" HBox.hgrow="ALWAYS" />
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" spacing="10.0" styleClass="input-group">
+                            <FontAwesomeIconView fill="WHITE" glyphName="LOCK" size="1.2em" styleClass="input-icon" />
+                            <PasswordField fx:id="txtClaveReg" promptText="Contraseña" styleClass="text-field-glass" HBox.hgrow="ALWAYS" />
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" spacing="10.0" styleClass="input-group">
+                            <FontAwesomeIconView fill="WHITE" glyphName="LOCK" size="1.2em" styleClass="input-icon" />
+                            <PasswordField fx:id="txtConfirmClaveReg" promptText="Confirmar Contraseña" styleClass="text-field-glass" HBox.hgrow="ALWAYS" />
+                        </HBox>
+                    </children>
+                </VBox>
+
+                <Label fx:id="lblStatusReg" alignment="CENTER" maxWidth="Infinity" style="-fx-font-weight: bold;" wrapText="true" />
+
+                <Region VBox.vgrow="ALWAYS" />
+
+                <VBox spacing="10.0">
+                    <children>
+                        <Button maxWidth="Infinity" onAction="#handleRegister" styleClass="button-solid-primary" text="Registrarse" />
+                        <Hyperlink alignment="CENTER" maxWidth="Infinity" onAction="#redirectToLogin" styleClass="hyperlink-light" text="¿Ya tienes cuenta? Inicia sesión aquí" />
+                        <Button maxWidth="Infinity" onAction="#cerrar" styleClass="btn-cerrar-app" text="Cerrar" />
+                    </children>
+                </VBox>
+
+            </children>
+        </VBox>
+
+    </children>
+</AnchorPane>

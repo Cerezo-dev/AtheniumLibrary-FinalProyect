@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="450.0" styleClass="root-glass-login" stylesheets="@/css/userAuth/login.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pe.edu.upeu.syslibrary.controller.student.StudentLoginController">
+    <children>
+
+        <VBox alignment="TOP_CENTER" layoutX="45.0" layoutY="50.0" prefHeight="500.0" prefWidth="360.0" spacing="20.0" styleClass="glass-pane" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="45.0" AnchorPane.rightAnchor="45.0" AnchorPane.topAnchor="50.0">
+            <padding>
+                <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+            </padding>
+            <children>
+
+                <VBox alignment="CENTER" spacing="10.0">
+                    <children>
+                        <FontAwesomeIconView fill="#a5d6a7" glyphName="GRADUATION_CAP" size="5em" />
+                        <Label style="-fx-font-size: 1.8em; -fx-font-weight: bold;" text="Portal Estudiante" textFill="WHITE" />
+                        <Label style="-fx-font-size: 0.9em;" text="Acceso a Biblioteca Virtual" textFill="#e0e0e0" />
+                    </children>
+                    <VBox.margin>
+                        <Insets bottom="20.0" />
+                    </VBox.margin>
+                </VBox>
+
+                <VBox spacing="25.0">
+                    <children>
+                        <HBox alignment="CENTER_LEFT" spacing="10.0" styleClass="input-group">
+                            <children>
+                                <FontAwesomeIconView fill="WHITE" glyphName="GOOGLE" size="1.2em" styleClass="input-icon" />
+                                <TextField fx:id="txtEmailStudent" promptText="Gmail Institucional" styleClass="text-field-glass" HBox.hgrow="ALWAYS" />
+                            </children>
+                        </HBox>
+
+                        <HBox alignment="CENTER_LEFT" spacing="10.0" styleClass="input-group">
+                            <children>
+                                <FontAwesomeIconView fill="WHITE" glyphName="BARCODE" size="1.2em" styleClass="input-icon" />
+                                <PasswordField fx:id="txtCodigoStudent" promptText="Código (Ej. 202512417)" styleClass="text-field-glass" HBox.hgrow="ALWAYS" />
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+
+                <Label fx:id="lblStatus" alignment="CENTER" maxWidth="Infinity" style="-fx-font-weight: bold;" wrapText="true" />
+
+                <Region VBox.vgrow="ALWAYS" />
+
+                <VBox spacing="15.0">
+                    <children>
+                        <Button maxWidth="Infinity" onAction="#handleStudentLogin" style="-fx-background-color: #2ecc71; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 8; -fx-cursor: hand;" text="Ingresar al Campus" />
+
+                        <Hyperlink alignment="CENTER" maxWidth="Infinity" onAction="#handleStudentRegister" styleClass="hyperlink-light" style="-fx-text-fill: #a5d6a7;" text="¿Eres nuevo? Regístrate aquí" />
+
+                        <Hyperlink alignment="CENTER" maxWidth="Infinity" onAction="#goBackToAdmin" styleClass="hyperlink-light" text="← Soy Administrativo" />
+                    </children>
+                </VBox>
+
+            </children>
+        </VBox>
+
+    </children>
+</AnchorPane>

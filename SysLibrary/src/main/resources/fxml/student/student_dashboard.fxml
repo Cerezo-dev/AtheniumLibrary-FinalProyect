@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import org.controlsfx.glyphfont.*?>
+
+<BorderPane prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: #f0f2f5;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pe.edu.upeu.syslibrary.controller.student.StudentDashboardController">
+
+    <!-- TOP BAR (Navegación Horizontal) -->
+    <top>
+        <HBox alignment="CENTER_LEFT" spacing="20.0" style="-fx-background-color: white; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 5, 0, 0, 2); -fx-padding: 10 30;">
+            <Label style="-fx-font-weight: bold; -fx-font-size: 20px; -fx-text-fill: #2ecc71;" text="no ser que poner xD" />
+
+            <Region HBox.hgrow="ALWAYS" />
+
+            <Button style="-fx-background-color: transparent; -fx-font-weight: bold; -fx-text-fill: #555;" text="Catálogo" />
+            <Button style="-fx-background-color: transparent; -fx-font-weight: bold; -fx-text-fill: #555;" text="Mis Préstamos" />
+            <Button style="-fx-background-color: transparent; -fx-font-weight: bold; -fx-text-fill: #555;" text="Favoritos" />
+
+            <Separator orientation="VERTICAL" />
+
+            <HBox alignment="CENTER" spacing="10.0">
+                <Label fx:id="lblStudentName" style="-fx-font-weight: bold;" text="Estudiante" />
+                <Button onAction="#logout" style="-fx-background-color: #ffebee; -fx-text-fill: #e74c3c; -fx-background-radius: 20;">
+                    <graphic><Glyph fontFamily="FontAwesome" icon="SIGN_OUT" /></graphic>
+                </Button>
+            </HBox>
+        </HBox>
+    </top>
+
+    <!-- CONTENIDO CENTRAL (Catálogo Visual) -->
+    <center>
+        <ScrollPane fitToWidth="true" style="-fx-background-color: transparent;">
+            <content>
+                <VBox spacing="30.0">
+                    <padding><Insets bottom="30" left="50" right="50" top="30" /></padding>
+
+                    <!-- Banner de Bienvenida -->
+                    <VBox style="-fx-background-color: linear-gradient(to right, #2ecc71, #27ae60); -fx-background-radius: 15; -fx-padding: 40;">
+                        <Label style="-fx-text-fill: white; -fx-font-size: 28px; -fx-font-weight: bold;" text="Explora el conocimiento" />
+                        <Label style="-fx-text-fill: white; -fx-font-size: 16px;" text="Busca libros, reserva ejemplares y gestiona tus préstamos." />
+                        <HBox style="-fx-padding: 20 0 0 0;">
+                            <TextField fx:id="txtSearch" promptText="¿Qué quieres leer hoy?"
+                                       style="-fx-background-radius: 20 0 0 20; -fx-padding: 10 20; -fx-pref-width: 300;"
+                                       onAction="#handleSearch"/>
+                            <Button onAction="#handleSearch" style="-fx-background-color: #2c3e50; -fx-text-fill: white; -fx-background-radius: 0 20 20 0; -fx-padding: 10 20;" text="Buscar" />
+                        </HBox>
+                    </VBox>
+
+                    <!-- Sección Novedades -->
+                    <Label style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #333;" text="Novedades en Biblioteca" />
+
+                    <FlowPane fx:id="booksContainer" hgap="20" vgap="20">
+                        <!-- Aquí se inyectarán las tarjetas de libros dinámicamente -->
+                        <!-- Ejemplo Estático -->
+                        <VBox style="-fx-background-color: white; -fx-background-radius: 10; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.05), 5, 0, 0, 2); -fx-padding: 10; -fx-pref-width: 180;">
+                            <StackPane style="-fx-background-color: #eee; -fx-pref-height: 220;">
+                                <Label text="Portada" textFill="#999" />
+                            </StackPane>
+                            <Label style="-fx-font-weight: bold; -fx-padding: 10 0 0 0;" text="Clean Code" wrapText="true" />
+                            <Label style="-fx-text-fill: #777; -fx-font-size: 12px;" text="Robert C. Martin" />
+                            <Button maxWidth="Infinity" style="-fx-background-color: #e8f5e9; -fx-text-fill: #2ecc71; -fx-background-radius: 5; -fx-margin: 10 0 0 0;" text="Ver Detalle" />
+                        </VBox>
+                    </FlowPane>
+
+                </VBox>
+            </content>
+        </ScrollPane>
+    </center>
+
+</BorderPane>

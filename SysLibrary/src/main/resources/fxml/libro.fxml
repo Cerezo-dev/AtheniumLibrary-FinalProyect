@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import org.controlsfx.glyphfont.*?>
+
+<VBox alignment="TOP_LEFT" spacing="20.0" styleClass="view-container" stylesheets="@/css/styles.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pe.edu.upeu.syslibrary.controller.LibroController">
+
+    <padding>
+        <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+    </padding>
+
+    <VBox spacing="25.0" styleClass="content-card" VBox.vgrow="ALWAYS">
+
+        <HBox alignment="CENTER_LEFT" spacing="20.0">
+            <VBox>
+                <Label style="-fx-font-size: 22px; -fx-font-weight: 900; -fx-text-fill: #2c3e50;" text="Gestión de Libros" />
+            </VBox>
+
+            <HBox alignment="CENTER_LEFT" maxWidth="450.0" style="-fx-background-color: #f8f9fa; -fx-background-radius: 8; -fx-padding: 8 12;" HBox.hgrow="SOMETIMES">
+                <Glyph fontFamily="FontAwesome" icon="SEARCH" style="-fx-text-fill: #999; -fx-font-size: 14px;">
+                    <HBox.margin>
+                        <Insets right="10.0" />
+                    </HBox.margin>
+                </Glyph>
+                <TextField fx:id="txtSearch" onAction="#handleSearch" prefHeight="38.0" prefWidth="450.0" promptText="Buscar por título, autor o ISBN..." style="-fx-background-color: transparent; -fx-prompt-text-fill: #aaa; -fx-text-fill: #333;" HBox.hgrow="ALWAYS" />
+            </HBox>
+
+            <Region prefHeight="54.0" HBox.hgrow="ALWAYS" />
+
+            <HBox alignment="CENTER_RIGHT" spacing="15.0">
+                <ComboBox fx:id="cmbFiltroCategoria" onAction="#handleFiltrarPorCategoria" prefHeight="36.0" prefWidth="187.0" promptText="Todas las categorías" style="-fx-background-color: #f8f9fa; -fx-background-radius: 8; -fx-border-color: #e9ecef; -fx-border-radius: 8; -fx-padding: 2;" />
+
+                <Button onAction="#handleAbrirFiltrosAvanzados" style="-fx-background-color: #f8f9fa; -fx-text-fill: #555; -fx-font-weight: bold; -fx-background-radius: 8; -fx-border-color: #e9ecef; -fx-border-radius: 8; -fx-padding: 8 15; -fx-cursor: hand;">
+                    <graphic>
+                        <Glyph fontFamily="FontAwesome" icon="FILTER" style="-fx-text-fill: #777;" />
+                    </graphic>
+                    <text> Filtros</text>
+                </Button>
+
+                <Button onAction="#handleNewBook" style="-fx-background-color: #6a5acd; -fx-text-fill: white; -fx-font-weight: 900; -fx-background-radius: 8; -fx-padding: 10 20; -fx-cursor: hand; -fx-effect: dropshadow(gaussian, rgba(106, 90, 205, 0.3), 8, 0, 0, 2);">
+                    <graphic>
+                        <Glyph fontFamily="FontAwesome" icon="PLUS" style="-fx-text-fill: white;" />
+                    </graphic>
+                    <text> Nuevo Libro</text>
+                </Button>
+                <Button onAction="#Refrescar" prefHeight="35.0" prefWidth="114.0" style="-fx-background-color: #f8f9fa; -fx-text-fill: #555; -fx-font-weight: bold; -fx-background-radius: 8; -fx-border-color: #e9ecef; -fx-border-radius: 8; -fx-padding: 8 15; -fx-cursor: hand;" text=" Refrescar">
+                    <graphic>
+                        <Glyph fontFamily="FontAwesome" icon="REFRESH" style="-fx-text-fill: #27ae60;" />
+                    </graphic>
+                    <tooltip>
+                        <Tooltip text="Limpiar todos los filtros y recargar" />
+                    </tooltip>
+                </Button>
+            </HBox>
+        </HBox>
+        <VBox prefHeight="459.0" prefWidth="1126.0" spacing="15.0" VBox.vgrow="ALWAYS">
+            <TableView fx:id="libroTable" prefHeight="400.0" prefWidth="1138.0" style="-fx-background-color: transparent; -fx-base: transparent;" VBox.vgrow="ALWAYS">
+                <columns>
+                    <TableColumn fx:id="colNum" prefWidth="40.0" style="-fx-alignment: CENTER;" text="#" />
+
+                    <TableColumn fx:id="colPortada" prefWidth="70.0" style="-fx-alignment: CENTER;" text="Portada" />
+                    <TableColumn fx:id="colTitulo" prefWidth="220.0" text="Título" />
+                    <TableColumn fx:id="colAutor" prefWidth="160.0" text="Autor" />
+                    <TableColumn fx:id="colCategoria" prefWidth="110.0" text="Categoría" />
+                    <TableColumn fx:id="colAnio" prefWidth="60.0" style="-fx-alignment: CENTER;" text="Año" />
+                    <TableColumn fx:id="colInventario" prefWidth="160.0" text="Inventario" />
+                    <TableColumn fx:id="colEstado" prefWidth="100.0" style="-fx-alignment: CENTER;" text="Estado Físico" />
+                    <TableColumn fx:id="colUbicacion" prefWidth="100.0" text="Ubicación" />
+                    <TableColumn fx:id="colActions" prefWidth="110.0" style="-fx-alignment: CENTER;" text="Acciones" />
+                </columns>
+                <columnResizePolicy>
+                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                </columnResizePolicy>
+            </TableView>
+
+            <HBox alignment="CENTER_RIGHT">
+                <Pagination fx:id="pagination" pageCount="1" style="-fx-page-information-visible: false;" />
+            </HBox>
+        </VBox>
+    </VBox> </VBox>

@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import org.controlsfx.glyphfont.*?>
+
+<ScrollPane fitToWidth="true" styleClass="view-container" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pe.edu.upeu.syslibrary.controller.DashboardController">
+    <content>
+        <VBox spacing="30">
+            <padding>
+                <Insets top="30.0" right="30.0" bottom="30.0" left="30.0" />
+            </padding>
+
+            <HBox spacing="25">
+                <VBox styleClass="white-card" HBox.hgrow="ALWAYS">
+                    <padding><Insets top="20" right="20" bottom="20" left="20"/></padding>
+                    <HBox alignment="CENTER_LEFT" spacing="10">
+                        <VBox>
+                            <Label text="Total Libros" styleClass="card-title-gray"/>
+                            <Label fx:id="lblTotalLibros" text="340" styleClass="card-value-large"/>
+                            <Label text="▲ 50.2%" style="-fx-text-fill: #4CAF50; -fx-font-weight:bold;"/>
+                        </VBox>
+                        <Region HBox.hgrow="ALWAYS"/>
+                        <Label styleClass="icon-container-red">
+                            <graphic><Glyph fontFamily="FontAwesome" icon="TROPHY" /></graphic>
+                        </Label>
+                    </HBox>
+                </VBox>
+
+                <VBox styleClass="white-card" HBox.hgrow="ALWAYS">
+                    <padding><Insets top="20" right="20" bottom="20" left="20"/></padding>
+                    <HBox alignment="CENTER_LEFT" spacing="10">
+                        <VBox>
+                            <Label text="Usuarios" styleClass="card-title-gray"/>
+                            <Label fx:id="lblTotalUsuarios" text="500" styleClass="card-value-large"/>
+                            <Label text="▼ 10.2%" style="-fx-text-fill: #E57373; -fx-font-weight:bold;"/>
+                        </VBox>
+                        <Region HBox.hgrow="ALWAYS"/>
+                        <Label styleClass="icon-container-blue">
+                            <graphic><Glyph fontFamily="FontAwesome" icon="diamond" /></graphic>
+                        </Label>
+                    </HBox>
+                </VBox>
+
+                <VBox styleClass="white-card" HBox.hgrow="ALWAYS">
+                    <padding><Insets top="20" right="20" bottom="20" left="20"/></padding>
+                    <HBox alignment="CENTER_LEFT" spacing="10">
+                        <VBox>
+                            <Label text="Préstamos Activos" styleClass="card-title-gray"/>
+                            <Label fx:id="lblPrestamosActivos" text="750" styleClass="card-value-large"/>
+                            <Label text="- 0.00%" style="-fx-text-fill: #9E9E9E; -fx-font-weight:bold;"/>
+                        </VBox>
+                        <Region HBox.hgrow="ALWAYS"/>
+                        <Label styleClass="icon-container-green">
+                            <graphic><Glyph fontFamily="FontAwesome" icon="leaf" /></graphic>
+                        </Label>
+                    </HBox>
+                </VBox>
+
+                <VBox styleClass="white-card" HBox.hgrow="ALWAYS">
+                    <padding><Insets top="20" right="20" bottom="20" left="20"/></padding>
+                    <HBox alignment="CENTER_LEFT" spacing="10">
+                        <VBox>
+                            <Label text="Ejemplares Disp." styleClass="card-title-gray"/>
+                            <Label fx:id="lblEjemplaresDisp" text="250" styleClass="card-value-large"/>
+                            <Label text="▲ 6.2%" style="-fx-text-fill: #4CAF50; -fx-font-weight:bold;"/>
+                        </VBox>
+                        <Region HBox.hgrow="ALWAYS"/>
+                        <Label styleClass="icon-container-gray">
+                            <graphic><Glyph fontFamily="FontAwesome" icon="shopping_cart" /></graphic>
+                        </Label>
+                    </HBox>
+                </VBox>
+            </HBox>
+
+            <GridPane hgap="30" vgap="30">
+                <columnConstraints>
+                    <ColumnConstraints percentWidth="70.0" />
+                    <ColumnConstraints percentWidth="30.0" />
+                </columnConstraints>
+                <rowConstraints>
+                    <RowConstraints vgrow="SOMETIMES" />
+                    <RowConstraints vgrow="SOMETIMES" />
+                </rowConstraints>
+
+                <VBox styleClass="white-card" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                    <padding><Insets top="20" right="20" bottom="20" left="20"/></padding>
+                    <HBox alignment="CENTER_LEFT">
+                        <Label text="Total points" styleClass="section-title"/>
+                        <Region HBox.hgrow="ALWAYS"/>
+                        <Button text="Export" styleClass="small-button"/>
+                    </HBox>
+
+                    <LineChart fx:id="chartPuntos" minHeight="300" createSymbols="false">
+                        <xAxis><CategoryAxis label="Meses"/></xAxis>
+                        <yAxis><NumberAxis label="Puntos"/></yAxis>
+                    </LineChart>
+                </VBox>
+
+                <VBox styleClass="white-card" GridPane.columnIndex="1" GridPane.rowIndex="0" GridPane.rowSpan="2">
+                    <padding><Insets top="20" right="20" bottom="20" left="20"/></padding>
+                    <HBox alignment="CENTER_LEFT">
+                        <Label text="Team Invoice" styleClass="section-title"/>
+                        <Region HBox.hgrow="ALWAYS"/>
+                        <Button style="-fx-background-color:transparent;"><graphic><Glyph fontFamily="FontAwesome" icon="ELLIPSIS_H"/></graphic></Button>
+                    </HBox>
+
+                    <VBox spacing="15" VBox.vgrow="ALWAYS">
+                        <padding><Insets top="20" right="0" bottom="0" left="0"/></padding>
+
+                        <HBox alignment="CENTER_LEFT" spacing="10">
+                            <Label styleClass="avatar-circle-small"><graphic><Glyph fontFamily="FontAwesome" icon="USER"/></graphic></Label>
+                            <VBox><Label text="John Doe" style="-fx-font-weight:bold;"/><Label text="07:00 AM" style="-fx-text-fill:#999;"/></VBox>
+                            <Region HBox.hgrow="ALWAYS"/>
+                            <VBox alignment="CENTER_RIGHT"><Label text="\$650" style="-fx-font-weight:bold;"/><Label text="Paid" style="-fx-text-fill:green; -fx-font-size:10;"/></VBox>
+                        </HBox>
+
+                        <HBox alignment="CENTER_LEFT" spacing="10">
+                            <Label styleClass="avatar-circle-small"><graphic><Glyph fontFamily="FontAwesome" icon="USER"/></graphic></Label>
+                            <VBox><Label text="Silvia Doe" style="-fx-font-weight:bold;"/><Label text="11:30 AM" style="-fx-text-fill:#999;"/></VBox>
+                            <Region HBox.hgrow="ALWAYS"/>
+                            <VBox alignment="CENTER_RIGHT"><Label text="\$700" style="-fx-font-weight:bold;"/><Label text="Pending" style="-fx-text-fill:blue; -fx-font-size:10;"/></VBox>
+                        </HBox>
+
+                        <HBox alignment="CENTER_LEFT" spacing="10">
+                            <Label styleClass="avatar-circle-small"><graphic><Glyph fontFamily="FontAwesome" icon="USER"/></graphic></Label>
+                            <VBox><Label text="Thonia" style="-fx-font-weight:bold;"/><Label text="09:00 AM" style="-fx-text-fill:#999;"/></VBox>
+                            <Region HBox.hgrow="ALWAYS"/>
+                            <VBox alignment="CENTER_RIGHT"><Label text="\$650" style="-fx-font-weight:bold;"/><Label text="Declined" style="-fx-text-fill:red; -fx-font-size:10;"/></VBox>
+                        </HBox>
+
+                        <HBox alignment="CENTER_LEFT" spacing="10">
+                            <Label styleClass="avatar-circle-small"><graphic><Glyph fontFamily="FontAwesome" icon="USER"/></graphic></Label>
+                            <VBox><Label text="Steve Doe" style="-fx-font-weight:bold;"/><Label text="10:00 AM" style="-fx-text-fill:#999;"/></VBox>
+                            <Region HBox.hgrow="ALWAYS"/>
+                            <VBox alignment="CENTER_RIGHT"><Label text="\$455" style="-fx-font-weight:bold;"/><Label text="Paid" style="-fx-text-fill:green; -fx-font-size:10;"/></VBox>
+                        </HBox>
+                    </VBox>
+                </VBox>
+
+                <HBox spacing="20" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                    <VBox spacing="15" minWidth="120">
+                        <HBox styleClass="small-card-green" alignment="CENTER_LEFT" spacing="10">
+                            <padding><Insets top="15" right="15" bottom="15" left="15"/></padding>
+                            <Label text="John" style="-fx-text-fill: #4CAF50"/>
+                            <Region HBox.hgrow="ALWAYS"/>
+                            <Label text="77" style="-fx-font-weight:bold; -fx-text-fill: white; -fx-background-color:#4CAF50; -fx-padding: 5; -fx-background-radius:5;"/>
+                        </HBox>
+                        <HBox styleClass="small-card-blue" alignment="CENTER_LEFT" spacing="10">
+                            <padding><Insets top="15" right="15" bottom="15" left="15"/></padding>
+                            <Label text="Jane" style="-fx-text-fill: #2196F3"/>
+                            <Region HBox.hgrow="ALWAYS"/>
+                            <Label text="77" style="-fx-font-weight:bold; -fx-text-fill: white; -fx-background-color:#2196F3; -fx-padding: 5; -fx-background-radius:5;"/>
+                        </HBox>
+                        <HBox styleClass="small-card-red" alignment="CENTER_LEFT" spacing="10">
+                            <padding><Insets top="15" right="15" bottom="15" left="15"/></padding>
+                            <Label text="Bob" style="-fx-text-fill: #EF5350"/>
+                            <Region HBox.hgrow="ALWAYS"/>
+                            <Label text="77" style="-fx-font-weight:bold; -fx-text-fill: white; -fx-background-color:#EF5350; -fx-padding: 5; -fx-background-radius:5;"/>
+                        </HBox>
+                    </VBox>
+
+                    <VBox styleClass="white-card" HBox.hgrow="ALWAYS">
+                        <padding><Insets top="20" right="20" bottom="20" left="20"/></padding>
+                        <Label text="Usuarios Recientes" styleClass="section-title"/>
+
+                        <GridPane hgap="15" vgap="15">
+                            <padding><Insets top="15" right="0" bottom="0" left="0"/></padding>
+                            <Label text="USERNAME" style="-fx-text-fill:#999; -fx-font-size:10;" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+                            <Label text="CREATED BY" style="-fx-text-fill:#999; -fx-font-size:10;" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+                            <Label text="STATUS" style="-fx-text-fill:#999; -fx-font-size:10;" GridPane.columnIndex="2" GridPane.rowIndex="0"/>
+                            <Label text="LAST UPDATED" style="-fx-text-fill:#999; -fx-font-size:10;" GridPane.columnIndex="3" GridPane.rowIndex="0"/>
+
+                            <Label text="John Doe" style="-fx-font-weight:bold;" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+                            <Label text="Admin" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+                            <Label text="Active" style="-fx-text-fill:green;" GridPane.columnIndex="2" GridPane.rowIndex="1"/>
+                            <Label text="2025/08/22" GridPane.columnIndex="3" GridPane.rowIndex="1"/>
+
+                            <Label text="Silvia" style="-fx-font-weight:bold;" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+                            <Label text="User" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+                            <Label text="Pending" style="-fx-text-fill:blue;" GridPane.columnIndex="2" GridPane.rowIndex="2"/>
+                            <Label text="2025/08/21" GridPane.columnIndex="3" GridPane.rowIndex="2"/>
+
+                            <Label text="Rebecca" style="-fx-font-weight:bold;" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+                            <Label text="Admin" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+                            <Label text="Active" style="-fx-text-fill:green;" GridPane.columnIndex="2" GridPane.rowIndex="3"/>
+                            <Label text="2025/08/23" GridPane.columnIndex="3" GridPane.rowIndex="3"/>
+                        </GridPane>
+                    </VBox>
+                </HBox>
+
+            </GridPane>
+        </VBox>
+    </content>
+</ScrollPane>

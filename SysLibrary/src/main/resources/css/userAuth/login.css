@@ -1,0 +1,214 @@
+/* * Hoja de estilos para el tema "Glassmorphism"
+ * Ruta: /css/Themes/glass/login-style.css
+ */
+
+/* 1. Raíz con Imagen de Fondo */
+.root-glass-login {
+    /* Reemplaza esta URL por una imagen en tu proyecto, ej: url('@/img/login-bg.jpg') */
+    /* Esta imagen de placeholder es oscura y abstracta, ideal para el efecto */
+    -fx-background-image: url("fondo.png");
+    -fx-background-size: cover;
+    -fx-background-position: center;
+}
+
+/* 2. El Panel de Vidrio Difuminado */
+.glass-pane {
+    /* Fondo semitransparente (negro al 30%) */
+    -fx-background-color: rgba(0, 0, 0, 0.3);
+
+    /* Bordes redondeados */
+    -fx-background-radius: 20;
+
+    /* Borde sutil blanco para el "brillo" del vidrio */
+    -fx-border-color: rgba(255, 255, 255, 0.2);
+    -fx-border-width: 1px;
+    -fx-border-radius: 20;
+
+    /* El Efecto de Difuminado */
+    -fx-effect: gaussian(10);
+
+    /* Sombra exterior para dar profundidad */
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 20, 0.1, 0, 10);
+}
+
+/* 3. Estilos de Texto (Legibilidad) */
+.glass-pane .label {
+    -fx-text-fill: white;
+}
+.input-group .label {
+    -fx-text-fill: #CCCCCC; /* Texto más suave para "Username", "Password" */
+}
+
+/* Iconos dentro de los grupos de entrada */
+.input-icon {
+    -fx-fill: white;
+    -fx-opacity: 0.7;
+}
+
+/* 4. Campos de Texto y Contraseña (CORREGIDO) */
+.text-field-glass,
+.text-field-glass .text-field { /* Para PasswordField interno */
+    -fx-background-color: transparent;
+    -fx-border-color: rgba(255, 255, 255, 0.4);
+    -fx-border-width: 0 0 1 0; /* Solo borde inferior */
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-prompt-text-fill: rgba(255, 255, 255, 0.6);
+}
+
+/* 🔵 CORRECCIÓN AQUÍ: Forzamos background transparente al enfocar */
+.text-field-glass:focused,
+.text-field-glass:focused .text-field {
+    -fx-background-color: transparent; /* Evita que se ponga blanco */
+    -fx-border-color: white; /* Borde más brillante al enfocar */
+    -fx-text-fill: white; /* Asegura que el texto siga siendo blanco */
+}
+
+/* 5. Botones */
+.button-solid-primary {
+    -fx-background-color: #007bff; /* Azul sólido para contraste */
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-padding: 12 20;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0, 123, 255, 0.3), 10, 0.4, 0, 5);
+}
+.button-solid-primary:hover {
+    -fx-background-color: #0056b3;
+}
+
+.button-outline-primary {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-border-color: white;
+    -fx-border-width: 2px;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-padding: 12 20;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+.button-outline-primary:hover {
+    -fx-background-color: white;
+    -fx-text-fill: #2e354f;
+}
+
+.button-forget-password {
+    -fx-background-color: transparent;
+    -fx-text-fill: #CCCCCC;
+    -fx-font-weight: bold;
+    -fx-padding: 0;
+    -fx-cursor: hand;
+    -fx-alignment: CENTER_RIGHT;
+}
+.button-forget-password:hover {
+    -fx-underline: true;
+    -fx-text-fill: white;
+}
+
+/* 6. Hyperlink */
+.hyperlink-light {
+    -fx-text-fill: #ADD8E6; /* Azul claro */
+    -fx-underline: false;
+    -fx-font-size: 13px;
+    -fx-cursor: hand;
+}
+.hyperlink-light:hover {
+    -fx-underline: true;
+    -fx-text-fill: white;
+}
+
+/* 7. Botón Cerrar App (Secundario) */
+.btn-cerrar-app {
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-padding: 8 15;
+    -fx-cursor: hand;
+}
+.btn-cerrar-app:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* 8. Mensajes de Estado */
+.label-status-error {
+    -fx-text-fill: #FF8A80; /* Rojo claro */
+}
+.label-status-success {
+    -fx-text-fill: #B9F6CA; /* Verde claro */
+}
+
+/* Toggle (simple) */
+.toggle-button-dark-mode {
+    -fx-background-color: rgba(255, 255, 255, 0.2);
+    -fx-background-radius: 20;
+}
+.toggle-button-dark-mode:selected {
+    -fx-background-color: #007bff;
+}
+
+/* 9. Estilo Glass para ComboBox */
+.combo-box-glass {
+    -fx-background-color: transparent;
+    -fx-border-color: rgba(255, 255, 255, 0.4);
+    -fx-border-width: 0 0 1 0; /* Solo borde inferior, igual que el TextField */
+    -fx-font-size: 14px;
+    -fx-padding: 0 0 3 0; /* Ajuste para alinear texto con los otros campos */
+}
+
+/* Estado Focus y Hover: Borde más brillante */
+.combo-box-glass:focused,
+.combo-box-glass:hover {
+    -fx-border-color: white;
+}
+
+/* El texto seleccionado dentro del combo */
+.combo-box-glass .cell {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-padding: 5 0 5 0; /* Espaciado interno */
+}
+
+/* El texto de "Prompt" (cuando no hay nada seleccionado) */
+.combo-box-glass .list-cell {
+    -fx-prompt-text-fill: rgba(255, 255, 255, 0.6);
+}
+
+/* Botón de la flecha */
+.combo-box-glass .arrow-button {
+    -fx-background-color: transparent;
+}
+
+/* La flecha en sí (triangulito) */
+.combo-box-glass .arrow {
+    -fx-background-color: rgba(255, 255, 255, 0.7); /* Blanco semitransparente */
+    -fx-background-insets: 0;
+    -fx-padding: 3px; /* Tamaño de la flecha */
+}
+
+/* --- LISTA DESPLEGABLE (POPUP) --- */
+/* Es importante darle un fondo oscuro sólido o semi-sólido para que se lea */
+.combo-box-glass .list-view {
+    -fx-background-color: rgba(20, 20, 20, 0.95); /* Fondo casi negro */
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 8, 0, 0, 4);
+}
+
+/* Celdas de la lista desplegable */
+.combo-box-glass .list-view .list-cell {
+    -fx-text-fill: #dddddd; /* Gris claro */
+    -fx-background-color: transparent;
+    -fx-padding: 8 10;
+}
+
+/* Celda al pasar el mouse o seleccionada */
+.combo-box-glass .list-view .list-cell:filled:selected,
+.combo-box-glass .list-view .list-cell:filled:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.2); /* Resaltado */
+    -fx-text-fill: white;
+}

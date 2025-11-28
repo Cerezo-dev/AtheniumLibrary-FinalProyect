@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import org.controlsfx.glyphfont.Glyph?>
+
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.ImageView?>
+<ScrollPane fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" prefHeight="750.0" prefWidth="900.0" style="-fx-background-color: white;" stylesheets="@/css/styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pe.edu.upeu.syslibrary.controller.BookRegistrationController">
+
+    <VBox alignment="TOP_CENTER" spacing="20.0" style="-fx-background-color: white;">
+
+        <padding>
+            <Insets bottom="20.0" left="30.0" right="30.0" top="20.0" />
+        </padding>
+
+        <VBox maxWidth="850.0" spacing="20.0" VBox.vgrow="ALWAYS">
+
+            <Label styleClass="dialog-title" text="Nuevo Libro">
+                <VBox.margin>
+                    <Insets bottom="15.0" />
+                </VBox.margin>
+            </Label>
+
+            <GridPane hgap="30.0" vgap="20.0">
+                <columnConstraints>
+                    <ColumnConstraints hgrow="SOMETIMES" percentWidth="50.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" percentWidth="50.0" />
+                </columnConstraints>
+
+                <VBox spacing="8.0" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                    <Label styleClass="form-label" text="Título *" />
+                    <TextField fx:id="txtTitulo" promptText="Ingrese el título completo" styleClass="form-field" />
+                </VBox>
+                <VBox spacing="8.0" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                    <Label styleClass="form-label" text="Autor *" />
+                    <TextField fx:id="txtAutor" promptText="Nombre del autor" styleClass="form-field" />
+                </VBox>
+
+                <VBox spacing="8.0" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                    <Label styleClass="form-label" text="ISBN" />
+                    <HBox spacing="10.0">
+                        <TextField fx:id="txtISBN" promptText="978-XXXX-XXXX" styleClass="form-field" HBox.hgrow="ALWAYS" />
+                        <Button fx:id="btnBuscarISBN" onAction="#handleSearchISBN" styleClass="search-action-button">
+                            <graphic>
+                                <Glyph fontFamily="FontAwesome" icon="SEARCH" textFill="white" />
+                            </graphic>
+                            <text> Buscar</text>
+                        </Button>
+                    </HBox>
+                </VBox>
+                <VBox spacing="8.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                    <Label styleClass="form-label" text="Categoría *" />
+                    <ComboBox fx:id="cmbCategoria" maxWidth="Infinity" promptText="Seleccionar categoría" styleClass="form-field" />
+                </VBox>
+
+                <VBox spacing="8.0" GridPane.columnIndex="0" GridPane.rowIndex="2">
+                    <Label styleClass="form-label" text="Año" />
+                    <TextField fx:id="txtAnio" promptText="Ej. 2023" styleClass="form-field" />
+                </VBox>
+                <VBox spacing="8.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                    <Label styleClass="form-label" text="Editorial" />
+                    <TextField fx:id="txtEditorial" promptText="Nombre de la editorial" styleClass="form-field" />
+                </VBox>
+
+                <VBox spacing="8.0" GridPane.columnIndex="0" GridPane.rowIndex="3">
+                    <Label styleClass="form-label" text="Cantidad Total *" />
+                    <TextField fx:id="txtNumeroEjemplares" text="1" styleClass="form-field" />
+                </VBox>
+                <VBox spacing="8.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                    <Label styleClass="form-label" text="Cantidad Disponible *" />
+                    <TextField fx:id="txtCantidadDisponible" disable="true" text="1" styleClass="form-field" />
+                </VBox>
+
+                <VBox spacing="8.0" GridPane.columnIndex="0" GridPane.rowIndex="4">
+                    <Label styleClass="form-label" text="Ubicación" />
+                    <TextField fx:id="txtUbicacion" promptText="Ej: Estante A-1" styleClass="form-field" />
+                </VBox>
+                <VBox spacing="8.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                    <Label styleClass="form-label" text="Estado Físico *" />
+                    <ComboBox fx:id="cmbEstadoFisico" maxWidth="Infinity" promptText="Seleccionar estado" styleClass="form-field" />
+                </VBox>
+
+                <VBox spacing="8.0" GridPane.columnIndex="0" GridPane.rowIndex="5">
+                    <Label styleClass="form-label" text="Código de Barras" />
+                    <HBox spacing="10.0">
+                        <TextField fx:id="txtCodigoBarras" promptText="LIB123..." styleClass="form-field" HBox.hgrow="ALWAYS" />
+                        <Button onAction="#handleGenerateBarcode" styleClass="secondary-button" text="Generar">
+                            <graphic>
+                                <Glyph fontFamily="FontAwesome" icon="BARCODE" />
+                            </graphic>
+                        </Button>
+                    </HBox>
+                </VBox>
+                <VBox spacing="8.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                    <Label styleClass="form-label" text="Portada del Libro" />
+
+                    <HBox spacing="10.0" alignment="CENTER_LEFT">
+                        <TextField fx:id="txtUrlPortada" promptText="Ruta de la imagen..." styleClass="form-field" HBox.hgrow="ALWAYS" editable="false"/>
+
+                        <Button onAction="#handleSeleccionarImagen" style="-fx-background-color: #3498db; -fx-text-fill: white; -fx-cursor: hand;">
+                            <graphic>
+                                <org.controlsfx.glyphfont.Glyph fontFamily="FontAwesome" icon="FOLDER_OPEN" />
+                            </graphic>
+                            <tooltip><Tooltip text="Buscar imagen en mi PC"/></tooltip>
+                        </Button>
+                    </HBox>
+
+                    <ImageView fx:id="imgPreview" fitHeight="150.0" fitWidth="120.0" preserveRatio="true" style="-fx-border-color: #ccc; -fx-border-style: dashed;">
+                        <image>
+                        </image>
+                    </ImageView>
+                </VBox>
+
+
+                <VBox spacing="8.0" GridPane.columnSpan="2" GridPane.rowIndex="6">
+                    <Label styleClass="form-label" text="Descripción" />
+                    <TextArea fx:id="txtDescripcion" prefHeight="100.0" prefRowCount="4" promptText="Breve descripción del libro" styleClass="form-field" wrapText="true" />
+                </VBox>
+            </GridPane>
+
+            <HBox alignment="CENTER_RIGHT" spacing="15.0" VBox.vgrow="ALWAYS">
+                <VBox.margin>
+                    <Insets top="30.0" />
+                </VBox.margin>
+                <Button onAction="#handleCancel" styleClass="secondary-button-light" text="Cancelar" />
+                <Button onAction="#handleSave" styleClass="primary-button" text="Guardar" />
+            </HBox>
+
+        </VBox>
+    </VBox>
+</ScrollPane>
