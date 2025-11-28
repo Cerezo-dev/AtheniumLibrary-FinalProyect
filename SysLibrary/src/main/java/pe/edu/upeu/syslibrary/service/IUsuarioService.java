@@ -5,17 +5,19 @@ import java.util.Optional;
 
 public interface IUsuarioService extends ICrudGenericService<Usuario, Long> {
 
+    // Buscar usuario por email (usado para validaciones)
     Usuario findByEmail(String email);
 
+    // Lógica de login (verifica contraseña encriptada)
     Usuario loginUsuario(String email, String password);
 
-    // Registro para Administrativos y Bibliotecarios (Formulario completo)
+    // Registro completo (Admin/Bibliotecario)
     Usuario registrarNuevoUsuario(String nombre, String apellidos, String email, String clave, String nombrePerfil);
 
-    // --- NUEVO: Registro Simplificado para Estudiantes ---
-    // (La contraseña será el mismo código automáticamente)
+    // Registro simplificado (Estudiantes)
     Usuario registrarEstudiante(String email, String codigo);
 
+    // Métodos de búsqueda específicos para el módulo de Préstamos
     Optional<Usuario> buscarPorDni(String dni);
     Optional<Usuario> buscarPorCodigo(String codigo);
     Optional<Usuario> buscarPorDniOCodigo(String busqueda);

@@ -10,21 +10,20 @@ import java.util.Optional;
 @Repository
 public interface UsuarioRepository extends ICrudGenericRepository<Usuario, Long> {
 
-    // Buscar por email (existente)
+    // 1. Validaciones de Login y Registro
     Usuario findByEmail(String email);
 
-    // Login (existente)
+    // Login (Legacy - aunque en el Service estamos usando encoder, este método no estorba)
     @Query("SELECT u FROM Usuario u WHERE u.email = :email AND u.password = :password")
     Usuario loginUsuario(@Param("email") String email, @Param("password") String password);
 
-    // --- NUEVO: Necesario para el Préstamo ---
-    // Busca por DNI
+    // 2. Búsquedas específicas (para validar duplicados en el registro)
     Optional<Usuario> findByDni(String dni);
 
-    // Busca por Código de Estudiante (por si prefieres usar el carné universitario)
     Optional<Usuario> findByCodigoEstudiante(String codigoEstudiante);
-    // Busca por el DNI o el Codigo
-    Optional<Usuario> findByDniOrCodigoEstudiante(String dni, String codigoEstudiante);
 
+    // 3. Búsqueda Dual para el Préstamo (Clave para que funcione tu buscador)
+    // Spring Data JPA generará automáticamente: WHERE u.dni = ?1 OR u.codigoEstudiante = ?2
+    Optional<Usuario> findByDniOrCodigoEstudiante(String dni, String codigoEstudiante);
 
 }

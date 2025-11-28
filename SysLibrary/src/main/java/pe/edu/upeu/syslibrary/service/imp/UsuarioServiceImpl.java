@@ -3,7 +3,7 @@ package pe.edu.upeu.syslibrary.service.imp;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional; // Importante para transacciones
+import org.springframework.transaction.annotation.Transactional;
 import pe.edu.upeu.syslibrary.model.Perfil;
 import pe.edu.upeu.syslibrary.model.Usuario;
 import pe.edu.upeu.syslibrary.repositorio.ICrudGenericRepository;
@@ -15,7 +15,7 @@ import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
-@Transactional // Asegura que las operaciones de BD sean atómicas
+@Transactional
 public class UsuarioServiceImpl extends CrudGenericServiceImp<Usuario, Long> implements IUsuarioService {
 
     private final UsuarioRepository usuarioRepository;
@@ -34,18 +34,22 @@ public class UsuarioServiceImpl extends CrudGenericServiceImp<Usuario, Long> imp
 
     @Override
     public Usuario loginUsuario(String email, String password) {
+        // 1. Buscamos por email usando el método del Repo
         Usuario user = usuarioRepository.findByEmail(email);
+
         if (user == null) return null;
 
+        // 2. Validamos la contraseña encriptada (Mejor práctica que hacerlo en la Query SQL)
         if (passwordEncoder.matches(password, user.getPassword())) {
             return user;
         }
         return null;
     }
 
-    // --- MÉTODO EXISTENTE (ADMIN/BIBLIOTECARIO) ---
+    // --- REGISTRO COMPLETO (ADMIN / BIBLIOTECARIO) ---
     @Override
     public Usuario registrarNuevoUsuario(String nombre, String apellidos, String email, String clave, String nombrePerfil) {
+        // Validamos que solo se puedan crear roles administrativos por aquí
         if (!nombrePerfil.equals("ADMINISTRADOR") && !nombrePerfil.equals("BIBLIOTECARIO")) {
             throw new IllegalArgumentException("Este método no permite registrar: " + nombrePerfil);
         }
@@ -66,7 +70,7 @@ public class UsuarioServiceImpl extends CrudGenericServiceImp<Usuario, Long> imp
         return usuarioRepository.save(nuevoUsuario);
     }
 
-    // --- NUEVO MÉTODO (MERGE): LOGICA ESTUDIANTE ---
+    // --- REGISTRO SIMPLIFICADO (ESTUDIANTES) ---
     @Override
     public Usuario registrarEstudiante(String email, String codigo) {
         // 1. Validar duplicidad de Email
@@ -74,7 +78,7 @@ public class UsuarioServiceImpl extends CrudGenericServiceImp<Usuario, Long> imp
             throw new IllegalArgumentException("El correo " + email + " ya está registrado.");
         }
 
-        // 2. Validar duplicidad de Código (si tienes el método en repo)
+        // 2. Validar duplicidad de Código usando tu método 'findByCodigoEstudiante'
         if (usuarioRepository.findByCodigoEstudiante(codigo).isPresent()) {
             throw new IllegalArgumentException("El código " + codigo + " ya está registrado.");
         }
@@ -82,7 +86,6 @@ public class UsuarioServiceImpl extends CrudGenericServiceImp<Usuario, Long> imp
         // 3. Buscar Perfil ESTUDIANTE
         Perfil perfilEstudiante = perfilRepository.findByNombre("ESTUDIANTE");
         if (perfilEstudiante == null) {
-            // Fallback por si la BD está vacía o se llama diferente
             throw new IllegalStateException("Error del sistema: El rol ESTUDIANTE no existe.");
         }
 
@@ -92,17 +95,16 @@ public class UsuarioServiceImpl extends CrudGenericServiceImp<Usuario, Long> imp
         u.setCodigoEstudiante(codigo);
         u.setPerfil(perfilEstudiante);
         u.setEstado("ACTIVO");
-
-        // Datos Placeholder (ya que el formulario simplificado no los pide)
-        // El estudiante podrá actualizarlos luego en su perfil
-        u.setNombre("Estudiante");
+        u.setNombre("Estudiante"); // Placeholder hasta que actualice perfil
         u.setApellidos("Nuevo");
 
-        // 5. REGLA DE NEGOCIO: La contraseña es el código encriptado
+        // 5. La contraseña es el código encriptado
         u.setPassword(passwordEncoder.encode(codigo));
 
         return usuarioRepository.save(u);
     }
+
+    // --- MÉTODOS DE BÚSQUEDA (ADAPTADOS A TU REPO) ---
 
     @Override
     public Optional<Usuario> buscarPorDni(String dni) {
@@ -116,6 +118,8 @@ public class UsuarioServiceImpl extends CrudGenericServiceImp<Usuario, Long> imp
 
     @Override
     public Optional<Usuario> buscarPorDniOCodigo(String busqueda) {
+        // ADAPTACIÓN: Tu repo pide (String dni, String codigoEstudiante).
+        // Pasamos 'busqueda' en ambos parámetros para que busque coincidencia en cualquiera de los dos.
         return usuarioRepository.findByDniOrCodigoEstudiante(busqueda, busqueda);
     }
 }

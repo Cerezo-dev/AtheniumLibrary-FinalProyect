@@ -30,6 +30,8 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
+import pe.edu.upeu.syslibrary.model.Prestamo; // Importar Modelo Prestamo
+import pe.edu.upeu.syslibrary.service.EmailService; // Importar EmailService
 
 @Controller
 public class StudentDashboardController {
@@ -39,6 +41,7 @@ public class StudentDashboardController {
     @Autowired private LibroRepository libroRepository;     // Para buscar en BD Local
     @Autowired private EjemplarRepository ejemplarRepository; // Para buscar stock
     @Autowired private PrestamoService prestamoService;
+    @Autowired private EmailService emailService;
 
     @FXML private Label lblStudentName;
     @FXML private FlowPane booksContainer; // El contenedor de tarjetas
@@ -147,19 +150,22 @@ public class StudentDashboardController {
 
         if (ejemplarOpt.isPresent()) {
             try {
-                // 3. REALIZAR EL PRÉSTAMO AUTOMÁTICO
                 Long idUsuario = SessionManager.getInstance().getUserId();
                 Ejemplar ejemplar = ejemplarOpt.get();
 
-                prestamoService.registrarPrestamo(ejemplar.getIdEjemplar(), idUsuario);
+                // 1. REGISTRAR PRÉSTAMO Y OBTENER EL OBJETO CREADO
+                // Asegúrate que tu PrestamoService.registrarPrestamo retorne el objeto 'Prestamo'
+                Prestamo prestamoGenerado = prestamoService.registrarPrestamo(ejemplar.getIdEjemplar(), idUsuario);
 
-                mostrarAlerta("¡Éxito!", "Préstamo registrado. Puedes pasar a recoger el libro: " + libroEncontrado.getCodigoBarras(), Alert.AlertType.INFORMATION);
+                // 2. ENVIAR CORREO EN SEGUNDO PLANO (Async para no trabar la UI)
+                CompletableFuture.runAsync(() -> {
+                    emailService.enviarNotificacionPrestamo(prestamoGenerado);
+                });
 
-                // TODO: Aquí iría la llamada a tu servicio de Email (JavaMailSender)
-                System.out.println("Enviando correo a " + idUsuario + " sobre el libro " + libroGoogle.getTitulo());
+                mostrarAlerta("¡Éxito!", "Préstamo registrado. Hemos enviado los detalles a tu correo.", Alert.AlertType.INFORMATION);
 
             } catch (Exception ex) {
-                mostrarAlerta("Error", "No se pudo procesar el préstamo: " + ex.getMessage(), Alert.AlertType.ERROR);
+                mostrarAlerta("Error", "No se pudo procesar: " + ex.getMessage(), Alert.AlertType.ERROR);
             }
         } else {
             mostrarAlerta("Agotado", "Tenemos el libro, pero todos los ejemplares están prestados actualmente.", Alert.AlertType.WARNING);

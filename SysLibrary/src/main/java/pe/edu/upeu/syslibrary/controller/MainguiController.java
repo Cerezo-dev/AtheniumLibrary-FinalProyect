@@ -8,6 +8,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
@@ -17,8 +18,6 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Controller;
 import pe.edu.upeu.syslibrary.dto.SessionManager;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 
 import java.io.IOException;
 import java.util.HashMap;
@@ -27,16 +26,18 @@ import java.util.Map;
 @Controller
 public class MainguiController {
 
-    // --- ELEMENTOS ESTRUCTURALES ---
+    @Autowired
+    private ApplicationContext applicationContext;
+
+    // --- ELEMENTOS ESTRUCTURALES FXML ---
     @FXML private BorderPane mainRoot;
     @FXML private VBox sidebar;
-    @FXML private VBox contentArea;
+    @FXML private VBox contentArea; // Área donde cargan las vistas hijas
     @FXML private Label lblPageTitle;
     @FXML private Label lblUserGreeting;
     @FXML private ImageView sidebarToggleIcon;
 
-    // 🔵 NUEVOS IDs INYECTADOS (Fusionados con la versión de tu compañero)
-    // Se necesitan para controlar quien ve qué botón
+    // --- BOTONES DEL MENÚ (IDs deben coincidir con tu FXML) ---
     @FXML private Button btnDashboard;
     @FXML private Button btnLibros;
     @FXML private Button btnCategorias;
@@ -48,39 +49,36 @@ public class MainguiController {
     @FXML private Button btnReportes;
     @FXML private Button btnConfiguracion;
 
+    // --- VARIABLES DE ESTADO ---
     private boolean isSidebarExpanded = true;
     private final double SIDEBAR_EXPANDED_WIDTH = 255.0;
     private final double SIDEBAR_COLLAPSED_WIDTH = 60.0;
     private final Map<Button, String> originalButtonTexts = new HashMap<>();
 
-    @Autowired
-    private ApplicationContext applicationContext;
-
     @FXML
     public void initialize() {
-        // Carga nombre de usuario (Manejo de null por seguridad)
-        String userName = (SessionManager.getInstance() != null) ? SessionManager.getInstance().getUserName() : "Admin";
+        // 1. Cargar Usuario de la Sesión
+        String userName = (SessionManager.getInstance() != null) ? SessionManager.getInstance().getUserName() : "Admin Local";
         lblUserGreeting.setText(userName);
 
+        // 2. Guardar textos originales de los botones para poder colapsar el menú luego
         storeOriginalButtonTexts();
 
-        // 🔵 NUEVO: Ejecutar lógica de permisos RBAC
+        // 3. Aplicar Permisos (Quién ve qué botón)
         aplicarPermisosRol();
 
-        // Cargar dashboard inicial al arrancar
-        Platform.runLater(() -> {
-            showDashboard(null);
-        });
+        // 4. Cargar Dashboard inicial
+        Platform.runLater(() -> showDashboard(null));
     }
 
-    // 🔵 LOGICA DE PERMISOS
+    // --- LÓGICA DE ROLES (RBAC) ---
     private void aplicarPermisosRol() {
         String rol = (SessionManager.getInstance() != null) ? SessionManager.getInstance().getNombrePerfil() : "INVITADO";
         System.out.println("✅ Login detectado. Rol: " + rol);
 
         switch (rol) {
             case "ESTUDIANTE":
-                // Estudiante no ve administración, config, ni reportes
+                // El estudiante solo ve sus cosas (o quizás nada del panel admin)
                 ocultarBoton(btnUsuariosAdmin);
                 ocultarBoton(btnConfiguracion);
                 ocultarBoton(btnReportes);
@@ -88,6 +86,7 @@ public class MainguiController {
                 ocultarBoton(btnDevoluciones);
                 ocultarBoton(btnCategorias);
                 ocultarBoton(btnEjemplares);
+                ocultarBoton(btnPrestamos); // Un estudiante no se presta a sí mismo en el sistema admin
                 break;
 
             case "DOCENTE":
@@ -98,7 +97,7 @@ public class MainguiController {
                 break;
 
             case "BIBLIOTECARIO":
-                // Bibliotecario ve casi todo menos crear Admins
+                // Ve todo excepto gestión de super-usuarios y config del sistema
                 ocultarBoton(btnUsuariosAdmin);
                 ocultarBoton(btnConfiguracion);
                 break;
@@ -108,143 +107,126 @@ public class MainguiController {
                 break;
 
             default:
-                // Seguridad por defecto: bloquear cosas sensibles
+                // Por seguridad, ocultar lo sensible
                 ocultarBoton(btnUsuariosAdmin);
                 ocultarBoton(btnConfiguracion);
-                ocultarBoton(btnReportes);
                 break;
         }
     }
 
-    // 🔵 Helper para ocultar botones y colapsar el espacio
     private void ocultarBoton(Button btn) {
         if (btn != null) {
             btn.setVisible(false);
-            btn.setManaged(false); // Importante: Elimina el hueco blanco
+            btn.setManaged(false); // Importante: Elimina el espacio blanco que dejaría el botón
         }
+    }
+
+    // --- NAVEGACIÓN ---
+
+    private void switchView(String title, String fxmlPath) {
+        if (lblPageTitle != null) lblPageTitle.setText(title);
+
+        try {
+            Resource resource = applicationContext.getResource("classpath:" + fxmlPath);
+            if (!resource.exists()) {
+                System.err.println("❌ ERROR: No se encuentra FXML: " + fxmlPath);
+                return;
+            }
+
+            FXMLLoader loader = new FXMLLoader(resource.getURL());
+            loader.setControllerFactory(applicationContext::getBean);
+            Parent view = loader.load();
+
+            contentArea.getChildren().clear(); // Limpia la vista anterior
+            contentArea.getChildren().add(view);
+            VBox.setVgrow(view, Priority.ALWAYS); // Que ocupe todo el espacio
+
+        } catch (IOException e) {
+            e.printStackTrace();
+            System.err.println("Error cargando vista: " + e.getMessage());
+        }
+    }
+
+    // --- EVENTOS DE BOTONES (Rutas FXML ajustadas) ---
+
+    @FXML private void showDashboard(ActionEvent event) {
+        // Asegúrate de tener dashboard_view.fxml o dashboard_admin.fxml
+        switchView("Panel Principal", "/fxml/dashboard_view.fxml");
+    }
+
+    @FXML private void showLibros(ActionEvent event) {
+        switchView("Gestión de Libros", "/fxml/libro.fxml");
+    }
+
+    @FXML private void showExemplars(ActionEvent event) {
+        switchView("Gestión de Ejemplares", "/fxml/exemplar_view.fxml");
+    }
+
+    @FXML private void showCategories(ActionEvent event) {
+        switchView("Categorías", "/fxml/category_view.fxml");
+    }
+
+    @FXML private void showIssueBook(ActionEvent event) {
+        // Esta es la vista que usa el controlador PrestamoLibroController
+        switchView("Registro de Préstamos", "/fxml/prestamoLibro.fxml");
+    }
+
+    @FXML private void showReturnBooks(ActionEvent event) {
+        switchView("Devolución de Libros", "/fxml/devolucion_libro.fxml");
+    }
+
+    @FXML private void showStudents(ActionEvent event) {
+        switchView("Gestión de Estudiantes", "/fxml/usuarioMain.fxml");
+    }
+
+    @FXML void showAddUser(ActionEvent event) {
+        switchView("Gestión de Usuarios Admin", "/fxml/user_view.fxml");
+    }
+
+    @FXML private void showReports(ActionEvent event) {
+        switchView("Reportes", "/fxml/dashboard_view.fxml"); // Placeholder
+    }
+
+    @FXML private void showSettings(ActionEvent event) {
+        switchView("Configuración", "/fxml/dashboard_view.fxml"); // Placeholder
+    }
+
+    @FXML private void handleLogout(ActionEvent event) {
+        // Lógica para cerrar la ventana actual y abrir Login
+        Stage stage = (Stage) mainRoot.getScene().getWindow();
+        stage.close();
+        // Aquí podrías reabrir el LoginController
+    }
+
+    // --- LÓGICA VISUAL DEL SIDEBAR (Colapsar/Expandir) ---
+
+    @FXML
+    public void toggleSidebar() {
+        if (isSidebarExpanded) {
+            sidebar.setPrefWidth(SIDEBAR_COLLAPSED_WIDTH);
+            sidebar.setMinWidth(SIDEBAR_COLLAPSED_WIDTH);
+            sidebar.setMaxWidth(SIDEBAR_COLLAPSED_WIDTH);
+            setButtonsTextVisibility(false);
+            sidebar.getStyleClass().add("sidebar-collapsed");
+        } else {
+            sidebar.setPrefWidth(SIDEBAR_EXPANDED_WIDTH);
+            sidebar.setMinWidth(SIDEBAR_EXPANDED_WIDTH);
+            sidebar.setMaxWidth(SIDEBAR_EXPANDED_WIDTH);
+            setButtonsTextVisibility(true);
+            sidebar.getStyleClass().remove("sidebar-collapsed");
+        }
+        isSidebarExpanded = !isSidebarExpanded;
     }
 
     private void storeOriginalButtonTexts() {
         for (Node node : sidebar.getChildren()) {
             if (node instanceof Button) {
                 Button button = (Button) node;
-                if (button.getGraphic() != null && !button.getText().trim().isEmpty()) {
+                if (!button.getText().trim().isEmpty()) {
                     originalButtonTexts.put(button, button.getText());
                 }
             }
         }
-    }
-
-    // Método genérico para cargar FXML
-    private Parent loadFxml(String fxmlPath) {
-        try {
-            Resource resource = applicationContext.getResource("classpath:" + fxmlPath);
-            if (!resource.exists()) {
-                System.err.println("❌ ERROR CRÍTICO: No se encontró el archivo FXML: " + fxmlPath);
-                return new Label("Error: Archivo no encontrado (" + fxmlPath + ")");
-            }
-
-            FXMLLoader loader = new FXMLLoader(resource.getURL());
-            loader.setControllerFactory(applicationContext::getBean);
-            return loader.load();
-        } catch (IOException e) {
-            e.printStackTrace();
-            return new Label("Error de carga: " + e.getMessage());
-        }
-    }
-
-    // Método central para cambiar vistas
-    private void switchView(String title, String fxmlPath) {
-        if (lblPageTitle != null) {
-            lblPageTitle.setText(title);
-        }
-
-        Parent view = loadFxml(fxmlPath);
-
-        if (contentArea.getChildren().size() > 1) {
-            contentArea.getChildren().remove(1);
-        }
-
-        contentArea.getChildren().add(view);
-        VBox.setVgrow(view, Priority.ALWAYS);
-    }
-
-    // --- ACCIONES DEL MENÚ ---
-
-    @FXML
-    private void showDashboard(ActionEvent event) {
-        switchView("Panel Principal", "/fxml/dashboard_view.fxml");
-    }
-
-    @FXML
-    void showLibros(ActionEvent event) {
-        switchView("Gestión de Libros", "/fxml/libro.fxml");
-    }
-
-    @FXML
-    private void showExemplars(ActionEvent event) {
-        switchView("Gestión de Ejemplares", "/fxml/exemplar_view.fxml");
-    }
-
-    @FXML
-    private void showCategories(ActionEvent event) {
-        switchView("Categorías", "/fxml/category_view.fxml");
-    }
-
-    @FXML
-    private void showIssueBook(ActionEvent event) {
-        switchView("Nuevo Préstamo", "/fxml/prestamoLibro.fxml");
-    }
-
-    @FXML
-    private void showReturnBooks(ActionEvent event) {
-        switchView("Devolución de Libros", "/fxml/devolucion_libro.fxml");
-    }
-
-    @FXML
-    private void showStudents(ActionEvent event) {
-        switchView("Gestión de Estudiantes", "/fxml/usuarioMain.fxml");
-    }
-
-    @FXML
-    void showAddUser(ActionEvent event) {
-        switchView("Gestión de Usuarios", "/fxml/user_view.fxml");
-    }
-
-    @FXML
-    private void showReports(ActionEvent event) {
-        switchView("Reportes", "/fxml/dashboard_view.fxml");
-    }
-
-    @FXML
-    private void showSettings(ActionEvent event) {
-        switchView("Configuración", "/fxml/dashboard_view.fxml");
-    }
-
-    // --- FUNCIONALIDAD BARRA LATERAL ---
-
-    @FXML
-    public void toggleSidebar() {
-        if (isSidebarExpanded) {
-            sidebar.getStyleClass().add("sidebar-collapsed");
-            sidebar.setPrefWidth(SIDEBAR_COLLAPSED_WIDTH);
-            sidebar.setMinWidth(SIDEBAR_COLLAPSED_WIDTH);
-            sidebar.setMaxWidth(SIDEBAR_COLLAPSED_WIDTH);
-            setButtonsTextVisibility(false);
-            try {
-                // Iconos opcionales
-            } catch (Exception e) {}
-        } else {
-            sidebar.getStyleClass().remove("sidebar-collapsed");
-            sidebar.setPrefWidth(SIDEBAR_EXPANDED_WIDTH);
-            sidebar.setMinWidth(SIDEBAR_EXPANDED_WIDTH);
-            sidebar.setMaxWidth(SIDEBAR_EXPANDED_WIDTH);
-            setButtonsTextVisibility(true);
-            try {
-                // Iconos opcionales
-            } catch (Exception e) {}
-        }
-        isSidebarExpanded = !isSidebarExpanded;
     }
 
     private void setButtonsTextVisibility(boolean visible) {
@@ -256,11 +238,5 @@ public class MainguiController {
                 }
             }
         }
-    }
-
-    @FXML
-    private void handleLogout(ActionEvent event) {
-        Stage stage = (Stage) mainRoot.getScene().getWindow();
-        stage.close();
     }
 }
